@@ -95,15 +95,8 @@ export default function ContactPage() {
       <Navbar />
       
       <main>
-        <section className="w-full py-32 bg-gradient-to-r from-gray-900 to-primary-dark text-white relative">
-          <div className="absolute inset-0 z-0">
-            <img 
-              src={heroBackground} 
-              alt="Background" 
-              className="w-full h-full object-cover object-center opacity-30"
-            />
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="w-full py-32 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl mb-6 font-['Montserrat'] font-normal">
                 Entre em <span className="relative">

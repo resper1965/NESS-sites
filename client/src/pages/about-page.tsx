@@ -78,27 +78,28 @@ export default function AboutPage() {
       <Navbar />
       
       <main>
-        {/* Hero Section com imagem escurecida */}
-        <section className="relative w-full py-32 overflow-hidden">
-          {/* Imagem de fundo escurecida */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-primary/50 mix-blend-multiply z-10"></div>
-            <img 
-              src={heroBackground} 
-              alt="Equipe ness" 
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-          
+        {/* Hero Section sem imagem (fundo azul gradiente) */}
+        <section className="relative w-full py-32 overflow-hidden bg-gradient-to-b from-blue-600 to-blue-800">
           {/* Conteúdo */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-['Montserrat'] font-normal text-5xl md:text-6xl text-white mb-6">
-                Quem somos
+                Transformação, performance e inovação em negócios
               </h1>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto">
-                Há mais de 30 anos transformando desafios tecnológicos em oportunidades de negócio
-              </p>
+              <div className="text-xl text-white/90 max-w-3xl mx-auto">
+                <p className="mb-6">
+                  A NESS é uma empresa brasileira de tecnologia com foco na solução de problemas reais com uso de inovação, transformação e na entrega de resultados com velocidade e segurança.
+                </p>
+                <p className="mb-6">
+                  Ao longo dos últimos 32 anos, nosso time desenha, implementa, suporta, executa, monitora, sustenta e co-gerencia importantes transformações digitais em parceria com nossos clientes.
+                </p>
+                <p className="font-bold mt-8 text-2xl">
+                  Somos a NESS
+                </p>
+                <p>
+                  Apaixonados por resolver grandes problemas através da inovação e transformação digital, com muita tecnologia!
+                </p>
+              </div>
             </div>
           </div>
         </section>

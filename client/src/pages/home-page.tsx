@@ -46,8 +46,8 @@ export default function HomePage() {
 
   // Default values in case the data is still loading
   const heroProps = content?.hero || {
-    title: "Transformamos Operações Críticas em Vantagem Estratégica",
-    subtitle: "Desde 1991 fornecendo as mais avançadas soluções em segurança, infraestrutura e operações críticas para empresas que buscam vantagem competitiva através da tecnologia.",
+    title: "Transformando o mundo através de tecnologia",
+    subtitle: "Somos um grande laboratório de tecnologia e processos focado em casos do mundo real. Uma empresa essencialmente orientada à inovar e transformar para resolver problemas e suportar transformações de diversos setores",
     backgroundImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080'
   };
 
