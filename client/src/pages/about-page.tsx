@@ -29,6 +29,22 @@ export default function AboutPage() {
         p4: "acreditamos que o essencial é muitas vezes invisível. e que o impacto real começa com decisões simples e arquiteturas seguras."
       },
       timeline: "nossa trajetória",
+      timelineEvents: {
+        1991: "a ness. é fundada como tercerização da área de tecnologia de um grande grupo econômico.",
+        1992: "atividades de infraestrutura, processamento de dados e BPO.",
+        1998: "início na atividade de infraestrutura em grandes eventos por todo diversos países da europa, américas, africa e ásia.",
+        2005: "início de serviços de privacidade e segurança digital.",
+        2014_1: "lançamento da divisão de software e processos.",
+        2014_2: "incubação de projetos de saúde. NESS Technology healthcare inicia como incubação.",
+        2016: "incubação da Trustness.",
+        2017: "criação da unidade de negócios NESS Health como Business Unit da NESS.",
+        2018: "Trustness como unidade de negócios.",
+        2019: "spin-off da NESS Health da NESS.",
+        2020: "NESS Health renomeada como IONIC Health, nova sede no Tech-Park SJC, crescimento local com grandes clientes brasileiros da área de saúde.",
+        2021: "incubação da forense.io.",
+        2022: "forense.io como unidade de negócios.",
+        2025: "estabelecida como uma plataforma modular para transformação digital confiável."
+      },
       cta: {
         title: "quer saber mais sobre a ness.?",
         button: "fale conosco"
@@ -46,6 +62,22 @@ export default function AboutPage() {
         p4: "we believe what's essential is often invisible. and that real impact starts with simple decisions and secure architectures."
       },
       timeline: "our journey",
+      timelineEvents: {
+        1991: "ness. is founded as an outsourced technology department for a large economic group.",
+        1992: "infrastructure activities, data processing, and BPO.",
+        1998: "beginning of infrastructure activities at major events throughout various countries in Europe, Americas, Africa, and Asia.",
+        2005: "initiation of privacy and digital security services.",
+        2014_1: "launch of the software and processes division.",
+        2014_2: "healthcare projects incubation. NESS Technology healthcare starts as an incubation project.",
+        2016: "Trustness incubation.",
+        2017: "creation of NESS Health as a NESS Business Unit.",
+        2018: "Trustness as a Business Unit.",
+        2019: "NESS Health spin-off from NESS.",
+        2020: "NESS Health rebranded as IONIC Health, new headquarters at SJC Tech-Park, local growth with major Brazilian healthcare clients.",
+        2021: "forense.io incubation.",
+        2022: "forense.io as a business unit.",
+        2025: "established as a modular platform for reliable digital transformation."
+      },
       cta: {
         title: "want to know more about ness.?",
         button: "contact us"
@@ -63,6 +95,22 @@ export default function AboutPage() {
         p4: "creemos que lo esencial a menudo es invisible. y que el impacto real comienza con decisiones simples y arquitecturas seguras."
       },
       timeline: "nuestra trayectoria",
+      timelineEvents: {
+        1991: "ness. es fundada como tercerización del área de tecnología de un gran grupo económico.",
+        1992: "actividades de infraestructura, procesamiento de datos y BPO.",
+        1998: "inicio en la actividad de infraestructura en grandes eventos por diversos países de Europa, América, África y Asia.",
+        2005: "inicio de servicios de privacidad y seguridad digital.",
+        2014_1: "lanzamiento de la división de software y procesos.",
+        2014_2: "incubación de proyectos de salud. NESS Technology healthcare inicia como incubación.",
+        2016: "incubación de Trustness.",
+        2017: "creación de la unidad de negocios NESS Health como Business Unit de NESS.",
+        2018: "Trustness como unidad de negocios.",
+        2019: "spin-off de NESS Health de NESS.",
+        2020: "NESS Health renombrada como IONIC Health, nueva sede en Tech-Park SJC, crecimiento local con grandes clientes brasileños del área de salud.",
+        2021: "incubación de forense.io.",
+        2022: "forense.io como unidad de negocios.",
+        2025: "establecida como una plataforma modular para transformación digital confiable."
+      },
       cta: {
         title: "¿quieres saber más sobre ness.?",
         button: "contáctanos"
@@ -76,6 +124,7 @@ export default function AboutPage() {
     heroSubtitle: localizedContent[language].heroSubtitle,
     manifesto: localizedContent[language].manifesto,
     timeline: localizedContent[language].timeline,
+    timelineEvents: localizedContent[language].timelineEvents,
     cta: localizedContent[language].cta
   };
 
@@ -206,7 +255,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">1991</h3>
-                      <p className="text-gray-700 lowercase">a ness. é fundada como tercerização da área de tecnologia de um grande grupo econômico.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents[1991]}</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -224,7 +273,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">1992</h3>
-                      <p className="text-gray-700 lowercase">atividades de infraestrutura, processamento de dados e BPO.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents[1992]}</p>
                     </div>
                   </div>
                 </div>
@@ -234,7 +283,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">1998</h3>
-                      <p className="text-gray-700 lowercase">início na atividade de infraestrutura em grandes eventos por todo diversos países da europa, américas, africa e ásia.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents[1998]}</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -252,7 +301,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2005</h3>
-                      <p className="text-gray-700 lowercase">início de serviços de privacidade e segurança digital.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents[2005]}</p>
                     </div>
                   </div>
                 </div>
@@ -262,7 +311,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2014</h3>
-                      <p className="text-gray-700 lowercase">lançamento da divisão de software e processos.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents["2014_1"]}</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
