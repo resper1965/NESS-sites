@@ -1,0 +1,356 @@
+/* Hero com estilo geométrico e abstrato para a página principal */
+.hero-main {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f3e4d;
+  color: white;
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.hero-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 60% 70%, rgba(0, 173, 224, 0.12), transparent 70%);
+  z-index: 1;
+}
+
+.cube-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  z-index: 2;
+}
+
+.cube {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 30s infinite linear;
+}
+
+.cube:nth-child(1) {
+  top: 20%;
+  left: 80%;
+  opacity: 0.6;
+  scale: 0.7;
+}
+
+.cube:nth-child(2) {
+  top: 70%;
+  left: 20%;
+  opacity: 0.35;
+  animation-delay: 2s;
+  animation-duration: 25s;
+  scale: 0.6;
+}
+
+.cube:nth-child(3) {
+  top: 30%;
+  left: 40%;
+  opacity: 0.25;
+  animation-delay: 4s;
+  animation-duration: 35s;
+  scale: 0.9;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 173, 224, 0.4);
+  opacity: 0.25;
+}
+
+.front {
+  transform: translateZ(100px);
+  background: linear-gradient(45deg, transparent, rgba(0, 173, 224, 0.1));
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+  background: linear-gradient(225deg, transparent, rgba(0, 173, 224, 0.1));
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+  background: linear-gradient(90deg, transparent, rgba(0, 173, 224, 0.1));
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+  background: linear-gradient(270deg, transparent, rgba(0, 173, 224, 0.1));
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+  background: linear-gradient(135deg, transparent, rgba(0, 173, 224, 0.1));
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background: linear-gradient(315deg, transparent, rgba(0, 173, 224, 0.1));
+}
+
+.grid-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.polygons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.polygon {
+  position: absolute;
+  border: 1px solid rgba(0, 173, 224, 0.5);
+  background-color: rgba(0, 173, 224, 0.05);
+  transform: rotate(45deg);
+  animation: float-rotate 20s infinite ease-in-out;
+}
+
+.polygon:nth-child(1) {
+  width: 350px;
+  height: 200px;
+  top: -100px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.polygon:nth-child(2) {
+  width: 250px;
+  height: 300px;
+  bottom: -150px;
+  right: -100px;
+  animation-delay: 2s;
+}
+
+.polygon:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  bottom: 10%;
+  left: 10%;
+  animation-delay: 4s;
+}
+
+.polygon:nth-child(4) {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 20%;
+  animation-delay: 6s;
+}
+
+.data-streams {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.stream {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 173, 224, 0.8), transparent);
+  animation: flow 6s infinite linear;
+}
+
+.stream:nth-child(1) {
+  width: 30%;
+  top: 30%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.stream:nth-child(2) {
+  width: 40%;
+  top: 70%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.stream:nth-child(3) {
+  width: 50%;
+  top: 45%;
+  left: 25%;
+  animation-delay: 4s;
+}
+
+.stream:nth-child(4) {
+  width: 20%;
+  top: 20%;
+  left: 60%;
+  animation-delay: 1s;
+}
+
+.hero-main-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-main-content h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: lowercase;
+  background: linear-gradient(to right, #ffffff, #00ade0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.hero-main-content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 800px;
+  text-transform: lowercase;
+  margin-bottom: 2rem;
+}
+
+.node-points {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.node-point {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(0, 173, 224, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px rgba(0, 173, 224, 0.5);
+  animation: pulse-node 4s infinite ease-in-out;
+}
+
+.node-point:nth-child(1) {
+  top: 35%;
+  left: 25%;
+  animation-delay: 0s;
+}
+
+.node-point:nth-child(2) {
+  top: 25%;
+  left: 65%;
+  animation-delay: 1s;
+}
+
+.node-point:nth-child(3) {
+  top: 70%;
+  left: 35%;
+  animation-delay: 0.5s;
+}
+
+.node-point:nth-child(4) {
+  top: 60%;
+  left: 75%;
+  animation-delay: 1.5s;
+}
+
+.node-point:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  animation: bounce 2s infinite;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+@keyframes float-rotate {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(48deg) translateY(-15px);
+  }
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-node {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
