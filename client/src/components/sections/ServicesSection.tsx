@@ -37,7 +37,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
       devarch: "desenvolvimento seguro com práticas de SDLC desde o design",
       autoops: "automação inteligente para processos operacionais eficientes",
       crisisops: "gestão de crises e incidentes com estrutura, agilidade e rastreabilidade",
-      privacy: "plataforma SaaS para gestão de privacidade e conformidade regulatória com ROPA, DPIA, LIA, gestão de gaps, avaliação de fornecedores e atendimento a titulares"
+      privacy: "plataforma SaaS para gestão de privacidade e conformidade com LGPD, GDPR e afins. inclui ROPA, DPIA, LIA, gaps, atendimento a titulares e avaliação de fornecedores"
     },
     en: {
       infraops: "resilient infrastructure with 24x7 monitoring and immediate response",
@@ -45,7 +45,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
       devarch: "secure development with SDLC practices from design to deployment",
       autoops: "intelligent automation for efficient operational processes",
       crisisops: "crisis and incident management with structure, agility, and traceability",
-      privacy: "SaaS platform for privacy management and regulatory compliance with ROPA, DPIA, LIA, gap management, vendor assessment, and data subject requests"
+      privacy: "SaaS platform for privacy management and compliance with GDPR, CCPA, and similar regulations. includes ROPA, DPIA, LIA, gaps, data subject requests and vendor assessment"
     },
     es: {
       infraops: "infraestructura resiliente con monitoreo 24x7 y respuesta inmediata",
@@ -53,7 +53,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
       devarch: "desarrollo seguro con prácticas de SDLC desde el diseño",
       autoops: "automatización inteligente para procesos operativos eficientes",
       crisisops: "gestión de crisis e incidentes con estructura, agilidad y trazabilidad",
-      privacy: "plataforma SaaS para gestión de privacidad y cumplimiento regulatorio con ROPA, DPIA, LIA, gestión de brechas, evaluación de proveedores y atención a titulares"
+      privacy: "plataforma SaaS para gestión de privacidad y cumplimiento con LGPD, GDPR y similares. incluye ROPA, DPIA, LIA, brechas, atención a titulares y evaluación de proveedores"
     }
   };
   

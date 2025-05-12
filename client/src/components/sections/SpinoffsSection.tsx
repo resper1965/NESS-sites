@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { useI18n } from '@/lib/i18n';
+import { ExternalLink } from 'lucide-react';
 
 interface SpinoffsSectionProps {
   title?: string;
@@ -25,16 +26,16 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
   // Descrições traduzidas para as divisões
   const descriptions = {
     pt: {
-      trustness: "soluções especializadas em segurança e privacidade, protegendo dados sensíveis e garantindo conformidade com regulamentações",
-      forense: "serviços avançados de resposta a incidentes, perícia digital e investigação forense para identificar e remediar violações de segurança"
+      trustness: "consultoria estratégica em privacidade, segurança da informação e compliance. foco em programas regulatórios, frameworks internacionais e gestão contínua",
+      forense: "unidade especializada em resposta a incidentes, perícia digital e investigação forense. atuação técnica em ambientes corporativos e suporte jurídico"
     },
     en: {
-      trustness: "specialized solutions in security and privacy, protecting sensitive data and ensuring compliance with regulations",
-      forense: "advanced incident response services, digital forensics and forensic investigation to identify and remediate security breaches"
+      trustness: "strategic consulting in privacy, information security and compliance. focus on regulatory programs, international frameworks and continuous management",
+      forense: "specialized unit in incident response, digital forensics and forensic investigation. technical expertise in corporate environments and legal support"
     },
     es: {
-      trustness: "soluciones especializadas en seguridad y privacidad, protegiendo datos sensibles y garantizando el cumplimiento de las regulaciones",
-      forense: "servicios avanzados de respuesta a incidentes, peritaje digital e investigación forense para identificar y remediar violaciones de seguridad"
+      trustness: "consultoría estratégica en privacidad, seguridad de la información y compliance. enfoque en programas regulatorios, frameworks internacionales y gestión continua",
+      forense: "unidad especializada en respuesta a incidentes, peritaje digital e investigación forense. actuación técnica en entornos corporativos y soporte jurídico"
     }
   };
   
@@ -44,13 +45,15 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
       id: "trustness",
       name: "trustness",
       description: descriptions[language].trustness,
-      url: "/spinoffs/trustness"
+      url: "https://trustness.com.br",
+      isExternal: true
     },
     {
       id: "forense",
       name: "forense.io",
       description: descriptions[language].forense,
-      url: "/spinoffs/forense"
+      url: "https://forense.io",
+      isExternal: true
     }
   ];
   
@@ -74,12 +77,24 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
                 {spinoff.description}
               </p>
               <div className="text-center">
-                <Link 
-                  href={spinoff.url} 
-                  className="text-white hover:text-[#00ade0] border border-white hover:border-[#00ade0] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
-                >
-                  {buttonText[language]}
-                </Link>
+                {spinoff.isExternal ? (
+                  <a 
+                    href={spinoff.url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-[#00ade0] border border-white hover:border-[#00ade0] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-flex items-center lowercase rounded-sm"
+                  >
+                    {buttonText[language]}
+                    <ExternalLink className="ml-1 h-3 w-3" />
+                  </a>
+                ) : (
+                  <Link 
+                    href={spinoff.url} 
+                    className="text-white hover:text-[#00ade0] border border-white hover:border-[#00ade0] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                  >
+                    {buttonText[language]}
+                  </Link>
+                )}
               </div>
             </div>
           ))}
