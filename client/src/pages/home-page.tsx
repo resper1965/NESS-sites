@@ -8,6 +8,7 @@ import ServicesSection from '@/components/sections/ServicesSection';
 import SpinoffsSection from '@/components/sections/SpinoffsSection';
 import StatsSection from '@/components/sections/StatsSection';
 import { Content } from '@shared/schema';
+import heroBackground from '../assets/hero-background.svg';
 
 export default function HomePage() {
   const { t, language } = useI18n();
@@ -145,13 +146,13 @@ export default function HomePage() {
       
       <main>
         <HeroSection 
-          title={heroProps.title}
-          subtitle={heroProps.subtitle}
-          ctaText1="Conheça nossos serviços"
-          ctaUrl1="#services"
-          ctaText2="Entre em contato"
+          title={t('home.hero.title')}
+          subtitle={t('home.hero.subtitle')}
+          ctaText1={t('home.hero.cta1')}
+          ctaUrl1="/services"
+          ctaText2={t('home.hero.cta2')}
           ctaUrl2="/contact"
-          backgroundImage={heroProps.backgroundImage}
+          backgroundImage={heroBackground}
         />
         
         <ServicesSection 
