@@ -34,7 +34,7 @@ export default function Navbar() {
   // Determine if we're on a page that should have transparent navbar
   const shouldBeTransparent = location === '/' || location.startsWith('/about') || location.startsWith('/services');
   const navbarClass = isScrolled || !shouldBeTransparent
-    ? 'bg-primary shadow-md'
+    ? 'bg-black shadow-md'
     : 'bg-transparent';
 
   return (
@@ -42,8 +42,8 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-2">
         <nav className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" className="text-white font-bold text-xl lowercase">
-              ness<span className="ness-dot ml-[1px]"></span>
+            <Link href="/" className="text-white text-xl lowercase">
+              ness<span className="ness-dot ml-[1px]" style={{color: "#00ade0"}}></span>
             </Link>
           </div>
 
@@ -68,14 +68,10 @@ export default function Navbar() {
             {/* Language Selector */}
             <LanguageSelector />
             
-            {/* Login/Admin button */}
-            {user ? (
+            {/* Only show Admin button if user is logged in */}
+            {user && (
               <Link href="/admin/dashboard" className="bg-accent hover:bg-accent-dark text-white py-2 px-4 rounded transition duration-200">
                 Admin
-              </Link>
-            ) : (
-              <Link href="/auth" className="bg-accent hover:bg-accent-dark text-white py-2 px-4 rounded transition duration-200">
-                {t('nav.login')}
               </Link>
             )}
           </div>
@@ -130,14 +126,10 @@ export default function Navbar() {
                 </div>
               </div>
               
-              {/* Login/Admin button */}
-              {user ? (
+              {/* Only show Admin button if user is logged in */}
+              {user && (
                 <Link href="/admin/dashboard" className="bg-accent hover:bg-accent-dark text-white py-2 px-4 rounded transition duration-200 inline-block">
                   Admin
-                </Link>
-              ) : (
-                <Link href="/auth" className="bg-accent hover:bg-accent-dark text-white py-2 px-4 rounded transition duration-200 inline-block">
-                  {t('nav.login')}
                 </Link>
               )}
             </div>

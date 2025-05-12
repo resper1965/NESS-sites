@@ -10,11 +10,11 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <Link href="/" className="text-white font-bold text-xl mb-6 inline-block">
-              <span className="text-accent">Corp</span>Tech
+            <Link href="/" className="text-white text-xl mb-6 inline-block lowercase">
+              ness<span className="ness-dot ml-[1px]" style={{color: "#00ade0"}}></span>
             </Link>
             <p className="text-gray-300 mb-6">
-              Fornecemos soluções empresariais de alta qualidade com foco em tecnologia, segurança e resultados.
+              Fornecemos soluções empresariais de alta qualidade com foco em cibersegurança, infraestrutura e arquitetura de software.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-accent transition duration-300">
@@ -77,7 +77,10 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
-          <p>&copy; {currentYear} CorpTech. {t('footer.rights')}.</p>
+          <p>&copy; {currentYear} ness<span className="ness-dot ml-[1px]" style={{color: "#00ade0"}}></span> {t('footer.rights')}.</p>
+          <div className="mt-2">
+            <Link href="/auth" className="text-gray-300 hover:text-accent transition duration-300">{t('nav.login')}</Link>
+          </div>
         </div>
       </div>
     </footer>
