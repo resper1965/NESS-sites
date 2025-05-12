@@ -557,6 +557,135 @@ export class DatabaseStorage implements IStorage {
       console.error("Error initializing database:", err);
     });
   }
+
+  // Site methods
+  async getSite(code: SiteCode): Promise<Site | undefined> {
+    const [site] = await db.select().from(sites).where(eq(sites.code, code));
+    return site;
+  }
+  
+  async getAllSites(): Promise<Site[]> {
+    return await db.select().from(sites);
+  }
+  
+  async createSite(site: InsertSite): Promise<Site> {
+    const [newSite] = await db.insert(sites).values(site).returning();
+    return newSite;
+  }
+  
+  async updateSite(code: SiteCode, site: Partial<Site>): Promise<Site> {
+    const [updated] = await db.update(sites)
+      .set({ ...site, updatedAt: new Date() })
+      .where(eq(sites.code, code))
+      .returning();
+      
+    return updated;
+  }
+  
+  // Content-Site associations
+  async associateContentToSite(contentId: number, contentType: string, siteCode: SiteCode): Promise<ContentSite> {
+    const [result] = await db.insert(contentSites)
+      .values({ contentId, contentType, siteCode })
+      .returning();
+      
+    return result;
+  }
+  
+  async removeContentFromSite(contentId: number, contentType: string, siteCode: SiteCode): Promise<void> {
+    await db.delete(contentSites)
+      .where(and(
+        eq(contentSites.contentId, contentId),
+        eq(contentSites.contentType, contentType),
+        eq(contentSites.siteCode, siteCode)
+      ));
+  }
+  
+  async getContentSites(contentId: number, contentType: string): Promise<SiteCode[]> {
+    const results = await db.select({ siteCode: contentSites.siteCode })
+      .from(contentSites)
+      .where(and(
+        eq(contentSites.contentId, contentId),
+        eq(contentSites.contentType, contentType)
+      ));
+      
+    return results.map(r => r.siteCode);
+  }
+  
+  // Landing Page methods
+  async getLandingPages(language: string, siteCode?: SiteCode): Promise<LandingPage[]> {
+    let pages;
+    
+    if (siteCode) {
+      // Get landing pages specific to the site
+      pages = await db.select().from(landingPages)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, landingPages.id),
+          eq(contentSites.contentType, 'landing_page'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(eq(landingPages.language, language));
+        
+      return pages.map(p => p.landing_pages);
+    } else {
+      // Get generic landing pages
+      return await db.select().from(landingPages)
+        .where(eq(landingPages.language, language));
+    }
+  }
+  
+  async getLandingPageBySlug(slug: string, language: string, siteCode?: SiteCode): Promise<LandingPage | undefined> {
+    let page;
+    
+    if (siteCode) {
+      // Get landing page specific to the site
+      const [result] = await db.select().from(landingPages)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, landingPages.id),
+          eq(contentSites.contentType, 'landing_page'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(and(
+          eq(landingPages.slug, slug),
+          eq(landingPages.language, language)
+        ));
+        
+      page = result ? result.landing_pages : undefined;
+    } else {
+      // Get generic landing page
+      const [result] = await db.select().from(landingPages)
+        .where(and(
+          eq(landingPages.slug, slug),
+          eq(landingPages.language, language)
+        ));
+        
+      page = result;
+    }
+    
+    return page;
+  }
+  
+  async getLandingPage(id: number): Promise<LandingPage | undefined> {
+    const [page] = await db.select().from(landingPages).where(eq(landingPages.id, id));
+    return page;
+  }
+  
+  async createLandingPage(landingPage: InsertLandingPage): Promise<LandingPage> {
+    const [newPage] = await db.insert(landingPages).values(landingPage).returning();
+    return newPage;
+  }
+  
+  async updateLandingPage(id: number, landingPage: Partial<LandingPage>): Promise<LandingPage> {
+    const [updated] = await db.update(landingPages)
+      .set({ ...landingPage, updatedAt: new Date() })
+      .where(eq(landingPages.id, id))
+      .returning();
+      
+    return updated;
+  }
+  
+  async deleteLandingPage(id: number): Promise<void> {
+    await db.delete(landingPages).where(eq(landingPages.id, id));
+  }
   
   // Initialize defaults if needed
   private async initializeDefaults() {
@@ -702,9 +831,32 @@ export class DatabaseStorage implements IStorage {
   }
   
   // Content methods
-  async getContent(pageId: string, language: string): Promise<Content | undefined> {
-    const [content] = await db.select().from(contents)
-      .where(and(eq(contents.pageId, pageId), eq(contents.language, language)));
+  async getContent(pageId: string, language: string, siteCode?: SiteCode): Promise<Content | undefined> {
+    let content;
+    
+    if (siteCode) {
+      // Buscar conteúdo específico para o site
+      const [result] = await db.select().from(contents)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, contents.id),
+          eq(contentSites.contentType, 'content'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(and(
+          eq(contents.pageId, pageId),
+          eq(contents.language, language)
+        ));
+      content = result ? result.contents : undefined;
+    } else {
+      // Buscar conteúdo genérico
+      const [result] = await db.select().from(contents)
+        .where(and(
+          eq(contents.pageId, pageId),
+          eq(contents.language, language)
+        ));
+      content = result;
+    }
+    
     return content;
   }
   
