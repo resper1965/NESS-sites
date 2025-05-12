@@ -168,35 +168,63 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">1991</h3>
-                      <p className="text-gray-700 lowercase">a ness. é fundada como uma empresa de consultoria em infraestrutura de TI.</p>
+                      <p className="text-gray-700 lowercase">a ness. é fundada como tercerização da área de tecnologia de um grande grupo econômico.</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                   <div className="md:w-1/2 md:pl-8 md:text-left"></div>
+                </div>
+                
+                {/* 1992 */}
+                <div className="mb-12 flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right"></div>
+                  <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">1992</h3>
+                      <p className="text-gray-700 lowercase">atividades de infraestrutura, processamento de dados e BPO.</p>
+                    </div>
+                  </div>
                 </div>
                 
                 {/* 1998 */}
                 <div className="mb-12 flex flex-col md:flex-row items-center">
-                  <div className="md:w-1/2 md:pr-8 md:text-right"></div>
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">1998</h3>
+                      <p className="text-gray-700 lowercase">início na atividade de infraestrutura em grandes eventos por todo diversos países da europa, américas, africa e ásia.</p>
+                    </div>
+                  </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
-                  <div className="md:w-1/2 md:pl-8 md:text-left">
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">1998</h3>
-                      <p className="text-gray-700 lowercase">expansão para segurança cibernética, antecipando necessidades emergentes.</p>
-                    </div>
-                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left"></div>
                 </div>
                 
                 {/* 2005 */}
                 <div className="mb-12 flex flex-col md:flex-row items-center">
-                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                  <div className="md:w-1/2 md:pr-8 md:text-right"></div>
+                  <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2005</h3>
-                      <p className="text-gray-700 lowercase">lançamento da divisão de software personalizado para ampliar capacidades.</p>
+                      <p className="text-gray-700 lowercase">início de serviços de privacidade e segurança digital.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* 2014 - Lado esquerdo */}
+                <div className="mb-12 flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2014</h3>
+                      <p className="text-gray-700 lowercase">lançamento da divisão de software e processos.</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -205,7 +233,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left"></div>
                 </div>
                 
-                {/* 2012 */}
+                {/* 2014 - Lado direito - Healthcare */}
                 <div className="mb-12 flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right"></div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -213,18 +241,46 @@ export default function AboutPage() {
                   </div>
                   <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md">
-                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2012</h3>
-                      <p className="text-gray-700 lowercase">início dos serviços de computação em nuvem e transição para modelo centrado em serviços.</p>
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2014</h3>
+                      <p className="text-gray-700 lowercase">incubação de projetos de saúde. NESS Technology healthcare inicia como incubação.</p>
                     </div>
                   </div>
                 </div>
                 
-                {/* 2018 */}
+                {/* 2016 - Trustness */}
+                <div className="mb-12 flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2016</h3>
+                      <p className="text-gray-700 lowercase">incubação da Trustness.</p>
+                    </div>
+                  </div>
+                  <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left"></div>
+                </div>
+                
+                {/* 2017 - Healthcare BU */}
+                <div className="mb-12 flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right"></div>
+                  <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2017</h3>
+                      <p className="text-gray-700 lowercase">criação da unidade de negócios NESS Health como Business Unit da NESS.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* 2018 - Trustness BU */}
                 <div className="mb-12 flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2018</h3>
-                      <p className="text-gray-700 lowercase">renovação da marca e reposicionamento em torno de unidades de serviço especializadas.</p>
+                      <p className="text-gray-700 lowercase">Trustness como unidade de negócios.</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -233,18 +289,60 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left"></div>
                 </div>
                 
-                {/* 2025 */}
-                <div className="flex flex-col md:flex-row items-center">
+                {/* 2019 - Healthcare spin-off */}
+                <div className="mb-12 flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right"></div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
                     <div className="w-3 h-3 bg-white rounded-full"></div>
                   </div>
                   <div className="md:w-1/2 md:pl-8 md:text-left">
-                    <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#00ade0]">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2019</h3>
+                      <p className="text-gray-700 lowercase">spin-off da NESS Health da NESS.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* 2021 - forense.io incubation */}
+                <div className="mb-12 flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2021</h3>
+                      <p className="text-gray-700 lowercase">incubação da forense.io.</p>
+                    </div>
+                  </div>
+                  <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left"></div>
+                </div>
+                
+                {/* 2022 - forense.io BU */}
+                <div className="mb-12 flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right"></div>
+                  <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2022</h3>
+                      <p className="text-gray-700 lowercase">forense.io como unidade de negócios.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* 2025 */}
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-white p-6 rounded-lg shadow-md border-r-4 border-[#00ade0]">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2025</h3>
                       <p className="text-gray-700 lowercase">estabelecida como uma plataforma modular para transformação digital confiável.</p>
                     </div>
                   </div>
+                  <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left"></div>
                 </div>
               </div>
             </div>
