@@ -36,12 +36,10 @@ function Router() {
       <Route path="/auth" component={AuthPage} />
       
       {/* Admin Routes - Protected */}
-      <Route path="/admin">
-        <ProtectedRoute path="/admin/dashboard" component={AdminDashboard} />
-        <ProtectedRoute path="/admin/content" component={ContentEditor} />
-        <ProtectedRoute path="/admin/jobs" component={JobsEditor} />
-        <ProtectedRoute path="/admin/news" component={NewsEditor} />
-      </Route>
+      <Route path="/admin/dashboard" component={() => <ProtectedRoute path="/admin/dashboard" component={AdminDashboard} />} />
+      <Route path="/admin/content" component={() => <ProtectedRoute path="/admin/content" component={ContentEditor} />} />
+      <Route path="/admin/jobs" component={() => <ProtectedRoute path="/admin/jobs" component={JobsEditor} />} />
+      <Route path="/admin/news" component={() => <ProtectedRoute path="/admin/news" component={NewsEditor} />} />
       
       {/* Fallback to 404 */}
       <Route component={NotFound} />
