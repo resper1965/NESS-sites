@@ -15,6 +15,8 @@ import ContactPage from "@/pages/contact-page";
 import AuthPage from "@/pages/auth-page";
 import AdminLoginPage from "@/pages/admin/login-page";
 import AdminDashboardPage from "@/pages/admin/dashboard-page";
+import InfraOpsPage from "@/pages/services/infraops-page";
+import SecOpsPage from "@/pages/services/secops-page";
 import { ProtectedRoute } from "./lib/protected-route";
 import { AuthProvider } from "@/hooks/use-auth";
 import { I18nProvider } from "@/lib/i18n";
