@@ -248,7 +248,7 @@ export default function AuthPage() {
               <div className="h-full flex flex-col justify-center">
                 <h2 className="text-3xl font-bold mb-6">Área Administrativa</h2>
                 <p className="text-lg mb-6">
-                  Bem-vindo ao painel administrativo da CorpTech. Aqui você pode gerenciar conteúdos institucionais, vagas, notícias e muito mais.
+                  Bem-vindo ao painel administrativo da ness. Aqui você pode gerenciar conteúdos institucionais, vagas, notícias e muito mais.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start">

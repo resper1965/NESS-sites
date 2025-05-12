@@ -50,8 +50,8 @@ function AdminLayout({ children, title }: AdminLayoutProps) {
   return (
     <div className="min-h-screen bg-gray-100">
       <SEOHead 
-        title={`${title} - Admin CorpTech`}
-        description="Painel administrativo da CorpTech"
+        title={`${title} - Admin ness.`}
+        description="Painel administrativo da ness."
         canonicalUrl="/admin"
       />
       
