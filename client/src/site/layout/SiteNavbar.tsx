@@ -3,10 +3,11 @@ import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { useSite } from '../SiteContext';
 import { useI18n } from '@/lib/i18n';
+import LanguageSelector from '@/components/common/LanguageSelector';
 
 export default function SiteNavbar() {
   const { siteConfig } = useSite();
-  const { language, t } = useI18n();
+  const { t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
@@ -27,126 +28,86 @@ export default function SiteNavbar() {
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
-
-  // Menus específicos por site
-  const getMenuItems = () => {
-    const items = [
-      { path: '/', label: t('navbar.home') },
-      { path: '/about', label: t('navbar.about') },
-      { path: '/services', label: t('navbar.services') },
-    ];
-    
-    // Itens específicos por site
-    switch (siteConfig.code) {
-      case 'ness':
-        items.push(
-          { path: '/jobs', label: t('navbar.jobs') },
-          { path: '/news', label: t('navbar.news') }
-        );
-        break;
-      case 'trustness':
-        items.push(
-          { path: '/solutions', label: t('navbar.solutions') },
-          { path: '/cases', label: t('navbar.cases') }
-        );
-        break;
-      case 'forense':
-        items.push(
-          { path: '/services/incident-response', label: t('navbar.incident_response') },
-          { path: '/services/digital-forensics', label: t('navbar.digital_forensics') }
-        );
-        break;
-    }
-    
-    // Item comum de contato
-    items.push({ path: '/contact', label: t('navbar.contact') });
-    
-    return items;
-  };
-
-  // Nome formatado do site com ponto em destaque
-  const formattedSiteName = () => {
-    if (siteConfig.name.includes('.')) {
-      const parts = siteConfig.name.split('.');
-      return (
-        <span className="font-['Montserrat'] text-xl">
-          {parts[0]}
-          <span className="text-[var(--primary-color)]">.</span>
-          {parts.length > 1 ? parts[1] : ''}
-        </span>
-      );
-    }
-    return <span className="font-['Montserrat'] text-xl">{siteConfig.name}</span>;
-  };
+  
+  const sitePrefix = `/site/${siteConfig.code}`;
 
   return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
-      }`}
-    >
-      <div className="container mx-auto px-4">
+    <header className={`sticky top-0 z-50 w-full transition-all duration-200 ${
+      isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            {siteConfig.logo ? (
-              <img 
-                src={siteConfig.logo} 
-                alt={siteConfig.name} 
-                className="h-10" 
-              />
-            ) : (
-              formattedSiteName()
-            )}
+          <Link href={sitePrefix} className="flex items-center">
+            <span className="text-2xl font-normal">
+              {siteConfig.name}
+            </span>
           </Link>
-          
-          {/* Nav Links - Desktop */}
-          <div className="hidden md:flex items-center space-x-8">
-            {getMenuItems().map((item) => (
-              <Link 
-                key={item.path} 
-                href={item.path}
-                className={`text-sm font-medium hover:text-[var(--primary-color)] transition-colors ${
-                  location === item.path ? 'text-[var(--primary-color)]' : 'text-gray-700'
-                }`}
-              >
-                {item.label}
+
+          {/* Menu Desktop */}
+          <div className="hidden md:flex items-center space-x-6">
+            <nav className="flex items-center space-x-6">
+              <Link href={`${sitePrefix}/about`} className="text-gray-700 hover:text-primary transition">
+                {t('menu.about')}
               </Link>
-            ))}
+              <Link href={`${sitePrefix}/services`} className="text-gray-700 hover:text-primary transition">
+                {t('menu.services')}
+              </Link>
+              <Link href={`${sitePrefix}/jobs`} className="text-gray-700 hover:text-primary transition">
+                {t('menu.jobs')}
+              </Link>
+              <Link href={`${sitePrefix}/news`} className="text-gray-700 hover:text-primary transition">
+                {t('menu.news')}
+              </Link>
+            </nav>
+            
+            {/* Language Selector */}
+            <LanguageSelector />
+            
+            {/* Contact Button */}
+            <Link href={`${sitePrefix}/contact`} className="bg-[var(--primary-color)] text-white px-4 py-2 rounded hover:bg-opacity-90 transition">
+              {t('menu.contact')}
+            </Link>
           </div>
-          
+
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button 
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-[var(--primary-color)]"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <button 
+            className="md:hidden text-gray-700 hover:text-primary"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
       
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="container mx-auto px-4 py-3">
-            <div className="flex flex-col space-y-4">
-              {getMenuItems().map((item) => (
-                <Link 
-                  key={item.path} 
-                  href={item.path}
-                  className={`text-sm font-medium hover:text-[var(--primary-color)] transition-colors ${
-                    location === item.path ? 'text-[var(--primary-color)]' : 'text-gray-700'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+        <div className="md:hidden bg-white border-t">
+          <div className="container mx-auto px-4 py-4">
+            <nav className="flex flex-col space-y-4">
+              <Link href={`${sitePrefix}/about`}>
+                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.about')}</a>
+              </Link>
+              <Link href={`${sitePrefix}/services`}>
+                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.services')}</a>
+              </Link>
+              <Link href={`${sitePrefix}/jobs`}>
+                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.jobs')}</a>
+              </Link>
+              <Link href={`${sitePrefix}/news`}>
+                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.news')}</a>
+              </Link>
+              <Link href={`${sitePrefix}/contact`}>
+                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.contact')}</a>
+              </Link>
+              <div className="flex items-center py-2">
+                <span className="text-gray-700 mr-2">{t('language')}:</span>
+                <LanguageSelector />
+              </div>
+            </nav>
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

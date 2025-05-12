@@ -1,6 +1,8 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 import { SITE_CODES, type SiteCode } from '@shared/schema';
 
+export type { SiteCode };
+
 // Definição das configurações para cada site
 interface SiteConfig {
   name: string;
