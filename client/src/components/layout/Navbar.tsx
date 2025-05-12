@@ -168,10 +168,10 @@ export default function Navbar() {
         <div className="md:hidden bg-black">
           <div className="container mx-auto px-4 py-2">
             <div className="flex flex-col space-y-3 pb-4">
-              <Link href="/" className="text-white hover:text-accent transition duration-200 font-medium">
+              <Link href="/" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.home')}
               </Link>
-              <Link href="/about" className="text-white hover:text-accent transition duration-200 font-medium">
+              <Link href="/about" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.about')}
               </Link>
               
@@ -214,18 +214,18 @@ export default function Navbar() {
                 )}
               </div>
               
-              <Link href="/jobs" className="text-white hover:text-accent transition duration-200 font-medium">
+              <Link href="/jobs" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.jobs')}
               </Link>
-              <Link href="/news" className="text-white hover:text-accent transition duration-200 font-medium">
+              <Link href="/news" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.news')}
               </Link>
-              <Link href="/contact" className="text-white hover:text-accent transition duration-200 font-medium">
+              <Link href="/contact" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.contact')}
               </Link>
               
               <div className="border-t border-gray-600 pt-4">
-                <p className="text-white mb-2 text-sm">{t('nav.language')}:</p>
+                <p className="text-white mb-2 text-sm lowercase">{t('nav.language')}:</p>
                 <div className="flex space-x-4">
                   <button onClick={() => {
                     const { setLanguage } = useI18n();
