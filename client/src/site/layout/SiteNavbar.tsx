@@ -85,20 +85,20 @@ export default function SiteNavbar() {
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href={`${sitePrefix}/about`}>
-                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.about')}</a>
+              <Link href={`${sitePrefix}/about`} className="text-gray-700 hover:text-primary transition py-2">
+                {t('menu.about')}
               </Link>
-              <Link href={`${sitePrefix}/services`}>
-                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.services')}</a>
+              <Link href={`${sitePrefix}/services`} className="text-gray-700 hover:text-primary transition py-2">
+                {t('menu.services')}
               </Link>
-              <Link href={`${sitePrefix}/jobs`}>
-                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.jobs')}</a>
+              <Link href={`${sitePrefix}/jobs`} className="text-gray-700 hover:text-primary transition py-2">
+                {t('menu.jobs')}
               </Link>
-              <Link href={`${sitePrefix}/news`}>
-                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.news')}</a>
+              <Link href={`${sitePrefix}/news`} className="text-gray-700 hover:text-primary transition py-2">
+                {t('menu.news')}
               </Link>
-              <Link href={`${sitePrefix}/contact`}>
-                <a className="text-gray-700 hover:text-primary transition py-2">{t('menu.contact')}</a>
+              <Link href={`${sitePrefix}/contact`} className="text-gray-700 hover:text-primary transition py-2">
+                {t('menu.contact')}
               </Link>
               <div className="flex items-center py-2">
                 <span className="text-gray-700 mr-2">{t('language')}:</span>
