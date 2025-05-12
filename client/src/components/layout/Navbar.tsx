@@ -81,9 +81,6 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6 items-center">
-            <Link href="/" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
-              {t('nav.home')}
-            </Link>
             <Link href="/about" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
               {t('nav.about')}
             </Link>
@@ -137,12 +134,14 @@ export default function Navbar() {
             <Link href="/news" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
               {t('nav.news')}
             </Link>
-            <Link href="/contact" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
-              {t('nav.contact')}
-            </Link>
             
             {/* Language Selector */}
             <LanguageSelector />
+            
+            {/* Contact as a button */}
+            <Link href="/contact" className="bg-[#00ade0] hover:bg-[#0095c4] text-white py-2 px-4 rounded-sm transition duration-200 lowercase">
+              {t('nav.contact')}
+            </Link>
             
             {/* Only show Admin button if user is logged in */}
             {user && (
@@ -168,9 +167,6 @@ export default function Navbar() {
         <div className="md:hidden bg-black">
           <div className="container mx-auto px-4 py-2">
             <div className="flex flex-col space-y-3 pb-4">
-              <Link href="/" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
-                {t('nav.home')}
-              </Link>
               <Link href="/about" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.about')}
               </Link>
@@ -220,9 +216,6 @@ export default function Navbar() {
               <Link href="/news" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.news')}
               </Link>
-              <Link href="/contact" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
-                {t('nav.contact')}
-              </Link>
               
               <div className="border-t border-gray-600 pt-4">
                 <p className="text-white mb-2 text-sm lowercase">{t('nav.language')}:</p>
@@ -241,6 +234,11 @@ export default function Navbar() {
                   }} className="text-white hover:text-accent">ES</button>
                 </div>
               </div>
+              
+              {/* Contact as a button */}
+              <Link href="/contact" className="bg-[#00ade0] hover:bg-[#0095c4] text-white py-2 px-4 rounded-sm transition duration-200 text-center lowercase">
+                {t('nav.contact')}
+              </Link>
               
               {/* Only show Admin button if user is logged in */}
               {user && (
