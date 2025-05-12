@@ -83,4 +83,46 @@
     height: 4px;
     background-color: #00ade0;
   }
+  
+  /* Hero styles */
+  .hero {
+    position: relative;
+    height: 70vh;
+    background: linear-gradient(to bottom, #f1f3f5, #e0e3e5); /* leve contraste */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%); /* ângulo leve no rodapé */
+  }
+  
+  .hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1.5rem;
+    color: #00ade0;
+    animation: bounce 1.5s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
 }
