@@ -656,6 +656,20 @@ export class DatabaseStorage implements IStorage {
     return user;
   }
   
+  async updateUser(id: number, userData: Partial<User>): Promise<User> {
+    const [user] = await db
+      .update(users)
+      .set(userData)
+      .where(eq(users.id, id))
+      .returning();
+    
+    if (!user) {
+      throw new Error(`User with id ${id} not found`);
+    }
+    
+    return user;
+  }
+  
   // Content methods
   async getContent(pageId: string, language: string): Promise<Content | undefined> {
     const [content] = await db.select().from(contents)

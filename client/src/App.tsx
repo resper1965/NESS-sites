@@ -11,11 +11,10 @@ import JobsPage from "@/pages/jobs-page";
 import NewsPage from "@/pages/news-page";
 import EthicsPage from "@/pages/ethics-page";
 import PrivacyPage from "@/pages/privacy-page";
+import ContactPage from "@/pages/contact-page";
 import AuthPage from "@/pages/auth-page";
-import AdminDashboard from "@/pages/admin/dashboard";
-import ContentEditor from "@/pages/admin/content-editor";
-import JobsEditor from "@/pages/admin/jobs-editor";
-import NewsEditor from "@/pages/admin/news-editor";
+import AdminLoginPage from "@/pages/admin/login-page";
+import AdminDashboardPage from "@/pages/admin/dashboard-page";
 import { ProtectedRoute } from "./lib/protected-route";
 import { AuthProvider } from "@/hooks/use-auth";
 import { I18nProvider } from "@/lib/i18n";
@@ -31,15 +30,14 @@ function Router() {
       <Route path="/news" component={NewsPage} />
       <Route path="/ethics" component={EthicsPage} />
       <Route path="/privacy" component={PrivacyPage} />
+      <Route path="/contact" component={ContactPage} />
       
       {/* Auth Route */}
       <Route path="/auth" component={AuthPage} />
       
-      {/* Admin Routes - Protected */}
-      <Route path="/admin/dashboard" component={() => <ProtectedRoute path="/admin/dashboard" component={AdminDashboard} />} />
-      <Route path="/admin/content" component={() => <ProtectedRoute path="/admin/content" component={ContentEditor} />} />
-      <Route path="/admin/jobs" component={() => <ProtectedRoute path="/admin/jobs" component={JobsEditor} />} />
-      <Route path="/admin/news" component={() => <ProtectedRoute path="/admin/news" component={NewsEditor} />} />
+      {/* Admin Routes */}
+      <Route path="/admin/login" component={AdminLoginPage} />
+      <Route path="/admin/dashboard" component={AdminDashboardPage} />
       
       {/* Fallback to 404 */}
       <Route component={NotFound} />
