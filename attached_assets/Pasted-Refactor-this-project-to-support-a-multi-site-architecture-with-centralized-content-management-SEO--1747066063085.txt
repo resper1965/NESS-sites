@@ -1,0 +1,80 @@
+Refactor this project to support a multi-site architecture with centralized content management, SEO optimization, and institutional configuration per brand.
+
+General Requirements:
+Preserve all existing content from the current NESS website (ness.com.br) — the content must be migrated into the new structure (inside /site/ness), not lost.
+
+Support and isolate content for three brands:
+
+ness.com.br
+
+trustness.com.br
+
+forense.io
+
+Directory Structure:
+/site/ness → homepage and content for NESS
+
+/site/trustness → homepage and content for Trustness
+
+/site/forense → homepage and content for forense.io
+
+/admin → central CMS interface
+
+/api/vagas → job listing API with site filter
+
+/api/noticias → blog/news API with site filter
+
+/api/landing → landing page API with slug and site filter
+
+/api/config → endpoint to expose each site's metadata (see below)
+
+CMS Features (/admin):
+Manage content types:
+
+Vagas (job listings)
+
+Notícias (blog/news posts)
+
+Landing pages (title, slug, meta, sections, CTA)
+
+Manage institutional configuration per site:
+
+Privacy policy and terms of use (editable text or markdown)
+
+Social media URLs (LinkedIn, Instagram, etc.)
+
+Contact email or recipient per site (for contact forms)
+
+Each content item and config block must include assignment to one or more sites (ness, trustness, forense)
+
+Provide simple preview and status (published/draft) control
+
+SEO Requirements:
+Support per-page metadata: <title>, <meta description>, canonical URL
+
+Static-like, SEO-friendly routes for each site:
+
+/trustness/blog/lgpd-guide
+
+/forense/lp/emergency-response
+
+/ness/lp/cloud-security
+
+OpenGraph image and metadata per content item
+
+Final Output:
+Routes for each website:
+
+/site/ness
+
+/site/trustness
+
+/site/forense
+
+CMS panel with CRUD for content and settings
+
+APIs to serve structured content per site
+
+Content from the current NESS site is migrated and available under /site/ness
+
+All sites must share a unified design system but allow for distinct identity (logo, palette, voice). The CMS must act as the control center for both content and brand-level configuration.
