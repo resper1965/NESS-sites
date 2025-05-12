@@ -1,4 +1,14 @@
-import { users, type User, type InsertUser, jobs, type Job, type InsertJob, news, type News, type InsertNews, contents, type Content, type InsertContent, activityLogs, type ActivityLog, type InsertActivityLog } from "@shared/schema";
+import { 
+  users, type User, type InsertUser, 
+  jobs, type Job, type InsertJob, 
+  news, type News, type InsertNews, 
+  contents, type Content, type InsertContent, 
+  activityLogs, type ActivityLog, type InsertActivityLog,
+  sites, type Site, type InsertSite,
+  contentSites, type ContentSite, type InsertContentSite,
+  landingPages, type LandingPage, type InsertLandingPage,
+  type SiteCode, SITE_CODES
+} from "@shared/schema";
 import session from "express-session";
 import createMemoryStore from "memorystore";
 import connectPg from "connect-pg-simple";
@@ -101,29 +111,50 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   updateUser(id: number, user: Partial<User>): Promise<User>;
   
+  // Site methods
+  getSite(code: SiteCode): Promise<Site | undefined>;
+  getAllSites(): Promise<Site[]>;
+  createSite(site: InsertSite): Promise<Site>;
+  updateSite(code: SiteCode, site: Partial<Site>): Promise<Site>;
+  
   // Content methods
-  getContent(pageId: string, language: string): Promise<Content | undefined>;
+  getContent(pageId: string, language: string, siteCode?: SiteCode): Promise<Content | undefined>;
   createContent(content: InsertContent): Promise<Content>;
   updateContent(id: number, content: Partial<Content>): Promise<Content>;
-  getContentCount(language: string): Promise<number>;
+  getContentCount(language: string, siteCode?: SiteCode): Promise<number>;
+  
+  // Content-Site associations
+  associateContentToSite(contentId: number, contentType: string, siteCode: SiteCode): Promise<ContentSite>;
+  removeContentFromSite(contentId: number, contentType: string, siteCode: SiteCode): Promise<void>;
+  getContentSites(contentId: number, contentType: string): Promise<SiteCode[]>;
+  
+  // Landing Page methods
+  getLandingPages(language: string, siteCode?: SiteCode): Promise<LandingPage[]>;
+  getLandingPageBySlug(slug: string, language: string, siteCode?: SiteCode): Promise<LandingPage | undefined>;
+  getLandingPage(id: number): Promise<LandingPage | undefined>;
+  createLandingPage(landingPage: InsertLandingPage): Promise<LandingPage>;
+  updateLandingPage(id: number, landingPage: Partial<LandingPage>): Promise<LandingPage>;
+  deleteLandingPage(id: number): Promise<void>;
   
   // Job methods
-  getJobs(language: string): Promise<Job[]>;
-  getFeaturedJobs(language: string): Promise<Job[]>;
+  getJobs(language: string, siteCode?: SiteCode): Promise<Job[]>;
+  getFeaturedJobs(language: string, siteCode?: SiteCode): Promise<Job[]>;
   getJob(id: number, language: string): Promise<Job | undefined>;
+  getJobBySlug(slug: string, language: string, siteCode?: SiteCode): Promise<Job | undefined>;
   createJob(job: InsertJob): Promise<Job>;
   updateJob(id: number, job: Partial<Job>): Promise<Job>;
   deleteJob(id: number): Promise<void>;
-  getJobCount(language: string): Promise<number>;
+  getJobCount(language: string, siteCode?: SiteCode): Promise<number>;
   
   // News methods
-  getNewsItems(language: string): Promise<News[]>;
-  getLatestNews(language: string): Promise<News[]>;
+  getNewsItems(language: string, siteCode?: SiteCode): Promise<News[]>;
+  getLatestNews(language: string, siteCode?: SiteCode): Promise<News[]>;
   getNewsItem(id: number, language: string): Promise<News | undefined>;
+  getNewsBySlug(slug: string, language: string, siteCode?: SiteCode): Promise<News | undefined>;
   createNewsItem(newsItem: InsertNews): Promise<News>;
   updateNewsItem(id: number, newsItem: Partial<News>): Promise<News>;
   deleteNewsItem(id: number): Promise<void>;
-  getNewsCount(language: string): Promise<number>;
+  getNewsCount(language: string, siteCode?: SiteCode): Promise<number>;
   
   // Activity logs
   createActivityLog(log: InsertActivityLog): Promise<ActivityLog>;

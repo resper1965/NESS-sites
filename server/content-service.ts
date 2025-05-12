@@ -39,6 +39,11 @@ export class ContentService {
         description: content.description || "",
         content: content.content || "",
         metadata: content.metadata || {},
+        metaTitle: content.metaTitle || content.title || pageId,
+        metaDescription: content.metaDescription || content.description || "",
+        ogImage: content.ogImage || "",
+        canonicalUrl: content.canonicalUrl || "",
+        published: content.published !== undefined ? content.published : true,
       });
     }
   }
