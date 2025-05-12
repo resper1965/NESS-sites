@@ -22,11 +22,25 @@ export default function ServicesSection({
 }: ServicesSectionProps) {
   const { t } = useI18n();
   
+  // Função para formatar o título do serviço com o ponto colorido
+  const formatServiceTitle = (title: string) => {
+    // Se o título já estiver no formato n.NOME
+    if (title.includes('.')) {
+      const [prefix, suffix] = title.split('.');
+      return (
+        <span className="font-normal font-['Montserrat'] inline-flex items-center">
+          {prefix}<span style={{color: "#00ade0", marginLeft: "1px", marginRight: "1px"}}>.</span>{suffix}
+        </span>
+      );
+    }
+    return <span className="font-['Montserrat']">{title}</span>;
+  };
+  
   return (
     <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">{title}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-['Montserrat']">{title}</h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
           <p className="text-lg max-w-3xl mx-auto text-gray-700">
             {description}
@@ -41,7 +55,9 @@ export default function ServicesSection({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={service.icon}></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-4">{service.title}</h3>
+              <h3 className="text-xl text-primary mb-4 font-['Montserrat']">
+                {formatServiceTitle(service.title)}
+              </h3>
               <p className="text-gray-700 mb-6">
                 {service.description}
               </p>

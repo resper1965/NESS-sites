@@ -4,14 +4,10 @@ import SEOHead from '@/components/common/SEOHead';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
-import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import SpinoffsSection from '@/components/sections/SpinoffsSection';
 import StatsSection from '@/components/sections/StatsSection';
-import JobsSection from '@/components/sections/JobsSection';
-import NewsSection from '@/components/sections/NewsSection';
-import ContactSection from '@/components/sections/ContactSection';
-import { Content, Job, News } from '@shared/schema';
+import { Content } from '@shared/schema';
 
 export default function HomePage() {
   const { t, language } = useI18n();
@@ -21,21 +17,12 @@ export default function HomePage() {
     queryKey: [`/api/content/home?lang=${language}`],
   });
 
-  // Fetch latest jobs
-  const { data: jobs, isLoading: jobsLoading } = useQuery<Job[]>({
-    queryKey: [`/api/jobs/featured?lang=${language}`],
-  });
-
-  // Fetch latest news
-  const { data: news, isLoading: newsLoading } = useQuery<News[]>({
-    queryKey: [`/api/news/latest?lang=${language}`],
-  });
-
   // Structured data for SEO
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "ness",
+    "name": "ness.",
+    "foundingDate": "1991",
     "url": "https://www.ness.com.br",
     "logo": "https://www.ness.com.br/logo.png",
     "contactPoint": {
@@ -59,37 +46,13 @@ export default function HomePage() {
 
   // Default values in case the data is still loading
   const heroProps = content?.hero || {
-    title: t('home.hero.title'),
-    subtitle: t('home.hero.subtitle'),
+    title: "Transformamos Operações Críticas em Vantagem Estratégica",
+    subtitle: "Desde 1991 fornecendo as mais avançadas soluções em segurança, infraestrutura e operações críticas para empresas que buscam vantagem competitiva através da tecnologia.",
     backgroundImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080'
   };
 
-  const aboutProps = content?.about || {
-    title: t('about.title'),
-    description: 'Somos uma empresa de tecnologia com mais de 15 anos de experiência no mercado, oferecendo soluções inovadoras e sustentáveis.',
-    content: 'Desenvolvemos tecnologias que transformam a maneira como as empresas operam, melhorando a eficiência e garantindo a segurança dos dados em todas as operações.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    values: [
-      {
-        title: 'Inovação constante',
-        description: 'Buscamos sempre as melhores soluções tecnológicas para nossos clientes.',
-        icon: 'check'
-      },
-      {
-        title: 'Segurança em primeiro lugar',
-        description: 'Priorizamos a proteção de dados e a segurança digital em todos os projetos.',
-        icon: 'check'
-      },
-      {
-        title: 'Compromisso com resultados',
-        description: 'Trabalhamos para entregar soluções que geram resultados mensuráveis.',
-        icon: 'check'
-      }
-    ]
-  };
-
   const servicesProps = content?.services || {
-    title: t('services.title'),
+    title: "Nossos Serviços",
     description: 'Transformamos operações críticas em vantagem estratégica para sua empresa através de serviços especializados em segurança e tecnologia.',
     services: [
       {
@@ -158,33 +121,18 @@ export default function HomePage() {
   const statsProps = {
     backgroundImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600',
     stats: [
-      { value: '15+', label: 'Anos de experiência' },
+      { value: '30+', label: 'Anos de experiência' },
       { value: '200+', label: 'Clientes satisfeitos' },
       { value: '50+', label: 'Especialistas' },
       { value: '98%', label: 'Taxa de renovação' }
     ]
   };
 
-  // Default empty states for jobs and news
-  const jobsContent = {
-    title: t('jobs.title'),
-    description: 'Junte-se à nossa equipe de especialistas e construa uma carreira de sucesso em tecnologia.',
-    jobs: jobs || [],
-    viewAllLink: '/jobs'
-  };
-
-  const newsContent = {
-    title: t('news.title'),
-    description: 'Fique por dentro das novidades sobre nossa empresa e o mercado de tecnologia.',
-    news: news || [],
-    viewAllLink: '/news'
-  };
-
   return (
     <>
       <SEOHead 
-        title="ness - Transformamos Operações Críticas em Vantagem Estratégica"
-        description="Soluções especializadas em segurança, infraestrutura e operações críticas para empresas que buscam vantagem competitiva através da tecnologia."
+        title="ness. - Transformamos Operações Críticas em Vantagem Estratégica"
+        description="Desde 1991 fornecendo soluções especializadas em segurança, infraestrutura e operações críticas para empresas que buscam vantagem competitiva através da tecnologia."
         structuredData={structuredData}
       />
       
@@ -194,19 +142,11 @@ export default function HomePage() {
         <HeroSection 
           title={heroProps.title}
           subtitle={heroProps.subtitle}
-          ctaText1={t('home.hero.cta1')}
+          ctaText1="Conheça nossos serviços"
           ctaUrl1="#services"
-          ctaText2={t('home.hero.cta2')}
-          ctaUrl2="#contact"
+          ctaText2="Entre em contato"
+          ctaUrl2="/contact"
           backgroundImage={heroProps.backgroundImage}
-        />
-        
-        <AboutSection 
-          title={aboutProps.title}
-          description={aboutProps.description}
-          content={aboutProps.content}
-          values={aboutProps.values}
-          image={aboutProps.image}
         />
         
         <ServicesSection 
@@ -225,26 +165,6 @@ export default function HomePage() {
           backgroundImage={statsProps.backgroundImage}
           stats={statsProps.stats}
         />
-        
-        {!jobsLoading && jobs?.length > 0 && (
-          <JobsSection 
-            title={jobsContent.title}
-            description={jobsContent.description}
-            jobs={jobsContent.jobs}
-            viewAllLink={jobsContent.viewAllLink}
-          />
-        )}
-        
-        {!newsLoading && news?.length > 0 && (
-          <NewsSection 
-            title={newsContent.title}
-            description={newsContent.description}
-            news={newsContent.news}
-            viewAllLink={newsContent.viewAllLink}
-          />
-        )}
-        
-        <ContactSection />
       </main>
       
       <Footer />
