@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="text-white text-xl mb-6 inline-block lowercase">
-              ness<span className="ness-dot ml-[1px]" style={{color: "#00ade0"}}></span>
+              ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>
             </Link>
             <p className="text-gray-300 mb-6">
               Fornecemos soluções empresariais de alta qualidade com foco em cibersegurança, infraestrutura e arquitetura de software.
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
-          <p>&copy; {currentYear} ness<span className="ness-dot ml-[1px]" style={{color: "#00ade0"}}></span> {t('footer.rights')}.</p>
+          <p>&copy; {currentYear} ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span> {t('footer.rights')}.</p>
           <div className="mt-2">
             <Link href="/auth" className="text-gray-300 hover:text-accent transition duration-300">{t('nav.login')}</Link>
           </div>

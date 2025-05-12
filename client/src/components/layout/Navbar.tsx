@@ -43,7 +43,7 @@ export default function Navbar() {
         <nav className="flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="text-white text-xl lowercase">
-              ness<span className="ness-dot ml-[1px]" style={{color: "#00ade0"}}></span>
+              ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>
             </Link>
           </div>
 
