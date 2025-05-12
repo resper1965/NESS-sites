@@ -78,15 +78,39 @@ export default function AboutPage() {
       <Navbar />
       
       <main>
-        {/* Hero Section sem imagem (fundo azul gradiente) */}
-        <section className="relative w-full py-32 overflow-hidden bg-gradient-to-b from-blue-600 to-blue-800">
+        {/* Hero Section com imagem escurecida */}
+        <section className="relative w-full py-32 overflow-hidden">
+          {/* Imagem de fundo escurecida */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-primary/50 mix-blend-multiply z-10"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&h=1080&q=80" 
+              alt="Equipe ness" 
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+          
           {/* Conteúdo */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="font-['Montserrat'] font-normal text-5xl md:text-6xl text-white mb-6">
-                Transformação, performance e inovação em negócios
+                Quem somos
               </h1>
-              <div className="text-xl text-white/90 max-w-3xl mx-auto">
+              <p className="text-xl text-white/90 max-w-3xl mx-auto">
+                Há mais de 30 anos transformando desafios tecnológicos em oportunidades de negócio
+              </p>
+            </div>
+          </div>
+        </section>
+        
+        {/* NESS Section */}
+        <section className="py-16 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="font-['Montserrat'] font-normal text-3xl md:text-4xl mb-8">
+                Transformação, performance e inovação em negócios
+              </h2>
+              <div className="text-xl text-white/90">
                 <p className="mb-6">
                   A NESS é uma empresa brasileira de tecnologia com foco na solução de problemas reais com uso de inovação, transformação e na entrega de resultados com velocidade e segurança.
                 </p>

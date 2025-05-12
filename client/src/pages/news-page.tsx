@@ -28,14 +28,14 @@ export default function NewsPage() {
 
   // Get unique categories
   const categories = news 
-    ? ['all', ...new Set(news.map(item => item.category))]
+    ? ['all', ...[...new Set(news.map(item => item.category))]]
     : ['all', 'company', 'technology', 'events'];
 
   return (
     <>
       <SEOHead 
-        title={`${t('news.title')} - CorpTech`}
-        description="Fique por dentro das últimas notícias e atualizações da CorpTech e do mundo da tecnologia."
+        title={`${t('news.title')} - ness.`}
+        description="Fique por dentro das últimas notícias e atualizações da ness. e do mundo da tecnologia."
         canonicalUrl="/news"
       />
       

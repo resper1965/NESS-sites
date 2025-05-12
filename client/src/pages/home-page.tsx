@@ -44,14 +44,19 @@ export default function HomePage() {
     ]
   };
 
+  // Parse metadata for getting hero and services data, or use defaults
+  const metadata = content?.metadata ? 
+    (typeof content.metadata === 'string' ? JSON.parse(content.metadata as string) : content.metadata) : 
+    {};
+  
   // Default values in case the data is still loading
-  const heroProps = content?.hero || {
+  const heroProps = metadata.hero || {
     title: "Transformando o mundo através de tecnologia",
     subtitle: "Somos um grande laboratório de tecnologia e processos focado em casos do mundo real. Uma empresa essencialmente orientada à inovar e transformar para resolver problemas e suportar transformações de diversos setores",
     backgroundImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080'
   };
 
-  const servicesProps = content?.services || {
+  const servicesProps = metadata.services || {
     title: "Nossos Serviços",
     description: 'Transformamos operações críticas em vantagem estratégica para sua empresa através de serviços especializados em segurança e tecnologia.',
     services: [
