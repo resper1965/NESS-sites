@@ -49,8 +49,8 @@ export default function NessAboutPage() {
         "1992": "atividades de infraestrutura, processamento de dados e BPO.",
         "1998": "início na atividade de infraestrutura em grandes eventos por todo diversos países da europa, américas, africa e ásia.",
         "2005": "início de serviços de privacidade e segurança digital.",
-        "20141": "lançamento da divisão de software e processos.",
-        "20142": "incubação de projetos de saúde. NESS Technology healthcare inicia como incubação.",
+        "2014-1": "lançamento da divisão de software e processos.",
+        "2014-2": "incubação de projetos de saúde. NESS Technology healthcare inicia como incubação.",
         "2016": "incubação da Trustness.",
         "2017": "criação da unidade de negócios NESS Health como Business Unit da NESS.",
         "2018": "Trustness como unidade de negócios.",
@@ -342,8 +342,8 @@ export default function NessAboutPage() {
                     <div className="w-1/2 px-6">
                       <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                         <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
-                          {year.length > 4 ? year.substring(0, 4) : year}
-                          {year.length > 4 && <span className="text-[#00ade0] text-sm">.{year.substring(4)}</span>}
+                          {year.includes('-') ? year.split('-')[0] : year}
+                          {year.includes('-') && <span className="text-[#00ade0] text-sm">.{year.split('-')[1]}</span>}
                         </span>
                         <p className="mt-2 text-gray-700 lowercase">
                           {description}
