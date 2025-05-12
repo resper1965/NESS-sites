@@ -81,10 +81,10 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6 items-center">
-            <Link href="/" className="text-white hover:text-accent transition duration-200 font-medium">
+            <Link href="/" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
               {t('nav.home')}
             </Link>
-            <Link href="/about" className="text-white hover:text-accent transition duration-200 font-medium">
+            <Link href="/about" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
               {t('nav.about')}
             </Link>
             
@@ -92,9 +92,9 @@ export default function Navbar() {
             <div className="relative" ref={dropdownRef}>
               <button 
                 onClick={toggleServicesDropdown}
-                className="text-white hover:text-accent transition duration-200 font-medium flex items-center"
+                className="text-white hover:text-accent transition duration-200 font-medium flex items-center lowercase"
               >
-                O que fazemos
+                o que fazemos
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'transform rotate-180' : ''}`} 
@@ -121,23 +121,23 @@ export default function Navbar() {
                     ))}
                     <Link 
                       href="/services"
-                      className="block px-4 py-2 text-sm font-medium text-accent hover:bg-gray-100 border-t border-gray-100"
+                      className="block px-4 py-2 text-sm font-medium text-accent hover:bg-gray-100 border-t border-gray-100 lowercase"
                       onClick={() => setServicesDropdownOpen(false)}
                     >
-                      Ver todos os serviços
+                      ver todos os serviços
                     </Link>
                   </div>
                 </div>
               )}
             </div>
             
-            <Link href="/jobs" className="text-white hover:text-accent transition duration-200 font-medium">
+            <Link href="/jobs" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
               {t('nav.jobs')}
             </Link>
-            <Link href="/news" className="text-white hover:text-accent transition duration-200 font-medium">
+            <Link href="/news" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
               {t('nav.news')}
             </Link>
-            <Link href="/contact" className="text-white hover:text-accent transition duration-200 font-medium">
+            <Link href="/contact" className="text-white hover:text-accent transition duration-200 font-medium lowercase">
               {t('nav.contact')}
             </Link>
             
@@ -179,9 +179,9 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={toggleServicesDropdown}
-                  className="text-white hover:text-accent transition duration-200 font-medium flex items-center w-full justify-between"
+                  className="text-white hover:text-accent transition duration-200 font-medium flex items-center w-full justify-between lowercase"
                 >
-                  O que fazemos
+                  o que fazemos
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'transform rotate-180' : ''}`} 
@@ -206,9 +206,9 @@ export default function Navbar() {
                     ))}
                     <Link 
                       href="/services"
-                      className="text-accent hover:text-accent-light transition duration-200 block mt-2 font-medium"
+                      className="text-accent hover:text-accent-light transition duration-200 block mt-2 font-medium lowercase"
                     >
-                      Ver todos os serviços
+                      ver todos os serviços
                     </Link>
                   </div>
                 )}

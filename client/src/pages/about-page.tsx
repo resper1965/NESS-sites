@@ -254,9 +254,9 @@ export default function AboutPage() {
         {/* CTA Section */}
         <section className="py-16 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">want to know more about <span className="text-black">ness<span className="text-[#00ade0]">.</span></span>?</h2>
+            <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">quer saber mais sobre a <span className="text-black">ness<span className="text-[#00ade0]">.</span></span>?</h2>
             <a href="/contact" className="inline-block bg-[#00ade0] hover:bg-[#00ade0]/90 text-white px-8 py-3 rounded-sm transition duration-300 lowercase">
-              contact us
+              fale conosco
             </a>
           </div>
         </section>
