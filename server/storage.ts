@@ -99,6 +99,7 @@ export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
+  updateUser(id: number, user: Partial<User>): Promise<User>;
   
   // Content methods
   getContent(pageId: string, language: string): Promise<Content | undefined>;
@@ -296,11 +297,28 @@ export class MemStorage implements IStorage {
     const user: User = { 
       ...insertUser, 
       id,
-      isAdmin: false,
+      isAdmin: insertUser.isAdmin || false,
       createdAt: new Date()
     };
     this.users.set(id, user);
     return user;
+  }
+  
+  async updateUser(id: number, userData: Partial<User>): Promise<User> {
+    const user = await this.getUser(id);
+    if (!user) {
+      throw new Error(`User with id ${id} not found`);
+    }
+    
+    const updatedUser: User = {
+      ...user,
+      ...userData,
+      id: user.id, // Ensure ID cannot be changed
+      createdAt: user.createdAt // Ensure createdAt cannot be changed
+    };
+    
+    this.users.set(id, updatedUser);
+    return updatedUser;
   }
 
   // Content methods
