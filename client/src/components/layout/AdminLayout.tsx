@@ -59,29 +59,27 @@ export default function AdminLayout({
       <div className="hidden md:flex md:flex-col md:w-64 md:bg-white md:border-r md:border-gray-200">
         <div className="flex flex-col flex-grow p-4">
           <div className="py-4 border-b border-gray-200 mb-4">
-            <Link href="/admin/dashboard">
-              <a className="flex items-center">
-                <h1 className="text-xl font-['Montserrat'] font-normal text-primary">
-                  ness<span className="text-accent">.</span> <span className="font-medium">admin</span>
-                </h1>
-              </a>
+            <Link href="/admin/dashboard" className="flex items-center">
+              <h1 className="text-xl font-['Montserrat'] font-normal text-primary">
+                ness<span className="text-accent">.</span> <span className="font-medium">admin</span>
+              </h1>
             </Link>
           </div>
           
           <div className="flex-grow">
             <nav className="space-y-1">
               {sidebarItems.map((item) => (
-                <Link key={item.id} href={item.href}>
-                  <a 
-                    className={`
-                      flex items-center px-4 py-3 text-gray-700 rounded-md transition-colors
-                      ${activeSection === item.id ? 'bg-primary text-white' : 'hover:bg-gray-100'}
-                    `}
-                    onClick={() => setActiveSection(item.id)}
-                  >
-                    {item.icon}
-                    <span className="ml-3">{item.label}</span>
-                  </a>
+                <Link 
+                  key={item.id} 
+                  href={item.href}
+                  className={`
+                    flex items-center px-4 py-3 text-gray-700 rounded-md transition-colors
+                    ${activeSection === item.id ? 'bg-primary text-white' : 'hover:bg-gray-100'}
+                  `}
+                  onClick={() => setActiveSection(item.id)}
+                >
+                  {item.icon}
+                  <span className="ml-3">{item.label}</span>
                 </Link>
               ))}
             </nav>
@@ -126,17 +124,17 @@ export default function AdminLayout({
           <div className="md:hidden border-t border-gray-200">
             <div className="flex overflow-x-auto space-x-2 px-4 py-2">
               {sidebarItems.map((item) => (
-                <Link key={item.id} href={item.href}>
-                  <a 
-                    className={`
-                      flex-shrink-0 flex items-center px-3 py-1.5 text-sm rounded-md transition-colors
-                      ${activeSection === item.id ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
-                    `}
-                    onClick={() => setActiveSection(item.id)}
-                  >
-                    {item.icon}
-                    <span className="ml-1.5">{item.label}</span>
-                  </a>
+                <Link 
+                  key={item.id} 
+                  href={item.href}
+                  className={`
+                    flex-shrink-0 flex items-center px-3 py-1.5 text-sm rounded-md transition-colors
+                    ${activeSection === item.id ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
+                  `}
+                  onClick={() => setActiveSection(item.id)}
+                >
+                  {item.icon}
+                  <span className="ml-1.5">{item.label}</span>
                 </Link>
               ))}
             </div>

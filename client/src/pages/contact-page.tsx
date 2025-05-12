@@ -212,21 +212,45 @@ export default function ContactPage() {
                     <label className="block text-gray-700 mb-2">Verificação *</label>
                     <div 
                       ref={captchaRef}
-                      className="border border-gray-300 bg-gray-100 p-4 rounded-md flex items-center justify-center"
-                      style={{ height: '78px' }}
+                      className="border border-gray-300 rounded-md overflow-hidden"
                     >
                       {/* Simulação de CAPTCHA - Em produção, usar reCAPTCHA ou similar */}
-                      <div className="flex items-center">
-                        <input 
-                          type="checkbox" 
-                          id="captcha" 
-                          className="mr-2 h-5 w-5"
-                          onChange={handleCaptchaChange}
-                          checked={captchaVerified}
-                        />
-                        <label htmlFor="captcha" className="text-gray-700">
-                          Não sou um robô
-                        </label>
+                      <div className="flex flex-col">
+                        <div className="bg-blue-50 p-2 border-b border-gray-300 flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9a1 1 0 00-1-1z" clipRule="evenodd" />
+                          </svg>
+                          <span className="text-sm text-gray-600">Verificação de Segurança</span>
+                        </div>
+                        <div className="p-4 flex items-center">
+                          <div className="flex items-center">
+                            <input 
+                              type="checkbox" 
+                              id="captcha" 
+                              className="mr-2 h-5 w-5 rounded border-gray-300 text-accent focus:ring-accent"
+                              onChange={handleCaptchaChange}
+                              checked={captchaVerified}
+                            />
+                            <label htmlFor="captcha" className="text-gray-700 flex items-center">
+                              <span>Não sou um robô</span>
+                              <div className="ml-8 flex items-center space-x-2 pl-2 border-l border-gray-300">
+                                <span className="text-xs text-gray-500">reCAPTCHA</span>
+                                <div className="flex space-x-1">
+                                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                </div>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                        <div className="bg-gray-50 px-2 py-1 border-t border-gray-300">
+                          <p className="text-xs text-gray-500">Protegido por reCAPTCHA - 
+                            <a href="#" className="text-blue-500 hover:underline ml-1">Privacidade</a> -
+                            <a href="#" className="text-blue-500 hover:underline ml-1">Termos</a>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>

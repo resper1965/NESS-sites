@@ -60,8 +60,8 @@ export default function Navbar() {
 
   // Services for dropdown menu
   const services = [
-    { id: 'infraops', name: 'n.InfraOps', path: '/services#infraops' },
-    { id: 'secops', name: 'n.SecOps', path: '/services#secops' },
+    { id: 'infraops', name: 'n.InfraOps', path: '/services/infraops' },
+    { id: 'secops', name: 'n.SecOps', path: '/services/secops' },
     { id: 'devarch', name: 'n.DevArch', path: '/services#devarch' },
     { id: 'autoops', name: 'n.AutoOps', path: '/services#autoops' },
     { id: 'crisisops', name: 'n.CrisisOps', path: '/services#crisisops' }
@@ -72,8 +72,10 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-2">
         <nav className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" className="text-white text-xl lowercase">
-              ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>
+            <Link href="/" className="text-white lowercase">
+              <h1 className="font-['Montserrat'] font-normal text-3xl">
+                ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>
+              </h1>
             </Link>
           </div>
 
