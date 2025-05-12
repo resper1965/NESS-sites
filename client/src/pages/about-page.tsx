@@ -15,36 +15,68 @@ export default function AboutPage() {
 
   const heroBackground = "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&h=1080&q=80";
 
+  // Content translations for different languages
+  const localizedContent = {
+    pt: {
+      title: "quem somos",
+      heroTitle: "quem somos",
+      heroSubtitle: "há 33 anos transformando problemas complexos em soluções modulares.",
+      manifesto: {
+        main: "somos a ness.",
+        p1: "desde 1991, evoluímos de uma consultoria de infraestrutura de TI para uma plataforma confiável de tecnologia e inovação. entregamos soluções com clareza, segurança e propósito.",
+        p2: "nossa equipe projeta, implementa, monitora e sustenta operações críticas — sempre com velocidade, ética e uma mentalidade orientada a resultados.",
+        p3: "somos apaixonados por resolver grandes problemas através da tecnologia e colaboração de longo prazo.",
+        p4: "acreditamos que o essencial é muitas vezes invisível. e que o impacto real começa com decisões simples e arquiteturas seguras."
+      },
+      timeline: "nossa trajetória",
+      cta: {
+        title: "quer saber mais sobre a ness.?",
+        button: "fale conosco"
+      }
+    },
+    en: {
+      title: "about us",
+      heroTitle: "about us",
+      heroSubtitle: "33 years transforming complex problems into modular solutions.",
+      manifesto: {
+        main: "we are ness.",
+        p1: "since 1991, we've evolved from an IT infrastructure consultancy into a trusted platform for technology and innovation. we deliver solutions with clarity, security, and purpose.",
+        p2: "our team designs, implements, monitors, and sustains critical operations — always with speed, ethics, and a results-driven mindset.",
+        p3: "we're passionate about solving big problems through technology and long-term collaboration.",
+        p4: "we believe what's essential is often invisible. and that real impact starts with simple decisions and secure architectures."
+      },
+      timeline: "our journey",
+      cta: {
+        title: "want to know more about ness.?",
+        button: "contact us"
+      }
+    },
+    es: {
+      title: "quiénes somos",
+      heroTitle: "quiénes somos",
+      heroSubtitle: "33 años transformando problemas complejos en soluciones modulares.",
+      manifesto: {
+        main: "somos ness.",
+        p1: "desde 1991, hemos evolucionado de una consultoría de infraestructura de TI a una plataforma confiable de tecnología e innovación. entregamos soluciones con claridad, seguridad y propósito.",
+        p2: "nuestro equipo diseña, implementa, monitorea y mantiene operaciones críticas — siempre con velocidad, ética y una mentalidad orientada a resultados.",
+        p3: "nos apasiona resolver grandes problemas a través de la tecnología y la colaboración a largo plazo.",
+        p4: "creemos que lo esencial a menudo es invisible. y que el impacto real comienza con decisiones simples y arquitecturas seguras."
+      },
+      timeline: "nuestra trayectoria",
+      cta: {
+        title: "¿quieres saber más sobre ness.?",
+        button: "contáctanos"
+      }
+    }
+  };
+
   const defaultContent = {
     title: t('about.title'),
-    content: `
-      <div class="prose prose-lg mx-auto">
-        <h2>Nossa História</h2>
-        <p>Fundada em 1991, a ness. surgiu como uma resposta às crescentes necessidades de serviços tecnológicos avançados no mercado brasileiro. Inicialmente focados em infraestrutura de TI, rapidamente expandimos nossa atuação para incluir cibersegurança, desenvolvimento de software e consultoria em transformação digital.</p>
-        
-        <p>Ao longo de mais de três décadas de atuação, evoluímos constantemente para acompanhar as mudanças tecnológicas e as necessidades de nossos clientes, mantendo sempre nossa essência de inovação e excelência técnica que nos define desde o primeiro dia.</p>
-        
-        <h2>Missão</h2>
-        <p>Desenvolver e entregar soluções tecnológicas que potencializem os negócios de nossos clientes, garantindo segurança, escalabilidade e inovação, enquanto promovemos um ambiente colaborativo para o crescimento de nossos profissionais.</p>
-        
-        <h2>Visão</h2>
-        <p>Ser reconhecida como referência em serviços tecnológicos de alto valor agregado, destacando-se pela capacidade de antever tendências e implementar soluções que realmente transformam o modo como as organizações operam no mundo digital.</p>
-        
-        <h2>Valores</h2>
-        <ul>
-          <li><strong>Excelência Técnica:</strong> Comprometimento com os mais altos padrões de qualidade e eficiência em tudo o que fazemos.</li>
-          <li><strong>Inovação Contínua:</strong> Busca constante por novas tecnologias, métodos e soluções que gerem valor real para nossos clientes.</li>
-          <li><strong>Integridade:</strong> Transparência e ética em todas as nossas relações e decisões.</li>
-          <li><strong>Colaboração:</strong> Valorização do trabalho em equipe e das parcerias de longo prazo com clientes e parceiros.</li>
-          <li><strong>Responsabilidade:</strong> Compromisso com o desenvolvimento sustentável e impacto positivo na sociedade.</li>
-        </ul>
-        
-        <h2>Nossa Equipe</h2>
-        <p>Nossa equipe é formada por profissionais altamente qualificados e certificados nas principais tecnologias do mercado. A diversidade de experiências e competências nos permite abordar desafios complexos com criatividade e eficiência, sempre buscando as melhores soluções para cada contexto de negócio.</p>
-        
-        <p>Investimos continuamente no desenvolvimento de nossos talentos, incentivando a inovação, o aprendizado constante e a troca de conhecimentos, criando um ambiente onde ideias são valorizadas e transformadas em soluções concretas.</p>
-      </div>
-    `
+    heroTitle: localizedContent[language].heroTitle,
+    heroSubtitle: localizedContent[language].heroSubtitle,
+    manifesto: localizedContent[language].manifesto,
+    timeline: localizedContent[language].timeline,
+    cta: localizedContent[language].cta
   };
 
   // Structured data for SEO
@@ -70,7 +102,13 @@ export default function AboutPage() {
     <>
       <SEOHead 
         title={`${defaultContent.title} | ness.`}
-        description="Conheça a história da ness., empresa com mais de 30 anos de experiência em serviços de tecnologia, infraestrutura e segurança cibernética."
+        description={
+          language === 'pt' 
+            ? "Conheça a história da ness., empresa com mais de 30 anos de experiência em serviços de tecnologia, infraestrutura e segurança cibernética."
+            : language === 'en'
+              ? "Learn about ness.'s history, a company with over 30 years of experience in technology services, infrastructure, and cybersecurity."
+              : "Conozca la historia de ness., empresa con más de 30 años de experiencia en servicios de tecnología, infraestructura y seguridad cibernética."
+        }
         canonicalUrl="/about"
         structuredData={structuredData}
       />
@@ -113,8 +151,8 @@ export default function AboutPage() {
           
           {/* Conteúdo principal */}
           <div className="hero-content">
-            <h1>quem somos</h1>
-            <p>há 33 anos transformando problemas complexos em soluções modulares.</p>
+            <h1>{defaultContent.heroTitle}</h1>
+            <p>{defaultContent.heroSubtitle}</p>
           </div>
           
           {/* Indicador de rolagem */}
@@ -126,24 +164,24 @@ export default function AboutPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-['Montserrat'] font-normal text-3xl md:text-4xl mb-8 text-center lowercase">
-                <span className="font-normal">somos a</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
+                <span className="font-normal">{language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
               </h2>
               
               <div className="prose prose-lg mx-auto text-gray-700 lowercase">
                 <p className="mb-6">
-                  desde 1991, evoluímos de uma consultoria de infraestrutura de TI para uma plataforma confiável de tecnologia e inovação. entregamos soluções com clareza, segurança e propósito.
+                  {defaultContent.manifesto.p1}
                 </p>
                 
                 <p className="mb-6">
-                  nossa equipe projeta, implementa, monitora e sustenta operações críticas — sempre com velocidade, ética e uma mentalidade orientada a resultados.
+                  {defaultContent.manifesto.p2}
                 </p>
                 
                 <p className="mb-6">
-                  somos apaixonados por resolver grandes problemas através da tecnologia e colaboração de longo prazo.
+                  {defaultContent.manifesto.p3}
                 </p>
                 
                 <p className="mb-6">
-                  acreditamos que o essencial é muitas vezes invisível. e que o impacto real começa com decisões simples e arquiteturas seguras.
+                  {defaultContent.manifesto.p4}
                 </p>
               </div>
             </div>
@@ -155,7 +193,7 @@ export default function AboutPage() {
         {/* Timeline Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">nossa trajetória</h2>
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">{defaultContent.timeline}</h2>
             
             <div className="max-w-4xl mx-auto relative">
               {/* Timeline line */}
@@ -366,9 +404,9 @@ export default function AboutPage() {
         {/* CTA Section */}
         <section className="py-16 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">quer saber mais sobre a <span className="text-black">ness<span className="text-[#00ade0]">.</span></span>?</h2>
+            <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">{defaultContent.cta.title}</h2>
             <a href="/contact" className="inline-block bg-[#00ade0] hover:bg-[#00ade0]/90 text-white px-8 py-3 rounded-sm transition duration-300 lowercase">
-              fale conosco
+              {defaultContent.cta.button}
             </a>
           </div>
         </section>
