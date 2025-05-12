@@ -80,11 +80,45 @@ export default function AboutPage() {
       <main>
         {/* Hero Section com novo estilo */}
         <section className="hero">
+          {/* Elementos de fundo e conexões */}
+          <div className="hero-bg-elements">
+            {/* Grade e linhas abstratas */}
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <pattern id="grid-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ffffff" strokeWidth="0.1" />
+              </pattern>
+              <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+              
+              {/* Linhas de conexão */}
+              <path d="M20,30 Q40,20 60,40 T90,30" stroke="#00ade0" strokeWidth="0.2" fill="none" opacity="0.3" />
+              <path d="M10,50 Q30,60 50,40 T80,50" stroke="#00ade0" strokeWidth="0.2" fill="none" opacity="0.3" />
+              <path d="M30,80 Q50,70 70,60 T90,70" stroke="#00ade0" strokeWidth="0.2" fill="none" opacity="0.3" />
+            </svg>
+          </div>
+          
+          {/* Nós de conexão */}
+          <div className="connection-nodes">
+            <div className="node" style={{ top: '20%', left: '10%' }}></div>
+            <div className="node" style={{ top: '30%', left: '25%' }}></div>
+            <div className="node" style={{ top: '15%', left: '45%' }}></div>
+            <div className="node" style={{ top: '25%', left: '65%' }}></div>
+            <div className="node" style={{ top: '10%', left: '85%' }}></div>
+            <div className="node" style={{ top: '45%', left: '15%' }}></div>
+            <div className="node" style={{ top: '55%', left: '35%' }}></div>
+            <div className="node" style={{ top: '65%', left: '55%' }}></div>
+            <div className="node" style={{ top: '75%', left: '75%' }}></div>
+            <div className="node" style={{ top: '85%', left: '25%' }}></div>
+            <div className="node" style={{ top: '50%', left: '85%' }}></div>
+          </div>
+          
+          {/* Conteúdo principal */}
           <div className="hero-content">
             <h1>quem somos</h1>
-            <p>33 anos transformando problemas complexos em soluções modulares.</p>
-            <div className="scroll-indicator">↓</div>
+            <p>há 33 anos transformando problemas complexos em soluções modulares.</p>
           </div>
+          
+          {/* Indicador de rolagem */}
+          <div className="scroll-indicator">↓</div>
         </section>
         
         {/* Manifesto Section */}
@@ -95,7 +129,7 @@ export default function AboutPage() {
                 <span className="font-normal">somos a</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
               </h2>
               
-              <div className="prose prose-lg mx-auto text-gray-700">
+              <div className="prose prose-lg mx-auto text-gray-700 lowercase">
                 <p className="mb-6">
                   desde 1991, evoluímos de uma consultoria de infraestrutura de TI para uma plataforma confiável de tecnologia e inovação. entregamos soluções com clareza, segurança e propósito.
                 </p>
@@ -121,7 +155,7 @@ export default function AboutPage() {
         {/* Timeline Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12">Nossa trajetória</h2>
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">nossa trajetória</h2>
             
             <div className="max-w-4xl mx-auto relative">
               {/* Timeline line */}
@@ -134,7 +168,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">1991</h3>
-                      <p className="text-gray-700">A ness. é fundada como uma empresa de consultoria em infraestrutura de TI.</p>
+                      <p className="text-gray-700 lowercase">a ness. é fundada como uma empresa de consultoria em infraestrutura de TI.</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -152,7 +186,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">1998</h3>
-                      <p className="text-gray-700">Expansão para segurança cibernética, antecipando necessidades emergentes.</p>
+                      <p className="text-gray-700 lowercase">expansão para segurança cibernética, antecipando necessidades emergentes.</p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +196,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2005</h3>
-                      <p className="text-gray-700">Lançamento da divisão de software personalizado para ampliar capacidades.</p>
+                      <p className="text-gray-700 lowercase">lançamento da divisão de software personalizado para ampliar capacidades.</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -180,7 +214,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2012</h3>
-                      <p className="text-gray-700">Início dos serviços de computação em nuvem e transição para modelo centrado em serviços.</p>
+                      <p className="text-gray-700 lowercase">início dos serviços de computação em nuvem e transição para modelo centrado em serviços.</p>
                     </div>
                   </div>
                 </div>
@@ -190,7 +224,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2018</h3>
-                      <p className="text-gray-700">Renovação da marca e reposicionamento em torno de unidades de serviço especializadas.</p>
+                      <p className="text-gray-700 lowercase">renovação da marca e reposicionamento em torno de unidades de serviço especializadas.</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -208,7 +242,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#00ade0]">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2025</h3>
-                      <p className="text-gray-700">Estabelecida como uma plataforma modular para transformação digital confiável.</p>
+                      <p className="text-gray-700 lowercase">estabelecida como uma plataforma modular para transformação digital confiável.</p>
                     </div>
                   </div>
                 </div>
