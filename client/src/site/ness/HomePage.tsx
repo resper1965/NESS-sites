@@ -52,7 +52,7 @@ export default function NessHomePage() {
         ctaUrl1={pageContent?.content?.ctaUrl1 || "/site/ness/services"}
         ctaText2={pageContent?.content?.ctaText2 || "fale conosco"}
         ctaUrl2={pageContent?.content?.ctaUrl2 || "/site/ness/contact"}
-        backgroundImage={pageContent?.content?.heroImage || "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"}
+        backgroundImage="/assets/images/image_1747089936831.png"
       />
       
       {/* Services Section */}
