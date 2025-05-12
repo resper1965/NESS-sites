@@ -51,11 +51,11 @@ export default function HeroSection({
           {subtitle}
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-8">
-          <Link href={ctaUrl1} className="bg-transparent border border-white hover:bg-white/10 text-white py-3 px-8 font-normal transition duration-300 inline-block lowercase">
-            [ {ctaText1} ]
+          <Link href={ctaUrl1} className="bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm">
+            {ctaText1}
           </Link>
-          <Link href={ctaUrl2} className="bg-transparent border border-white hover:bg-white/10 text-white py-3 px-8 font-normal transition duration-300 inline-block lowercase">
-            [ {ctaText2} ]
+          <Link href={ctaUrl2} className="bg-transparent border border-[#00ade0] text-white hover:text-[#00ade0] py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm">
+            {ctaText2}
           </Link>
         </div>
         <div className="mt-12">
