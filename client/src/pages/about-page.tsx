@@ -28,6 +28,22 @@ export default function AboutPage() {
         p3: "somos apaixonados por resolver grandes problemas através da tecnologia e colaboração de longo prazo.",
         p4: "acreditamos que o essencial é muitas vezes invisível. e que o impacto real começa com decisões simples e arquiteturas seguras."
       },
+      values: {
+        title: "nossos valores",
+        vision: {
+          title: "nossa visão",
+          text: "tornar-se uma referência global em soluções tecnológicas modulares e confiáveis, com um time de alta performance que habilita pessoas e organizações a enfrentarem desafios complexos com segurança, inteligência e velocidade."
+        },
+        mission: {
+          title: "nossa missão",
+          text: "expandir o acesso, a eficiência e a qualidade em operações críticas, oferecendo tecnologias que conectam, automatizam e sustentam a transformação digital com clareza e propósito."
+        },
+        values: {
+          title: "nossos valores",
+          p1: "obsessão por excelência no atendimento, um compromisso inegociável com pessoas e confiança, e uma cultura de agilidade e melhoria contínua.",
+          p2: "buscamos equilibrar lucro, pessoas e impacto de forma sustentável, onde a diversidade do nosso time alimenta a inovação e fortalece nosso ecossistema."
+        }
+      },
       timeline: "nossa trajetória",
       timelineEvents: {
         "1991": "a ness. é fundada como tercerização da área de tecnologia de um grande grupo econômico.",
@@ -60,6 +76,22 @@ export default function AboutPage() {
         p2: "our team designs, implements, monitors, and sustains critical operations — always with speed, ethics, and a results-driven mindset.",
         p3: "we're passionate about solving big problems through technology and long-term collaboration.",
         p4: "we believe what's essential is often invisible. and that real impact starts with simple decisions and secure architectures."
+      },
+      values: {
+        title: "our values",
+        vision: {
+          title: "our vision",
+          text: "to become a global reference in modular and reliable technological solutions, with a high-performance team that enables people and organizations to face complex challenges with security, intelligence, and speed."
+        },
+        mission: {
+          title: "our mission",
+          text: "to expand access, efficiency, and quality in critical operations, offering technologies that connect, automate, and sustain digital transformation with clarity and purpose."
+        },
+        values: {
+          title: "our values",
+          p1: "obsession with service excellence, a non-negotiable commitment to people and trust, and a culture of agility and continuous improvement.",
+          p2: "we seek to balance profit, people, and impact sustainably, where the diversity of our team fuels innovation and strengthens our ecosystem."
+        }
       },
       timeline: "our journey",
       timelineEvents: {
@@ -94,6 +126,22 @@ export default function AboutPage() {
         p3: "nos apasiona resolver grandes problemas a través de la tecnología y la colaboración a largo plazo.",
         p4: "creemos que lo esencial a menudo es invisible. y que el impacto real comienza con decisiones simples y arquitecturas seguras."
       },
+      values: {
+        title: "nuestros valores",
+        vision: {
+          title: "nuestra visión",
+          text: "convertirse en una referencia global en soluciones tecnológicas modulares y confiables, con un equipo de alto rendimiento que permite a personas y organizaciones enfrentar desafíos complejos con seguridad, inteligencia y velocidad."
+        },
+        mission: {
+          title: "nuestra misión",
+          text: "expandir el acceso, la eficiencia y la calidad en operaciones críticas, ofreciendo tecnologías que conectan, automatizan y sustentan la transformación digital con claridad y propósito."
+        },
+        values: {
+          title: "nuestros valores",
+          p1: "obsesión por la excelencia en el servicio, un compromiso innegociable con las personas y la confianza, y una cultura de agilidad y mejora continua.",
+          p2: "buscamos equilibrar el beneficio, las personas y el impacto de forma sostenible, donde la diversidad de nuestro equipo alimenta la innovación y fortalece nuestro ecosistema."
+        }
+      },
       timeline: "nuestra trayectoria",
       timelineEvents: {
         "1991": "ness. es fundada como tercerización del área de tecnología de un gran grupo económico.",
@@ -123,6 +171,7 @@ export default function AboutPage() {
     heroTitle: localizedContent[language].heroTitle,
     heroSubtitle: localizedContent[language].heroSubtitle,
     manifesto: localizedContent[language].manifesto,
+    values: localizedContent[language].values,
     timeline: localizedContent[language].timeline,
     timelineEvents: localizedContent[language].timelineEvents,
     cta: localizedContent[language].cta
@@ -237,8 +286,34 @@ export default function AboutPage() {
           </div>
         </section>
         
-
-
+        {/* Values Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">{defaultContent.values.title}</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Vision */}
+              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
+                <h3 className="text-xl font-['Montserrat'] font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.vision.title}</h3>
+                <p className="text-gray-700 lowercase">{defaultContent.values.vision.text}</p>
+              </div>
+              
+              {/* Mission */}
+              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
+                <h3 className="text-xl font-['Montserrat'] font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.mission.title}</h3>
+                <p className="text-gray-700 lowercase">{defaultContent.values.mission.text}</p>
+              </div>
+              
+              {/* Values */}
+              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
+                <h3 className="text-xl font-['Montserrat'] font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.values.title}</h3>
+                <p className="text-gray-700 mb-4 lowercase">{defaultContent.values.values.p1}</p>
+                <p className="text-gray-700 lowercase">{defaultContent.values.values.p2}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         {/* Timeline Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
