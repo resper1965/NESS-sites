@@ -47,7 +47,7 @@ export default function NessHomePage() {
       {/* Hero Section */}
       <HeroSection 
         title={pageContent?.content?.heroTitle || "tecnologia modular para o essencial invisível"}
-        subtitle={pageContent?.content?.heroSubtitle || "arquitetura modular de infraestrutura, segurança e desenvolvimento em modelos SaaS e projetos personalizados"}
+        subtitle={pageContent?.content?.heroSubtitle || "arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade"}
         ctaText1={pageContent?.content?.ctaText1 || "conheça nossos serviços"}
         ctaUrl1={pageContent?.content?.ctaUrl1 || "/site/ness/services"}
         ctaText2={pageContent?.content?.ctaText2 || "fale conosco"}
