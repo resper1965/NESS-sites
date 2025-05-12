@@ -239,26 +239,26 @@ export default function SiteFooter() {
             
             {/* Links de Documentos Legais */}
             <div className="flex flex-wrap justify-center gap-x-4 mt-4 md:mt-0">
-              <Link href={`${sitePrefix}/privacy`}>
-                <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
+              <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
+                <Link href={`${sitePrefix}/privacy`}>
                   {t('footer.privacy')}
-                </a>
-              </Link>
-              <Link href={`${sitePrefix}/terms`}>
-                <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
+                </Link>
+              </div>
+              <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
+                <Link href={`${sitePrefix}/terms`}>
                   {t('footer.terms')}
-                </a>
-              </Link>
-              <Link href={`${sitePrefix}/cookies`}>
-                <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
+                </Link>
+              </div>
+              <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
+                <Link href={`${sitePrefix}/cookies`}>
                   {t('footer.cookies')}
-                </a>
-              </Link>
-              <Link href="/auth">
-                <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
+                </Link>
+              </div>
+              <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
+                <Link href="/auth">
                   {t('footer.login')}
-                </a>
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
