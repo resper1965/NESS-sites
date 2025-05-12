@@ -44,11 +44,11 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Coluna 1: Sobre a empresa */}
           <div>
-            <Link href={sitePrefix}>
-              <a className="text-white text-xl mb-6 inline-block">
+            <div className="text-white text-xl mb-6 inline-block">
+              <Link href={sitePrefix}>
                 {siteConfig.name}
-              </a>
-            </Link>
+              </Link>
+            </div>
             <p className="text-gray-300 mb-6">
               {t('footer.description')}
             </p>
@@ -120,46 +120,46 @@ export default function SiteFooter() {
             <h4 className="text-lg font-bold mb-6">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link href={`${sitePrefix}`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}`}>
                     {t('menu.home')}
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/about`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/about`}>
                     {t('menu.about')}
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/services`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/services`}>
                     {t('menu.services')}
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/jobs`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/jobs`}>
                     {t('menu.jobs')}
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/news`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/news`}>
                     {t('menu.news')}
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/contact`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/contact`}>
                     {t('menu.contact')}
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
             </ul>
           </div>
@@ -169,39 +169,39 @@ export default function SiteFooter() {
             <h4 className="text-lg font-bold mb-6">{t('footer.solutions')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link href={`${sitePrefix}/services#infraops`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/services#infraops`}>
                     n.InfraOps
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/services#secops`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/services#secops`}>
                     n.SecOps
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/services#devarch`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/services#devarch`}>
                     n.DevArch
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/services#autoops`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/services#autoops`}>
                     n.AutoOps
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={`${sitePrefix}/services#crisisops`}>
-                  <a className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                  <Link href={`${sitePrefix}/services#crisisops`}>
                     n.CrisisOps
-                  </a>
-                </Link>
+                  </Link>
+                </div>
               </li>
             </ul>
           </div>
