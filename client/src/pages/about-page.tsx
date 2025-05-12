@@ -214,41 +214,48 @@ export default function AboutPage() {
       <Navbar />
       
       <main>
-        {/* Hero Section com novo estilo */}
-        <section className="hero">
-          {/* Elementos de fundo e conexões */}
-          <div className="hero-bg-elements">
-            {/* Grade e linhas abstratas */}
-            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        {/* Hero Section com estilo abstrato geométrico */}
+        <section className="hero-abstract">
+          {/* Elementos de fundo geométricos */}
+          <div className="hero-abstract-bg">
+            {/* Grade de fundo */}
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" className="grid-pattern">
               <pattern id="grid-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ffffff" strokeWidth="0.1" />
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#00ade0" strokeWidth="0.1" />
               </pattern>
               <rect width="100%" height="100%" fill="url(#grid-pattern)" />
-              
-              {/* Linhas de conexão */}
-              <path d="M20,30 Q40,20 60,40 T90,30" stroke="#00ade0" strokeWidth="0.2" fill="none" opacity="0.3" />
-              <path d="M10,50 Q30,60 50,40 T80,50" stroke="#00ade0" strokeWidth="0.2" fill="none" opacity="0.3" />
-              <path d="M30,80 Q50,70 70,60 T90,70" stroke="#00ade0" strokeWidth="0.2" fill="none" opacity="0.3" />
             </svg>
           </div>
           
-          {/* Nós de conexão */}
-          <div className="connection-nodes">
-            <div className="node" style={{ top: '20%', left: '10%' }}></div>
-            <div className="node" style={{ top: '30%', left: '25%' }}></div>
-            <div className="node" style={{ top: '15%', left: '45%' }}></div>
-            <div className="node" style={{ top: '25%', left: '65%' }}></div>
-            <div className="node" style={{ top: '10%', left: '85%' }}></div>
-            <div className="node" style={{ top: '45%', left: '15%' }}></div>
-            <div className="node" style={{ top: '55%', left: '35%' }}></div>
-            <div className="node" style={{ top: '65%', left: '55%' }}></div>
-            <div className="node" style={{ top: '75%', left: '75%' }}></div>
-            <div className="node" style={{ top: '85%', left: '25%' }}></div>
-            <div className="node" style={{ top: '50%', left: '85%' }}></div>
+          {/* Blocos geométricos */}
+          <div className="geometric-blocks">
+            <div className="block"></div>
+            <div className="block"></div>
+            <div className="block"></div>
+            <div className="block"></div>
+            <div className="block"></div>
+          </div>
+          
+          {/* Linhas fluidas */}
+          <div className="flowing-lines">
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+          </div>
+          
+          {/* Pontos de conexão */}
+          <div className="connections">
+            <div className="connection"></div>
+            <div className="connection"></div>
+            <div className="connection"></div>
+            <div className="connection"></div>
+            <div className="connection"></div>
+            <div className="connection"></div>
           </div>
           
           {/* Conteúdo principal */}
-          <div className="hero-content">
+          <div className="hero-abstract-content">
             <h1>{defaultContent.heroTitle}</h1>
             <p>{defaultContent.heroSubtitle}</p>
           </div>
