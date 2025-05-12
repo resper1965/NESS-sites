@@ -36,9 +36,12 @@ export default function HeroSection({
       
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-          <span className="text-white">{title.split(' ').slice(0, -1).join(' ')} </span>
-          <span className="text-accent">{title.split(' ').slice(-1)}</span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-['Montserrat'] font-normal text-white mb-6">
+          {title.includes('ness.') ? (
+            <>ness<span className="text-[#00ade0]">.</span> {title.replace('ness.', '')}</>
+          ) : (
+            <>{title}</>
+          )}
         </h1>
         <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
           {subtitle}

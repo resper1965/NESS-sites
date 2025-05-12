@@ -109,9 +109,8 @@ export default function AdminDashboardPage() {
           <>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {statCards.map((card, index) => (
-                <a 
+                <div 
                   key={index} 
-                  href={card.link}
                   className="block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100"
                 >
                   <div className="flex items-center">
@@ -123,7 +122,7 @@ export default function AdminDashboardPage() {
                       <p className="text-gray-600">{card.title}</p>
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
             
@@ -175,34 +174,22 @@ export default function AdminDashboardPage() {
                 </div>
                 <div className="p-6">
                   <div className="grid grid-cols-2 gap-4">
-                    <a 
-                      href="/admin/content/create" 
-                      className="p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors"
-                    >
+                    <div className="p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors">
                       <FileText className="h-6 w-6 mx-auto mb-2 text-primary" />
                       <span className="text-gray-800">Novo Conteúdo</span>
-                    </a>
-                    <a 
-                      href="/admin/jobs/create" 
-                      className="p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors"
-                    >
+                    </div>
+                    <div className="p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors">
                       <Briefcase className="h-6 w-6 mx-auto mb-2 text-primary" />
                       <span className="text-gray-800">Nova Vaga</span>
-                    </a>
-                    <a 
-                      href="/admin/news/create" 
-                      className="p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors"
-                    >
+                    </div>
+                    <div className="p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors">
                       <Newspaper className="h-6 w-6 mx-auto mb-2 text-primary" />
                       <span className="text-gray-800">Nova Notícia</span>
-                    </a>
-                    <a 
-                      href="/admin/settings" 
-                      className="p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors"
-                    >
+                    </div>
+                    <div className="p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors">
                       <Settings className="h-6 w-6 mx-auto mb-2 text-primary" />
                       <span className="text-gray-800">Configurações</span>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -219,17 +206,12 @@ export default function AdminDashboardPage() {
                     Use o menu lateral para navegar entre as diferentes seções do painel.
                   </p>
                   <div className="flex justify-end">
-                    <a 
-                      href="/" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="inline-flex items-center text-primary hover:text-primary-dark"
-                    >
+                    <div className="inline-flex items-center text-primary hover:text-primary-dark">
                       <span className="mr-1">Ver site</span>
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -32,6 +32,13 @@ export default function ServicesSection({
           {prefix}<span style={{color: "#00ade0", marginLeft: "1px", marginRight: "1px"}}>.</span>{suffix}
         </span>
       );
+    // Se o título inclui o nome da empresa
+    } else if (title.toLowerCase().includes('ness')) {
+      return (
+        <span className="font-normal font-['Montserrat'] inline-flex items-center">
+          ness<span style={{color: "#00ade0", marginLeft: "1px", marginRight: "1px"}}>.</span> {title.replace(/ness/i, '')}
+        </span>
+      );
     }
     return <span className="font-['Montserrat']">{title}</span>;
   };
