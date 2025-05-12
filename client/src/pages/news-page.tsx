@@ -42,12 +42,12 @@ export default function NewsPage() {
       <Navbar />
       
       <main>
-        {/* Hero Section */}
-        <section className="relative py-20 bg-primary text-white">
+        {/* Hero Section com fundo gradiente azul, sem imagem */}
+        <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
           <div className="container mx-auto px-4 pt-16">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('news.title')}</h1>
-              <div className="w-20 h-1 bg-accent mx-auto mb-8"></div>
+              <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6">{t('news.title')}</h1>
+              <div className="w-20 h-1 bg-[#00ade0] mx-auto mb-8"></div>
               <p className="text-xl max-w-3xl mx-auto">
                 Fique por dentro das novidades sobre nossa empresa e o mercado de tecnologia.
               </p>
