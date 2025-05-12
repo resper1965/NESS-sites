@@ -23,7 +23,16 @@ export default function HeroSection({
   const { t } = useI18n();
   
   return (
-    <section className="hero-main">
+    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={backgroundImage} 
+          alt="Hero background" 
+          className="w-full h-full object-cover" 
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.1)] to-[rgba(18,18,18,0.3)]"></div>
+      </div>
       {/* Grid pattern */}
       <div className="grid-panel">
         <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
