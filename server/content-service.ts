@@ -1,4 +1,4 @@
-import { Content, type InsertContent } from "@shared/schema";
+import { Content, type InsertContent, type SiteCode } from "@shared/schema";
 import { IStorage } from "./storage";
 
 export class ContentService {
@@ -9,19 +9,22 @@ export class ContentService {
   }
 
   /**
-   * Get content for a specific page and language
+   * Get content for a specific page, language and site
+   * If siteCode is not provided, it will return content
+   * that is not associated with any specific site
    */
-  async getContent(pageId: string, language: string): Promise<Content | undefined> {
-    return await this.storage.getContent(pageId, language);
+  async getContent(pageId: string, language: string, siteCode?: SiteCode): Promise<Content | undefined> {
+    return await this.storage.getContent(pageId, language, siteCode);
   }
 
   /**
-   * Update content for a specific page and language
+   * Update content for a specific page, language and site
    * If content doesn't exist, it will be created
+   * If siteCode is provided, the content will be associated with that site
    */
-  async updateContent(pageId: string, language: string, content: Partial<Content>): Promise<Content> {
+  async updateContent(pageId: string, language: string, content: Partial<Content>, siteCode?: SiteCode): Promise<Content> {
     // First, try to get existing content
-    const existing = await this.storage.getContent(pageId, language);
+    const existing = await this.storage.getContent(pageId, language, siteCode);
     
     if (existing) {
       // Update existing content
@@ -32,7 +35,7 @@ export class ContentService {
       });
     } else {
       // Create new content
-      return await this.storage.createContent({
+      const newContent = await this.storage.createContent({
         pageId,
         language,
         title: content.title || pageId,
@@ -45,7 +48,35 @@ export class ContentService {
         canonicalUrl: content.canonicalUrl || "",
         published: content.published !== undefined ? content.published : true,
       });
+
+      // If siteCode is provided, associate the content with the site
+      if (siteCode && newContent.id) {
+        await this.storage.associateContentToSite(newContent.id, 'content', siteCode);
+      }
+
+      return newContent;
     }
+  }
+
+  /**
+   * Get all sites that a content is associated with
+   */
+  async getContentSites(contentId: number): Promise<SiteCode[]> {
+    return await this.storage.getContentSites(contentId, 'content');
+  }
+
+  /**
+   * Associate content with a site
+   */
+  async associateContentToSite(contentId: number, siteCode: SiteCode): Promise<void> {
+    await this.storage.associateContentToSite(contentId, 'content', siteCode);
+  }
+
+  /**
+   * Remove content from a site
+   */
+  async removeContentFromSite(contentId: number, siteCode: SiteCode): Promise<void> {
+    await this.storage.removeContentFromSite(contentId, 'content', siteCode);
   }
 
   /**

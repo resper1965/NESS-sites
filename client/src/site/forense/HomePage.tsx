@@ -1,0 +1,220 @@
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { useI18n } from '@/lib/i18n';
+import { useSite } from '../SiteContext';
+import SiteLayout from '../layout/SiteLayout';
+
+export default function ForenseHomePage() {
+  const { siteConfig } = useSite();
+  const { language } = useI18n();
+  
+  // Buscar conteúdo da página inicial específico para o site forense
+  const { data: pageContent, isLoading } = useQuery({
+    queryKey: ['/api/content/home', language, siteConfig.code],
+    queryFn: async () => {
+      const res = await fetch(`/api/content/home?lang=${language}&site=${siteConfig.code}`);
+      if (!res.ok) throw new Error('Failed to fetch content');
+      return res.json();
+    }
+  });
+  
+  // Definir o título da página com base no conteúdo
+  const pageTitle = pageContent?.metaTitle || siteConfig.metadata?.defaultTitle;
+  const pageDescription = pageContent?.metaDescription || siteConfig.metadata?.defaultDescription;
+  
+  if (isLoading) {
+    return (
+      <SiteLayout>
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[var(--primary-color)]"></div>
+        </div>
+      </SiteLayout>
+    );
+  }
+  
+  return (
+    <SiteLayout
+      title={pageTitle}
+      description={pageDescription}
+      ogImage={pageContent?.ogImage}
+      canonicalUrl={`https://${siteConfig.domain}`}
+    >
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-[#2c2c34] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#fff" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
+              {pageContent?.content?.heroTitle || 'forense.io'}
+            </h1>
+            <div className="h-1 w-20 bg-[var(--primary-color)] mx-auto mb-6"></div>
+            <p className="text-xl text-gray-300 mb-8">
+              {pageContent?.content?.heroSubtitle || 
+                'resposta a incidentes, perícia digital e investigação forense para identificar e remediar violações de segurança'}
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="/site/forense/services/incident-response"
+                className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
+              >
+                resposta a incidentes
+              </a>
+              <a
+                href="/site/forense/services/digital-forensics"
+                className="border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:bg-opacity-10 px-6 py-3 rounded lowercase"
+              >
+                análise forense
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+              {pageContent?.content?.featuresSectionTitle || 'nossas capacidades'}
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              {pageContent?.content?.featuresSectionDescription || 
+                'atuação técnica em ambientes corporativos e suporte jurídico em situações de crise de segurança.'}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Feature 1 */}
+            <div className="text-center p-6">
+              <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 text-[var(--primary-color)]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-medium text-gray-800 mb-2">resposta rápida</h3>
+              <p className="text-gray-600 text-sm">
+                atendimento emergencial com equipe disponível 24x7 para contenção e análise inicial de incidentes.
+              </p>
+            </div>
+            
+            {/* Feature 2 */}
+            <div className="text-center p-6">
+              <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 text-[var(--primary-color)]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-medium text-gray-800 mb-2">análise forense</h3>
+              <p className="text-gray-600 text-sm">
+                investigação forense detalhada com ferramentas e metodologias avançadas para preservação de evidências.
+              </p>
+            </div>
+            
+            {/* Feature 3 */}
+            <div className="text-center p-6">
+              <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 text-[var(--primary-color)]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-medium text-gray-800 mb-2">suporte jurídico</h3>
+              <p className="text-gray-600 text-sm">
+                apoio legal especializado em questões de cibersegurança, notificações e relatórios para autoridades.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+              {pageContent?.content?.servicesSectionTitle || 'serviços especializados'}
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              {pageContent?.content?.servicesSectionDescription || 
+                'oferecemos uma gama completa de serviços forenses e de resposta a incidentes.'}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Service 1 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-100">
+              <h3 className="text-xl font-medium text-gray-800 mb-4">resposta a incidentes</h3>
+              <ul className="text-gray-600 space-y-2 mb-6 text-sm">
+                <li>• contenção de incidentes em tempo real</li>
+                <li>• investigação de causa raiz</li>
+                <li>• detecção e remoção de malwares</li>
+                <li>• recuperação de sistemas comprometidos</li>
+                <li>• gestão de crise e comunicação</li>
+              </ul>
+              <a 
+                href="/site/forense/services/incident-response" 
+                className="text-[var(--primary-color)] hover:text-[var(--primary-color)]/80 inline-flex items-center"
+              >
+                <span>saiba mais</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
+                  <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                </svg>
+              </a>
+            </div>
+            
+            {/* Service 2 */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-100">
+              <h3 className="text-xl font-medium text-gray-800 mb-4">análise forense digital</h3>
+              <ul className="text-gray-600 space-y-2 mb-6 text-sm">
+                <li>• coleta de evidências digitais</li>
+                <li>• análise de discos e memória</li>
+                <li>• investigação de logs e artefatos</li>
+                <li>• reconstrução de eventos</li>
+                <li>• documentação técnica e relatórios</li>
+              </ul>
+              <a 
+                href="/site/forense/services/digital-forensics" 
+                className="text-[var(--primary-color)] hover:text-[var(--primary-color)]/80 inline-flex items-center"
+              >
+                <span>saiba mais</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
+                  <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-20 bg-[var(--secondary-color)] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">
+            {pageContent?.content?.ctaTitle || 'enfrentando um incidente de segurança?'}
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            {pageContent?.content?.ctaDescription || 
+              'nossa equipe está disponível 24 horas por dia para ajudar na contenção e investigação de incidentes.'}
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="/site/forense/contact"
+              className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-8 py-4 rounded text-lg lowercase"
+            >
+              contato emergencial
+            </a>
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}

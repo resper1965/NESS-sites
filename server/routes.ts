@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { setupAuth } from "./auth";
 import { storage } from "./storage";
 import { ContentService } from "./content-service";
+import { SiteCode, SITE_CODES } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Setup authentication routes and middleware
@@ -19,7 +20,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { pageId } = req.params;
       const lang = req.query.lang?.toString() || "pt";
-      const content = await contentService.getContent(pageId, lang);
+      const site = req.query.site?.toString();
+      
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+      
+      const content = await contentService.getContent(pageId, lang, siteCode);
       
       if (!content) {
         return res.status(404).json({ message: "Content not found" });
@@ -27,6 +35,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(content);
     } catch (error) {
+      console.error("Error fetching content:", error);
       res.status(500).json({ message: "Error fetching content" });
     }
   });
@@ -39,9 +48,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { pageId } = req.params;
       const lang = req.query.lang?.toString() || "pt";
+      const site = req.query.site?.toString();
       const content = req.body;
 
-      const result = await contentService.updateContent(pageId, lang, content);
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+
+      const result = await contentService.updateContent(pageId, lang, content, siteCode);
       
       // Log activity
       await storage.createActivityLog({
@@ -49,11 +64,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         action: "update",
         entityType: "content",
         entityId: pageId,
-        details: { language: lang }
+        details: { language: lang, site: siteCode }
       });
       
       res.json(result);
     } catch (error) {
+      console.error("Error updating content:", error);
       res.status(500).json({ message: "Error updating content" });
     }
   });
@@ -62,9 +78,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/jobs", async (req, res) => {
     try {
       const lang = req.query.lang?.toString() || "pt";
-      const jobs = await storage.getJobs(lang);
+      const site = req.query.site?.toString();
+      
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+      
+      const jobs = await storage.getJobs(lang, siteCode);
       res.json(jobs);
     } catch (error) {
+      console.error("Error fetching jobs:", error);
       res.status(500).json({ message: "Error fetching jobs" });
     }
   });
@@ -72,9 +96,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/jobs/featured", async (req, res) => {
     try {
       const lang = req.query.lang?.toString() || "pt";
-      const jobs = await storage.getFeaturedJobs(lang);
+      const site = req.query.site?.toString();
+      
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+      
+      const jobs = await storage.getFeaturedJobs(lang, siteCode);
       res.json(jobs);
     } catch (error) {
+      console.error("Error fetching featured jobs:", error);
       res.status(500).json({ message: "Error fetching featured jobs" });
     }
   });
@@ -181,9 +213,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/news", async (req, res) => {
     try {
       const lang = req.query.lang?.toString() || "pt";
-      const newsItems = await storage.getNewsItems(lang);
+      const site = req.query.site?.toString();
+      
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+      
+      const newsItems = await storage.getNewsItems(lang, siteCode);
       res.json(newsItems);
     } catch (error) {
+      console.error("Error fetching news:", error);
       res.status(500).json({ message: "Error fetching news" });
     }
   });
@@ -191,9 +231,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/news/latest", async (req, res) => {
     try {
       const lang = req.query.lang?.toString() || "pt";
-      const newsItems = await storage.getLatestNews(lang);
+      const site = req.query.site?.toString();
+      
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+      
+      const newsItems = await storage.getLatestNews(lang, siteCode);
       res.json(newsItems);
     } catch (error) {
+      console.error("Error fetching latest news:", error);
       res.status(500).json({ message: "Error fetching latest news" });
     }
   });
@@ -341,10 +389,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
     try {
       const lang = req.query.lang?.toString() || "pt";
+      const site = req.query.site?.toString();
       
-      const jobCount = await storage.getJobCount(lang);
-      const newsCount = await storage.getNewsCount(lang);
-      const contentCount = await storage.getContentCount(lang);
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+      
+      const jobCount = await storage.getJobCount(lang, siteCode);
+      const newsCount = await storage.getNewsCount(lang, siteCode);
+      const contentCount = await storage.getContentCount(lang, siteCode);
       
       // Mock data for demonstration
       const stats = {
@@ -352,11 +406,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
         pageViews: 4875,
         contentCount,
         jobCount,
-        newsCount
+        newsCount,
+        site: siteCode || 'all'
       };
       
       res.json(stats);
     } catch (error) {
+      console.error("Error fetching stats:", error);
       res.status(500).json({ message: "Error fetching stats" });
     }
   });
@@ -371,7 +427,73 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const activities = await storage.getRecentActivities();
       res.json(activities);
     } catch (error) {
+      console.error("Error fetching activities:", error);
       res.status(500).json({ message: "Error fetching activities" });
+    }
+  });
+  
+  // Site Routes
+  app.get("/api/sites", async (req, res) => {
+    try {
+      const sites = await storage.getAllSites();
+      res.json(sites);
+    } catch (error) {
+      console.error("Error fetching sites:", error);
+      res.status(500).json({ message: "Error fetching sites" });
+    }
+  });
+  
+  app.get("/api/sites/:code", async (req, res) => {
+    try {
+      const { code } = req.params;
+      
+      // Verifica se o código do site é válido
+      if (!(SITE_CODES as readonly string[]).includes(code)) {
+        return res.status(400).json({ message: "Invalid site code" });
+      }
+      
+      const site = await storage.getSite(code as SiteCode);
+      
+      if (!site) {
+        return res.status(404).json({ message: "Site not found" });
+      }
+      
+      res.json(site);
+    } catch (error) {
+      console.error("Error fetching site:", error);
+      res.status(500).json({ message: "Error fetching site" });
+    }
+  });
+  
+  app.put("/api/sites/:code", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+    
+    try {
+      const { code } = req.params;
+      
+      // Verifica se o código do site é válido
+      if (!(SITE_CODES as readonly string[]).includes(code)) {
+        return res.status(400).json({ message: "Invalid site code" });
+      }
+      
+      const siteData = req.body;
+      const result = await storage.updateSite(code as SiteCode, siteData);
+      
+      // Log activity
+      await storage.createActivityLog({
+        userId: req.user!.id,
+        action: "update",
+        entityType: "site",
+        entityId: code,
+        details: { name: siteData.name }
+      });
+      
+      res.json(result);
+    } catch (error) {
+      console.error("Error updating site:", error);
+      res.status(500).json({ message: "Error updating site" });
     }
   });
 
