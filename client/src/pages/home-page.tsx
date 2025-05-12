@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
+import SpinoffsSection from '@/components/sections/SpinoffsSection';
 import StatsSection from '@/components/sections/StatsSection';
 import JobsSection from '@/components/sections/JobsSection';
 import NewsSection from '@/components/sections/NewsSection';
@@ -34,9 +35,9 @@ export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "CorpTech",
-    "url": "https://www.empresainstitucional.com",
-    "logo": "https://www.empresainstitucional.com/logo.png",
+    "name": "ness",
+    "url": "https://www.ness.com.br",
+    "logo": "https://www.ness.com.br/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+55-11-3456-7890",
@@ -52,10 +53,7 @@ export default function HomePage() {
       "addressCountry": "BR"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/corptech",
-      "https://www.facebook.com/corptech",
-      "https://www.twitter.com/corptech",
-      "https://www.instagram.com/corptech"
+      "https://www.linkedin.com/company/ness-security"
     ]
   };
 
@@ -92,28 +90,67 @@ export default function HomePage() {
 
   const servicesProps = content?.services || {
     title: t('services.title'),
-    description: 'Oferecemos soluções completas para empresas que buscam transformação digital, segurança da informação e eficiência operacional.',
+    description: 'Transformamos operações críticas em vantagem estratégica para sua empresa através de serviços especializados em segurança e tecnologia.',
     services: [
       {
-        id: 'security',
-        title: 'Segurança da Informação',
-        description: 'Proteja seus dados e sistemas com nossas soluções avançadas de segurança digital, incluindo prevenção contra ataques cibernéticos e gestão de vulnerabilidades.',
+        id: 'infraops',
+        title: 'n.InfraOps',
+        description: 'Serviços de infraestrutura de TI que garantem disponibilidade, escalabilidade e segurança para suas operações críticas, com monitoramento 24x7 e resposta imediata a incidentes.',
+        icon: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4',
+        url: '/services#infraops'
+      },
+      {
+        id: 'secops',
+        title: 'n.SecOps',
+        description: 'Operações de segurança integradas que protegem seus ativos digitais contra ameaças cibernéticas, incluindo monitoramento contínuo, detecção e resposta a incidentes.',
         icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
-        url: '/services#security'
+        url: '/services#secops'
       },
       {
-        id: 'digital',
-        title: 'Transformação Digital',
-        description: 'Modernize seus processos de negócio com tecnologias cloud-first, automação inteligente e integração de sistemas para aumentar a eficiência operacional.',
-        icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',
-        url: '/services#digital'
+        id: 'devarch',
+        title: 'n.DevArch',
+        description: 'Desenvolvimento e arquitetura de soluções tecnológicas sob medida, com foco em segurança desde o design, seguindo práticas de DevSecOps e arquitetura zero-trust.',
+        icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+        url: '/services#devarch'
       },
       {
-        id: 'analytics',
-        title: 'Análise de Dados',
-        description: 'Transforme dados em insights estratégicos com nossas soluções de business intelligence, analytics avançado e desenvolvimento de dashboards personalizados.',
-        icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
-        url: '/services#analytics'
+        id: 'autoops',
+        title: 'n.AutoOps',
+        description: 'Automação de processos operacionais que aumentam a eficiência e reduzem erros humanos em ambientes críticos, com integração de ferramentas e fluxos de trabalho inteligentes.',
+        icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15',
+        url: '/services#autoops'
+      },
+      {
+        id: 'crisisops',
+        title: 'n.CrisisOps',
+        description: 'Gerenciamento de crises e resposta a incidentes críticos, com equipes especializadas disponíveis 24x7 para mitigar impactos e garantir a continuidade dos negócios.',
+        icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z',
+        url: '/services#crisisops'
+      }
+    ]
+  };
+
+  const spinoffsProps = {
+    title: 'Nossas Divisões Especializadas',
+    description: 'Conheça nossas unidades de negócio focadas em áreas específicas de segurança e tecnologia.',
+    spinoffs: [
+      {
+        id: 'trustness',
+        title: 'trustness',
+        description: 'Soluções especializadas em segurança e privacidade, protegendo dados sensíveis e garantindo conformidade com regulamentações como LGPD e GDPR.',
+        logo: '',
+        url: '/spinoffs/trustness',
+        bgColor: 'bg-gray-900',
+        textColor: 'text-white'
+      },
+      {
+        id: 'forense',
+        title: 'forense.io',
+        description: 'Serviços avançados de resposta a incidentes, perícia digital e investigação forense para identificar, conter e remediar violações de segurança.',
+        logo: '',
+        url: '/spinoffs/forense',
+        bgColor: 'bg-primary',
+        textColor: 'text-white'
       }
     ]
   };
@@ -146,8 +183,8 @@ export default function HomePage() {
   return (
     <>
       <SEOHead 
-        title="CorpTech - Soluções empresariais inovadoras"
-        description="Oferecemos soluções empresariais de alta qualidade com foco em inovação, segurança e resultados sustentáveis."
+        title="ness - Transformamos Operações Críticas em Vantagem Estratégica"
+        description="Soluções especializadas em segurança, infraestrutura e operações críticas para empresas que buscam vantagem competitiva através da tecnologia."
         structuredData={structuredData}
       />
       
@@ -176,6 +213,12 @@ export default function HomePage() {
           title={servicesProps.title}
           description={servicesProps.description}
           services={servicesProps.services}
+        />
+        
+        <SpinoffsSection
+          title={spinoffsProps.title}
+          description={spinoffsProps.description}
+          spinoffs={spinoffsProps.spinoffs}
         />
         
         <StatsSection 
