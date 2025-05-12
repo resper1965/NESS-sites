@@ -43,7 +43,7 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
   const spinoffs = [
     {
       id: "trustness",
-      name: "trustness",
+      name: "trustness.",
       description: descriptions[language].trustness,
       url: "https://trustness.com.br",
       isExternal: true
@@ -56,6 +56,21 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
       isExternal: true
     }
   ];
+  
+  // Função para formatar nome com o ponto em azul
+  const formatName = (name: string) => {
+    if (name.includes('.')) {
+      const parts = name.split('.');
+      return (
+        <span className="font-['Montserrat'] font-medium text-xl">
+          {parts[0]}
+          <span className="text-[#00ade0]">.</span>
+          {parts.length > 1 ? parts[1] : ''}
+        </span>
+      );
+    }
+    return <span className="font-['Montserrat'] font-medium text-xl">{name}</span>;
+  };
   
   return (
     <section id="spinoffs" className="py-20 bg-[#2f3e4d] text-white">
@@ -70,8 +85,8 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
               key={spinoff.id} 
               className="bg-[#2c2c34] border border-[#3a3a45] rounded p-8 shadow-md transition-shadow duration-300 hover:shadow-lg text-center"
             >
-              <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase">
-                {spinoff.name}
+              <h3 className="mb-4 lowercase">
+                {formatName(spinoff.name)}
               </h3>
               <p className="text-gray-300 text-sm mb-6 lowercase">
                 {spinoff.description}
