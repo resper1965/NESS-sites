@@ -14,6 +14,7 @@ export const users = pgTable("users", {
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
+  isAdmin: true,
 });
 
 // Content table

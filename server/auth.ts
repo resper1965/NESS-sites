@@ -1,6 +1,6 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
-import { Express } from "express";
+import { Express, Request, Response, NextFunction } from "express";
 import session from "express-session";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
@@ -28,8 +28,54 @@ async function comparePasswords(supplied: string, stored: string) {
   return timingSafeEqual(hashedBuf, suppliedBuf);
 }
 
+// Middleware para verificar se o usuário é um administrador
+export const requireAdmin = (req: Request, res: Response, next: NextFunction) => {
+  if (!req.isAuthenticated()) {
+    return res.status(401).json({ message: "Not authenticated" });
+  }
+  
+  if (!req.user.isAdmin) {
+    return res.status(403).json({ message: "Access denied. Admin privileges required." });
+  }
+  
+  next();
+};
+
+// Verificar e criar o usuário administrador na inicialização
+async function ensureAdminUser() {
+  const adminUsername = process.env.ADMIN_USER;
+  const adminPassword = process.env.ADMIN_PASSWORD;
+  
+  if (!adminUsername || !adminPassword) {
+    console.error("WARNING: Admin credentials not found in environment variables");
+    return;
+  }
+  
+  try {
+    // Verificar se o usuário admin já existe
+    const existingAdmin = await storage.getUserByUsername(adminUsername);
+    
+    if (!existingAdmin) {
+      // Criar o usuário admin se não existir
+      const hashedPassword = await hashPassword(adminPassword);
+      await storage.createUser({
+        username: adminUsername,
+        password: hashedPassword,
+        isAdmin: true,
+      });
+      console.log("Admin user created successfully");
+    } else if (!existingAdmin.isAdmin) {
+      // Atualizar para admin se o usuário existe mas não é admin
+      await storage.updateUser(existingAdmin.id, { isAdmin: true });
+      console.log("Existing user promoted to admin");
+    }
+  } catch (error) {
+    console.error("Error creating admin user:", error);
+  }
+}
+
 export function setupAuth(app: Express) {
-  const sessionSecret = process.env.SESSION_SECRET || "corptech-secret-key-change-in-production";
+  const sessionSecret = process.env.SESSION_SECRET || "ness-secret-key-change-in-production";
   
   const sessionSettings: session.SessionOptions = {
     secret: sessionSecret,
@@ -48,6 +94,9 @@ export function setupAuth(app: Express) {
   app.use(session(sessionSettings));
   app.use(passport.initialize());
   app.use(passport.session());
+
+  // Garantir que o usuário admin exista
+  ensureAdminUser();
 
   passport.use(
     new LocalStrategy(async (username, password, done) => {
@@ -91,6 +140,7 @@ export function setupAuth(app: Express) {
       const user = await storage.createUser({
         username,
         password: hashedPassword,
+        isAdmin: false, // Usuários registrados normalmente não são admins
       });
 
       req.login(user, (err) => {
