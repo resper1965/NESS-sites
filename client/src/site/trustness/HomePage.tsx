@@ -1,0 +1,162 @@
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { useI18n } from '@/lib/i18n';
+import { useSite } from '../SiteContext';
+import SiteLayout from '../layout/SiteLayout';
+
+export default function TrustnessHomePage() {
+  const { siteConfig } = useSite();
+  const { language } = useI18n();
+  
+  // Buscar conteúdo da página inicial específico para o site trustness
+  const { data: pageContent, isLoading } = useQuery({
+    queryKey: ['/api/content/home', language, siteConfig.code],
+    queryFn: async () => {
+      const res = await fetch(`/api/content/home?lang=${language}&site=${siteConfig.code}`);
+      if (!res.ok) throw new Error('Failed to fetch content');
+      return res.json();
+    }
+  });
+  
+  // Definir o título da página com base no conteúdo
+  const pageTitle = pageContent?.metaTitle || siteConfig.metadata?.defaultTitle;
+  const pageDescription = pageContent?.metaDescription || siteConfig.metadata?.defaultDescription;
+  
+  if (isLoading) {
+    return (
+      <SiteLayout>
+        <div className="flex justify-center items-center min-h-screen">
+          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[var(--primary-color)]"></div>
+        </div>
+      </SiteLayout>
+    );
+  }
+  
+  return (
+    <SiteLayout
+      title={pageTitle}
+      description={pageDescription}
+      ogImage={pageContent?.ogImage}
+      canonicalUrl={`https://${siteConfig.domain}`}
+    >
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-[#2c2c34] text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
+              {pageContent?.content?.heroTitle || 'consultoria estratégica em privacidade e segurança'}
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              {pageContent?.content?.heroSubtitle || 
+                'privacidade, segurança da informação e compliance com foco em programas regulatórios e frameworks internacionais'}
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="#services"
+                className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
+              >
+                nossos serviços
+              </a>
+              <a
+                href="/contact"
+                className="border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:bg-opacity-10 px-6 py-3 rounded lowercase"
+              >
+                fale conosco
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+              {pageContent?.content?.servicesSectionTitle || 'áreas de atuação'}
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              {pageContent?.content?.servicesSectionDescription || 
+                'consultoria especializada em privacidade, segurança da informação e compliance para sua empresa.'}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Serviço 1 */}
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-medium text-gray-800 mb-4">privacidade de dados</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                implementação de programas de governança em privacidade, conformidade com LGPD, GDPR e demais regulações.
+              </p>
+              <ul className="text-gray-600 text-sm space-y-2 mb-6">
+                <li>• avaliação de maturidade</li>
+                <li>• inventário e mapeamento de dados</li>
+                <li>• políticas e procedimentos</li>
+                <li>• DPIA, ROPA e LIA</li>
+              </ul>
+            </div>
+            
+            {/* Serviço 2 */}
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-medium text-gray-800 mb-4">segurança da informação</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                avaliação e implementação de controles de segurança baseados em frameworks internacionais.
+              </p>
+              <ul className="text-gray-600 text-sm space-y-2 mb-6">
+                <li>• ISO 27001/27002</li>
+                <li>• NIST Cybersecurity Framework</li>
+                <li>• SOC 2</li>
+                <li>• análise de riscos</li>
+              </ul>
+            </div>
+            
+            {/* Serviço 3 */}
+            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-medium text-gray-800 mb-4">gestão de compliance</h3>
+              <p className="text-gray-600 mb-4 text-sm">
+                conformidade regulatória e frameworks de governança para diferentes setores e indústrias.
+              </p>
+              <ul className="text-gray-600 text-sm space-y-2 mb-6">
+                <li>• programas de compliance</li>
+                <li>• política anticorrupção</li>
+                <li>• due diligence</li>
+                <li>• auditorias de compliance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Clients Section, if available */}
+      {pageContent?.content?.clients && (
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+                {pageContent?.content?.clientsSectionTitle || 'clientes'}
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                {pageContent?.content?.clientsSectionDescription || 
+                  'empresas e organizações que confiam em nossa expertise.'}
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-70">
+              {pageContent.content.clients.map((client: any, index: number) => (
+                <div key={index} className="p-4">
+                  {client.logo && (
+                    <img 
+                      src={client.logo} 
+                      alt={client.name} 
+                      className="max-h-12 mx-auto grayscale hover:grayscale-0 transition-all" 
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+    </SiteLayout>
+  );
+}
