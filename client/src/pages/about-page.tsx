@@ -385,7 +385,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2019</h3>
-                      <p className="text-gray-700 lowercase">spin-off da NESS Health da NESS.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents["2019"]}</p>
                     </div>
                   </div>
                 </div>
@@ -395,7 +395,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2020</h3>
-                      <p className="text-gray-700 lowercase">NESS Health renomeada como IONIC Health, nova sede no Tech-Park SJC, crescimento local com grandes clientes brasileiros da área de saúde.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents["2020"]}</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -409,7 +409,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2021</h3>
-                      <p className="text-gray-700 lowercase">incubação da forense.io.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents["2021"]}</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
@@ -427,7 +427,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pl-8 md:text-left">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2022</h3>
-                      <p className="text-gray-700 lowercase">forense.io como unidade de negócios.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents["2022"]}</p>
                     </div>
                   </div>
                 </div>
@@ -437,7 +437,7 @@ export default function AboutPage() {
                   <div className="md:w-1/2 md:pr-8 md:text-right">
                     <div className="bg-white p-6 rounded-lg shadow-md border-r-4 border-[#00ade0]">
                       <h3 className="text-xl font-medium text-[#00ade0] mb-2">2025</h3>
-                      <p className="text-gray-700 lowercase">estabelecida como uma plataforma modular para transformação digital confiável.</p>
+                      <p className="text-gray-700 lowercase">{defaultContent.timelineEvents["2025"]}</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
