@@ -8,6 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 
 // Site-specific pages
 import NessHomePage from "@/site/ness/HomePage";
+import NessAboutPage from "@/site/ness/AboutPage";
 import TrustnessHomePage from "@/site/trustness/HomePage";
 import ForenseHomePage from "@/site/forense/HomePage";
 
@@ -37,19 +38,27 @@ import { SiteProvider } from "@/site/SiteContext";
 function Router() {
   return (
     <Switch>
-      {/* Site-specific routes */}
+      {/* Site-specific routes - NESS */}
       <Route path="/site/ness">
         <SiteProvider siteCode="ness">
           <NessHomePage />
         </SiteProvider>
       </Route>
       
+      <Route path="/site/ness/about">
+        <SiteProvider siteCode="ness">
+          <NessAboutPage />
+        </SiteProvider>
+      </Route>
+      
+      {/* Site-specific routes - TRUSTNESS */}
       <Route path="/site/trustness">
         <SiteProvider siteCode="trustness">
           <TrustnessHomePage />
         </SiteProvider>
       </Route>
       
+      {/* Site-specific routes - FORENSE */}
       <Route path="/site/forense">
         <SiteProvider siteCode="forense">
           <ForenseHomePage />
