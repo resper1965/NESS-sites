@@ -49,8 +49,8 @@ export default function NessAboutPage() {
         "1992": "atividades de infraestrutura, processamento de dados e BPO.",
         "1998": "início na atividade de infraestrutura em grandes eventos por todo diversos países da europa, américas, africa e ásia.",
         "2005": "início de serviços de privacidade e segurança digital.",
-        "2014-1": "lançamento da divisão de software e processos.",
-        "2014-2": "incubação de projetos de saúde. NESS Technology healthcare inicia como incubação.",
+        "2014": "lançamento da divisão de software e processos.",
+        "2014.2": "incubação de projetos de saúde. NESS Technology healthcare inicia como incubação.",
         "2016": "incubação da Trustness.",
         "2017": "criação da unidade de negócios NESS Health como Business Unit da NESS.",
         "2018": "Trustness como unidade de negócios.",
@@ -98,8 +98,8 @@ export default function NessAboutPage() {
         "1992": "infrastructure activities, data processing, and BPO.",
         "1998": "beginning of infrastructure activities at major events throughout various countries in Europe, Americas, Africa, and Asia.",
         "2005": "initiation of privacy and digital security services.",
-        "20141": "launch of the software and processes division.",
-        "20142": "healthcare projects incubation. NESS Technology healthcare starts as an incubation project.",
+        "2014": "launch of the software and processes division.",
+        "2014.2": "healthcare projects incubation. NESS Technology healthcare starts as an incubation project.",
         "2016": "Trustness incubation.",
         "2017": "creation of NESS Health as a NESS Business Unit.",
         "2018": "Trustness as a Business Unit.",
@@ -147,8 +147,8 @@ export default function NessAboutPage() {
         "1992": "actividades de infraestructura, procesamiento de datos y BPO.",
         "1998": "inicio en la actividad de infraestructura en grandes eventos por diversos países de Europa, América, África y Asia.",
         "2005": "inicio de servicios de privacidad y seguridad digital.",
-        "20141": "lanzamiento de la división de software y procesos.",
-        "20142": "incubación de proyectos de salud. NESS Technology healthcare inicia como incubación.",
+        "2014": "lanzamiento de la división de software y procesos.",
+        "2014.2": "incubación de proyectos de salud. NESS Technology healthcare inicia como incubación.",
         "2016": "incubación de Trustness.",
         "2017": "creación de la unidad de negocios NESS Health como Business Unit de NESS.",
         "2018": "Trustness como unidad de negocios.",
@@ -342,8 +342,8 @@ export default function NessAboutPage() {
                     <div className="w-1/2 px-6">
                       <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                         <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
-                          {year.includes('-') ? year.split('-')[0] : year}
-                          {year.includes('-') && <span className="text-[#00ade0] text-sm">.{year.split('-')[1]}</span>}
+                          {year.includes('.') ? year.split('.')[0] : year}
+                          {year.includes('.') && <span className="text-[#00ade0] text-sm">.{year.split('.')[1]}</span>}
                         </span>
                         <p className="mt-2 text-gray-700 lowercase">
                           {description}
