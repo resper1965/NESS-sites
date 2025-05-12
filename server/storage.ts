@@ -1,0 +1,487 @@
+import { users, type User, type InsertUser, jobs, type Job, type InsertJob, news, type News, type InsertNews, contents, type Content, type InsertContent, activityLogs, type ActivityLog, type InsertActivityLog } from "@shared/schema";
+import session from "express-session";
+import createMemoryStore from "memorystore";
+
+// Create memory store for sessions
+const MemoryStore = createMemoryStore(session);
+
+// Default content for pages by language
+const defaultContent: Record<string, Record<string, Partial<Content>>> = {
+  pt: {
+    home: {
+      title: "Página Inicial",
+      description: "Bem-vindo ao nosso site institucional",
+      content: "<h1>Bem-vindo à CorpTech</h1><p>Soluções tecnológicas para o seu negócio.</p>"
+    },
+    about: {
+      title: "Quem Somos",
+      description: "Conheça nossa história e valores",
+      content: "<h1>Sobre a CorpTech</h1><p>Somos uma empresa especializada em soluções tecnológicas.</p>"
+    },
+    services: {
+      title: "O Que Fazemos",
+      description: "Conheça nossos serviços e soluções",
+      content: "<h1>Nossos Serviços</h1><p>Oferecemos uma ampla gama de serviços tecnológicos.</p>"
+    },
+    ethics: {
+      title: "Código de Ética",
+      description: "Nossos princípios e valores éticos",
+      content: "<h1>Código de Ética</h1><p>Acreditamos em conduzir nossos negócios com os mais altos padrões éticos.</p>"
+    },
+    privacy: {
+      title: "Política de Segurança e Privacidade",
+      description: "Como protegemos seus dados",
+      content: "<h1>Política de Privacidade</h1><p>Valorizamos a segurança e privacidade de seus dados.</p>"
+    }
+  },
+  en: {
+    home: {
+      title: "Home Page",
+      description: "Welcome to our institutional website",
+      content: "<h1>Welcome to CorpTech</h1><p>Technological solutions for your business.</p>"
+    },
+    about: {
+      title: "About Us",
+      description: "Learn about our history and values",
+      content: "<h1>About CorpTech</h1><p>We are a company specialized in technological solutions.</p>"
+    },
+    services: {
+      title: "What We Do",
+      description: "Discover our services and solutions",
+      content: "<h1>Our Services</h1><p>We offer a wide range of technological services.</p>"
+    },
+    ethics: {
+      title: "Code of Ethics",
+      description: "Our ethical principles and values",
+      content: "<h1>Code of Ethics</h1><p>We believe in conducting our business with the highest ethical standards.</p>"
+    },
+    privacy: {
+      title: "Security and Privacy Policy",
+      description: "How we protect your data",
+      content: "<h1>Privacy Policy</h1><p>We value the security and privacy of your data.</p>"
+    }
+  },
+  es: {
+    home: {
+      title: "Página de Inicio",
+      description: "Bienvenido a nuestro sitio web institucional",
+      content: "<h1>Bienvenido a CorpTech</h1><p>Soluciones tecnológicas para su negocio.</p>"
+    },
+    about: {
+      title: "Quiénes Somos",
+      description: "Conozca nuestra historia y valores",
+      content: "<h1>Sobre CorpTech</h1><p>Somos una empresa especializada en soluciones tecnológicas.</p>"
+    },
+    services: {
+      title: "Qué Hacemos",
+      description: "Descubra nuestros servicios y soluciones",
+      content: "<h1>Nuestros Servicios</h1><p>Ofrecemos una amplia gama de servicios tecnológicos.</p>"
+    },
+    ethics: {
+      title: "Código de Ética",
+      description: "Nuestros principios y valores éticos",
+      content: "<h1>Código de Ética</h1><p>Creemos en conducir nuestros negocios con los más altos estándares éticos.</p>"
+    },
+    privacy: {
+      title: "Política de Seguridad y Privacidad",
+      description: "Cómo protegemos sus datos",
+      content: "<h1>Política de Privacidad</h1><p>Valoramos la seguridad y privacidad de sus datos.</p>"
+    }
+  }
+};
+
+// Storage interface
+export interface IStorage {
+  // User methods
+  getUser(id: number): Promise<User | undefined>;
+  getUserByUsername(username: string): Promise<User | undefined>;
+  createUser(user: InsertUser): Promise<User>;
+  
+  // Content methods
+  getContent(pageId: string, language: string): Promise<Content | undefined>;
+  createContent(content: InsertContent): Promise<Content>;
+  updateContent(id: number, content: Partial<Content>): Promise<Content>;
+  getContentCount(language: string): Promise<number>;
+  
+  // Job methods
+  getJobs(language: string): Promise<Job[]>;
+  getFeaturedJobs(language: string): Promise<Job[]>;
+  getJob(id: number, language: string): Promise<Job | undefined>;
+  createJob(job: InsertJob): Promise<Job>;
+  updateJob(id: number, job: Partial<Job>): Promise<Job>;
+  deleteJob(id: number): Promise<void>;
+  getJobCount(language: string): Promise<number>;
+  
+  // News methods
+  getNewsItems(language: string): Promise<News[]>;
+  getLatestNews(language: string): Promise<News[]>;
+  getNewsItem(id: number, language: string): Promise<News | undefined>;
+  createNewsItem(newsItem: InsertNews): Promise<News>;
+  updateNewsItem(id: number, newsItem: Partial<News>): Promise<News>;
+  deleteNewsItem(id: number): Promise<void>;
+  getNewsCount(language: string): Promise<number>;
+  
+  // Activity logs
+  createActivityLog(log: InsertActivityLog): Promise<ActivityLog>;
+  getRecentActivities(): Promise<ActivityLog[]>;
+  
+  // Session store
+  sessionStore: session.SessionStore;
+}
+
+// In-memory storage implementation
+export class MemStorage implements IStorage {
+  private users: Map<number, User>;
+  private contents: Map<number, Content>;
+  private jobsData: Map<number, Job>;
+  private newsData: Map<number, News>;
+  private activities: Map<number, ActivityLog>;
+  
+  sessionStore: session.SessionStore;
+  currentId: number;
+  contentId: number;
+  jobId: number;
+  newsId: number;
+  activityId: number;
+
+  constructor() {
+    this.users = new Map();
+    this.contents = new Map();
+    this.jobsData = new Map();
+    this.newsData = new Map();
+    this.activities = new Map();
+    
+    this.sessionStore = new MemoryStore({
+      checkPeriod: 86400000, // 24h
+    });
+    
+    this.currentId = 1;
+    this.contentId = 1;
+    this.jobId = 1;
+    this.newsId = 1;
+    this.activityId = 1;
+    
+    // Initialize with admin user
+    this.createUser({
+      username: "admin",
+      password: "$2b$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa", // 'password'
+    }).then(user => {
+      // Update user to be admin
+      const adminUser = { ...user, isAdmin: true };
+      this.users.set(user.id, adminUser);
+    });
+    
+    // Initialize with default content
+    this.initializeDefaultContent();
+    
+    // Initialize with sample jobs
+    this.initializeSampleJobs();
+    
+    // Initialize with sample news
+    this.initializeSampleNews();
+  }
+
+  // Initialize default content for all pages and languages
+  private async initializeDefaultContent() {
+    const languages = ["pt", "en", "es"];
+    const pageIds = ["home", "about", "services", "ethics", "privacy"];
+    
+    for (const lang of languages) {
+      for (const pageId of pageIds) {
+        const defaultData = defaultContent[lang][pageId];
+        if (defaultData) {
+          await this.createContent({
+            pageId,
+            language: lang,
+            title: defaultData.title || "",
+            description: defaultData.description || "",
+            content: defaultData.content || "",
+            metadata: {},
+          });
+        }
+      }
+    }
+  }
+
+  // Initialize sample jobs
+  private async initializeSampleJobs() {
+    const sampleJobs = [
+      {
+        title: "Desenvolvedor Full Stack",
+        location: "Remoto - Brasil",
+        locationType: "remote",
+        type: "Integral",
+        summary: "Buscamos um desenvolvedor full stack com experiência em Node.js, React e bancos de dados NoSQL para integrar nossa equipe de produtos digitais.",
+        description: "Descrição detalhada da vaga de desenvolvedor full stack.",
+        requirements: "Experiência com Node.js, React, MongoDB e AWS.",
+        language: "pt",
+        active: true,
+        tags: [{ name: "Node.js" }, { name: "React" }, { name: "MongoDB" }, { name: "AWS" }],
+      },
+      {
+        title: "Especialista em Segurança da Informação",
+        location: "São Paulo, SP",
+        locationType: "office",
+        type: "Integral",
+        summary: "Procuramos um especialista em segurança da informação para implementar e gerenciar soluções de proteção de dados e sistemas para nossos clientes.",
+        description: "Descrição detalhada da vaga de especialista em segurança.",
+        requirements: "Certificações em segurança, experiência com LGPD e ISO 27001.",
+        language: "pt",
+        active: true,
+        tags: [{ name: "ISO 27001" }, { name: "Pentest" }, { name: "LGPD" }, { name: "Análise de Vulnerabilidades" }],
+      }
+    ];
+    
+    for (const job of sampleJobs) {
+      await this.createJob(job);
+    }
+  }
+
+  // Initialize sample news
+  private async initializeSampleNews() {
+    const sampleNews = [
+      {
+        title: "Nova parceria estratégica para expansão internacional",
+        summary: "Nossa empresa firmou uma parceria estratégica com o grupo internacional TechGlobal para expandir a oferta de soluções em segurança da informação para América Latina.",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>",
+        image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+        date: "2023-06-15",
+        category: "company",
+        language: "pt",
+        featured: true,
+      },
+      {
+        title: "Lançamento da nova plataforma de analytics",
+        summary: "Apresentamos nossa nova plataforma de analytics com inteligência artificial, que permitirá aos clientes obter insights mais precisos e em tempo real sobre seus negócios.",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>",
+        image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+        date: "2023-06-03",
+        category: "technology",
+        language: "pt",
+        featured: false,
+      },
+      {
+        title: "Participação em evento global de tecnologia",
+        summary: "Nossa equipe marcou presença no TechSummit 2023, um dos maiores eventos globais de tecnologia, apresentando nossas soluções inovadoras em segurança digital.",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>",
+        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+        date: "2023-05-22",
+        category: "events",
+        language: "pt",
+        featured: false,
+      }
+    ];
+    
+    for (const item of sampleNews) {
+      await this.createNewsItem(item);
+    }
+  }
+
+  // User methods
+  async getUser(id: number): Promise<User | undefined> {
+    return this.users.get(id);
+  }
+
+  async getUserByUsername(username: string): Promise<User | undefined> {
+    return Array.from(this.users.values()).find(
+      (user) => user.username === username,
+    );
+  }
+
+  async createUser(insertUser: InsertUser): Promise<User> {
+    const id = this.currentId++;
+    const user: User = { 
+      ...insertUser, 
+      id,
+      isAdmin: false,
+      createdAt: new Date()
+    };
+    this.users.set(id, user);
+    return user;
+  }
+
+  // Content methods
+  async getContent(pageId: string, language: string): Promise<Content | undefined> {
+    return Array.from(this.contents.values()).find(
+      (content) => content.pageId === pageId && content.language === language
+    );
+  }
+
+  async createContent(content: InsertContent): Promise<Content> {
+    const id = this.contentId++;
+    const now = new Date();
+    const newContent: Content = {
+      ...content,
+      id,
+      createdAt: now,
+      updatedAt: now
+    };
+    this.contents.set(id, newContent);
+    return newContent;
+  }
+
+  async updateContent(id: number, content: Partial<Content>): Promise<Content> {
+    const existing = this.contents.get(id);
+    if (!existing) {
+      throw new Error(`Content with ID ${id} not found`);
+    }
+    
+    const updated: Content = {
+      ...existing,
+      ...content,
+      updatedAt: new Date()
+    };
+    
+    this.contents.set(id, updated);
+    return updated;
+  }
+
+  async getContentCount(language: string): Promise<number> {
+    return Array.from(this.contents.values()).filter(
+      (content) => content.language === language
+    ).length;
+  }
+
+  // Job methods
+  async getJobs(language: string): Promise<Job[]> {
+    return Array.from(this.jobsData.values())
+      .filter(job => job.language === language)
+      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+  }
+
+  async getFeaturedJobs(language: string): Promise<Job[]> {
+    return Array.from(this.jobsData.values())
+      .filter(job => job.language === language && job.active)
+      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
+      .slice(0, 4);
+  }
+
+  async getJob(id: number, language: string): Promise<Job | undefined> {
+    const job = this.jobsData.get(id);
+    if (job && job.language === language) {
+      return job;
+    }
+    return undefined;
+  }
+
+  async createJob(job: InsertJob): Promise<Job> {
+    const id = this.jobId++;
+    const now = new Date();
+    const newJob: Job = {
+      ...job,
+      id,
+      createdAt: now,
+      updatedAt: now
+    };
+    this.jobsData.set(id, newJob);
+    return newJob;
+  }
+
+  async updateJob(id: number, job: Partial<Job>): Promise<Job> {
+    const existing = this.jobsData.get(id);
+    if (!existing) {
+      throw new Error(`Job with ID ${id} not found`);
+    }
+    
+    const updated: Job = {
+      ...existing,
+      ...job,
+      updatedAt: new Date()
+    };
+    
+    this.jobsData.set(id, updated);
+    return updated;
+  }
+
+  async deleteJob(id: number): Promise<void> {
+    this.jobsData.delete(id);
+  }
+
+  async getJobCount(language: string): Promise<number> {
+    return Array.from(this.jobsData.values()).filter(
+      (job) => job.language === language
+    ).length;
+  }
+
+  // News methods
+  async getNewsItems(language: string): Promise<News[]> {
+    return Array.from(this.newsData.values())
+      .filter(news => news.language === language)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }
+
+  async getLatestNews(language: string): Promise<News[]> {
+    return Array.from(this.newsData.values())
+      .filter(news => news.language === language)
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 3);
+  }
+
+  async getNewsItem(id: number, language: string): Promise<News | undefined> {
+    const newsItem = this.newsData.get(id);
+    if (newsItem && newsItem.language === language) {
+      return newsItem;
+    }
+    return undefined;
+  }
+
+  async createNewsItem(newsItem: InsertNews): Promise<News> {
+    const id = this.newsId++;
+    const now = new Date();
+    const newNewsItem: News = {
+      ...newsItem,
+      id,
+      createdAt: now,
+      updatedAt: now
+    };
+    this.newsData.set(id, newNewsItem);
+    return newNewsItem;
+  }
+
+  async updateNewsItem(id: number, newsItem: Partial<News>): Promise<News> {
+    const existing = this.newsData.get(id);
+    if (!existing) {
+      throw new Error(`News item with ID ${id} not found`);
+    }
+    
+    const updated: News = {
+      ...existing,
+      ...newsItem,
+      updatedAt: new Date()
+    };
+    
+    this.newsData.set(id, updated);
+    return updated;
+  }
+
+  async deleteNewsItem(id: number): Promise<void> {
+    this.newsData.delete(id);
+  }
+
+  async getNewsCount(language: string): Promise<number> {
+    return Array.from(this.newsData.values()).filter(
+      (news) => news.language === language
+    ).length;
+  }
+
+  // Activity logs
+  async createActivityLog(log: InsertActivityLog): Promise<ActivityLog> {
+    const id = this.activityId++;
+    const now = new Date();
+    const newLog: ActivityLog = {
+      ...log,
+      id,
+      createdAt: now
+    };
+    this.activities.set(id, newLog);
+    return newLog;
+  }
+
+  async getRecentActivities(): Promise<ActivityLog[]> {
+    return Array.from(this.activities.values())
+      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
+      .slice(0, 5);
+  }
+}
+
+export const storage = new MemStorage();

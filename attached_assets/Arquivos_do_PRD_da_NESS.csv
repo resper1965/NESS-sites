@@ -1,0 +1,105 @@
+Arquivo,Conteúdo
+config/design.md,"# 🎨 Design e Estilo
+
+## Paleta de Cores
+- **Primário**: `#00ade0`
+- **Base**: Tons de **cinza** e **branco**
+- **Texto**: Cinza escuro e preto suave
+
+## Tipografia
+- **Fonte principal**: Montserrat
+- Tamanhos e pesos adaptáveis com base na hierarquia visual
+
+## Contraste de Seções
+- Todas as **Hero Sections** devem ter **fundo escuro**, com textos em branco ou tons claros para contraste.
+- As demais seções do site devem manter fundo **claro**.
+
+## Responsividade, Multilinguismo e Tradução Automática (via Replit)
+- Site 100% responsivo (mobile, tablet, desktop)
+- Idiomas: Português (pt), Inglês (en), Espanhol (es)
+- Tradução automática via API da OpenAI (ChatGPT)
+- Revisor interno antes da publicação
+- Detecta idioma do navegador, default para inglês
+- Backend e logs hospedados via Replit
+"
+routes/public-pages.md,"# 🧱 Páginas Públicas
+
+## Navegação Principal
+- Início
+- Quem Somos
+- O que fazemos (com submenu)
+- Vagas
+- Notícias
+- Código de Ética
+- Política de Segurança e Privacidade
+
+## Página Inicial
+- Hero escuro com CTA
+- Seção ""O que fazemos"" com ícones
+- Spin-offs integradas
+- Footer com links e redes sociais
+
+## Quem Somos
+- Hero escuro
+- Missão e Visão (2 colunas)
+- História (linha do tempo)
+
+## Serviços (por rota)
+- Hero escuro com nome
+- Descrição, casos de uso, CTA
+
+## Notícias
+- Hero escuro
+- Cards com imagem, título, resumo
+- Página individual por notícia
+
+## Vagas
+- Hero escuro
+- Cards com título, local, tipo, link
+- Página de detalhe por vaga
+
+## Código de Ética & Política de Segurança
+- Texto institucional com estrutura organizada
+"
+routes/admin.md,"# 🧑‍💼 Área Administrativa
+
+## Acesso
+- Login e senha com timeout
+- Sessões seguras
+
+## Dashboard
+- Resumo: acessos, conteúdo publicado, status
+
+## CMS Interno
+### Páginas Institucionais
+- Editor rico com controle de versão
+
+### Biblioteca de Mídia
+- Upload, filtros, organização
+
+### Usuários
+- Cadastro, permissões e logs
+
+## Gerenciamento de Notícias
+- CRUD completo com agendamento
+
+## Gerenciamento de Vagas
+- CRUD com campos específicos
+- Redirecionamento interno
+
+## Gerenciamento de Formulários
+- Formulários internos
+- E-mail destino padrão: contato@ness.com.br
+- Personalização de destinatário
+- Histórico de envios
+"
+seo/seo-guidelines.md,"# 🔎 SEO Optimization
+
+- Metadados por página
+- URLs amigáveis
+- Sitemap.xml e robots.txt
+- Tags semânticas (h1, h2, etc.)
+- Open Graph e ALT em imagens
+- Google Search Console
+- Dados estruturados (schema.org)
+"
