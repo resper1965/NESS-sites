@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useI18n, Language } from '@/lib/i18n';
 
 export default function LanguageSelector() {
   const { language, setLanguage, t } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<Language>(language);
+  
+  useEffect(() => {
+    // Update language when it changes through context
+    setSelectedLanguage(language);
+  }, [language]);
   
   const toggleDropdown = () => setIsOpen(!isOpen);
   
@@ -19,7 +25,7 @@ export default function LanguageSelector() {
         onClick={toggleDropdown}
         className="flex items-center text-white hover:text-accent transition duration-200"
       >
-        <span>{language.toUpperCase()}</span>
+        <span>{selectedLanguage.toUpperCase()}</span>
         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"></path>
         </svg>
@@ -32,7 +38,10 @@ export default function LanguageSelector() {
               key={lang.code}
               onClick={() => {
                 setLanguage(lang.code);
+                setSelectedLanguage(lang.code);
                 setIsOpen(false);
+                // Para forçar o recarregamento da página e das traduções
+                window.location.reload();
               }}
               className={`block w-full text-left px-4 py-2 text-sm ${
                 language === lang.code ? 'bg-neutral-dark text-primary font-medium' : 'text-gray-800 hover:bg-neutral-dark'

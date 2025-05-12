@@ -33,74 +33,14 @@ export default function HeroSection({
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.1)] to-[rgba(18,18,18,0.3)]"></div>
       </div>
-      {/* Grid pattern */}
-      <div className="grid-panel">
-        <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <pattern id="grid-pattern-main" width="10" height="10" patternUnits="userSpaceOnUse">
-            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#00ade0" strokeWidth="0.1" />
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#grid-pattern-main)" />
-        </svg>
-      </div>
-      
-      {/* 3D cubes */}
-      <div className="cube-wrapper">
-        <div className="cube">
-          <div className="cube-face front"></div>
-          <div className="cube-face back"></div>
-          <div className="cube-face right"></div>
-          <div className="cube-face left"></div>
-          <div className="cube-face top"></div>
-          <div className="cube-face bottom"></div>
-        </div>
-        <div className="cube">
-          <div className="cube-face front"></div>
-          <div className="cube-face back"></div>
-          <div className="cube-face right"></div>
-          <div className="cube-face left"></div>
-          <div className="cube-face top"></div>
-          <div className="cube-face bottom"></div>
-        </div>
-        <div className="cube">
-          <div className="cube-face front"></div>
-          <div className="cube-face back"></div>
-          <div className="cube-face right"></div>
-          <div className="cube-face left"></div>
-          <div className="cube-face top"></div>
-          <div className="cube-face bottom"></div>
-        </div>
-      </div>
-      
-      {/* Polygons/Shapes */}
-      <div className="polygons">
-        <div className="polygon"></div>
-        <div className="polygon"></div>
-        <div className="polygon"></div>
-        <div className="polygon"></div>
-      </div>
-      
-      {/* Data streams */}
-      <div className="data-streams">
-        <div className="stream"></div>
-        <div className="stream"></div>
-        <div className="stream"></div>
-        <div className="stream"></div>
-      </div>
-      
-      {/* Node points */}
-      <div className="node-points">
-        <div className="node-point"></div>
-        <div className="node-point"></div>
-        <div className="node-point"></div>
-        <div className="node-point"></div>
-        <div className="node-point"></div>
-      </div>
+      {/* Overlay para garantir boa legibilidade do texto */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.2)] to-[rgba(18,18,18,0.4)]"></div>
       
       {/* Content */}
       <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
         <div className="hero-main-content text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6 text-white">
-            <span className="text-white">ness</span><span className="text-[#00ade0]">.</span>
+            ness<span className="text-[#00ade0]">.</span>
           </h1>
           <p className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
             {title}
@@ -120,8 +60,7 @@ export default function HeroSection({
           </div>
         </div>
         
-        {/* Scroll indicator */}
-        <div className="scroll-down">↓</div>
+
       </div>
     </section>
   );
