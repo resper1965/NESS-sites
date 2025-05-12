@@ -15,7 +15,7 @@ interface I18nContextType {
   isLoading: boolean;
 }
 
-const DEFAULT_LANGUAGE: Language = 'pt';
+const DEFAULT_LANGUAGE: Language = 'en';
 
 // Initial basic translations
 const translations: TranslationsMap = {
