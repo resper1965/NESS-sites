@@ -1,6 +1,9 @@
 import { users, type User, type InsertUser, jobs, type Job, type InsertJob, news, type News, type InsertNews, contents, type Content, type InsertContent, activityLogs, type ActivityLog, type InsertActivityLog } from "@shared/schema";
 import session from "express-session";
 import createMemoryStore from "memorystore";
+import connectPg from "connect-pg-simple";
+import { db } from "./db";
+import { eq, desc, and, asc } from "drizzle-orm";
 
 // Create memory store for sessions
 const MemoryStore = createMemoryStore(session);
@@ -484,4 +487,299 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+// Database storage implementation
+export class DatabaseStorage implements IStorage {
+  sessionStore: session.SessionStore;
+  
+  constructor() {
+    // Use PostgreSQL session store
+    const PostgresSessionStore = connectPg(session);
+    
+    this.sessionStore = new PostgresSessionStore({
+      createTableIfMissing: true,
+      tableName: 'sessions',
+      conObject: {
+        connectionString: process.env.DATABASE_URL,
+      }
+    });
+    
+    // Initialize the database with default content
+    this.initializeDefaults().catch(err => {
+      console.error("Error initializing database:", err);
+    });
+  }
+  
+  // Initialize defaults if needed
+  private async initializeDefaults() {
+    // Check if users table is empty
+    const result = await db.select({ count: users.id }).from(users);
+    const usersCount = parseInt(result[0]?.count as unknown as string, 10) || 0;
+    
+    if (usersCount === 0) {
+      console.log("Initializing default admin user...");
+      // Create admin user
+      await this.createUser({
+        username: "admin",
+        password: "$2b$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa", // 'password'
+        isAdmin: true,
+      });
+      
+      // Initialize default content
+      await this.initializeDefaultContent();
+      
+      // Initialize sample jobs and news
+      await this.initializeSampleJobs();
+      await this.initializeSampleNews();
+    }
+  }
+  
+  // Initialize default content for all pages and languages
+  private async initializeDefaultContent() {
+    console.log("Initializing default content...");
+    const languages = ["pt", "en", "es"];
+    const pageIds = ["home", "about", "services", "ethics", "privacy"];
+    
+    for (const lang of languages) {
+      for (const pageId of pageIds) {
+        const defaultData = defaultContent[lang][pageId];
+        if (defaultData) {
+          await this.createContent({
+            pageId,
+            language: lang,
+            title: defaultData.title || "",
+            description: defaultData.description || "",
+            content: defaultData.content || "",
+            metadata: {},
+          });
+        }
+      }
+    }
+  }
+  
+  // Initialize sample jobs
+  private async initializeSampleJobs() {
+    console.log("Initializing sample jobs...");
+    const sampleJobs = [
+      {
+        title: "Desenvolvedor Full Stack",
+        location: "Remoto - Brasil",
+        locationType: "remote",
+        type: "Integral",
+        summary: "Buscamos um desenvolvedor full stack com experiência em Node.js, React e bancos de dados NoSQL para integrar nossa equipe de produtos digitais.",
+        description: "Descrição detalhada da vaga de desenvolvedor full stack.",
+        requirements: "Experiência com Node.js, React, MongoDB e AWS.",
+        language: "pt",
+        active: true,
+        tags: [{ name: "Node.js" }, { name: "React" }, { name: "MongoDB" }, { name: "AWS" }],
+      },
+      {
+        title: "Especialista em Segurança da Informação",
+        location: "São Paulo, SP",
+        locationType: "office",
+        type: "Integral",
+        summary: "Procuramos um especialista em segurança da informação para implementar e gerenciar soluções de proteção de dados e sistemas para nossos clientes.",
+        description: "Descrição detalhada da vaga de especialista em segurança.",
+        requirements: "Certificações em segurança, experiência com LGPD e ISO 27001.",
+        language: "pt",
+        active: true,
+        tags: [{ name: "ISO 27001" }, { name: "Pentest" }, { name: "LGPD" }, { name: "Análise de Vulnerabilidades" }],
+      }
+    ];
+    
+    for (const job of sampleJobs) {
+      await this.createJob(job);
+    }
+  }
+  
+  // Initialize sample news
+  private async initializeSampleNews() {
+    console.log("Initializing sample news...");
+    const sampleNews = [
+      {
+        title: "Nova parceria estratégica para expansão internacional",
+        summary: "Nossa empresa firmou uma parceria estratégica com o grupo internacional TechGlobal para expandir a oferta de soluções em segurança da informação para América Latina.",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>",
+        image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+        date: "2023-06-15",
+        category: "company",
+        language: "pt",
+        featured: true,
+      },
+      {
+        title: "Lançamento da nova plataforma de analytics",
+        summary: "Apresentamos nossa nova plataforma de analytics com inteligência artificial, que permitirá aos clientes obter insights mais precisos e em tempo real sobre seus negócios.",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>",
+        image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+        date: "2023-06-03",
+        category: "technology",
+        language: "pt",
+        featured: false,
+      }
+    ];
+    
+    for (const item of sampleNews) {
+      await this.createNewsItem(item);
+    }
+  }
+  
+  // User methods
+  async getUser(id: number): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user;
+  }
+  
+  async getUserByUsername(username: string): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user;
+  }
+  
+  async createUser(insertUser: InsertUser): Promise<User> {
+    const [user] = await db.insert(users).values(insertUser).returning();
+    return user;
+  }
+  
+  // Content methods
+  async getContent(pageId: string, language: string): Promise<Content | undefined> {
+    const [content] = await db.select().from(contents)
+      .where(and(eq(contents.pageId, pageId), eq(contents.language, language)));
+    return content;
+  }
+  
+  async createContent(content: InsertContent): Promise<Content> {
+    const [newContent] = await db.insert(contents).values(content).returning();
+    return newContent;
+  }
+  
+  async updateContent(id: number, content: Partial<Content>): Promise<Content> {
+    const [updated] = await db.update(contents)
+      .set({ ...content, updatedAt: new Date() })
+      .where(eq(contents.id, id))
+      .returning();
+      
+    if (!updated) {
+      throw new Error(`Content with ID ${id} not found`);
+    }
+    
+    return updated;
+  }
+  
+  async getContentCount(language: string): Promise<number> {
+    const result = await db.select({ count: contents.id })
+      .from(contents)
+      .where(eq(contents.language, language));
+    return parseInt(result[0].count as unknown as string, 10) || 0;
+  }
+  
+  // Job methods
+  async getJobs(language: string): Promise<Job[]> {
+    return await db.select().from(jobs)
+      .where(eq(jobs.language, language))
+      .orderBy(desc(jobs.createdAt));
+  }
+  
+  async getFeaturedJobs(language: string): Promise<Job[]> {
+    return await db.select().from(jobs)
+      .where(and(eq(jobs.language, language), eq(jobs.active, true)))
+      .orderBy(desc(jobs.createdAt))
+      .limit(4);
+  }
+  
+  async getJob(id: number, language: string): Promise<Job | undefined> {
+    const [job] = await db.select().from(jobs)
+      .where(and(eq(jobs.id, id), eq(jobs.language, language)));
+    return job;
+  }
+  
+  async createJob(job: InsertJob): Promise<Job> {
+    const [newJob] = await db.insert(jobs).values(job).returning();
+    return newJob;
+  }
+  
+  async updateJob(id: number, job: Partial<Job>): Promise<Job> {
+    const [updated] = await db.update(jobs)
+      .set({ ...job, updatedAt: new Date() })
+      .where(eq(jobs.id, id))
+      .returning();
+      
+    if (!updated) {
+      throw new Error(`Job with ID ${id} not found`);
+    }
+    
+    return updated;
+  }
+  
+  async deleteJob(id: number): Promise<void> {
+    await db.delete(jobs).where(eq(jobs.id, id));
+  }
+  
+  async getJobCount(language: string): Promise<number> {
+    const result = await db.select({ count: jobs.id })
+      .from(jobs)
+      .where(eq(jobs.language, language));
+    return parseInt(result[0].count as unknown as string, 10) || 0;
+  }
+  
+  // News methods
+  async getNewsItems(language: string): Promise<News[]> {
+    return await db.select().from(news)
+      .where(eq(news.language, language))
+      .orderBy(desc(news.date));
+  }
+  
+  async getLatestNews(language: string): Promise<News[]> {
+    return await db.select().from(news)
+      .where(eq(news.language, language))
+      .orderBy(desc(news.date))
+      .limit(3);
+  }
+  
+  async getNewsItem(id: number, language: string): Promise<News | undefined> {
+    const [newsItem] = await db.select().from(news)
+      .where(and(eq(news.id, id), eq(news.language, language)));
+    return newsItem;
+  }
+  
+  async createNewsItem(newsItem: InsertNews): Promise<News> {
+    const [newNewsItem] = await db.insert(news).values(newsItem).returning();
+    return newNewsItem;
+  }
+  
+  async updateNewsItem(id: number, newsItem: Partial<News>): Promise<News> {
+    const [updated] = await db.update(news)
+      .set({ ...newsItem, updatedAt: new Date() })
+      .where(eq(news.id, id))
+      .returning();
+      
+    if (!updated) {
+      throw new Error(`News item with ID ${id} not found`);
+    }
+    
+    return updated;
+  }
+  
+  async deleteNewsItem(id: number): Promise<void> {
+    await db.delete(news).where(eq(news.id, id));
+  }
+  
+  async getNewsCount(language: string): Promise<number> {
+    const result = await db.select({ count: news.id })
+      .from(news)
+      .where(eq(news.language, language));
+    return parseInt(result[0].count as unknown as string, 10) || 0;
+  }
+  
+  // Activity logs
+  async createActivityLog(log: InsertActivityLog): Promise<ActivityLog> {
+    const [newLog] = await db.insert(activityLogs).values(log).returning();
+    return newLog;
+  }
+  
+  async getRecentActivities(): Promise<ActivityLog[]> {
+    return await db.select().from(activityLogs)
+      .orderBy(desc(activityLogs.createdAt))
+      .limit(5);
+  }
+}
+
+// Use DatabaseStorage instead of MemStorage
+export const storage = new DatabaseStorage();
