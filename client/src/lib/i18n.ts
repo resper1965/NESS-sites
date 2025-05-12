@@ -89,10 +89,14 @@ const translations: TranslationsMap = {
 
 // Helper to detect browser language
 export function detectBrowserLanguage(): Language {
-  const browserLang = navigator.language.split('-')[0];
-  
-  if (browserLang === 'pt' || browserLang === 'en' || browserLang === 'es') {
-    return browserLang as Language;
+  try {
+    const browserLang = navigator.language.split('-')[0];
+    
+    if (browserLang === 'pt' || browserLang === 'en' || browserLang === 'es') {
+      return browserLang as Language;
+    }
+  } catch (error) {
+    console.error('Error detecting browser language:', error);
   }
   
   return DEFAULT_LANGUAGE;
@@ -113,11 +117,21 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   // Initialize language from browser or localStorage on mount
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') as Language;
-    const detectedLanguage = detectBrowserLanguage();
-    
-    setLanguageState(savedLanguage || detectedLanguage);
-    setIsLoading(false);
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const langParam = urlParams.get('lang') as Language | null;
+      const savedLanguage = localStorage.getItem('language') as Language;
+      const detectedLanguage = detectBrowserLanguage();
+      
+      const finalLanguage = langParam || savedLanguage || detectedLanguage;
+      setLanguageState(finalLanguage);
+      localStorage.setItem('language', finalLanguage);
+    } catch (error) {
+      console.error('Error setting language:', error);
+      setLanguageState(DEFAULT_LANGUAGE);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   // Set language and save to localStorage
