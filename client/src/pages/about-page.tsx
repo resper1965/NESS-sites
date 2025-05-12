@@ -303,6 +303,20 @@ export default function AboutPage() {
                   </div>
                 </div>
                 
+                {/* 2020 - NESS Health rebranded */}
+                <div className="mb-12 flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-medium text-[#00ade0] mb-2">2020</h3>
+                      <p className="text-gray-700 lowercase">NESS Health renomeada como IONIC Health, nova sede no Tech-Park SJC, crescimento local com grandes clientes brasileiros da área de saúde.</p>
+                    </div>
+                  </div>
+                  <div className="mx-auto md:mx-0 my-4 md:my-0 w-10 h-10 rounded-full bg-[#00ade0] flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  </div>
+                  <div className="md:w-1/2 md:pl-8 md:text-left"></div>
+                </div>
+                
                 {/* 2021 - forense.io incubation */}
                 <div className="mb-12 flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right">
