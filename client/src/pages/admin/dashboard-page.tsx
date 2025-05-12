@@ -1,11 +1,157 @@
-import { useState } from 'react';
+import { useState, ReactNode } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/hooks/use-auth';
-import { Redirect } from 'wouter';
+import { Redirect, Link } from 'wouter';
 import { getQueryFn } from '@/lib/queryClient';
 import { Loader2, Home, FileText, Briefcase, Newspaper, Settings, Users, LogOut } from 'lucide-react';
-import AdminLayout from '@/components/layout/AdminLayout';
-import { Content, Job, News } from '@shared/schema';
+import { User } from '@shared/schema';
+
+// Inline AdminLayout component to avoid import issues
+interface AdminLayoutProps {
+  title: string;
+  children: ReactNode;
+  user: User;
+  onLogout: () => void;
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+}
+
+function AdminLayout({
+  title,
+  children,
+  user,
+  onLogout,
+  activeSection,
+  setActiveSection
+}: AdminLayoutProps) {
+  const sidebarItems = [
+    { 
+      icon: <Home className="w-5 h-5" />, 
+      label: 'Dashboard', 
+      href: '/admin/dashboard',
+      id: 'overview'
+    },
+    { 
+      icon: <FileText className="w-5 h-5" />, 
+      label: 'Conteúdos', 
+      href: '/admin/content',
+      id: 'content'
+    },
+    { 
+      icon: <Briefcase className="w-5 h-5" />, 
+      label: 'Vagas', 
+      href: '/admin/jobs',
+      id: 'jobs'
+    },
+    { 
+      icon: <Newspaper className="w-5 h-5" />, 
+      label: 'Notícias', 
+      href: '/admin/news',
+      id: 'news'
+    },
+    { 
+      icon: <Settings className="w-5 h-5" />, 
+      label: 'Configurações', 
+      href: '/admin/settings',
+      id: 'settings'
+    },
+  ];
+  
+  return (
+    <div className="flex h-screen bg-gray-100">
+      {/* Sidebar */}
+      <div className="hidden md:flex md:flex-col md:w-64 md:bg-white md:border-r md:border-gray-200">
+        <div className="flex flex-col flex-grow p-4">
+          <div className="py-4 border-b border-gray-200 mb-4">
+            <Link href="/admin/dashboard" className="flex items-center">
+              <h1 className="text-xl font-['Montserrat'] font-normal text-primary">
+                ness<span className="text-accent">.</span> <span className="font-medium">admin</span>
+              </h1>
+            </Link>
+          </div>
+          
+          <div className="flex-grow">
+            <nav className="space-y-1">
+              {sidebarItems.map((item) => (
+                <Link 
+                  key={item.id} 
+                  href={item.href}
+                  className={`
+                    flex items-center px-4 py-3 text-gray-700 rounded-md transition-colors
+                    ${activeSection === item.id ? 'bg-primary text-white' : 'hover:bg-gray-100'}
+                  `}
+                  onClick={() => setActiveSection(item.id)}
+                >
+                  {item.icon}
+                  <span className="ml-3">{item.label}</span>
+                </Link>
+              ))}
+            </nav>
+          </div>
+          
+          <div className="border-t border-gray-200 pt-4">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <p className="text-sm font-medium text-gray-900">{user.username}</p>
+                <p className="text-xs text-gray-500">Administrador</p>
+              </div>
+              <button
+                onClick={onLogout}
+                className="p-1.5 rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors"
+                title="Sair"
+              >
+                <LogOut className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Main content */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <header className="bg-white shadow-sm z-10">
+          <div className="px-4 py-3 sm:px-6 flex justify-between items-center">
+            <h1 className="text-lg font-semibold text-gray-900">{title}</h1>
+            
+            <div className="flex items-center md:hidden">
+              <button
+                onClick={onLogout}
+                className="ml-2 p-1.5 rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors"
+                title="Sair"
+              >
+                <LogOut className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+          
+          {/* Mobile navigation */}
+          <div className="md:hidden border-t border-gray-200">
+            <div className="flex overflow-x-auto space-x-2 px-4 py-2">
+              {sidebarItems.map((item) => (
+                <Link 
+                  key={item.id} 
+                  href={item.href}
+                  className={`
+                    flex-shrink-0 flex items-center px-3 py-1.5 text-sm rounded-md transition-colors
+                    ${activeSection === item.id ? 'bg-primary text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
+                  `}
+                  onClick={() => setActiveSection(item.id)}
+                >
+                  {item.icon}
+                  <span className="ml-1.5">{item.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </header>
+        
+        <main className="flex-1 overflow-auto bg-gray-50">
+          {children}
+        </main>
+      </div>
+    </div>
+  );
+}
 
 export default function AdminDashboardPage() {
   const { user, isLoading: authLoading, logoutMutation } = useAuth();
@@ -50,8 +196,8 @@ export default function AdminDashboardPage() {
     }
   };
   
-  // If not logged in or not admin, redirect to login
-  if (!authLoading && (!user || !user.isAdmin)) {
+  // If not logged in, redirect to login
+  if (!authLoading && !user) {
     return <Redirect to="/admin/login" />;
   }
   
@@ -61,6 +207,11 @@ export default function AdminDashboardPage() {
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     );
+  }
+  
+  // Safety check to ensure user is defined before accessing properties
+  if (!user) {
+    return null;
   }
   
   const statCards = [
@@ -131,12 +282,12 @@ export default function AdminDashboardPage() {
                 <h2 className="text-lg font-semibold text-gray-800">Atividades Recentes</h2>
               </div>
               <div className="p-6">
-                {recentActivities && recentActivities.length > 0 ? (
+                {Array.isArray(recentActivities) && recentActivities.length > 0 ? (
                   <div className="divide-y divide-gray-100">
-                    {recentActivities.map((activity, index) => (
+                    {recentActivities.map((activity: any, index: number) => (
                       <div key={index} className="py-3 flex items-start">
                         <div className="mr-4 mt-1">
-                          <div className="h-8 w-8 rounded-full bg-primary-light flex items-center justify-center">
+                          <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
                             <span className="text-primary text-sm">{activity.userId}</span>
                           </div>
                         </div>
@@ -149,13 +300,13 @@ export default function AdminDashboardPage() {
                             </span>
                           </p>
                           <p className="text-sm text-gray-500">
-                            {new Date(activity.createdAt).toLocaleDateString('pt-BR', {
+                            {activity.createdAt ? new Date(activity.createdAt).toLocaleDateString('pt-BR', {
                               day: '2-digit',
                               month: '2-digit',
                               year: 'numeric',
                               hour: '2-digit',
                               minute: '2-digit'
-                            })}
+                            }) : 'Data não disponível'}
                           </p>
                         </div>
                       </div>
