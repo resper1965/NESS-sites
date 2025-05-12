@@ -18,7 +18,7 @@ export default function EthicsPage() {
     content: `
       <div class="prose prose-lg mx-auto">
         <h2>Nosso Compromisso Ético</h2>
-        <p>A CorpTech estabelece este Código de Ética para orientar as condutas e decisões de todos os seus colaboradores, parceiros e fornecedores. Acreditamos que o sucesso sustentável só é possível quando fundamentado em princípios éticos sólidos.</p>
+        <p>A ness. estabelece este Código de Ética para orientar as condutas e decisões de todos os seus colaboradores, parceiros e fornecedores. Acreditamos que o sucesso sustentável só é possível quando fundamentado em princípios éticos sólidos.</p>
         
         <h2>Princípios Fundamentais</h2>
         <ul>
@@ -75,7 +75,7 @@ export default function EthicsPage() {
         </ul>
         
         <h2>Combate à Corrupção</h2>
-        <p>A CorpTech repudia veementemente qualquer forma de corrupção. É expressamente proibido a todos os colaboradores, parceiros e fornecedores:</p>
+        <p>A ness. repudia veementemente qualquer forma de corrupção. É expressamente proibido a todos os colaboradores, parceiros e fornecedores:</p>
         <ul>
           <li>Oferecer, prometer, dar ou autorizar vantagens indevidas a qualquer pessoa, especialmente a agentes públicos.</li>
           <li>Solicitar ou aceitar vantagens indevidas em troca de influência ou favorecimento.</li>
@@ -89,7 +89,7 @@ export default function EthicsPage() {
         <p>As violações deste Código de Ética serão analisadas caso a caso e poderão resultar em medidas disciplinares, incluindo advertência, suspensão ou demissão, além das possíveis consequências legais.</p>
         
         <h2>Compromisso da Liderança</h2>
-        <p>A liderança da CorpTech tem o dever de:</p>
+        <p>A liderança da ness. tem o dever de:</p>
         <ul>
           <li>Agir como exemplo no cumprimento deste Código de Ética.</li>
           <li>Assegurar que os colaboradores conheçam e cumpram este Código.</li>
@@ -105,8 +105,8 @@ export default function EthicsPage() {
   return (
     <>
       <SEOHead 
-        title={`${content?.title || defaultContent.title} - CorpTech`}
-        description="Conheça o Código de Ética da CorpTech e nossos princípios fundamentais para a condução de negócios responsáveis e éticos."
+        title={`${content?.title || defaultContent.title} - ness.`}
+        description="Conheça o Código de Ética da ness. e nossos princípios fundamentais para a condução de negócios responsáveis e éticos."
         canonicalUrl="/ethics"
       />
       

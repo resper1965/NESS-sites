@@ -28,8 +28,8 @@ export default function JobsPage() {
   return (
     <>
       <SEOHead 
-        title={`${t('jobs.title')} - CorpTech`}
-        description="Explore as oportunidades de carreira na CorpTech e junte-se a nossa equipe de especialistas em tecnologia."
+        title={`${t('jobs.title')} - ness.`}
+        description="Explore as oportunidades de carreira na ness. e junte-se a nossa equipe de especialistas em tecnologia."
         canonicalUrl="/jobs"
       />
       

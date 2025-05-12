@@ -105,7 +105,7 @@ export default function ServicesPage() {
   return (
     <>
       <SEOHead 
-        title={`${t('services.title')} - CorpTech`}
+        title={`${t('services.title')} - ness.`}
         description="Conheça nossas soluções em segurança da informação, transformação digital e análise de dados para impulsionar seu negócio."
         canonicalUrl="/services"
       />

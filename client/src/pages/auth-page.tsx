@@ -81,8 +81,8 @@ export default function AuthPage() {
   return (
     <>
       <SEOHead 
-        title="Login - CorpTech"
-        description="Faça login para acessar a área administrativa da CorpTech."
+        title="Login - ness."
+        description="Faça login para acessar a área administrativa da ness."
         canonicalUrl="/auth"
       />
       

@@ -18,7 +18,7 @@ export default function PrivacyPage() {
     content: `
       <div class="prose prose-lg mx-auto">
         <h2>Introdução</h2>
-        <p>Na CorpTech, proteger as informações dos nossos clientes, parceiros e colaboradores é uma prioridade fundamental. Esta Política de Segurança e Privacidade estabelece como coletamos, usamos, protegemos e compartilhamos dados pessoais e informações confidenciais.</p>
+        <p>Na ness., proteger as informações dos nossos clientes, parceiros e colaboradores é uma prioridade fundamental. Esta Política de Segurança e Privacidade estabelece como coletamos, usamos, protegemos e compartilhamos dados pessoais e informações confidenciais.</p>
         
         <h2>Compromisso com a Proteção de Dados</h2>
         <p>Estamos comprometidos em cumprir plenamente as leis e regulamentos de proteção de dados aplicáveis, em especial a Lei Geral de Proteção de Dados (LGPD) no Brasil, o Regulamento Geral de Proteção de Dados (GDPR) na União Europeia e outras regulamentações semelhantes.</p>
@@ -144,7 +144,7 @@ export default function PrivacyPage() {
   return (
     <>
       <SEOHead 
-        title={`${content?.title || defaultContent.title} - CorpTech`}
+        title={`${content?.title || defaultContent.title} - ness.`}
         description="Conheça nossa Política de Segurança e Privacidade e como tratamos seus dados pessoais com o máximo de segurança e transparência."
         canonicalUrl="/privacy"
       />
