@@ -1,8 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useSite } from '../SiteContext';
-import SiteNavbar from './SiteNavbar';
-import SiteFooter from './SiteFooter';
 
 interface SiteLayoutProps {
   children: ReactNode;
@@ -63,13 +61,33 @@ export default function SiteLayout({
       </Helmet>
       
       <div className="flex flex-col min-h-screen">
-        <SiteNavbar />
+        {/* Temporariamente usando componentes básicos de navegação */}
+        <header className="bg-white shadow-sm py-4">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-between items-center">
+              <h1 className="text-xl font-semibold">{siteConfig.name}</h1>
+              <nav className="space-x-4">
+                <a href="#" className="text-gray-600 hover:text-[var(--primary-color)]">Home</a>
+                <a href="#" className="text-gray-600 hover:text-[var(--primary-color)]">About</a>
+                <a href="#" className="text-gray-600 hover:text-[var(--primary-color)]">Services</a>
+                <a href="#" className="text-gray-600 hover:text-[var(--primary-color)]">Contact</a>
+              </nav>
+            </div>
+          </div>
+        </header>
         
         <main className="flex-grow">
           {children}
         </main>
         
-        <SiteFooter />
+        {/* Footer básico */}
+        <footer className="bg-[var(--secondary-color)] text-white py-8">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <p>© {new Date().getFullYear()} {siteConfig.name} All Rights Reserved</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );

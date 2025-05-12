@@ -32,39 +32,34 @@ import { I18nProvider } from "@/lib/i18n";
 
 // Site Routes
 import { NessRoute, TrustnessRoute, ForenseRoute } from "@/site/SiteRoute";
+import { SiteProvider } from "@/site/SiteContext";
 
 function Router() {
   return (
     <Switch>
-      {/* Default route - redirect to NESS site */}
-      <Route path="/" exact>
-        <Redirect to="/site/ness/" />
+      {/* Site-specific routes */}
+      <Route path="/site/ness">
+        <SiteProvider siteCode="ness">
+          <NessHomePage />
+        </SiteProvider>
       </Route>
-
-      {/* Multi-site Routes */}
-      {/* NESS routes */}
-      <NessRoute path="/" component={NessHomePage} />
-      <NessRoute path="/about" component={AboutPage} />
-      <NessRoute path="/services" component={ServicesPage} />
-      <NessRoute path="/jobs" component={JobsPage} />
-      <NessRoute path="/news" component={NewsPage} />
-      <NessRoute path="/contact" component={ContactPage} />
-      <NessRoute path="/ethics" component={EthicsPage} />
-      <NessRoute path="/privacy" component={PrivacyPage} />
       
-      {/* Trustness routes */}
-      <TrustnessRoute path="/" component={TrustnessHomePage} />
-      <TrustnessRoute path="/about" component={AboutPage} />
-      <TrustnessRoute path="/services" component={ServicesPage} />
-      <TrustnessRoute path="/contact" component={ContactPage} />
-      <TrustnessRoute path="/privacy" component={PrivacyPage} />
+      <Route path="/site/trustness">
+        <SiteProvider siteCode="trustness">
+          <TrustnessHomePage />
+        </SiteProvider>
+      </Route>
       
-      {/* Forense routes */}
-      <ForenseRoute path="/" component={ForenseHomePage} />
-      <ForenseRoute path="/about" component={AboutPage} />
-      <ForenseRoute path="/services" component={ServicesPage} />
-      <ForenseRoute path="/contact" component={ContactPage} />
-      <ForenseRoute path="/privacy" component={PrivacyPage} />
+      <Route path="/site/forense">
+        <SiteProvider siteCode="forense">
+          <ForenseHomePage />
+        </SiteProvider>
+      </Route>
+      
+      {/* Default route - redirect to NESS site */}
+      <Route path="/">
+        <Redirect to="/site/ness" />
+      </Route>
 
       {/* Legacy routes - will be removed after migration */}
       <Route path="/about" component={AboutPage} />

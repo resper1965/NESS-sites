@@ -20,15 +20,21 @@ export function SiteRoute({ path, siteCode, component: Component }: SiteRoutePro
 
 // HOC para criar uma rota específica para o site ness
 export function NessRoute({ path, component }: Omit<SiteRouteProps, 'siteCode'>) {
-  return <SiteRoute path={`/site/ness${path}`} siteCode="ness" component={component} />;
+  // Faz o path ficar correto, adicionando uma barra final se necessário
+  const formattedPath = path === '/' ? '/site/ness/' : `/site/ness${path}`;
+  return <SiteRoute path={formattedPath} siteCode="ness" component={component} />;
 }
 
 // HOC para criar uma rota específica para o site trustness
 export function TrustnessRoute({ path, component }: Omit<SiteRouteProps, 'siteCode'>) {
-  return <SiteRoute path={`/site/trustness${path}`} siteCode="trustness" component={component} />;
+  // Faz o path ficar correto, adicionando uma barra final se necessário
+  const formattedPath = path === '/' ? '/site/trustness/' : `/site/trustness${path}`;
+  return <SiteRoute path={formattedPath} siteCode="trustness" component={component} />;
 }
 
 // HOC para criar uma rota específica para o site forense
 export function ForenseRoute({ path, component }: Omit<SiteRouteProps, 'siteCode'>) {
-  return <SiteRoute path={`/site/forense${path}`} siteCode="forense" component={component} />;
+  // Faz o path ficar correto, adicionando uma barra final se necessário
+  const formattedPath = path === '/' ? '/site/forense/' : `/site/forense${path}`;
+  return <SiteRoute path={formattedPath} siteCode="forense" component={component} />;
 }
