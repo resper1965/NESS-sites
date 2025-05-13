@@ -179,13 +179,17 @@ export default function TrustnessHomePage() {
                   conduzimos assessments com base em frameworks reconhecidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riscos e traçar caminhos reais rumo à certificação e maturidade operacional.
                 </p>
                 
+                <p className="text-gray-300 mb-1">
+                  <span className="text-[#005fa3] font-semibold">vai se certificar ISO 27001, ou outra certificação?</span>
+                </p>
                 <p className="text-gray-300">
-                  <span className="text-[#005fa3] font-semibold">vai se certificar ISO 27001, ou outra certificação? </span>
                   atuamos também como auditores externos, avaliando a aderência da organização a normas e requisitos específicos — antes de uma certificação ou como parte de uma estratégia contínua de conformidade.
                 </p>
                 
+                <p className="text-gray-300 mb-1">
+                  <span className="text-[#005fa3] font-semibold">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
+                </p>
                 <p className="text-gray-300">
-                  <span className="text-[#005fa3] font-semibold">precisa se adequar à LGPD, ou outra norma de privacidade? </span>
                   conduzimos projetos completos de adequação à LGPD, GDPR, HIPAA e outras regulamentações de privacidade, com mapeamento de dados, implantação de controles e apoio contínuo à gestão.
                 </p>
                 
