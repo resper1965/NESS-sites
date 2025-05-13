@@ -154,26 +154,9 @@ export default function SiteNavbar() {
               {t('nav.news')}
             </Link>
             
-            {/* Language Switcher Alternativo */}
-            <div className="ml-4 flex items-center gap-2">
-              <button 
-                onClick={() => setLanguage('pt')} 
-                className={`text-xs px-1.5 py-0.5 rounded ${language === 'pt' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
-              >
-                PT
-              </button>
-              <button 
-                onClick={() => setLanguage('en')} 
-                className={`text-xs px-1.5 py-0.5 rounded ${language === 'en' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
-              >
-                EN
-              </button>
-              <button 
-                onClick={() => setLanguage('es')} 
-                className={`text-xs px-1.5 py-0.5 rounded ${language === 'es' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
-              >
-                ES
-              </button>
+            {/* Language Switcher */}
+            <div className="ml-4">
+              <LanguageSwitcher />
             </div>
             
             {/* Contact as a button */}
@@ -240,26 +223,9 @@ export default function SiteNavbar() {
                 {t('nav.news')}
               </Link>
               
-              {/* Language Selector Mobile */}
-              <div className="flex justify-center gap-3 mb-4 mt-2">
-                <button 
-                  onClick={() => setLanguage('pt')} 
-                  className={`text-sm px-2 py-1 rounded ${language === 'pt' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
-                >
-                  PT
-                </button>
-                <button 
-                  onClick={() => setLanguage('en')} 
-                  className={`text-sm px-2 py-1 rounded ${language === 'en' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
-                >
-                  EN
-                </button>
-                <button 
-                  onClick={() => setLanguage('es')} 
-                  className={`text-sm px-2 py-1 rounded ${language === 'es' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
-                >
-                  ES
-                </button>
+              {/* Language Switcher Mobile */}
+              <div className="mb-4 mt-2 flex justify-center">
+                <LanguageSwitcher />
               </div>
               <Link 
                 href={`${sitePrefix}/contact`} 
