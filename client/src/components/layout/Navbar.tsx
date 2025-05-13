@@ -157,23 +157,103 @@ export default function Navbar() {
               </button>
               
               {servicesDropdownOpen && (
-                <div className="absolute z-50 left-[-200px] mt-2 w-[800px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-6">
-                  <div className="grid grid-cols-3 gap-4" role="menu" aria-orientation="vertical">
-                    {services.map(service => (
-                      <Link 
-                        key={service.id}
-                        href={service.path}
-                        className="block p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100"
-                        onClick={() => setServicesDropdownOpen(false)}
-                      >
+                <div className="absolute z-50 left-[-150px] mt-2 w-[750px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-4">
+                  <div className="flex flex-wrap" role="menu" aria-orientation="vertical">
+                    <Link 
+                      key="secops"
+                      href="/services/secops"
+                      className="w-1/3 p-2"
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
-                          n<span className="text-[#00ade0]">.</span>{service.name.substring(2)}
+                          n<span className="text-[#00ade0]">.</span>SecOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
-                          {serviceDescriptions[language as keyof typeof serviceDescriptions][service.id as keyof typeof serviceDescriptions.pt]}
+                          {serviceDescriptions[language as keyof typeof serviceDescriptions].secops}
                         </p>
-                      </Link>
-                    ))}
+                      </div>
+                    </Link>
+                    
+                    <Link 
+                      key="infraops"
+                      href="/services/infraops"
+                      className="w-1/3 p-2"
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
+                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                          n<span className="text-[#00ade0]">.</span>InfraOps
+                        </h3>
+                        <p className="text-sm text-gray-600 leading-snug">
+                          {serviceDescriptions[language as keyof typeof serviceDescriptions].infraops}
+                        </p>
+                      </div>
+                    </Link>
+                    
+                    <Link 
+                      key="devarch"
+                      href="/services#devarch"
+                      className="w-1/3 p-2"
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
+                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                          n<span className="text-[#00ade0]">.</span>DevArch
+                        </h3>
+                        <p className="text-sm text-gray-600 leading-snug">
+                          {serviceDescriptions[language as keyof typeof serviceDescriptions].devarch}
+                        </p>
+                      </div>
+                    </Link>
+                    
+                    <Link 
+                      key="autoops"
+                      href="/services#autoops"
+                      className="w-1/3 p-2"
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
+                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                          n<span className="text-[#00ade0]">.</span>AutoOps
+                        </h3>
+                        <p className="text-sm text-gray-600 leading-snug">
+                          {serviceDescriptions[language as keyof typeof serviceDescriptions].autoops}
+                        </p>
+                      </div>
+                    </Link>
+                    
+                    <Link 
+                      key="crisisops"
+                      href="/services#crisisops"
+                      className="w-1/3 p-2"
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
+                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                          n<span className="text-[#00ade0]">.</span>CrisisOps
+                        </h3>
+                        <p className="text-sm text-gray-600 leading-snug">
+                          {serviceDescriptions[language as keyof typeof serviceDescriptions].crisisops}
+                        </p>
+                      </div>
+                    </Link>
+                    
+                    <Link 
+                      key="privacy"
+                      href="/services#privacy"
+                      className="w-1/3 p-2"
+                      onClick={() => setServicesDropdownOpen(false)}
+                    >
+                      <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
+                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                          n<span className="text-[#00ade0]">.</span>Privacy
+                        </h3>
+                        <p className="text-sm text-gray-600 leading-snug">
+                          {serviceDescriptions[language as keyof typeof serviceDescriptions].privacy}
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-100 text-center">
                     <Link 
