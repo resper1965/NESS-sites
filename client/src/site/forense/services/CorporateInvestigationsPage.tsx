@@ -8,7 +8,7 @@ import { forenseStyles as styles } from '../styles';
 export default function ForenseCorporateInvestigationsPage() {
   const DotSpan = () => <span className="text-[#00ade0]">.</span>;
   const { siteConfig } = useSite();
-  const { language } = useI18n();
+  const { language, t } = useI18n();
   
   // Buscar conteúdo da página específico para o serviço
   const { data: pageContent, isLoading } = useQuery({

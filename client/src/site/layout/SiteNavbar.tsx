@@ -154,9 +154,26 @@ export default function SiteNavbar() {
               {t('nav.news')}
             </Link>
             
-            {/* Language Switcher */}
-            <div className="ml-4">
-              <LanguageSwitcher />
+            {/* Language Switcher Alternativo */}
+            <div className="ml-4 flex items-center gap-2">
+              <button 
+                onClick={() => setLanguage('pt')} 
+                className={`text-xs px-1.5 py-0.5 rounded ${language === 'pt' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
+              >
+                PT
+              </button>
+              <button 
+                onClick={() => setLanguage('en')} 
+                className={`text-xs px-1.5 py-0.5 rounded ${language === 'en' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
+              >
+                EN
+              </button>
+              <button 
+                onClick={() => setLanguage('es')} 
+                className={`text-xs px-1.5 py-0.5 rounded ${language === 'es' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
+              >
+                ES
+              </button>
             </div>
             
             {/* Contact as a button */}
@@ -222,6 +239,28 @@ export default function SiteNavbar() {
               <Link href={`${sitePrefix}/news`} className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.news')}
               </Link>
+              
+              {/* Language Selector Mobile */}
+              <div className="flex justify-center gap-3 mb-4 mt-2">
+                <button 
+                  onClick={() => setLanguage('pt')} 
+                  className={`text-sm px-2 py-1 rounded ${language === 'pt' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
+                >
+                  PT
+                </button>
+                <button 
+                  onClick={() => setLanguage('en')} 
+                  className={`text-sm px-2 py-1 rounded ${language === 'en' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
+                >
+                  EN
+                </button>
+                <button 
+                  onClick={() => setLanguage('es')} 
+                  className={`text-sm px-2 py-1 rounded ${language === 'es' ? 'bg-white/10 font-medium' : 'text-gray-300'}`}
+                >
+                  ES
+                </button>
+              </div>
               <Link 
                 href={`${sitePrefix}/contact`} 
                 className={`${siteConfig.code === 'forense' ? 'bg-[#00ade0]' : 'bg-[var(--primary-color)]'} hover:bg-opacity-90 text-white py-2 px-4 rounded-sm transition duration-200 text-center lowercase`}
