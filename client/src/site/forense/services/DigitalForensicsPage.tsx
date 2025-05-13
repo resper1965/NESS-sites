@@ -22,7 +22,7 @@ export default function ForenseDigitalForensicsPage() {
   const defaultContent = {
     pt: {
       title: 'forense.digital',
-      description: 'perícia digital especializada e análise avançada de dados',
+      description: 'forense digital e análise de evidências',
       intro: 'nossa divisão de forense digital oferece serviços especializados em coleta, preservação e análise detalhada de evidências digitais, garantindo a integridade dos dados e a validade legal dos resultados obtidos.',
       sections: [
         {
@@ -34,12 +34,16 @@ export default function ForenseDigitalForensicsPage() {
           content: 'realizamos análises minuciosas de mídias digitais, dispositivos móveis, computadores, redes e sistemas de armazenamento em nuvem para recuperar, identificar e contextualizar informações relevantes.'
         },
         {
-          title: 'produção de evidências',
-          content: 'elaboramos relatórios técnicos detalhados e laudos periciais que documentam os procedimentos adotados e as evidências encontradas, traduzindo aspectos técnicos complexos em linguagem acessível aos profissionais jurídicos.'
+          title: 'produção e validação de evidências',
+          content: 'recuperação e investigação de material digital para produção de evidências com validade probatória em juízo. elaboramos relatórios técnicos detalhados e laudos periciais que documentam os procedimentos adotados.'
         },
         {
           title: 'reexame forense',
-          content: 'oferecemos serviços de contraprova e reexame de relatórios forenses já produzidos, identificando possíveis inconsistências ou falhas metodológicas que possam comprometer a validade das conclusões apresentadas.'
+          content: 'revisão técnica de evidências digitais para órgãos públicos e privados, garantindo avaliação imparcial. identificamos possíveis inconsistências ou falhas metodológicas que possam comprometer a validade das conclusões.'
+        },
+        {
+          title: 'contraprova de relatórios',
+          content: 'análise independente de relatórios forenses e de inteligência, proporcionando visões alternativas sobre os dados apresentados. oferecemos uma segunda opinião técnica para validar ou contestar conclusões prévias.'
         }
       ],
       cta: {
@@ -49,7 +53,7 @@ export default function ForenseDigitalForensicsPage() {
     },
     en: {
       title: 'forensic.digital',
-      description: 'specialized digital forensics and advanced data analysis',
+      description: 'digital forensics and evidence analysis',
       intro: 'our digital forensics division offers specialized services in collection, preservation, and detailed analysis of digital evidence, ensuring data integrity and the legal validity of the obtained results.',
       sections: [
         {
@@ -61,12 +65,16 @@ export default function ForenseDigitalForensicsPage() {
           content: 'we conduct thorough analyses of digital media, mobile devices, computers, networks, and cloud storage systems to recover, identify, and contextualize relevant information.'
         },
         {
-          title: 'evidence production',
-          content: 'we prepare detailed technical reports and expert opinions that document the procedures adopted and the evidence found, translating complex technical aspects into language accessible to legal professionals.'
+          title: 'evidence production and validation',
+          content: 'recovery and investigation of digital material to produce evidence with probative validity in court. we prepare detailed technical reports and expert opinions that document the procedures adopted.'
         },
         {
           title: 'forensic reexamination',
-          content: 'we offer counter-evidence and reexamination services for forensic reports already produced, identifying possible inconsistencies or methodological flaws that may compromise the validity of the conclusions presented.'
+          content: 'technical review of digital evidence for public and private entities, ensuring impartial evaluation. we identify possible inconsistencies or methodological flaws that may compromise the validity of conclusions.'
+        },
+        {
+          title: 'report counter-evidence',
+          content: 'independent analysis of forensic and intelligence reports, providing alternative views on the presented data. we offer a technical second opinion to validate or contest previous conclusions.'
         }
       ],
       cta: {
@@ -76,7 +84,7 @@ export default function ForenseDigitalForensicsPage() {
     },
     es: {
       title: 'forense.digital',
-      description: 'peritaje digital especializado y análisis avanzado de datos',
+      description: 'forense digital y análisis de evidencias',
       intro: 'nuestra división de forense digital ofrece servicios especializados en recolección, preservación y análisis detallado de evidencias digitales, garantizando la integridad de los datos y la validez legal de los resultados obtenidos.',
       sections: [
         {
@@ -88,12 +96,16 @@ export default function ForenseDigitalForensicsPage() {
           content: 'realizamos análisis minuciosos de medios digitales, dispositivos móviles, computadoras, redes y sistemas de almacenamiento en la nube para recuperar, identificar y contextualizar información relevante.'
         },
         {
-          title: 'producción de evidencias',
-          content: 'elaboramos informes técnicos detallados y dictámenes periciales que documentan los procedimientos adoptados y las evidencias encontradas, traduciendo aspectos técnicos complejos en un lenguaje accesible a los profesionales jurídicos.'
+          title: 'producción y validación de evidencias',
+          content: 'recuperación e investigación de material digital para producción de evidencias con validez probatoria en juicio. elaboramos informes técnicos detallados y dictámenes periciales que documentan los procedimientos adoptados.'
         },
         {
           title: 'reexamen forense',
-          content: 'ofrecemos servicios de contraprueba y reexamen de informes forenses ya producidos, identificando posibles inconsistencias o fallas metodológicas que puedan comprometer la validez de las conclusiones presentadas.'
+          content: 'revisión técnica de evidencias digitales para órganos públicos y privados, garantizando evaluación imparcial. identificamos posibles inconsistencias o fallas metodológicas que puedan comprometer la validez de las conclusiones.'
+        },
+        {
+          title: 'contraprueba de informes',
+          content: 'análisis independiente de informes forenses y de inteligencia, proporcionando visiones alternativas sobre los datos presentados. ofrecemos una segunda opinión técnica para validar o contestar conclusiones previas.'
         }
       ],
       cta: {
