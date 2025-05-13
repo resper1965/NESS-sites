@@ -182,13 +182,14 @@ export default function ForenseDigitalForensicsPage() {
                     {t('forense.digital.title')} <span className={styles.colors.primary}>{t('forense.service.digital')}</span>?
                   </h2>
                   <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} ${styles.spacing.mb.medium} leading-relaxed`}>
-                    a forense digital é uma disciplina que combina elementos da ciência da computação e da investigação criminal para coletar, analisar e preservar evidências digitais seguindo protocolos específicos que garantem sua validade legal.
+                    {t('forense.digital.description1')}
                   </p>
                   <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} ${styles.spacing.mb.medium} leading-relaxed`}>
-                    na forense<DotSpan />io, aplicamos metodologias forenses robustas para extrair, documentar e interpretar dados digitais que podem ser decisivos em processos judiciais, investigações corporativas e auditorias de segurança.
+                    {t('forense.digital.description2').replace('at forense.io', 'at forense').replace('en forense.io', 'en forense')}
+                    <DotSpan />io
                   </p>
                   <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} leading-relaxed`}>
-                    nossa abordagem científica assegura que cada evidência digital seja tratada com o rigor técnico e a conformidade legal necessários para ser considerada válida perante os tribunais e órgãos reguladores.
+                    {t('forense.digital.description3')}
                   </p>
                 </div>
                 <div className="md:w-1/2 bg-[#00ade0]/5 rounded-lg p-8 border border-[#00ade0]/20">
