@@ -10,6 +10,7 @@ import { HelmetProvider } from "react-helmet-async";
 import NessHomePage from "@/site/ness/HomePage";
 import NessAboutPage from "@/site/ness/AboutPage";
 import TrustnessHomePage from "@/site/trustness/HomePage";
+import TrustnessAboutPage from "@/site/trustness/AboutPage";
 import ForenseHomePage from "@/site/forense/HomePage";
 
 // Legacy pages (will be migrated)
@@ -55,6 +56,12 @@ function Router() {
       <Route path="/site/trustness">
         <SiteProvider siteCode="trustness">
           <TrustnessHomePage />
+        </SiteProvider>
+      </Route>
+
+      <Route path="/site/trustness/about">
+        <SiteProvider siteCode="trustness">
+          <TrustnessAboutPage />
         </SiteProvider>
       </Route>
       
