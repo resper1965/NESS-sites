@@ -354,16 +354,16 @@ export default function TrustnessAboutPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
-                ? <>quer saber mais sobre a <span className="font-normal">trustness<span className="text-[#005fa3]">.</span></span>?</> 
+                ? <>quer saber mais sobre a <span className="font-normal">trustness<span className="text-[#00ade0]">.</span></span>?</> 
                 : language === 'en'
-                  ? <>want to know more about <span className="font-normal">trustness<span className="text-[#005fa3]">.</span></span>?</>
-                  : <>¿quieres saber más sobre <span className="font-normal">trustness<span className="text-[#005fa3]">.</span></span>?</>
+                  ? <>want to know more about <span className="font-normal">trustness<span className="text-[#00ade0]">.</span></span>?</>
+                  : <>¿quieres saber más sobre <span className="font-normal">trustness<span className="text-[#00ade0]">.</span></span>?</>
               }
             </h2>
             
             <a 
               href="/site/trustness/contact" 
-              className="inline-block bg-[#005fa3] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+              className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {defaultContent.cta.button}
             </a>
