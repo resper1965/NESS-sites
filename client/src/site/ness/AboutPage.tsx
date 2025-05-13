@@ -360,7 +360,7 @@ export default function NessAboutPage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-[#2f3e4d] text-white">
+        <section className="py-20 bg-[#f9f9f9] text-gray-800">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {defaultContent.cta.title}

@@ -97,7 +97,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
     }
   ];
   
-  // Função para formatar o título do serviço com o ponto colorido
+  // Função para formatar o título do serviço com apenas o ponto azul
   const formatServiceName = (name: string) => {
     if (name.startsWith('n.')) {
       return (
