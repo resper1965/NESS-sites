@@ -120,7 +120,9 @@ export default function ForenseDigitalForensicsPage() {
   const content = defaultContent[language] || defaultContent.en;
   
   // Definir o título da página e metadados
-  const pageTitle = pageContent?.metaTitle || `${content.title} | forense.io`;
+  const ForenseIo = () => (<>forense<DotSpan />io</>);
+  const forenseIoText = "forense.io";
+  const pageTitle = pageContent?.metaTitle || `${content.title} | ${forenseIoText}`;
   const pageDescription = pageContent?.metaDescription || content.description;
   
   // Schema.org estruturado para SEO
@@ -131,7 +133,7 @@ export default function ForenseDigitalForensicsPage() {
     "description": content.description,
     "provider": {
       "@type": "Organization",
-      "name": "forense.io",
+      "name": forenseIoText,
       "url": `https://${siteConfig.domain}`
     },
     "serviceType": "Digital Forensics"
@@ -182,7 +184,7 @@ export default function ForenseDigitalForensicsPage() {
                     a forense digital é uma disciplina que combina elementos da ciência da computação e da investigação criminal para coletar, analisar e preservar evidências digitais seguindo protocolos específicos que garantem sua validade legal.
                   </p>
                   <p className="text-gray-700 text-sm mb-4 leading-relaxed">
-                    na <span className="text-[#00ade0]">forense.io</span>, aplicamos metodologias forenses robustas para extrair, documentar e interpretar dados digitais que podem ser decisivos em processos judiciais, investigações corporativas e auditorias de segurança.
+                    na forense<DotSpan />io, aplicamos metodologias forenses robustas para extrair, documentar e interpretar dados digitais que podem ser decisivos em processos judiciais, investigações corporativas e auditorias de segurança.
                   </p>
                   <p className="text-gray-700 text-sm leading-relaxed">
                     nossa abordagem científica assegura que cada evidência digital seja tratada com o rigor técnico e a conformidade legal necessários para ser considerada válida perante os tribunais e órgãos reguladores.
