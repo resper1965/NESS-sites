@@ -70,7 +70,7 @@ export default function NessHomePage() {
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               {pageContent?.content?.featuredSectionDescription || 
-                'desenvolvemos tecnologias invisíveis que estruturam o essencial: segurança, desempenho e governança para operações críticas.'}
+                'nossas soluções são modulares, escaláveis e atuam nos bastidores — porque o essencial, a estrutura que sustenta tudo, deve funcionar com precisão e ser invisível para quem depende dela.'}
             </p>
           </div>
           
