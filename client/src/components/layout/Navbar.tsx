@@ -58,13 +58,44 @@ export default function Navbar() {
     ? 'bg-black shadow-md'
     : 'bg-transparent';
 
-  // Services for dropdown menu
+  // Services for dropdown menu with descriptions
   const services = [
-    { id: 'infraops', name: 'n.InfraOps', path: '/services/infraops' },
-    { id: 'secops', name: 'n.SecOps', path: '/services/secops' },
-    { id: 'devarch', name: 'n.DevArch', path: '/services#devarch' },
-    { id: 'autoops', name: 'n.AutoOps', path: '/services#autoops' },
-    { id: 'crisisops', name: 'n.CrisisOps', path: '/services#crisisops' }
+    { 
+      id: 'secops', 
+      name: 'n.SecOps', 
+      path: '/services/secops',
+      description: 'Segurança integrada às operações com monitoramento contínuo.'
+    },
+    { 
+      id: 'infraops', 
+      name: 'n.InfraOps', 
+      path: '/services/infraops',
+      description: 'Gestão moderna de infraestrutura com alta disponibilidade.'
+    },
+    { 
+      id: 'devarch', 
+      name: 'n.DevArch', 
+      path: '/services#devarch',
+      description: 'Fundamentos sólidos para desenvolvimento com arquitetura segura.'
+    },
+    { 
+      id: 'autoops', 
+      name: 'n.AutoOps', 
+      path: '/services#autoops',
+      description: 'Automação inteligente de processos operacionais.'
+    },
+    { 
+      id: 'crisisops', 
+      name: 'n.CrisisOps', 
+      path: '/services#crisisops',
+      description: 'Resposta imediata para incidentes e gestão de crises cibernéticas.'
+    },
+    { 
+      id: 'privacy', 
+      name: 'n.Privacy', 
+      path: '/services#privacy',
+      description: 'Gestão completa de privacidade para conformidade com LGPD/GDPR.'
+    }
   ];
 
   return (
@@ -104,21 +135,26 @@ export default function Navbar() {
               </button>
               
               {servicesDropdownOpen && (
-                <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                  <div className="py-1" role="menu" aria-orientation="vertical">
+                <div className="absolute -left-16 mt-2 w-[800px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-6">
+                  <div className="grid grid-cols-3 gap-6" role="menu" aria-orientation="vertical">
                     {services.map(service => (
                       <Link 
                         key={service.id}
                         href={service.path}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block p-4 rounded hover:bg-gray-50 transition-colors duration-200"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
-                        {service.name}
+                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                          n<span className="text-[#00ade0]">.</span>{service.name.substring(2)}
+                        </h3>
+                        <p className="text-sm text-gray-600 leading-snug">{service.description}</p>
                       </Link>
                     ))}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-100 text-center">
                     <Link 
                       href="/services"
-                      className="block px-4 py-2 text-sm font-medium text-accent hover:bg-gray-100 border-t border-gray-100 lowercase"
+                      className="text-accent hover:text-accent-dark font-medium transition-colors duration-200 lowercase"
                       onClick={() => setServicesDropdownOpen(false)}
                     >
                       ver todos os serviços
