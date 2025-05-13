@@ -5,6 +5,7 @@ import SiteLayout from '@/site/layout/SiteLayout';
 import { Content } from '@shared/schema';
 import { useSite } from '@/site/SiteContext';
 
+
 export default function NessAboutPage() {
   const { t, language } = useI18n();
   const { siteConfig } = useSite();
@@ -217,7 +218,7 @@ export default function NessAboutPage() {
           {/* Background image */}
           <div className="absolute inset-0 z-0">
             <img 
-              src={import.meta.env.BASE_URL + "/src/assets/images/hero-dark-bg.png"} 
+              src="/assets/images/hero-dark-bg.png" 
               alt="Hero background" 
               className="w-full h-full object-cover" 
             />
