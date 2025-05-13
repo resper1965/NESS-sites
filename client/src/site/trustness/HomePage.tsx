@@ -69,59 +69,73 @@ export default function TrustnessHomePage() {
       </section>
       
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="py-20 bg-[#f9f9f9]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-              {pageContent?.content?.servicesSectionTitle || 'áreas de atuação'}
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-8 lowercase">
+              {pageContent?.content?.servicesSectionTitle || 'serviços'}
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              {pageContent?.content?.servicesSectionDescription || 
-                'consultoria especializada em privacidade, segurança da informação e compliance para sua empresa.'}
-            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Serviço 1 */}
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-medium text-gray-800 mb-4">privacidade de dados</h3>
-              <p className="text-gray-600 mb-4 text-sm">
-                implementação de programas de governança em privacidade, conformidade com LGPD, GDPR e demais regulações.
+            {/* Serviço 1 - Assessment */}
+            <div className="bg-white rounded p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+              <h3 className="mb-4">
+                <span className="font-['Montserrat'] font-medium text-lg text-gray-800">
+                  <span className="text-[#005fa3]">.</span>assessment
+                </span>
+              </h3>
+              <p className="text-gray-600 text-sm mb-6 lowercase">
+                avaliações de segurança com base nos frameworks NIST e CIS Controls.
               </p>
-              <ul className="text-gray-600 text-sm space-y-2 mb-6">
-                <li>• avaliação de maturidade</li>
-                <li>• inventário e mapeamento de dados</li>
-                <li>• políticas e procedimentos</li>
-                <li>• DPIA, ROPA e LIA</li>
-              </ul>
+              <div className="text-center">
+                <a 
+                  href="/site/trustness/services/assessment" 
+                  className="text-gray-600 hover:text-[#005fa3] border border-gray-300 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                >
+                  saiba mais
+                </a>
+              </div>
             </div>
             
-            {/* Serviço 2 */}
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-medium text-gray-800 mb-4">segurança da informação</h3>
-              <p className="text-gray-600 mb-4 text-sm">
-                avaliação e implementação de controles de segurança baseados em frameworks internacionais.
+            {/* Serviço 2 - Conformity */}
+            <div className="bg-white rounded p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+              <h3 className="mb-4">
+                <span className="font-['Montserrat'] font-medium text-lg text-gray-800">
+                  <span className="text-[#005fa3]">.</span>conformity
+                </span>
+              </h3>
+              <p className="text-gray-600 text-sm mb-6 lowercase">
+                execução de auditorias e adequação a normas como ISO 27001, SOC 2, PCI DSS, HIPAA, LGPD/GDPR e HITRUST.
               </p>
-              <ul className="text-gray-600 text-sm space-y-2 mb-6">
-                <li>• ISO 27001/27002</li>
-                <li>• NIST Cybersecurity Framework</li>
-                <li>• SOC 2</li>
-                <li>• análise de riscos</li>
-              </ul>
+              <div className="text-center">
+                <a 
+                  href="/site/trustness/services/conformity" 
+                  className="text-gray-600 hover:text-[#005fa3] border border-gray-300 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                >
+                  saiba mais
+                </a>
+              </div>
             </div>
             
-            {/* Serviço 3 */}
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-medium text-gray-800 mb-4">gestão de compliance</h3>
-              <p className="text-gray-600 mb-4 text-sm">
-                conformidade regulatória e frameworks de governança para diferentes setores e indústrias.
+            {/* Serviço 3 - Privacy */}
+            <div className="bg-white rounded p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+              <h3 className="mb-4">
+                <span className="font-['Montserrat'] font-medium text-lg text-gray-800">
+                  <span className="text-[#005fa3]">.</span>privacy
+                </span>
+              </h3>
+              <p className="text-gray-600 text-sm mb-6 lowercase">
+                implementação de controles de privacidade alinhados a padrões regulatórios nacionais e internacionais.
               </p>
-              <ul className="text-gray-600 text-sm space-y-2 mb-6">
-                <li>• programas de compliance</li>
-                <li>• política anticorrupção</li>
-                <li>• due diligence</li>
-                <li>• auditorias de compliance</li>
-              </ul>
+              <div className="text-center">
+                <a 
+                  href="/site/trustness/services/privacy" 
+                  className="text-gray-600 hover:text-[#005fa3] border border-gray-300 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                >
+                  saiba mais
+                </a>
+              </div>
             </div>
           </div>
         </div>
