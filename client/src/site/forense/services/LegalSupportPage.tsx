@@ -24,7 +24,7 @@ export default function ForenseLegalSupportPage() {
     pt: {
       title: 'suporte.legal',
       description: 'consultoria técnica especializada em evidências digitais',
-      intro: 'nossa divisão de suporte técnico-legal oferece serviços especializados de orientação em casos envolvendo evidências digitais, proporcionando clareza e embasamento científico para profissionais e organizações. não prestamos serviços jurídicos, atuamos exclusivamente no suporte técnico especializado a casos com componentes digitais.',
+      intro: 'nossa divisão de suporte técnico-legal oferece serviços especializados de orientação em casos envolvendo evidências digitais, proporcionando clareza e embasamento científico para profissionais e organizações. não prestamos serviços jurídicos, atuamos no suporte técnico especializado a casos com componentes digitais.',
       sections: [
         {
           title: 'consultoria estratégica',
@@ -157,7 +157,7 @@ export default function ForenseLegalSupportPage() {
                       <span className="text-[#00ade0]">consultoria técnica</span> especializada
                     </h2>
                     <p className="text-gray-500 max-w-3xl mx-auto">
-                      fornecemos suporte técnico especializado para a área legal, sem exercer atividades jurídicas.
+                      fornecemos suporte técnico especializado para a área legal.
                     </p>
                   </div>
                   
@@ -212,7 +212,7 @@ export default function ForenseLegalSupportPage() {
                 serviços de <span className="text-[#00ade0]">consultoria técnica</span>
               </h2>
               <div className="max-w-3xl mx-auto text-center mb-10">
-                <p className="text-gray-500 text-sm">oferecemos suporte técnico especializado para profissionais e instituições da área legal em casos que envolvam evidências digitais, sem exercer atividades jurídicas.</p>
+                <p className="text-gray-500 text-sm">oferecemos suporte técnico especializado para profissionais e instituições da área legal em casos que envolvam evidências digitais.</p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -226,12 +226,12 @@ export default function ForenseLegalSupportPage() {
                       {content.sections[0].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
-                      <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                        <span>análise técnica</span>
-                        <span>•</span>
-                        <span>avaliação prévia</span>
-                        <span>•</span>
-                        <span>viabilidade técnica</span>
+                      <div className="flex justify-center text-xs text-gray-500">
+                        <div className="grid grid-cols-3 gap-2 w-full">
+                          <span className="text-center">análise técnica</span>
+                          <span className="text-center">avaliação prévia</span>
+                          <span className="text-center">viabilidade técnica</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -247,12 +247,12 @@ export default function ForenseLegalSupportPage() {
                       {content.sections[1].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
-                      <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                        <span>formulação técnica</span>
-                        <span>•</span>
-                        <span>contraprovas</span>
-                        <span>•</span>
-                        <span>análise de laudo</span>
+                      <div className="flex justify-center text-xs text-gray-500">
+                        <div className="grid grid-cols-3 gap-2 w-full">
+                          <span className="text-center">formulação técnica</span>
+                          <span className="text-center">contraprovas</span>
+                          <span className="text-center">análise de laudo</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -268,12 +268,12 @@ export default function ForenseLegalSupportPage() {
                       {content.sections[2].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
-                      <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                        <span>depoimento técnico</span>
-                        <span>•</span>
-                        <span>pareceres</span>
-                        <span>•</span>
-                        <span>simplificação técnica</span>
+                      <div className="flex justify-center text-xs text-gray-500">
+                        <div className="grid grid-cols-3 gap-2 w-full">
+                          <span className="text-center">depoimento técnico</span>
+                          <span className="text-center">pareceres</span>
+                          <span className="text-center">simplificação técnica</span>
+                        </div>
                       </div>
                     </div>
                   </div>
