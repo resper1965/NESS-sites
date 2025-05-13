@@ -66,9 +66,17 @@ export default function SiteNavbar() {
     { id: 'privacy', name: '.privacy', path: `/site/trustness/services#privacy` }
   ];
   
+  // Serviços da forense.io
+  const forenseServices = [
+    { id: 'digital-forensics', name: 'forense.digital', path: `/site/forense/services/digital-forensics` },
+    { id: 'legal-support', name: 'suporte.legal', path: `/site/forense/services/legal-support` },
+    { id: 'corporate-investigations', name: 'investigações.corporativas', path: `/site/forense/services/corporate-investigations` }
+  ];
+  
   // Seleciona serviços com base no site atual
   const services = siteConfig.code === 'ness' ? nessServices : 
-                   siteConfig.code === 'trustness' ? trustnessServices : [];
+                   siteConfig.code === 'trustness' ? trustnessServices :
+                   siteConfig.code === 'forense' ? forenseServices : [];
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${navbarClass}`}>

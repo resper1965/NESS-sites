@@ -10,6 +10,7 @@ interface SiteLayoutProps {
   description?: string;
   ogImage?: string;
   canonicalUrl?: string;
+  structuredData?: Record<string, any>;
 }
 
 export default function SiteLayout({
@@ -18,6 +19,7 @@ export default function SiteLayout({
   description,
   ogImage,
   canonicalUrl,
+  structuredData,
 }: SiteLayoutProps) {
   const { siteConfig } = useSite();
   
@@ -45,6 +47,13 @@ export default function SiteLayout({
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         {pageImage && <meta name="twitter:image" content={pageImage} />}
+        
+        {/* Structured Data / Schema.org */}
+        {structuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        )}
         
         {/* Favicon */}
         {siteConfig.metadata?.favicon && (

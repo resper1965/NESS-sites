@@ -13,6 +13,9 @@ import TrustnessHomePage from "@/site/trustness/HomePage";
 import TrustnessAboutPage from "@/site/trustness/AboutPage";
 import ForenseHomePage from "@/site/forense/HomePage";
 import ForenseAboutPage from "@/site/forense/AboutPage";
+import ForenseDigitalForensicsPage from "@/site/forense/services/DigitalForensicsPage";
+import ForenseLegalSupportPage from "@/site/forense/services/LegalSupportPage";
+import ForenseCorporateInvestigationsPage from "@/site/forense/services/CorporateInvestigationsPage";
 
 // Legacy pages (will be migrated)
 import HomePage from "@/pages/home-page";
@@ -76,6 +79,24 @@ function Router() {
       <Route path="/site/forense/about">
         <SiteProvider siteCode="forense">
           <ForenseAboutPage />
+        </SiteProvider>
+      </Route>
+
+      <Route path="/site/forense/services/digital-forensics">
+        <SiteProvider siteCode="forense">
+          <ForenseDigitalForensicsPage />
+        </SiteProvider>
+      </Route>
+
+      <Route path="/site/forense/services/legal-support">
+        <SiteProvider siteCode="forense">
+          <ForenseLegalSupportPage />
+        </SiteProvider>
+      </Route>
+
+      <Route path="/site/forense/services/corporate-investigations">
+        <SiteProvider siteCode="forense">
+          <ForenseCorporateInvestigationsPage />
         </SiteProvider>
       </Route>
       
