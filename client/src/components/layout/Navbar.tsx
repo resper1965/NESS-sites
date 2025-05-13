@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   const [location] = useLocation();
   const { user } = useAuth();
 
@@ -58,43 +58,65 @@ export default function Navbar() {
     ? 'bg-black shadow-md'
     : 'bg-transparent';
 
+  // Services descriptions in different languages
+  const serviceDescriptions = {
+    pt: {
+      secops: 'Segurança integrada às operações com monitoramento contínuo.',
+      infraops: 'Gestão moderna de infraestrutura com alta disponibilidade.',
+      devarch: 'Fundamentos sólidos para desenvolvimento com arquitetura segura.',
+      autoops: 'Automação inteligente de processos operacionais.',
+      crisisops: 'Resposta imediata para incidentes e gestão de crises cibernéticas.',
+      privacy: 'Gestão completa de privacidade para conformidade com LGPD/GDPR.'
+    },
+    en: {
+      secops: 'Integrated security operations with continuous monitoring.',
+      infraops: 'Modern infrastructure management with high availability.',
+      devarch: 'Solid foundations for development with secure architecture.',
+      autoops: 'Intelligent automation of operational processes.',
+      crisisops: 'Immediate response for incidents and cybernetic crisis management.',
+      privacy: 'Complete privacy management for LGPD/GDPR compliance.'
+    },
+    es: {
+      secops: 'Seguridad integrada a las operaciones con monitoreo continuo.',
+      infraops: 'Gestión moderna de infraestructura con alta disponibilidad.',
+      devarch: 'Fundamentos sólidos para desarrollo con arquitectura segura.',
+      autoops: 'Automatización inteligente de procesos operacionales.',
+      crisisops: 'Respuesta inmediata para incidentes y gestión de crisis cibernéticas.',
+      privacy: 'Gestión completa de privacidad para conformidad con LGPD/GDPR.'
+    }
+  };
+
   // Services for dropdown menu with descriptions
   const services = [
     { 
       id: 'secops', 
       name: 'n.SecOps', 
-      path: '/services/secops',
-      description: 'Segurança integrada às operações com monitoramento contínuo.'
+      path: '/services/secops'
     },
     { 
       id: 'infraops', 
       name: 'n.InfraOps', 
-      path: '/services/infraops',
-      description: 'Gestão moderna de infraestrutura com alta disponibilidade.'
+      path: '/services/infraops'
     },
     { 
       id: 'devarch', 
       name: 'n.DevArch', 
-      path: '/services#devarch',
-      description: 'Fundamentos sólidos para desenvolvimento com arquitetura segura.'
+      path: '/services#devarch'
     },
     { 
       id: 'autoops', 
       name: 'n.AutoOps', 
-      path: '/services#autoops',
-      description: 'Automação inteligente de processos operacionais.'
+      path: '/services#autoops'
     },
     { 
       id: 'crisisops', 
       name: 'n.CrisisOps', 
-      path: '/services#crisisops',
-      description: 'Resposta imediata para incidentes e gestão de crises cibernéticas.'
+      path: '/services#crisisops'
     },
     { 
       id: 'privacy', 
       name: 'n.Privacy', 
-      path: '/services#privacy',
-      description: 'Gestão completa de privacidade para conformidade com LGPD/GDPR.'
+      path: '/services#privacy'
     }
   ];
 
@@ -122,7 +144,7 @@ export default function Navbar() {
                 onClick={toggleServicesDropdown}
                 className="text-white hover:text-accent transition duration-200 font-medium flex items-center lowercase"
               >
-                o que fazemos
+                {language === 'pt' ? 'o que fazemos' : language === 'en' ? 'what we do' : 'lo que hacemos'}
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
                   className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'transform rotate-180' : ''}`} 
@@ -135,7 +157,7 @@ export default function Navbar() {
               </button>
               
               {servicesDropdownOpen && (
-                <div className="absolute -left-16 mt-2 w-[800px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-6">
+                <div className="absolute left-[-250px] mt-2 w-[900px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-6">
                   <div className="grid grid-cols-3 gap-6" role="menu" aria-orientation="vertical">
                     {services.map(service => (
                       <Link 
@@ -147,7 +169,9 @@ export default function Navbar() {
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
                           n<span className="text-[#00ade0]">.</span>{service.name.substring(2)}
                         </h3>
-                        <p className="text-sm text-gray-600 leading-snug">{service.description}</p>
+                        <p className="text-sm text-gray-600 leading-snug">
+                          {serviceDescriptions[language as keyof typeof serviceDescriptions][service.id as keyof typeof serviceDescriptions.pt]}
+                        </p>
                       </Link>
                     ))}
                   </div>
@@ -157,7 +181,7 @@ export default function Navbar() {
                       className="text-accent hover:text-accent-dark font-medium transition-colors duration-200 lowercase"
                       onClick={() => setServicesDropdownOpen(false)}
                     >
-                      ver todos os serviços
+                      {language === 'pt' ? 'ver todos os serviços' : language === 'en' ? 'view all services' : 'ver todos los servicios'}
                     </Link>
                   </div>
                 </div>
