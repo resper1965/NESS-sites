@@ -149,16 +149,31 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       setIsLoading(false);
     }
   }, []);
+  
+  // Adiciona um evento de popstate para atualizar o idioma quando o usuário navega pelo histórico
+  useEffect(() => {
+    const handlePopState = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const langParam = urlParams.get('lang') as Language | null;
+      if (langParam && langParam !== language) {
+        setLanguageState(langParam);
+        localStorage.setItem('language', langParam);
+      }
+    };
+    
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [language]);
 
   // Set language and save to localStorage
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem('language', lang);
     
-    // Update URL with new language
+    // Atualiza a URL com o novo idioma, mas sem recarregar a página
     const url = new URL(window.location.href);
     url.searchParams.set('lang', lang);
-    window.location.href = url.toString();
+    window.history.pushState({}, '', url.toString());
   };
 
   // Translation function
