@@ -142,6 +142,52 @@ export default function ForenseHomePage() {
         </div>
       </section>
       
+      {/* Por que a forense.io Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+              porque a forense<span className="text-[#00ade0]">.</span>io?
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              nosso compromisso com excelência e transparência nos diferencia no mercado de forense digital
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Box 1 */}
+            <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white">
+              <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-[#00ade0] lowercase">
+                proporcionalidade e precisão
+              </h3>
+              <p className="text-gray-300 text-sm">
+                utilizamos tecnologia de ponta para garantir que cada análise seja detalhada e proporcional às necessidades do caso, assegurando resultados precisos e relevantes.
+              </p>
+            </div>
+            
+            {/* Box 2 */}
+            <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white">
+              <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-[#00ade0] lowercase">
+                maturidade e experiência
+              </h3>
+              <p className="text-gray-300 text-sm">
+                com mais de três décadas de atuação no mercado de tecnologia por meio da ness., a forense.io traz um legado de confiabilidade e um profundo conhecimento técnico para o campo da forense digital.
+              </p>
+            </div>
+            
+            {/* Box 3 */}
+            <div className="bg-gray-900 p-8 rounded-lg shadow-md text-white">
+              <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-[#00ade0] lowercase">
+                confiança e clareza
+              </h3>
+              <p className="text-gray-300 text-sm">
+                nossa transparência no processo e rigor metodológico estabelecem uma base sólida de confiança com nossos clientes, fornecendo evidências claras e compreensíveis que suportam decisões judiciais informadas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* CTA Section */}
       <section className="py-20 bg-[#1a1a22] text-white">
         <div className="container mx-auto px-4 text-center">
