@@ -1,9 +1,18 @@
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
-// Define supported languages
+/**
+ * Define idiomas suportados pela plataforma
+ * pt: Português
+ * en: Inglês
+ * es: Espanhol
+ */
 export type Language = 'pt' | 'en' | 'es';
 
-// Define translation record structure
+/**
+ * Define estrutura de traduções
+ * TranslationRecord: Mapeamento de chaves para strings traduzidas
+ * TranslationsMap: Mapeamento de idiomas para seus respectivos registros de tradução
+ */
 type TranslationRecord = Record<string, string>;
 type TranslationsMap = Record<Language, TranslationRecord>;
 

@@ -137,10 +137,10 @@ export default function ForenseLegalSupportPage() {
         <section className="pt-32 pb-20 text-white bg-[#0d1117] relative">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-3xl md:text-4xl font-['Montserrat'] font-normal mb-6 lowercase">
+              <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
                 suporte<DotSpan />legal
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className={`${styles.fontSizes.hero.subtitle} ${styles.colors.text.light} ${styles.spacing.mb.xl}`}>
                 {content.description}
               </p>
             </div>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useSite } from '../SiteContext';
-import { useI18n, Language } from '@/lib/i18n';
-import LanguageSelector from '@/components/common/LanguageSelector';
+import { useI18n } from '@/lib/i18n';
+import { LanguageSwitcher } from '../components/LanguageSwitcher';
 
 export default function SiteNavbar() {
   const { siteConfig } = useSite();
@@ -154,9 +154,9 @@ export default function SiteNavbar() {
               {t('nav.news')}
             </Link>
             
-            {/* Language Selector */}
+            {/* Language Switcher */}
             <div className="ml-4">
-              <LanguageSelector />
+              <LanguageSwitcher />
             </div>
             
             {/* Contact as a button */}
