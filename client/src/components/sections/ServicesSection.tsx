@@ -34,7 +34,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
     pt: {
       secops: "segurança integrada às operações com monitoramento contínuo.",
       infraops: "gestão moderna de infraestrutura com alta disponibilidade.",
-      devarch: "fundamentos sólidos para desenvolvimento com arquitetura e...",
+      devarch: "fundamentos sólidos para desenvolvimento com arquitetura e IA.",
       autoops: "automação inteligente de processos com IA.",
       crisisops: "resposta imediata para incidentes e gestão de crises cibernéticas.",
       privacy: "gestão completa de privacidade para conformidade com LGPD/GDPR."
@@ -42,7 +42,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
     en: {
       secops: "integrated security operations with continuous monitoring.",
       infraops: "modern infrastructure management with high availability.",
-      devarch: "solid foundations for development with architecture and...",
+      devarch: "solid foundations for development with architecture and AI.",
       autoops: "intelligent process automation with AI.",
       crisisops: "immediate response for incidents and cybernetic crisis management.",
       privacy: "complete privacy management for LGPD/GDPR compliance."
@@ -50,7 +50,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
     es: {
       secops: "seguridad integrada a las operaciones con monitoreo continuo.",
       infraops: "gestión moderna de infraestructura con alta disponibilidad.",
-      devarch: "fundamentos sólidos para desarrollo con arquitectura y...",
+      devarch: "fundamentos sólidos para desarrollo con arquitectura e IA.",
       autoops: "automatización inteligente de procesos con IA.",
       crisisops: "respuesta inmediata para incidentes y gestión de crisis cibernéticas.",
       privacy: "gestión completa de privacidad para conformidad con LGPD/GDPR."
