@@ -95,8 +95,8 @@ const siteConfigs: Record<SiteCode, SiteConfig> = {
   forense: {
     name: 'forense.io',
     logo: '/logos/forense-logo.svg',
-    primaryColor: '#2d3e50',
-    secondaryColor: '#1abc9c',
+    primaryColor: '#00ade0',
+    secondaryColor: '#00ade0',
     fontFamily: 'Montserrat, sans-serif',
     code: 'forense',
     domain: 'forense.io',

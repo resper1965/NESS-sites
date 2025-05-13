@@ -41,13 +41,7 @@ export default function ForenseHomePage() {
     >
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#0d1117] text-white relative overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-          <img 
-            src="/assets/optimized/forense-hero-bg.webp" 
-            alt="forense.io background" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {/* Nenhuma imagem de fundo conforme solicitado */}
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
