@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { useSite } from '../SiteContext';
-import { useI18n } from '@/lib/i18n';
+import { useI18n, Language } from '@/lib/i18n';
 import { LanguageSwitcher } from '../components/LanguageSwitcher';
 
 export default function SiteNavbar() {

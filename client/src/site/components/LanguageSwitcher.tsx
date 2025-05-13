@@ -1,12 +1,5 @@
 import React from 'react';
 import { useI18n, Language } from '@/lib/i18n';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Globe } from 'lucide-react';
 
 /**
  * Componente para alternar entre os idiomas disponíveis.
@@ -27,23 +20,17 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center text-sm gap-1 outline-none">
-        <Globe className="h-4 w-4" />
-        <span className="text-xs font-medium uppercase ml-1">{language}</span>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-40">
-        {languages.map((lang) => (
-          <DropdownMenuItem
-            key={lang.code}
-            className={`text-sm cursor-pointer ${language === lang.code ? 'font-bold' : ''}`}
-            onClick={() => handleLanguageChange(lang.code)}
-          >
-            <span className="mr-2">{lang.flag}</span>
-            {lang.label}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="flex items-center gap-2">
+      {languages.map((lang) => (
+        <button
+          key={lang.code}
+          className={`text-xs px-2 py-1 rounded flex items-center ${language === lang.code ? 'bg-white/20 font-medium' : 'text-gray-300 hover:text-white'}`}
+          onClick={() => handleLanguageChange(lang.code)}
+        >
+          <span className="mr-1">{lang.flag}</span>
+          {lang.code.toUpperCase()}
+        </button>
+      ))}
+    </div>
   );
 }

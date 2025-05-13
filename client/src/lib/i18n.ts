@@ -56,6 +56,15 @@ const translations: TranslationsMap = {
     'news.title': 'Últimas Notícias',
     'contact.title': 'Entre em Contato',
     'footer.rights': 'Todos os direitos reservados',
+    
+    // Textos de páginas de serviço
+    'forense.service.digital': 'forense digital',
+    'forense.service.legal': 'suporte legal',
+    'forense.service.corporate': 'investigações corporativas',
+    'forense.cta.title': 'precisa de um serviço especializado?',
+    'forense.cta.button': 'entre em contato',
+    'forense.digital.title': 'o que é forense digital?',
+    'forense.digital.why': 'por que a forense digital é essencial',
   },
   en: {
     'nav.home': 'Home',
@@ -78,6 +87,15 @@ const translations: TranslationsMap = {
     'news.title': 'Latest News',
     'contact.title': 'Contact Us',
     'footer.rights': 'All rights reserved',
+    
+    // Service page texts
+    'forense.service.digital': 'digital forensics',
+    'forense.service.legal': 'legal support',
+    'forense.service.corporate': 'corporate investigations',
+    'forense.cta.title': 'need specialized services?',
+    'forense.cta.button': 'contact us',
+    'forense.digital.title': 'what is digital forensics?',
+    'forense.digital.why': 'why digital forensics is essential',
   },
   es: {
     'nav.home': 'Inicio',
