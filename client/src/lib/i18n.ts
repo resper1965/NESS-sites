@@ -68,6 +68,9 @@ const translations: TranslationsMap = {
     'forense.legal.title': 'o que é suporte legal?',
     'forense.legal.why': 'por que o suporte legal é essencial',
     'forense.legal.desc': 'consultoria técnica especializada em evidências digitais',
+    'forense.corporate.title': 'o que são investigações corporativas?',
+    'forense.corporate.why': 'por que as investigações corporativas são essenciais',
+    'forense.corporate.desc': 'investigações e auditoria digital para ambientes corporativos',
   },
   en: {
     'nav.home': 'Home',
@@ -102,6 +105,9 @@ const translations: TranslationsMap = {
     'forense.legal.title': 'what is legal support?',
     'forense.legal.why': 'why legal support is essential',
     'forense.legal.desc': 'specialized technical consulting for digital evidence',
+    'forense.corporate.title': 'what are corporate investigations?',
+    'forense.corporate.why': 'why corporate investigations are essential',
+    'forense.corporate.desc': 'investigations and digital auditing for corporate environments',
   },
   es: {
     'nav.home': 'Inicio',
@@ -136,6 +142,9 @@ const translations: TranslationsMap = {
     'forense.legal.title': '¿qué es soporte legal?',
     'forense.legal.why': 'por qué el soporte legal es esencial',
     'forense.legal.desc': 'consultoría técnica especializada en evidencias digitales',
+    'forense.corporate.title': '¿qué son investigaciones corporativas?',
+    'forense.corporate.why': 'por qué las investigaciones corporativas son esenciales',
+    'forense.corporate.desc': 'investigaciones y auditoría digital para entornos corporativos',
   }
 };
 

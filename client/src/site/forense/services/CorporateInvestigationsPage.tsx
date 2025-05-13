@@ -138,10 +138,10 @@ export default function ForenseCorporateInvestigationsPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
-                investigações<DotSpan />corporativas
+                {t('forense.service.corporate').split(' ')[0]}<DotSpan />{t('forense.service.corporate').split(' ')[1]}
               </h1>
               <p className={`${styles.fontSizes.hero.subtitle} ${styles.colors.text.light} ${styles.spacing.mb.xl}`}>
-                {content.description}
+                {t('forense.corporate.desc')}
               </p>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function ForenseCorporateInvestigationsPage() {
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
-                  sobre <span className="text-[#00ade0]">investigações corporativas</span>
+                  {t('forense.corporate.title')}
                 </h2>
                 <p className="text-gray-600 max-w-3xl mx-auto mb-12">
                   {content.intro}
@@ -404,12 +404,12 @@ export default function ForenseCorporateInvestigationsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-2xl md:text-3xl font-['Montserrat'] font-normal mb-6 text-white lowercase">
-                {content.cta.title}
+                {t('forense.cta.title')}
               </h2>
               <div className="mt-8">
-                <a href="/contato" 
+                <a href={`/site/forense/contact`}
                   className="inline-block py-3 px-8 bg-white text-[#00ade0] rounded-md font-medium transition-all hover:shadow-lg hover:bg-gray-50">
-                  {content.cta.button}
+                  {t('forense.cta.button')}
                 </a>
               </div>
             </div>
