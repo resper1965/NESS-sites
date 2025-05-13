@@ -285,7 +285,7 @@ export default function ForenseDigitalForensicsPage() {
                     armazenamento em <span className="text-[#00ade0]">nuvem</span>
                   </h3>
                   <p className="text-gray-300 text-sm mb-4">
-                    extração forense de dados armazenados em serviços de nuvem, incluindo e-mails, documentos e backups, seguindo protocolos legais para acesso autorizado.
+                    extração forense de dados armazenados em serviços de nuvem, incluindo e-mails, documentos, redes sociais, sites e backups, seguindo protocolos legais para acesso autorizado.
                   </p>
                   <div className="mt-auto pt-4 border-t border-gray-800">
                     <div className="flex items-center text-xs text-[#00ade0]/80">
