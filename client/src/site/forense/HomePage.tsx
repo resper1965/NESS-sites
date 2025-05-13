@@ -93,53 +93,50 @@ export default function ForenseHomePage() {
               <p className="text-gray-700 text-sm mb-6">
                 Perícia avançada para coleta, preservação e análise detalhada de dados. Especialização em Produção e Validação de Evidências, Reexame Forense e Contraprova de Relatórios, assegurando integridade e precisão
               </p>
-              <a 
-                href="/site/forense/services/digital-forensics" 
-                className="text-[#00ade0] hover:text-[#00ade0]/80 inline-flex items-center"
-              >
-                <span>saiba mais</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
-                  <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                </svg>
-              </a>
+              <div className="text-center">
+                <a 
+                  href="/site/forense/services/digital-forensics" 
+                  className="border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0]/5 px-4 py-2 rounded-sm text-sm inline-block transition-colors lowercase"
+                >
+                  saiba mais
+                </a>
+              </div>
             </div>
             
             {/* Service 2 - Suporte Legal */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-100">
               <h3 className="text-xl font-['Montserrat'] font-medium text-gray-800 mb-4 lowercase">
-                forense<span className="text-[#00ade0]">.</span>legal
+                suporte<span className="text-[#00ade0]">.</span>legal
               </h3>
               <p className="text-gray-700 text-sm mb-6">
                 Consultoria estratégica e assistência técnica em litígios, com foco na elaboração de teses, análise crítica de evidências e preparação eficaz para audiências, garantindo uma representação robusta em questões jurídicas complexas
               </p>
-              <a 
-                href="/site/forense/services/legal-support" 
-                className="text-[#00ade0] hover:text-[#00ade0]/80 inline-flex items-center"
-              >
-                <span>saiba mais</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
-                  <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                </svg>
-              </a>
+              <div className="text-center">
+                <a 
+                  href="/site/forense/services/legal-support" 
+                  className="border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0]/5 px-4 py-2 rounded-sm text-sm inline-block transition-colors lowercase"
+                >
+                  saiba mais
+                </a>
+              </div>
             </div>
             
             {/* Service 3 - Investigações Corporativas */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-100">
               <h3 className="text-xl font-['Montserrat'] font-medium text-gray-800 mb-4 lowercase">
-                forense<span className="text-[#00ade0]">.</span>corp
+                investigações<span className="text-[#00ade0]">.</span>corporativas
               </h3>
               <p className="text-gray-700 text-sm mb-6">
                 Análise aprofundada e auditorias digitais para resolver incidentes internos, fraudes e uso indevido de recursos, fortalecendo a segurança empresarial e a conformidade regulatória
               </p>
-              <a 
-                href="/site/forense/services/corporate-investigations" 
-                className="text-[#00ade0] hover:text-[#00ade0]/80 inline-flex items-center"
-              >
-                <span>saiba mais</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
-                  <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                </svg>
-              </a>
+              <div className="text-center">
+                <a 
+                  href="/site/forense/services/corporate-investigations" 
+                  className="border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0]/5 px-4 py-2 rounded-sm text-sm inline-block transition-colors lowercase"
+                >
+                  saiba mais
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -148,20 +145,15 @@ export default function ForenseHomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-[#1a1a22] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">
-            precisa de análise forense especializada?
+          <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
+            quer saber mais sobre a <span className="font-normal">forense<span className="text-[#00ade0]">.</span>io</span>?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            nossa equipe de especialistas está pronta para transformar evidências digitais em resultados concretos para seu caso
-          </p>
-          <div className="flex justify-center">
-            <a
-              href="/site/forense/contact"
-              className="bg-[#00ade0] hover:bg-opacity-90 text-white px-8 py-4 rounded text-lg lowercase transition-all duration-300"
-            >
-              fale conosco
-            </a>
-          </div>
+          <a
+            href="/site/forense/contact"
+            className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+          >
+            fale conosco
+          </a>
         </div>
       </section>
     </SiteLayout>
