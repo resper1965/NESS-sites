@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
 import { useSite } from '../../SiteContext';
 import SiteLayout from '../../layout/SiteLayout';
+import { forenseStyles as styles } from '../styles';
 
 export default function ForenseDigitalForensicsPage() {
   const DotSpan = () => <span className="text-[#00ade0]">.</span>;
@@ -161,10 +162,10 @@ export default function ForenseDigitalForensicsPage() {
         <section className="pt-32 pb-20 text-white bg-[#0d1117] relative">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-3xl md:text-4xl font-['Montserrat'] font-normal mb-6 lowercase">
+              <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
                 forense<DotSpan />digital
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className={`${styles.fontSizes.hero.subtitle} ${styles.colors.text.light} ${styles.spacing.mb.xl}`}>
                 {content.description}
               </p>
             </div>

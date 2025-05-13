@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
 import { useSite } from '../../SiteContext';
 import SiteLayout from '../../layout/SiteLayout';
+import { forenseStyles as styles } from '../styles';
 
 export default function ForenseCorporateInvestigationsPage() {
   const DotSpan = () => <span className="text-[#00ade0]">.</span>;
