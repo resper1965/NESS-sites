@@ -325,7 +325,7 @@ export default function ForenseAboutPage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-gray-900 text-white">
+        <section className="py-20 bg-[#0d1117] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
