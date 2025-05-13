@@ -202,6 +202,7 @@ export default function ForenseAboutPage() {
       <main>
         {/* Hero Section com fundo escuro */}
         <section className="pt-32 pb-20 text-white bg-[#0d1117] relative">
+          {/* Aqui não adicionamos mais imagem de hero conforme solicitado anteriormente */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
@@ -210,23 +211,6 @@ export default function ForenseAboutPage() {
               <p className="text-xl text-gray-300 mb-8">
                 {defaultContent.heroTitle}
               </p>
-            </div>
-          </div>
-        </section>
-        
-        {/* Manifesto Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="prose prose-base mx-auto text-gray-700 lowercase">
-                <p className="mb-8 text-lg">
-                  a forense<span className="text-[#00ade0]">.</span>io, divisão especializada da ness<span className="text-[#00ade0]">.</span>, emerge como líder em soluções de forense digital, capitalizando mais de três décadas de inovação tecnológica. nossa equipe de especialistas utiliza as mais modernas técnicas e tecnologias para análise, recuperação e validação de evidências digitais, assegurando sua integridade e relevância jurídica. nos dedicamos a resolver complexidades em casos de fraude, litígios e crimes cibernéticos, garantindo resultados precisos e confiáveis.
-                </p>
-                
-                <p className="mb-4 text-lg">
-                  com um compromisso inabalável com a excelência, a forense<span className="text-[#00ade0]">.</span>io oferece não apenas suporte técnico, mas uma parceria estratégica. nosso objetivo é proteger os ativos digitais dos clientes e salvaguardar seus interesses legais, entregando soluções claras e eficazes que sustentam decisões informadas e seguras. estamos na vanguarda da inovação em forense digital, prontos para enfrentar os desafios de hoje e antecipar os de amanhã.
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -353,7 +337,7 @@ export default function ForenseAboutPage() {
             </h2>
             <a
               href={`/site/forense/contact`}
-              className="inline-block bg-[#0099cc] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+              className="inline-block bg-[#006699] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {defaultContent.cta.button}
             </a>
