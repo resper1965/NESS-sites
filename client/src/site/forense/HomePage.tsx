@@ -40,49 +40,36 @@ export default function ForenseHomePage() {
       canonicalUrl={`https://${siteConfig.domain}`}
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-[#2c2c34] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      <section className="pt-32 pb-20 bg-[#005fa3] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-[#003f6d] to-[#00ade0]">
           <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <pattern id="dna" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M0,10 C5,5 15,15 20,10 M0,10 C5,15 15,5 20,10" fill="none" stroke="#00ade0" strokeWidth="0.5"/>
-              </pattern>
-              <pattern id="circuit" width="30" height="30" patternUnits="userSpaceOnUse">
-                <path d="M10,0 L10,10 L0,10 M20,0 L20,20 L0,20 M30,10 L20,10 M30,20 L25,20" fill="none" stroke="#fff" strokeWidth="0.5"/>
-              </pattern>
-              <pattern id="combined" width="50" height="50" patternUnits="userSpaceOnUse">
-                <rect width="50" height="50" fill="url(#dna)" />
-                <rect width="50" height="50" fill="url(#circuit)" />
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#fff" strokeWidth="0.5"/>
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#combined)" />
+            <rect width="100%" height="100%" fill="url(#grid)" />
           </svg>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-3 lowercase">
-              Digital Forensic Experts
+              forense<span className="text-[#00ade0]">.</span>io
             </h1>
             <h2 className="text-2xl font-['Montserrat'] font-normal mb-6 lowercase">
-              forense<span className="text-[#00ade0]">.</span>io
+              Digital Forensic Experts
             </h2>
             <div className="h-1 w-20 bg-[#00ade0] mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 mb-8">
               transformamos a evidência digital em resultados concretos, com precisão e segurança
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex justify-center">
               <a
-                href="/site/forense/services/forensic-digital"
-                className="bg-[#00ade0] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
+                href="/site/forense/contact"
+                className="bg-[#00ade0] hover:bg-opacity-90 text-white px-8 py-3 rounded lowercase transition-all duration-300"
               >
-                forense digital
-              </a>
-              <a
-                href="/site/forense/services/legal-support"
-                className="border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:bg-opacity-10 px-6 py-3 rounded lowercase"
-              >
-                suporte legal
+                fale conosco
               </a>
             </div>
           </div>
@@ -227,12 +214,12 @@ export default function ForenseHomePage() {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             nossa equipe de especialistas está pronta para transformar evidências digitais em resultados concretos para seu caso
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex justify-center">
             <a
               href="/site/forense/contact"
               className="bg-[#00ade0] hover:bg-opacity-90 text-white px-8 py-4 rounded text-lg lowercase transition-all duration-300"
             >
-              entre em contato
+              fale conosco
             </a>
           </div>
         </div>

@@ -78,7 +78,10 @@ export default function SiteNavbar() {
           <div className="flex items-center">
             <Link href={sitePrefix} className="text-white lowercase">
               <h1 className="font-['Montserrat'] font-normal text-3xl">
-                {siteConfig.name.replace('.', '')}<span style={{color: siteConfig.primaryColor, marginLeft: "1px"}}>.</span>
+                {siteConfig.code === 'forense' 
+                  ? <>forense<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>io</>
+                  : <>{siteConfig.name.replace('.', '')}<span style={{color: siteConfig.primaryColor, marginLeft: "1px"}}>.</span></>
+                }
               </h1>
             </Link>
           </div>
@@ -141,7 +144,10 @@ export default function SiteNavbar() {
             </div>
             
             {/* Contact as a button */}
-            <Link href={`${sitePrefix}/contact`} className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white py-1.5 px-3 rounded-sm transition duration-200 text-sm lowercase ml-2">
+            <Link 
+              href={`${sitePrefix}/contact`} 
+              className={`${siteConfig.code === 'forense' ? 'bg-[#00ade0]' : 'bg-[var(--primary-color)]'} hover:bg-opacity-90 text-white py-1.5 px-3 rounded-sm transition duration-200 text-sm lowercase ml-2`}
+            >
               {t('nav.contact')}
             </Link>
           </div>
@@ -178,7 +184,10 @@ export default function SiteNavbar() {
               <Link href={`${sitePrefix}/news`} className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.news')}
               </Link>
-              <Link href={`${sitePrefix}/contact`} className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white py-2 px-4 rounded-sm transition duration-200 text-center lowercase">
+              <Link 
+                href={`${sitePrefix}/contact`} 
+                className={`${siteConfig.code === 'forense' ? 'bg-[#00ade0]' : 'bg-[var(--primary-color)]'} hover:bg-opacity-90 text-white py-2 px-4 rounded-sm transition duration-200 text-center lowercase`}
+              >
                 {t('nav.contact')}
               </Link>
             </div>
