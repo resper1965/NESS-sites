@@ -220,11 +220,54 @@ export default function ForenseAboutPage() {
             <div className="max-w-3xl mx-auto">
               <div className="prose prose-base mx-auto text-gray-700 lowercase">
                 <p className="mb-8 text-lg">
-                  a forense.io, divisão especializada da NESS, emerge como líder em soluções de forense digital, capitalizando mais de três décadas de inovação tecnológica. nossa equipe de especialistas utiliza as mais modernas técnicas e tecnologias para análise, recuperação e validação de evidências digitais, assegurando sua integridade e relevância jurídica. nos dedicamos a resolver complexidades em casos de fraude, litígios e crimes cibernéticos, garantindo resultados precisos e confiáveis.
+                  a forense<span className="text-[#00ade0]">.</span>io, divisão especializada da ness<span className="text-[#00ade0]">.</span>, emerge como líder em soluções de forense digital, capitalizando mais de três décadas de inovação tecnológica. nossa equipe de especialistas utiliza as mais modernas técnicas e tecnologias para análise, recuperação e validação de evidências digitais, assegurando sua integridade e relevância jurídica. nos dedicamos a resolver complexidades em casos de fraude, litígios e crimes cibernéticos, garantindo resultados precisos e confiáveis.
                 </p>
                 
                 <p className="mb-4 text-lg">
-                  com um compromisso inabalável com a excelência, a forense.io oferece não apenas suporte técnico, mas uma parceria estratégica. nosso objetivo é proteger os ativos digitais dos clientes e salvaguardar seus interesses legais, entregando soluções claras e eficazes que sustentam decisões informadas e seguras. estamos na vanguarda da inovação em forense digital, prontos para enfrentar os desafios de hoje e antecipar os de amanhã.
+                  com um compromisso inabalável com a excelência, a forense<span className="text-[#00ade0]">.</span>io oferece não apenas suporte técnico, mas uma parceria estratégica. nosso objetivo é proteger os ativos digitais dos clientes e salvaguardar seus interesses legais, entregando soluções claras e eficazes que sustentam decisões informadas e seguras. estamos na vanguarda da inovação em forense digital, prontos para enfrentar os desafios de hoje e antecipar os de amanhã.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Sobre a forense.io Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+                sobre a forense<span className="text-[#00ade0]">.</span>io
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto mb-10">
+                convertemos complexidade técnica em resultados judiciais concretos
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
+                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+                  expertise forense<span className="text-[#00ade0]">.</span>
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  nossa equipe combina conhecimento técnico avançado com compreensão profunda dos requisitos legais, garantindo que cada evidência coletada seja juridicamente válida e tecnicamente robusta.
+                </p>
+              </div>
+              
+              <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
+                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+                  tecnologia avançada<span className="text-[#00ade0]">.</span>
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  utilizamos ferramentas e metodologias proprietárias desenvolvidas ao longo de anos para recuperar, analisar e validar evidências digitais com o mais alto padrão de precisão do mercado.
+                </p>
+              </div>
+              
+              <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
+                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+                  resultados concretos<span className="text-[#00ade0]">.</span>
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  nosso trabalho vai além da simples coleta de dados - transformamos evidências técnicas em narrativas claras e defensáveis que sustentam decisões judiciais e corporativas.
                 </p>
               </div>
             </div>
@@ -298,7 +341,7 @@ export default function ForenseAboutPage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-white text-gray-900">
+        <section className="py-20 bg-gray-50 text-gray-900">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
@@ -310,7 +353,7 @@ export default function ForenseAboutPage() {
             </h2>
             <a
               href={`/site/forense/contact`}
-              className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+              className="inline-block bg-[#0099cc] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {defaultContent.cta.button}
             </a>
