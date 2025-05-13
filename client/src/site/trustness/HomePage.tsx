@@ -109,7 +109,7 @@ export default function TrustnessHomePage() {
                     <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
                       <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">nossa abordagem</h3>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="text-gray-700 mb-3">
                     na trustness, avaliamos, auditamos e estruturamos práticas que sustentam a segurança, a privacidade e a conformidade regulatória.
@@ -134,12 +134,12 @@ export default function TrustnessHomePage() {
                   </p>
                 </div>
                 
-                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 md:col-span-2">
                   <div className="mb-6">
                     <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
                       <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidade</h3>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidade & DPO as a Service</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
@@ -150,15 +150,6 @@ export default function TrustnessHomePage() {
                   <p className="text-gray-700 mb-3">
                     estruturamos relatórios como ROPA, DPIA e LIA, além de apoiar processos como atendimento a titulares, avaliação de fornecedores e governança da privacidade.
                   </p>
-                </div>
-                
-                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
-                  <div className="mb-6">
-                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
-                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
-                    </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">DPO as a Service</h3>
-                  </div>
                   <p className="text-gray-700">
                     também atuamos como DPO as a Service, assumindo a função de encarregado de dados da organização — com responsabilidade técnica, legal e estratégica sobre a conformidade e o relacionamento com autoridades e titulares.
                   </p>
@@ -173,7 +164,7 @@ export default function TrustnessHomePage() {
                     <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
                       <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">our approach</h3>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="text-gray-700 mb-3">
                     at trustness, we assess, audit, and structure practices that support security, privacy, and regulatory compliance.
@@ -198,12 +189,12 @@ export default function TrustnessHomePage() {
                   </p>
                 </div>
                 
-                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 md:col-span-2">
                   <div className="mb-6">
                     <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
                       <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacy</h3>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacy & DPO as a Service</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">need to comply with GDPR, LGPD or other privacy laws?</span>
@@ -214,15 +205,6 @@ export default function TrustnessHomePage() {
                   <p className="text-gray-700 mb-3">
                     we structure reports such as ROPA, DPIA and LIA, in addition to supporting processes such as data subject requests, vendor assessment and privacy governance.
                   </p>
-                </div>
-                
-                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
-                  <div className="mb-6">
-                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
-                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
-                    </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">DPO as a Service</h3>
-                  </div>
                   <p className="text-gray-700">
                     we also act as DPO as a Service, assuming the role of data protection officer — with technical, legal and strategic responsibility for compliance and relationships with authorities and data subjects.
                   </p>
@@ -237,7 +219,7 @@ export default function TrustnessHomePage() {
                     <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
                       <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">nuestro enfoque</h3>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="text-gray-700 mb-3">
                     en trustness, evaluamos, auditamos y estructuramos prácticas que sustentan la seguridad, la privacidad y el cumplimiento normativo.
@@ -262,12 +244,12 @@ export default function TrustnessHomePage() {
                   </p>
                 </div>
                 
-                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 md:col-span-2">
                   <div className="mb-6">
                     <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
                       <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidad</h3>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidad & DPO as a Service</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿necesita cumplir con GDPR, LGPD u otras leyes de privacidad?</span>
@@ -278,15 +260,6 @@ export default function TrustnessHomePage() {
                   <p className="text-gray-700 mb-3">
                     estructuramos informes como ROPA, DPIA y LIA, además de apoyar procesos como atención a titulares, evaluación de proveedores y gobernanza de la privacidad.
                   </p>
-                </div>
-                
-                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
-                  <div className="mb-6">
-                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
-                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
-                    </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">DPO as a Service</h3>
-                  </div>
                   <p className="text-gray-700">
                     también actuamos como DPO as a Service, asumiendo la función de encargado de protección de datos de la organización — con responsabilidad técnica, legal y estratégica sobre el cumplimiento y la relación con autoridades y titulares.
                   </p>
