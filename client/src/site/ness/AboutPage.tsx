@@ -212,54 +212,18 @@ export default function NessAboutPage() {
       />
       
       <main>
-        {/* Hero Section com estilo abstrato geométrico */}
-        <section className="hero-abstract">
-          {/* Elementos de fundo geométricos */}
-          <div className="hero-abstract-bg">
-            {/* Grade de fundo */}
-            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" className="grid-pattern">
-              <pattern id="grid-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#00ade0" strokeWidth="0.1" />
-              </pattern>
-              <rect width="100%" height="100%" fill="url(#grid-pattern)" />
-            </svg>
+        {/* Hero Section simplificada */}
+        <section className="relative py-20 md:py-28 bg-gray-50 border-b border-gray-200">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-['Montserrat'] font-normal mb-6 lowercase">
+                {defaultContent.heroTitle}
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-700 lowercase">
+                {defaultContent.heroSubtitle}
+              </p>
+            </div>
           </div>
-          
-          {/* Blocos geométricos */}
-          <div className="geometric-blocks">
-            <div className="block"></div>
-            <div className="block"></div>
-            <div className="block"></div>
-            <div className="block"></div>
-            <div className="block"></div>
-          </div>
-          
-          {/* Linhas fluidas */}
-          <div className="flowing-lines">
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-          </div>
-          
-          {/* Pontos de conexão */}
-          <div className="connections">
-            <div className="connection"></div>
-            <div className="connection"></div>
-            <div className="connection"></div>
-            <div className="connection"></div>
-            <div className="connection"></div>
-            <div className="connection"></div>
-          </div>
-          
-          {/* Conteúdo principal */}
-          <div className="hero-abstract-content">
-            <h1>{defaultContent.heroTitle}</h1>
-            <p>{defaultContent.heroSubtitle}</p>
-          </div>
-          
-          {/* Indicador de rolagem */}
-          <div className="scroll-indicator">↓</div>
         </section>
         
         {/* Manifesto Section */}
