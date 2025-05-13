@@ -40,11 +40,22 @@ export default function TrustnessHomePage() {
       canonicalUrl={`https://${siteConfig.domain}`}
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-[#2c2c34] text-white">
-        <div className="container mx-auto px-4">
+      <section 
+        className="pt-32 pb-20 text-white bg-[#0b1016] relative"
+        style={{
+          backgroundImage: 'url(/assets/images/optimized/trustness-hero-bg.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Overlay para garantir contraste com o texto */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
-              {pageContent?.content?.heroTitle || 'consultoria estratégica em privacidade e segurança'}
+              trustness<span className="text-[#005fa3]">.</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               {pageContent?.content?.heroSubtitle || 
