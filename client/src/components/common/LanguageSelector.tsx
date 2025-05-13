@@ -40,7 +40,7 @@ export default function LanguageSelector() {
     <div className="relative ml-4" ref={dropdownRef}>
       <button 
         onClick={toggleDropdown}
-        className="flex items-center text-white hover:text-accent transition duration-200"
+        className="flex items-center text-white hover:text-[var(--primary-color)] transition duration-200"
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
@@ -56,13 +56,13 @@ export default function LanguageSelector() {
       </button>
       
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg overflow-hidden z-50">
+        <div className="absolute right-0 mt-2 w-32 bg-gray-800 rounded-md shadow-lg overflow-hidden z-50">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
               className={`block w-full text-left px-4 py-2 text-sm ${
-                language === lang.code ? 'bg-neutral-dark text-primary font-medium' : 'text-gray-800 hover:bg-neutral-dark hover:text-white'
+                language === lang.code ? 'bg-gray-700 text-[var(--primary-color)] font-medium' : 'text-gray-300 hover:bg-gray-700'
               }`}
             >
               {lang.label}

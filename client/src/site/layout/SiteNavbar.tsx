@@ -53,8 +53,8 @@ export default function SiteNavbar() {
   const sitePrefix = `/site/${siteConfig.code}`;
   const shouldBeTransparent = location === sitePrefix || location.includes(`${sitePrefix}/about`) || location.includes(`${sitePrefix}/services`);
   const navbarClass = isScrolled || !shouldBeTransparent
-    ? 'bg-black shadow-md'
-    : 'bg-transparent';
+    ? 'bg-gray-50 shadow-md'
+    : 'bg-gray-50';
 
   // Services for dropdown menu
   const services = [
@@ -109,26 +109,18 @@ export default function SiteNavbar() {
               </button>
               
               {servicesDropdownOpen && (
-                <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-900 border border-gray-800 z-50">
+                <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-50 border border-gray-200 z-50">
                   <div className="py-1" role="menu" aria-orientation="vertical">
                     {services.map(service => (
                       <Link 
                         key={service.id}
                         href={service.path}
-                        className="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-800 transition-colors duration-150"
+                        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition-colors duration-150"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
-                        <span className="inline-block w-2 h-2 rounded-full bg-[var(--primary-color)] mr-2"></span>
-                        {service.name}
+                        n<span className="text-[#00ade0]">.</span>{service.name.substring(1)}
                       </Link>
                     ))}
-                    <Link 
-                      href={`${sitePrefix}/services`}
-                      className="block px-4 py-2 text-sm font-medium text-[var(--primary-color)] hover:bg-gray-800 border-t border-gray-700 lowercase transition-colors duration-150"
-                      onClick={() => setServicesDropdownOpen(false)}
-                    >
-                      {t('nav.seeAllServices')}
-                    </Link>
                   </div>
                 </div>
               )}
