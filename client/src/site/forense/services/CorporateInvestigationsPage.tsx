@@ -5,6 +5,7 @@ import { useSite } from '../../SiteContext';
 import SiteLayout from '../../layout/SiteLayout';
 
 export default function ForenseCorporateInvestigationsPage() {
+  const DotSpan = () => <span className="text-[#00ade0]">.</span>;
   const { siteConfig } = useSite();
   const { language } = useI18n();
   
@@ -22,82 +23,70 @@ export default function ForenseCorporateInvestigationsPage() {
   const defaultContent = {
     pt: {
       title: 'investigações.corporativas',
-      description: 'análise forense digital em casos empresariais',
-      intro: 'nosso serviço de investigações corporativas fornece análises forenses digitais detalhadas para identificar, documentar e resolver questões internas envolvendo violações de políticas, fraudes, vazamento de dados e outras ameaças à integridade empresarial.',
+      description: 'investigações e auditoria digital para ambientes corporativos',
+      intro: 'nossa divisão de investigações corporativas oferece soluções especializadas para esclarecer incidentes, investigar possíveis fraudes e garantir a integridade dos ativos digitais corporativos, usando metodologias forenses avançadas.',
       sections: [
         {
-          title: 'fraudes internas',
-          content: 'investigamos suspeitas de fraudes financeiras, desvios, manipulação de dados e outras atividades ilícitas no ambiente corporativo, coletando e analisando evidências digitais de forma a preservar sua integridade para possíveis ações administrativas ou judiciais.'
+          title: 'investigação de incidentes',
+          content: 'análise detalhada de dados para esclarecer incidentes, violações de políticas internas ou fraudes, permitindo a identificação precisa dos fatos ocorridos através de técnicas forenses avançadas.'
         },
         {
-          title: 'uso indevido de recursos',
-          content: 'identificamos e documentamos casos de uso indevido de recursos corporativos, incluindo violações de propriedade intelectual, uso não autorizado de sistemas e apropriação de informações confidenciais, aplicando métodos forenses que respeitam a privacidade e as leis trabalhistas.'
+          title: 'auditoria digital',
+          content: 'verificação de possíveis usos indevidos de recursos digitais, visando à integridade corporativa e à conformidade com normas internas e externas, usando metodologias não intrusivas.'
         },
         {
-          title: 'vazamento de informações',
-          content: 'rastreamos a origem de vazamentos de dados confidenciais ou proprietários, analisando registros de sistemas, comunicações corporativas e dispositivos, para identificar responsáveis e fortalecer medidas preventivas contra novos incidentes.'
-        },
-        {
-          title: 'verificações de compliance',
-          content: 'realizamos auditorias forenses para verificar a conformidade com políticas internas e regulamentações setoriais, identificando vulnerabilidades e fornecendo recomendações para fortalecer os controles e a segurança corporativa.'
+          title: 'perícia computacional',
+          content: 'exame técnico especializado de dispositivos e sistemas corporativos para a coleta de evidências digitais, preservando a cadeia de custódia e a validade legal das informações recuperadas.'
         }
       ],
       cta: {
-        title: 'precisa de uma investigação corporativa discreta e eficaz?',
+        title: 'precisa de investigação digital especializada?',
         button: 'entre em contato'
       }
     },
     en: {
       title: 'corporate.investigations',
-      description: 'digital forensic analysis in corporate cases',
-      intro: 'our corporate investigations service provides detailed digital forensic analyses to identify, document, and resolve internal issues involving policy violations, fraud, data leaks, and other threats to corporate integrity.',
+      description: 'digital investigations and auditing for corporate environments',
+      intro: 'our corporate investigations division offers specialized solutions to clarify incidents, investigate potential fraud, and ensure the integrity of corporate digital assets using advanced forensic methodologies.',
       sections: [
         {
-          title: 'internal fraud',
-          content: 'we investigate suspicions of financial fraud, embezzlement, data manipulation, and other illicit activities in the corporate environment, collecting and analyzing digital evidence in a way that preserves its integrity for possible administrative or legal actions.'
+          title: 'incident investigation',
+          content: 'detailed data analysis to clarify incidents, internal policy violations, or fraud, allowing precise identification of the facts through advanced forensic techniques.'
         },
         {
-          title: 'misuse of resources',
-          content: 'we identify and document cases of corporate resource misuse, including intellectual property violations, unauthorized system use, and appropriation of confidential information, applying forensic methods that respect privacy and labor laws.'
+          title: 'digital audit',
+          content: 'verification of possible misuse of digital resources, aimed at corporate integrity and compliance with internal and external standards, using non-intrusive methodologies.'
         },
         {
-          title: 'information leakage',
-          content: 'we track the origin of confidential or proprietary data leaks by analyzing system logs, corporate communications, and devices to identify responsible parties and strengthen preventive measures against new incidents.'
-        },
-        {
-          title: 'compliance verifications',
-          content: 'we conduct forensic audits to verify compliance with internal policies and industry regulations, identifying vulnerabilities and providing recommendations to strengthen corporate controls and security.'
+          title: 'computer forensics',
+          content: 'specialized technical examination of corporate devices and systems for the collection of digital evidence, preserving the chain of custody and legal validity of recovered information.'
         }
       ],
       cta: {
-        title: 'need a discreet and effective corporate investigation?',
+        title: 'need specialized digital investigation?',
         button: 'contact us'
       }
     },
     es: {
       title: 'investigaciones.corporativas',
-      description: 'análisis forense digital en casos empresariales',
-      intro: 'nuestro servicio de investigaciones corporativas proporciona análisis forenses digitales detallados para identificar, documentar y resolver problemas internos que involucran violaciones de políticas, fraudes, filtración de datos y otras amenazas a la integridad empresarial.',
+      description: 'investigaciones y auditoría digital para entornos corporativos',
+      intro: 'nuestra división de investigaciones corporativas ofrece soluciones especializadas para esclarecer incidentes, investigar posibles fraudes y garantizar la integridad de los activos digitales corporativos utilizando metodologías forenses avanzadas.',
       sections: [
         {
-          title: 'fraudes internos',
-          content: 'investigamos sospechas de fraudes financieros, desvíos, manipulación de datos y otras actividades ilícitas en el entorno corporativo, recopilando y analizando evidencias digitales de forma que preserve su integridad para posibles acciones administrativas o judiciales.'
+          title: 'investigación de incidentes',
+          content: 'análisis detallado de datos para esclarecer incidentes, violaciones de políticas internas o fraudes, permitiendo la identificación precisa de los hechos ocurridos a través de técnicas forenses avanzadas.'
         },
         {
-          title: 'uso indebido de recursos',
-          content: 'identificamos y documentamos casos de uso indebido de recursos corporativos, incluyendo violaciones de propiedad intelectual, uso no autorizado de sistemas y apropiación de información confidencial, aplicando métodos forenses que respetan la privacidad y las leyes laborales.'
+          title: 'auditoría digital',
+          content: 'verificación de posibles usos indebidos de recursos digitales, buscando la integridad corporativa y la conformidad con normas internas y externas, utilizando metodologías no intrusivas.'
         },
         {
-          title: 'filtración de información',
-          content: 'rastreamos el origen de filtraciones de datos confidenciales o propietarios, analizando registros de sistemas, comunicaciones corporativas y dispositivos, para identificar responsables y fortalecer medidas preventivas contra nuevos incidentes.'
-        },
-        {
-          title: 'verificaciones de compliance',
-          content: 'realizamos auditorías forenses para verificar el cumplimiento de políticas internas y regulaciones sectoriales, identificando vulnerabilidades y proporcionando recomendaciones para fortalecer los controles y la seguridad corporativa.'
+          title: 'peritaje computacional',
+          content: 'examen técnico especializado de dispositivos y sistemas corporativos para la recolección de evidencias digitales, preservando la cadena de custodia y la validez legal de la información recuperada.'
         }
       ],
       cta: {
-        title: '¿necesita una investigación corporativa discreta y eficaz?',
+        title: '¿necesita una investigación digital especializada?',
         button: 'contáctenos'
       }
     }
@@ -107,7 +96,8 @@ export default function ForenseCorporateInvestigationsPage() {
   const content = defaultContent[language] || defaultContent.en;
   
   // Definir o título da página e metadados
-  const pageTitle = pageContent?.metaTitle || `${content.title} | forense.io`;
+  const forenseIoText = "forense.io";
+  const pageTitle = pageContent?.metaTitle || `${content.title} | ${forenseIoText}`;
   const pageDescription = pageContent?.metaDescription || content.description;
   
   // Schema.org estruturado para SEO
@@ -118,7 +108,7 @@ export default function ForenseCorporateInvestigationsPage() {
     "description": content.description,
     "provider": {
       "@type": "Organization",
-      "name": "forense.io",
+      "name": forenseIoText,
       "url": `https://${siteConfig.domain}`
     },
     "serviceType": "Corporate Investigations"
@@ -147,7 +137,7 @@ export default function ForenseCorporateInvestigationsPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl font-['Montserrat'] font-normal mb-6 lowercase">
-                investigações<span className="text-[#00ade0]">.</span>corporativas
+                investigações<DotSpan />corporativas
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 {content.description}
@@ -155,52 +145,273 @@ export default function ForenseCorporateInvestigationsPage() {
             </div>
           </div>
         </section>
-        
-        {/* Intro Section */}
-        <section className="py-16 bg-white">
+
+        {/* Introdução e Visão Geral */}
+        <section className="py-24 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="prose prose-base mx-auto text-gray-700 lowercase">
-                <p className="text-lg leading-relaxed mb-6">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
+                  sobre <span className="text-[#00ade0]">investigações corporativas</span>
+                </h2>
+                <p className="text-gray-600 max-w-3xl mx-auto mb-12">
                   {content.intro}
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Service Details */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {content.sections.map((section, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 className="text-xl font-['Montserrat'] text-gray-800 mb-4 lowercase">
-                      <span className="text-[#00ade0]">●</span> {section.title}
+              
+              <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+                      <span className="text-[#00ade0]">discreta</span> e precisa
                     </h3>
-                    <p className="text-gray-700 text-sm">
-                      {section.content}
+                    <p className="text-gray-600 text-sm mb-6">
+                      nossas investigações são conduzidas com máxima discrição e precisão técnica, minimizando impactos nas operações diárias e preservando a confidencialidade em todas as etapas do processo.
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      utilizamos metodologias forenses que asseguram a integridade das evidências digitais, permitindo sua utilização em processos internos ou, quando necessário, em procedimentos legais.
                     </p>
                   </div>
-                ))}
+                  
+                  <div className="border-l border-gray-200 pl-8">
+                    <h3 className="text-xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+                      benefícios <span className="text-[#00ade0]">estratégicos</span>
+                    </h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-start">
+                        <div className="h-1.5 w-1.5 rounded-full bg-[#00ade0] mt-1.5 mr-2 flex-shrink-0"></div>
+                        <span className="text-gray-600 text-sm">
+                          identificação precisa de incidentes e violações de políticas internas
+                        </span>
+                      </li>
+                      <li className="flex items-start">
+                        <div className="h-1.5 w-1.5 rounded-full bg-[#00ade0] mt-1.5 mr-2 flex-shrink-0"></div>
+                        <span className="text-gray-600 text-sm">
+                          preservação adequada de evidências para processos disciplinares ou judiciais
+                        </span>
+                      </li>
+                      <li className="flex items-start">
+                        <div className="h-1.5 w-1.5 rounded-full bg-[#00ade0] mt-1.5 mr-2 flex-shrink-0"></div>
+                        <span className="text-gray-600 text-sm">
+                          recuperação de dados deletados ou ocultos relevantes para investigações internas
+                        </span>
+                      </li>
+                      <li className="flex items-start">
+                        <div className="h-1.5 w-1.5 rounded-full bg-[#00ade0] mt-1.5 mr-2 flex-shrink-0"></div>
+                        <span className="text-gray-600 text-sm">
+                          relatórios técnicos detalhados com linguagem acessível para tomada de decisão
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        
-        {/* CTA Section */}
-        <section className="py-20 bg-[#0d1117] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
-              {content.cta.title}
-            </h2>
-            <a
-              href={`/site/forense/contact`}
-              className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
-            >
-              {content.cta.button}
-            </a>
+
+        {/* Serviços Principais */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-16 text-center lowercase">
+                serviços de <span className="text-[#00ade0]">investigação</span>
+              </h2>
+              <div className="max-w-3xl mx-auto text-center mb-10">
+                <p className="text-gray-500 text-sm">oferecemos serviços especializados em investigação digital para ambientes corporativos, com foco em detectar e documentar incidentes.</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                {/* Investigação de Incidentes */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
+                  <div className="p-8">
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
+                      investigação de <span className="text-[#00ade0]">incidentes</span>
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {content.sections[0].content}
+                    </p>
+                    <div className="mt-6 pt-6 border-t border-gray-100">
+                      <div className="flex justify-center text-xs text-gray-500">
+                        <div className="grid grid-cols-3 gap-2 w-full">
+                          <span className="text-center">fraudes</span>
+                          <span className="text-center">violações</span>
+                          <span className="text-center">incidentes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Auditoria Digital */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
+                  <div className="p-8">
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
+                      auditoria <span className="text-[#00ade0]">digital</span>
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {content.sections[1].content}
+                    </p>
+                    <div className="mt-6 pt-6 border-t border-gray-100">
+                      <div className="flex justify-center text-xs text-gray-500">
+                        <div className="grid grid-cols-3 gap-2 w-full">
+                          <span className="text-center">conformidade</span>
+                          <span className="text-center">integridade</span>
+                          <span className="text-center">verificação</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Perícia Computacional */}
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
+                  <div className="p-8">
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
+                      perícia <span className="text-[#00ade0]">computacional</span>
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {content.sections[2].content}
+                    </p>
+                    <div className="mt-6 pt-6 border-t border-gray-100">
+                      <div className="flex justify-center text-xs text-gray-500">
+                        <div className="grid grid-cols-3 gap-2 w-full">
+                          <span className="text-center">análise</span>
+                          <span className="text-center">recuperação</span>
+                          <span className="text-center">documentação</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Metodologia */}
+        <section className="py-24 bg-[#0d1117] text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
+                nossa <span className="text-[#00ade0]">metodologia</span>
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                <div className="relative pl-10 md:pl-0">
+                  <div className="absolute left-0 top-0 flex items-center justify-center h-8 w-8 rounded-full bg-[#00ade0]/10 text-[#00ade0]">
+                    <span className="text-xl font-light">1</span>
+                  </div>
+                  <div className="mb-4">
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
+                      avaliação <span className="text-[#00ade0]">inicial</span>
+                    </h3>
+                  </div>
+                  <p className="text-gray-400 text-sm">
+                    análise preliminar do cenário, definição do escopo da investigação e identificação dos recursos digitais relevantes para o caso. nesta fase, estabelecemos os objetivos e as limitações da investigação.
+                  </p>
+                </div>
+                
+                <div className="relative pl-10 md:pl-0">
+                  <div className="absolute left-0 top-0 flex items-center justify-center h-8 w-8 rounded-full bg-[#00ade0]/10 text-[#00ade0]">
+                    <span className="text-xl font-light">2</span>
+                  </div>
+                  <div className="mb-4">
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
+                      coleta <span className="text-[#00ade0]">forense</span>
+                    </h3>
+                  </div>
+                  <p className="text-gray-400 text-sm">
+                    aquisição de dados digitais usando técnicas forenses que preservam a integridade das evidências. criamos cópias forenses dos dispositivos ou sistemas relevantes seguindo protocolos rigorosos de cadeia de custódia.
+                  </p>
+                </div>
+                
+                <div className="relative pl-10 md:pl-0">
+                  <div className="absolute left-0 top-0 flex items-center justify-center h-8 w-8 rounded-full bg-[#00ade0]/10 text-[#00ade0]">
+                    <span className="text-xl font-light">3</span>
+                  </div>
+                  <div className="mb-4">
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
+                      análise <span className="text-[#00ade0]">técnica</span>
+                    </h3>
+                  </div>
+                  <p className="text-gray-400 text-sm">
+                    exame detalhado das evidências coletadas, incluindo a recuperação de arquivos excluídos, análise de logs, histórico de atividades, comunicações digitais e outros elementos relevantes para a investigação.
+                  </p>
+                </div>
+                
+                <div className="relative pl-10 md:pl-0">
+                  <div className="absolute left-0 top-0 flex items-center justify-center h-8 w-8 rounded-full bg-[#00ade0]/10 text-[#00ade0]">
+                    <span className="text-xl font-light">4</span>
+                  </div>
+                  <div className="mb-4">
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
+                      documentação <span className="text-[#00ade0]">e relatório</span>
+                    </h3>
+                  </div>
+                  <p className="text-gray-400 text-sm">
+                    compilação dos achados em relatório técnico detalhado e compreensível, contendo a metodologia, as evidências encontradas e as conclusões técnicas, apresentadas de forma clara para apoiar a tomada de decisões.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Casos de Uso */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
+                casos de <span className="text-[#00ade0]">uso</span>
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="bg-gray-50 rounded-lg p-8 border border-gray-100">
+                  <h3 className="text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase">
+                    suspeita de <span className="text-[#00ade0]">fraude interna</span>
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    investigação de atividades suspeitas de funcionários, como desvio de recursos, manipulação de dados ou uso indevido de informações corporativas, usando técnicas forenses para recuperar e analisar evidências digitais.
+                  </p>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg p-8 border border-gray-100">
+                  <h3 className="text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase">
+                    vazamento de <span className="text-[#00ade0]">informações</span>
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    identificação da origem e extensão de incidentes de vazamento de dados confidenciais, determinando como ocorreu o incidente, quais dados foram comprometidos e quem teve acesso às informações.
+                  </p>
+                </div>
+                
+                <div className="bg-gray-50 rounded-lg p-8 border border-gray-100">
+                  <h3 className="text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase">
+                    verificação de <span className="text-[#00ade0]">conformidade</span>
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    avaliação técnica do cumprimento de políticas de segurança da informação e normas regulatórias, identificando possíveis violações e fornecendo recomendações para assegurar a conformidade.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-16 bg-[#00ade0]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-['Montserrat'] font-normal mb-6 text-white lowercase">
+                {content.cta.title}
+              </h2>
+              <div className="mt-8">
+                <a href="/contato" 
+                  className="inline-block py-3 px-8 bg-white text-[#00ade0] rounded-md font-medium transition-all hover:shadow-lg hover:bg-gray-50">
+                  {content.cta.button}
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
