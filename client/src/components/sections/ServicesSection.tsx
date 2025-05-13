@@ -32,44 +32,44 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
   // Descrições traduzidas
   const descriptions = {
     pt: {
-      infraops: "infraestrutura resiliente com monitoramento 24x7 e resposta imediata",
-      secops: "segurança modular com detecção, resposta e governança contínuas",
-      devarch: "desenvolvimento seguro com práticas de SDLC desde o design",
-      autoops: "automação inteligente para processos operacionais eficientes",
-      crisisops: "gestão de crises e incidentes com estrutura, agilidade e rastreabilidade",
-      privacy: "plataforma SaaS para gestão de privacidade e conformidade com LGPD, GDPR e afins"
+      secops: "segurança integrada às operações com monitoramento contínuo.",
+      infraops: "gestão moderna de infraestrutura com alta disponibilidade.",
+      devarch: "fundamentos sólidos para desenvolvimento com arquitetura e...",
+      autoops: "automação inteligente de processos com IA.",
+      crisisops: "resposta imediata para incidentes e gestão de crises cibernéticas.",
+      privacy: "gestão completa de privacidade para conformidade com LGPD/GDPR."
     },
     en: {
-      infraops: "resilient infrastructure with 24x7 monitoring and immediate response",
-      secops: "modular security with continuous detection, response, and governance",
-      devarch: "secure development with SDLC practices from design to deployment",
-      autoops: "intelligent automation for efficient operational processes",
-      crisisops: "crisis and incident management with structure, agility, and traceability",
-      privacy: "SaaS platform for privacy management and compliance with GDPR, CCPA, and similar regulations"
+      secops: "integrated security operations with continuous monitoring.",
+      infraops: "modern infrastructure management with high availability.",
+      devarch: "solid foundations for development with architecture and...",
+      autoops: "intelligent process automation with AI.",
+      crisisops: "immediate response for incidents and cybernetic crisis management.",
+      privacy: "complete privacy management for LGPD/GDPR compliance."
     },
     es: {
-      infraops: "infraestructura resiliente con monitoreo 24x7 y respuesta inmediata",
-      secops: "seguridad modular con detección, respuesta y gobernanza continuas",
-      devarch: "desarrollo seguro con prácticas de SDLC desde el diseño",
-      autoops: "automatización inteligente para procesos operativos eficientes",
-      crisisops: "gestión de crisis e incidentes con estructura, agilidad y trazabilidad",
-      privacy: "plataforma SaaS para gestión de privacidad y cumplimiento con LGPD, GDPR y similares"
+      secops: "seguridad integrada a las operaciones con monitoreo continuo.",
+      infraops: "gestión moderna de infraestructura con alta disponibilidad.",
+      devarch: "fundamentos sólidos para desarrollo con arquitectura y...",
+      autoops: "automatización inteligente de procesos con IA.",
+      crisisops: "respuesta inmediata para incidentes y gestión de crisis cibernéticas.",
+      privacy: "gestión completa de privacidad para conformidad con LGPD/GDPR."
     }
   };
   
   // Lista de serviços modulares
   const modularServices: ModularService[] = [
     {
-      id: "infraops",
-      name: "n.InfraOps",
-      description: descriptions[language].infraops,
-      url: "/services/infraops"
-    },
-    {
       id: "secops",
       name: "n.SecOps",
       description: descriptions[language].secops,
       url: "/services/secops"
+    },
+    {
+      id: "infraops",
+      name: "n.InfraOps",
+      description: descriptions[language].infraops,
+      url: "/services/infraops"
     },
     {
       id: "devarch",
