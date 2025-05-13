@@ -337,7 +337,7 @@ export default function ForenseAboutPage() {
             </h2>
             <a
               href={`/site/forense/contact`}
-              className="inline-block bg-[#006699] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+              className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {defaultContent.cta.button}
             </a>
