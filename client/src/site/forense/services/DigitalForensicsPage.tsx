@@ -203,8 +203,8 @@ export default function ForenseDigitalForensicsPage() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-medium text-gray-800 mb-1 lowercase text-sm">evidências incontestáveis</h4>
-                        <p className="text-sm text-gray-600">produção de provas digitais que resistem a questionamentos técnicos e jurídicos</p>
+                        <h4 className="font-medium text-gray-800 mb-1 lowercase text-sm">{t('forense.digital.evidence.title')}</h4>
+                        <p className="text-sm text-gray-600">{t('forense.digital.evidence.desc')}</p>
                       </div>
                     </li>
                     <li className="flex items-start">
