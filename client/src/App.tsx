@@ -12,6 +12,7 @@ import NessAboutPage from "@/site/ness/AboutPage";
 import TrustnessHomePage from "@/site/trustness/HomePage";
 import TrustnessAboutPage from "@/site/trustness/AboutPage";
 import ForenseHomePage from "@/site/forense/HomePage";
+import ForenseAboutPage from "@/site/forense/AboutPage";
 
 // Legacy pages (will be migrated)
 import HomePage from "@/pages/home-page";
@@ -69,6 +70,12 @@ function Router() {
       <Route path="/site/forense">
         <SiteProvider siteCode="forense">
           <ForenseHomePage />
+        </SiteProvider>
+      </Route>
+
+      <Route path="/site/forense/about">
+        <SiteProvider siteCode="forense">
+          <ForenseAboutPage />
         </SiteProvider>
       </Route>
       
