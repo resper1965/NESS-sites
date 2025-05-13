@@ -180,21 +180,25 @@ export default function TrustnessHomePage() {
                 </p>
                 
                 <p className="text-gray-300 mb-1">
-                  <span className="text-[#005fa3] font-semibold">vai se certificar ISO 27001, ou outra certificação?</span>
+                  <span className="text-[#005fa3] font-semibold text-lg">vai se certificar ISO 27001, ou outra certificação?</span>
                 </p>
                 <p className="text-gray-300">
                   atuamos também como auditores externos, avaliando a aderência da organização a normas e requisitos específicos — antes de uma certificação ou como parte de uma estratégia contínua de conformidade.
                 </p>
                 
                 <p className="text-gray-300 mb-1">
-                  <span className="text-[#005fa3] font-semibold">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
+                  <span className="text-[#005fa3] font-semibold text-lg">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
                 </p>
                 <p className="text-gray-300">
                   conduzimos projetos completos de adequação à LGPD, GDPR, HIPAA e outras regulamentações de privacidade, com mapeamento de dados, implantação de controles e apoio contínuo à gestão.
                 </p>
                 
                 <p className="text-gray-300">
-                  estruturamos relatórios como ROPA, DPIA e LIA, e apoiamos processos como atendimento a titulares, avaliação de fornecedores e governança da privacidade.
+                  estruturamos relatórios como ROPA, DPIA e LIA, além de apoiar processos como atendimento a titulares, avaliação de fornecedores e governança da privacidade.
+                </p>
+                
+                <p className="text-gray-300">
+                  também atuamos como DPO as a Service, assumindo a função de encarregado de dados da organização — com responsabilidade técnica, legal e estratégica sobre a conformidade e o relacionamento com autoridades e titulares.
                 </p>
               </>
             )}
@@ -209,16 +213,26 @@ export default function TrustnessHomePage() {
                   we conduct assessments based on recognized frameworks — such as NIST, CIS Controls, and ISO 27001 — to identify vulnerabilities, map risks, and chart real paths toward certification and operational maturity.
                 </p>
                 
+                <p className="text-gray-300 mb-1">
+                  <span className="text-[#005fa3] font-semibold text-lg">need ISO 27001 certification or other security standards?</span>
+                </p>
                 <p className="text-gray-300">
                   we also act as external auditors, evaluating the organization's adherence to specific standards and requirements — before certification or as part of an ongoing compliance strategy.
                 </p>
                 
+                <p className="text-gray-300 mb-1">
+                  <span className="text-[#005fa3] font-semibold text-lg">need to comply with GDPR, LGPD or other privacy laws?</span>
+                </p>
                 <p className="text-gray-300">
                   we conduct complete compliance projects for GDPR, LGPD, HIPAA and other privacy regulations, with data mapping, control implementation and continuous management support.
                 </p>
                 
                 <p className="text-gray-300">
-                  we structure reports such as ROPA, DPIA and LIA, and support processes such as data subject requests, vendor assessment and privacy governance.
+                  we structure reports such as ROPA, DPIA and LIA, in addition to supporting processes such as data subject requests, vendor assessment and privacy governance.
+                </p>
+                
+                <p className="text-gray-300">
+                  we also act as DPO as a Service, assuming the role of data protection officer — with technical, legal and strategic responsibility for compliance and relationships with authorities and data subjects.
                 </p>
               </>
             )}
@@ -233,16 +247,26 @@ export default function TrustnessHomePage() {
                   realizamos evaluaciones basadas en marcos reconocidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riesgos y trazar caminos reales hacia la certificación y madurez operativa.
                 </p>
                 
+                <p className="text-gray-300 mb-1">
+                  <span className="text-[#005fa3] font-semibold text-lg">¿necesita certificarse en ISO 27001 u otros estándares de seguridad?</span>
+                </p>
                 <p className="text-gray-300">
                   también actuamos como auditores externos, evaluando la adhesión de la organización a normas y requisitos específicos — antes de una certificación o como parte de una estrategia continua de cumplimiento.
                 </p>
                 
+                <p className="text-gray-300 mb-1">
+                  <span className="text-[#005fa3] font-semibold text-lg">¿necesita cumplir con GDPR, LGPD u otras leyes de privacidad?</span>
+                </p>
                 <p className="text-gray-300">
                   realizamos proyectos completos de adecuación a GDPR, LGPD, HIPAA y otras regulaciones de privacidad, con mapeo de datos, implementación de controles y apoyo continuo a la gestión.
                 </p>
                 
                 <p className="text-gray-300">
-                  estructuramos informes como ROPA, DPIA y LIA, y apoyamos procesos como atención a titulares, evaluación de proveedores y gobernanza de la privacidad.
+                  estructuramos informes como ROPA, DPIA y LIA, además de apoyar procesos como atención a titulares, evaluación de proveedores y gobernanza de la privacidad.
+                </p>
+                
+                <p className="text-gray-300">
+                  también actuamos como DPO as a Service, asumiendo la función de encargado de protección de datos de la organización — con responsabilidad técnica, legal y estratégica sobre el cumplimiento y la relación con autoridades y titulares.
                 </p>
               </>
             )}
