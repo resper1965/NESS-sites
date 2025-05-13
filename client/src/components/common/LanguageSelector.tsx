@@ -44,13 +44,13 @@ export default function LanguageSelector() {
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
-        <svg className="w-5 h-5 mr-1 text-[#00ade0]" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-4 h-4 mr-0.5 text-[#00ade0]" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" opacity="0.2" />
           <path d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm10-8a8 8 0 100 16 8 8 0 000-16z" strokeWidth="1" stroke="currentColor" fill="none" />
           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" fill="none" stroke="currentColor" strokeWidth="1" />
         </svg>
-        <span>{language.toUpperCase()}</span>
-        <svg className={`w-3 h-3 ml-1 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
+        <span className="text-xs">{language.toUpperCase()}</span>
+        <svg className={`w-2.5 h-2.5 ml-0.5 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24" 
