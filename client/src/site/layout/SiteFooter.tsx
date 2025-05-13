@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'wouter';
-import { useI18n } from '@/lib/i18n';
+import { useI18n, Language } from '@/lib/i18n';
 import { useSite } from '../SiteContext';
 import { 
   Linkedin, 
@@ -10,7 +10,8 @@ import {
   Youtube,
   Phone, 
   Mail, 
-  MapPin 
+  MapPin,
+  Globe
 } from 'lucide-react';
 
 export default function SiteFooter() {
@@ -259,10 +260,90 @@ export default function SiteFooter() {
                   {t('footer.login')}
                 </Link>
               </div>
+              
+              {/* Seletor de Idioma */}
+              <div className="flex items-center gap-2 text-gray-300 relative mt-4 md:mt-0 md:ml-4">
+                <Globe size={16} className="text-[var(--primary-color)]" />
+                <FooterLanguageSelector />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
+  );
+}
+
+// Versão do seletor de idioma específica para o footer
+function FooterLanguageSelector() {
+  const { language, setLanguage } = useI18n();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  
+  const toggleDropdown = () => setIsOpen(!isOpen);
+  
+  // Fechar dropdown ao clicar fora
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+  
+  const languages: { code: Language; label: string }[] = [
+    { code: 'pt', label: 'Português' },
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' }
+  ];
+  
+  // Lidar com mudança de idioma
+  const handleLanguageChange = (lang: Language) => {
+    if (lang !== language) {
+      setLanguage(lang);
+      setIsOpen(false);
+    }
+  };
+  
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <button 
+        onClick={toggleDropdown}
+        className="flex items-center text-gray-300 hover:text-[var(--primary-color)] transition"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+      >
+        <span>{language.toUpperCase()}</span>
+        <svg className={`w-4 h-4 ml-1 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      
+      {isOpen && (
+        <div className="absolute bottom-full right-0 mb-2 w-32 bg-gray-800 rounded-md shadow-lg overflow-hidden z-50">
+          {languages.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => handleLanguageChange(lang.code)}
+              className={`block w-full text-left px-4 py-2 text-sm ${
+                language === lang.code ? 'bg-gray-700 text-[var(--primary-color)] font-medium' : 'text-gray-300 hover:bg-gray-700'
+              }`}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
