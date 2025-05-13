@@ -251,16 +251,31 @@ export default function NessAboutPage() {
               </h2>
               
               <div className="prose prose-base mx-auto text-gray-700 lowercase">
-                <p className="mb-6 text-center font-light tracking-wide text-base">
-                  tecnologia clara <span className="text-[#00ade0]">•</span> estrutura segura <span className="text-[#00ade0]">•</span> propósito real
+                <p className="mb-6 text-center font-light tracking-wide text-lg">
+                  {language === 'pt' 
+                    ? <>tecnologia clara <span className="text-[#00ade0]">•</span> estrutura segura <span className="text-[#00ade0]">•</span> propósito real</>
+                    : language === 'en'
+                      ? <>clear technology <span className="text-[#00ade0]">•</span> secure structure <span className="text-[#00ade0]">•</span> real purpose</>
+                      : <>tecnología clara <span className="text-[#00ade0]">•</span> estructura segura <span className="text-[#00ade0]">•</span> propósito real</>
+                  }
                 </p>
                 
-                <p className="mb-4 text-center">
-                  projetamos, conectamos e sustentamos soluções críticas
+                <p className="mb-4 text-center text-lg">
+                  {language === 'pt'
+                    ? 'projetamos, conectamos e sustentamos soluções críticas'
+                    : language === 'en'
+                      ? 'we design, connect and sustain critical solutions'
+                      : 'diseñamos, conectamos y sostenemos soluciones críticas'
+                  }
                 </p>
                 
-                <h4 className="mt-8 text-center font-light text-sm">
-                  invisível para quem usa. indispensável para quem confia.
+                <h4 className="mt-8 text-center font-light text-md">
+                  {language === 'pt'
+                    ? 'invisível para quem usa. indispensável para quem confia.'
+                    : language === 'en'
+                      ? 'invisible to users. indispensable to those who rely on it.'
+                      : 'invisible para quien usa. indispensable para quien confía.'
+                  }
                 </h4>
               </div>
             </div>
