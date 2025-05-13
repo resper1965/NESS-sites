@@ -50,14 +50,25 @@ export default function SiteNavbar() {
     ? 'bg-black shadow-md'
     : 'bg-transparent';
 
-  // Services for dropdown menu
-  const services = [
-    { id: 'infraops', name: 'n.InfraOps', path: `${sitePrefix}/services#infraops` },
-    { id: 'secops', name: 'n.SecOps', path: `${sitePrefix}/services#secops` },
-    { id: 'devarch', name: 'n.DevArch', path: `${sitePrefix}/services#devarch` },
-    { id: 'autoops', name: 'n.AutoOps', path: `${sitePrefix}/services#autoops` },
-    { id: 'crisisops', name: 'n.CrisisOps', path: `${sitePrefix}/services#crisisops` }
+  // Services for dropdown menu - diferentes para cada site
+  const nessServices = [
+    { id: 'secops', name: 'n.SecOps', path: `/site/ness/services#secops` },
+    { id: 'infraops', name: 'n.InfraOps', path: `/site/ness/services#infraops` },
+    { id: 'devarch', name: 'n.DevArch', path: `/site/ness/services#devarch` },
+    { id: 'autoops', name: 'n.AutoOps', path: `/site/ness/services#autoops` },
+    { id: 'crisisops', name: 'n.CrisisOps', path: `/site/ness/services#crisisops` },
+    { id: 'privacy', name: 'n.Privacy', path: `/site/ness/services#privacy` }
   ];
+  
+  const trustnessServices = [
+    { id: 'assessment', name: '.assessment', path: `/site/trustness/services#assessment` },
+    { id: 'conformity', name: '.conformity', path: `/site/trustness/services#conformity` },
+    { id: 'privacy', name: '.privacy', path: `/site/trustness/services#privacy` }
+  ];
+  
+  // Seleciona serviços com base no site atual
+  const services = siteConfig.code === 'ness' ? nessServices : 
+                   siteConfig.code === 'trustness' ? trustnessServices : [];
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${navbarClass}`}>
@@ -105,7 +116,11 @@ export default function SiteNavbar() {
                         className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition-colors duration-150"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
-                        n<span className="text-[#00ade0]">.</span>{service.name.substring(1)}
+                        {siteConfig.code === 'ness' ? (
+                          <>n<span className="text-[#00ade0]">.</span>{service.name.substring(2)}</>
+                        ) : (
+                          <><span className="text-[#005fa3]">.</span>{service.name.substring(1)}</>
+                        )}
                       </Link>
                     ))}
                   </div>

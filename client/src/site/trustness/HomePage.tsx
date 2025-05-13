@@ -43,7 +43,7 @@ export default function TrustnessHomePage() {
       <section 
         className="pt-32 pb-20 text-white bg-[#0b1016] relative"
         style={{
-          backgroundImage: 'url(/assets/images/optimized/trustness-hero-bg.webp)',
+          backgroundImage: 'url(/assets/images/trustness-hero-bg.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
