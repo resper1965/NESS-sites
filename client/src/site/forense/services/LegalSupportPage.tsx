@@ -40,7 +40,7 @@ export default function ForenseLegalSupportPage() {
         }
       ],
       cta: {
-        title: 'precisa de consultoria legal especializada em evidências digitais?',
+        title: 'precisa de suporte técnico para a área legal em casos com evidências digitais?',
         button: 'entre em contato'
       }
     },
@@ -157,7 +157,7 @@ export default function ForenseLegalSupportPage() {
                       <span className="text-[#00ade0]">consultoria técnica</span> especializada
                     </h2>
                     <p className="text-gray-500 max-w-3xl mx-auto">
-                      <strong>importante:</strong> não oferecemos serviços jurídicos. nossa atuação é exclusivamente técnica.
+                      fornecemos suporte técnico especializado para a área legal, sem exercer atividades jurídicas.
                     </p>
                   </div>
                   
@@ -212,7 +212,7 @@ export default function ForenseLegalSupportPage() {
                 serviços de <span className="text-[#00ade0]">consultoria técnica</span>
               </h2>
               <div className="max-w-3xl mx-auto text-center mb-10">
-                <p className="text-gray-500 text-sm">nossa atuação tem caráter exclusivamente técnico. não prestamos consultoria jurídica ou advocacia, apenas suporte técnico para casos que envolvam evidências digitais.</p>
+                <p className="text-gray-500 text-sm">oferecemos suporte técnico especializado para profissionais e instituições da área legal em casos que envolvam evidências digitais, sem exercer atividades jurídicas.</p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -222,7 +222,7 @@ export default function ForenseLegalSupportPage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
                       consultoria <span className="text-[#00ade0]">estratégica</span>
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed h-20">
+                    <p className="text-gray-600 mb-6 leading-relaxed">
                       {content.sections[0].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
@@ -243,7 +243,7 @@ export default function ForenseLegalSupportPage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
                       assistência <span className="text-[#00ade0]">técnica processual</span>
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed h-20">
+                    <p className="text-gray-600 mb-6 leading-relaxed">
                       {content.sections[1].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
@@ -264,7 +264,7 @@ export default function ForenseLegalSupportPage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
                       esclarecimentos <span className="text-[#00ade0]">em audiências</span>
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed h-20">
+                    <p className="text-gray-600 mb-6 leading-relaxed">
                       {content.sections[2].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
