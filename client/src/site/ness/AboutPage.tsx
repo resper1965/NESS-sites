@@ -19,8 +19,8 @@ export default function NessAboutPage() {
   const localizedContent = {
     pt: {
       title: "quem somos",
-      heroTitle: "quem somos",
-      heroSubtitle: "há 33 anos transformando problemas complexos em soluções modulares.",
+      heroTitle: "modularidade que transforma o complexo em confiável",
+      heroSubtitle: "tecnologia invisível que sustenta o essencial desde 1991",
       manifesto: {
         main: "somos a ness.",
         p1: "tecnologia clara. estrutura segura. propósito real.",
@@ -229,15 +229,15 @@ export default function NessAboutPage() {
           
           {/* Content */}
           <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
-            <div className="hero-main-content text-center">
+            <div className="hero-main-content text-center max-w-4xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6">
                 <span style={{color: "#ffffff"}}>ness</span><span style={{color: "#00ade0"}}>.</span>
               </h1>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-6 text-white lowercase tracking-tight">
                 {defaultContent.heroTitle}
               </p>
             
-              <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-white font-['Montserrat'] lowercase">
+              <p className="text-lg md:text-xl lg:text-2xl mb-8 mx-auto text-white font-['Montserrat'] lowercase font-light">
                 {defaultContent.heroSubtitle}
               </p>
             </div>
@@ -253,61 +253,57 @@ export default function NessAboutPage() {
               </h2>
               
               <div className="prose prose-base mx-auto text-gray-700 lowercase">
-                <p className="mb-4 text-sm md:text-base">
-                  {defaultContent.manifesto.p1}
+                <p className="mb-6 text-center font-light tracking-wide text-base">
+                  tecnologia clara <span className="text-[#00ade0]">•</span> estrutura segura <span className="text-[#00ade0]">•</span> propósito real
                 </p>
                 
-                <p className="mb-4 text-sm md:text-base">
-                  {defaultContent.manifesto.p2}
+                <p className="mb-4 text-center">
+                  projetamos, conectamos e sustentamos soluções críticas
                 </p>
                 
-                <p className="mb-4 text-sm md:text-base">
-                  {defaultContent.manifesto.p3}
-                </p>
-                
-                <p className="mb-4 text-sm md:text-base">
-                  {defaultContent.manifesto.p4}
-                </p>
+                <h4 className="mt-8 text-center font-light text-sm">
+                  invisível para quem usa. indispensável para quem confia.
+                </h4>
               </div>
             </div>
           </div>
         </section>
         
         {/* Values Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#2c2c34]">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">{defaultContent.values.title}</h2>
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-[#00ade0]">{defaultContent.values.title}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Vision */}
-              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase">
+              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
+                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
                   {defaultContent.values.vision.title}
                 </h3>
-                <p className="text-gray-700 lowercase">
+                <p className="text-gray-200 lowercase">
                   {defaultContent.values.vision.text}
                 </p>
               </div>
               
               {/* Mission */}
-              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase">
+              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
+                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
                   {defaultContent.values.mission.title}
                 </h3>
-                <p className="text-gray-700 lowercase">
+                <p className="text-gray-200 lowercase">
                   {defaultContent.values.mission.text}
                 </p>
               </div>
               
               {/* Values */}
-              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase">
+              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
+                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
                   {defaultContent.values.values.title}
                 </h3>
-                <p className="text-gray-700 lowercase mb-4">
+                <p className="text-gray-200 lowercase mb-4">
                   {defaultContent.values.values.p1}
                 </p>
-                <p className="text-gray-700 lowercase">
+                <p className="text-gray-200 lowercase">
                   {defaultContent.values.values.p2}
                 </p>
               </div>
