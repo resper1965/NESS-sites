@@ -184,11 +184,11 @@ export default function TrustnessHomePage() {
                 </p>
                 
                 <p className="text-gray-300">
-                  por meio de programas de privacidade como LGPD, GDPR e HIPAA, implementamos controles personalizados, mapeamos fluxos de dados e apoiamos a gestão com relatórios estruturados e ações práticas.
+                  conduzimos projetos completos de adequação à LGPD, GDPR, HIPAA e outras regulamentações de privacidade, com mapeamento de dados, implantação de controles e apoio contínuo à gestão.
                 </p>
                 
                 <p className="text-gray-300">
-                  nossos controles são ajustados à realidade de cada setor, protegendo operações críticas e fortalecendo a governança frente a ameaças cibernéticas e exigências legais.
+                  estruturamos relatórios como ROPA, DPIA e LIA, e apoiamos processos como atendimento a titulares, avaliação de fornecedores e governança da privacidade.
                 </p>
               </>
             )}
@@ -208,11 +208,11 @@ export default function TrustnessHomePage() {
                 </p>
                 
                 <p className="text-gray-300">
-                  through privacy programs such as GDPR, LGPD, and HIPAA, we implement customized controls, map data flows, and support management with structured reports and practical actions.
+                  we conduct complete compliance projects for GDPR, LGPD, HIPAA and other privacy regulations, with data mapping, control implementation and continuous management support.
                 </p>
                 
                 <p className="text-gray-300">
-                  our controls are adjusted to the reality of each sector, protecting critical operations and strengthening governance against cyber threats and legal requirements.
+                  we structure reports such as ROPA, DPIA and LIA, and support processes such as data subject requests, vendor assessment and privacy governance.
                 </p>
               </>
             )}
@@ -232,11 +232,11 @@ export default function TrustnessHomePage() {
                 </p>
                 
                 <p className="text-gray-300">
-                  a través de programas de privacidad como GDPR, LGPD y HIPAA, implementamos controles personalizados, mapeamos flujos de datos y apoyamos la gestión con informes estructurados y acciones prácticas.
+                  realizamos proyectos completos de adecuación a GDPR, LGPD, HIPAA y otras regulaciones de privacidad, con mapeo de datos, implementación de controles y apoyo continuo a la gestión.
                 </p>
                 
                 <p className="text-gray-300">
-                  nuestros controles se ajustan a la realidad de cada sector, protegiendo operaciones críticas y fortaleciendo la gobernanza frente a amenazas cibernéticas y exigencias legales.
+                  estructuramos informes como ROPA, DPIA y LIA, y apoyamos procesos como atención a titulares, evaluación de proveedores y gobernanza de la privacidad.
                 </p>
               </>
             )}
