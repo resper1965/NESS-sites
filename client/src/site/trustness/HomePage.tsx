@@ -79,15 +79,21 @@ export default function TrustnessHomePage() {
         </div>
       </section>
       
-      {/* Como Atuamos Section - Agora com fundo claro */}
-      <section className="py-20 bg-[#f9f9f9] text-gray-800">
+      {/* Como Atuamos Section - Visual moderno */}
+      <section className="py-24 bg-gradient-to-b from-white to-[#f2f8fd] text-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800">
+            <span className="inline-block bg-[#eaf2fa] text-[#005fa3] px-4 py-1 rounded-full text-sm font-medium mb-4 lowercase">
+              {language === 'pt' && 'metodologia'}
+              {language === 'en' && 'methodology'}
+              {language === 'es' && 'metodología'}
+            </span>
+            <h2 className="text-4xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800">
               {language === 'pt' && 'como atuamos'}
               {language === 'en' && 'how we work'}
               {language === 'es' && 'cómo trabajamos'}
             </h2>
+            <div className="w-16 h-1 bg-[#005fa3] mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {language === 'pt' && 'programas consultivos em segurança, privacidade e conformidade — personalizados para sua operação'}
               {language === 'en' && 'consultative programs in security, privacy, and compliance — customized for your operation'}
@@ -95,106 +101,196 @@ export default function TrustnessHomePage() {
             </p>
           </div>
           
-          <div className="space-y-6 text-center max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto">
             {language === 'pt' && (
               <>
-                <p className="text-gray-700">
-                  na trustness, avaliamos, auditamos e estruturamos práticas que sustentam a segurança, a privacidade e a conformidade regulatória.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">nossa abordagem</h3>
+                  </div>
+                  <p className="text-gray-700 mb-3">
+                    na trustness, avaliamos, auditamos e estruturamos práticas que sustentam a segurança, a privacidade e a conformidade regulatória.
+                  </p>
+                  <p className="text-gray-700">
+                    conduzimos assessments com base em frameworks reconhecidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riscos e traçar caminhos reais rumo à certificação e maturidade operacional.
+                  </p>
+                </div>
                 
-                <p className="text-gray-700">
-                  conduzimos assessments com base em frameworks reconhecidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riscos e traçar caminhos reais rumo à certificação e maturidade operacional.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certificações</h3>
+                  </div>
+                  <p className="mb-4">
+                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">vai se certificar ISO 27001, ou outra certificação?</span>
+                    <span className="text-gray-700">
+                      atuamos também como auditores externos, avaliando a aderência da organização a normas e requisitos específicos — antes de uma certificação ou como parte de uma estratégia contínua de conformidade.
+                    </span>
+                  </p>
+                </div>
                 
-                <p className="text-gray-700 mb-1">
-                  <span className="text-[#005fa3] font-semibold text-lg">vai se certificar ISO 27001, ou outra certificação?</span>
-                </p>
-                <p className="text-gray-700">
-                  atuamos também como auditores externos, avaliando a aderência da organização a normas e requisitos específicos — antes de uma certificação ou como parte de uma estratégia contínua de conformidade.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidade</h3>
+                  </div>
+                  <p className="mb-4">
+                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
+                    <span className="text-gray-700">
+                      conduzimos projetos completos de adequação à LGPD, GDPR, HIPAA e outras regulamentações de privacidade, com mapeamento de dados, implantação de controles e apoio contínuo à gestão.
+                    </span>
+                  </p>
+                  <p className="text-gray-700 mb-3">
+                    estruturamos relatórios como ROPA, DPIA e LIA, além de apoiar processos como atendimento a titulares, avaliação de fornecedores e governança da privacidade.
+                  </p>
+                </div>
                 
-                <p className="text-gray-700 mb-1">
-                  <span className="text-[#005fa3] font-semibold text-lg">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
-                </p>
-                <p className="text-gray-700">
-                  conduzimos projetos completos de adequação à LGPD, GDPR, HIPAA e outras regulamentações de privacidade, com mapeamento de dados, implantação de controles e apoio contínuo à gestão.
-                </p>
-                
-                <p className="text-gray-700">
-                  estruturamos relatórios como ROPA, DPIA e LIA, além de apoiar processos como atendimento a titulares, avaliação de fornecedores e governança da privacidade.
-                </p>
-                
-                <p className="text-gray-700">
-                  também atuamos como DPO as a Service, assumindo a função de encarregado de dados da organização — com responsabilidade técnica, legal e estratégica sobre a conformidade e o relacionamento com autoridades e titulares.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">DPO as a Service</h3>
+                  </div>
+                  <p className="text-gray-700">
+                    também atuamos como DPO as a Service, assumindo a função de encarregado de dados da organização — com responsabilidade técnica, legal e estratégica sobre a conformidade e o relacionamento com autoridades e titulares.
+                  </p>
+                </div>
               </>
             )}
             
             {language === 'en' && (
               <>
-                <p className="text-gray-700">
-                  at trustness, we assess, audit, and structure practices that support security, privacy, and regulatory compliance.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">our approach</h3>
+                  </div>
+                  <p className="text-gray-700 mb-3">
+                    at trustness, we assess, audit, and structure practices that support security, privacy, and regulatory compliance.
+                  </p>
+                  <p className="text-gray-700">
+                    we conduct assessments based on recognized frameworks — such as NIST, CIS Controls, and ISO 27001 — to identify vulnerabilities, map risks, and chart real paths toward certification and operational maturity.
+                  </p>
+                </div>
                 
-                <p className="text-gray-700">
-                  we conduct assessments based on recognized frameworks — such as NIST, CIS Controls, and ISO 27001 — to identify vulnerabilities, map risks, and chart real paths toward certification and operational maturity.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certifications</h3>
+                  </div>
+                  <p className="mb-4">
+                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">need ISO 27001 certification or other security standards?</span>
+                    <span className="text-gray-700">
+                      we also act as external auditors, evaluating the organization's adherence to specific standards and requirements — before certification or as part of an ongoing compliance strategy.
+                    </span>
+                  </p>
+                </div>
                 
-                <p className="text-gray-700 mb-1">
-                  <span className="text-[#005fa3] font-semibold text-lg">need ISO 27001 certification or other security standards?</span>
-                </p>
-                <p className="text-gray-700">
-                  we also act as external auditors, evaluating the organization's adherence to specific standards and requirements — before certification or as part of an ongoing compliance strategy.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacy</h3>
+                  </div>
+                  <p className="mb-4">
+                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">need to comply with GDPR, LGPD or other privacy laws?</span>
+                    <span className="text-gray-700">
+                      we conduct complete compliance projects for GDPR, LGPD, HIPAA and other privacy regulations, with data mapping, control implementation and continuous management support.
+                    </span>
+                  </p>
+                  <p className="text-gray-700 mb-3">
+                    we structure reports such as ROPA, DPIA and LIA, in addition to supporting processes such as data subject requests, vendor assessment and privacy governance.
+                  </p>
+                </div>
                 
-                <p className="text-gray-700 mb-1">
-                  <span className="text-[#005fa3] font-semibold text-lg">need to comply with GDPR, LGPD or other privacy laws?</span>
-                </p>
-                <p className="text-gray-700">
-                  we conduct complete compliance projects for GDPR, LGPD, HIPAA and other privacy regulations, with data mapping, control implementation and continuous management support.
-                </p>
-                
-                <p className="text-gray-700">
-                  we structure reports such as ROPA, DPIA and LIA, in addition to supporting processes such as data subject requests, vendor assessment and privacy governance.
-                </p>
-                
-                <p className="text-gray-700">
-                  we also act as DPO as a Service, assuming the role of data protection officer — with technical, legal and strategic responsibility for compliance and relationships with authorities and data subjects.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">DPO as a Service</h3>
+                  </div>
+                  <p className="text-gray-700">
+                    we also act as DPO as a Service, assuming the role of data protection officer — with technical, legal and strategic responsibility for compliance and relationships with authorities and data subjects.
+                  </p>
+                </div>
               </>
             )}
             
             {language === 'es' && (
               <>
-                <p className="text-gray-700">
-                  en trustness, evaluamos, auditamos y estructuramos prácticas que sustentan la seguridad, la privacidad y el cumplimiento normativo.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">nuestro enfoque</h3>
+                  </div>
+                  <p className="text-gray-700 mb-3">
+                    en trustness, evaluamos, auditamos y estructuramos prácticas que sustentan la seguridad, la privacidad y el cumplimiento normativo.
+                  </p>
+                  <p className="text-gray-700">
+                    realizamos evaluaciones basadas en marcos reconocidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riesgos y trazar caminos reales hacia la certificación y madurez operativa.
+                  </p>
+                </div>
                 
-                <p className="text-gray-700">
-                  realizamos evaluaciones basadas en marcos reconocidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riesgos y trazar caminos reales hacia la certificación y madurez operativa.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certificaciones</h3>
+                  </div>
+                  <p className="mb-4">
+                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿necesita certificarse en ISO 27001 u otros estándares de seguridad?</span>
+                    <span className="text-gray-700">
+                      también actuamos como auditores externos, evaluando la adhesión de la organización a normas y requisitos específicos — antes de una certificación o como parte de una estrategia continua de cumplimiento.
+                    </span>
+                  </p>
+                </div>
                 
-                <p className="text-gray-700 mb-1">
-                  <span className="text-[#005fa3] font-semibold text-lg">¿necesita certificarse en ISO 27001 u otros estándares de seguridad?</span>
-                </p>
-                <p className="text-gray-700">
-                  también actuamos como auditores externos, evaluando la adhesión de la organización a normas y requisitos específicos — antes de una certificación o como parte de una estrategia continua de cumplimiento.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidad</h3>
+                  </div>
+                  <p className="mb-4">
+                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿necesita cumplir con GDPR, LGPD u otras leyes de privacidad?</span>
+                    <span className="text-gray-700">
+                      realizamos proyectos completos de adecuación a GDPR, LGPD, HIPAA y otras regulaciones de privacidad, con mapeo de datos, implementación de controles y apoyo continuo a la gestión.
+                    </span>
+                  </p>
+                  <p className="text-gray-700 mb-3">
+                    estructuramos informes como ROPA, DPIA y LIA, además de apoyar procesos como atención a titulares, evaluación de proveedores y gobernanza de la privacidad.
+                  </p>
+                </div>
                 
-                <p className="text-gray-700 mb-1">
-                  <span className="text-[#005fa3] font-semibold text-lg">¿necesita cumplir con GDPR, LGPD u otras leyes de privacidad?</span>
-                </p>
-                <p className="text-gray-700">
-                  realizamos proyectos completos de adecuación a GDPR, LGPD, HIPAA y otras regulaciones de privacidad, con mapeo de datos, implementación de controles y apoyo continuo a la gestión.
-                </p>
-                
-                <p className="text-gray-700">
-                  estructuramos informes como ROPA, DPIA y LIA, además de apoyar procesos como atención a titulares, evaluación de proveedores y gobernanza de la privacidad.
-                </p>
-                
-                <p className="text-gray-700">
-                  también actuamos como DPO as a Service, asumiendo la función de encargado de protección de datos de la organización — con responsabilidad técnica, legal y estratégica sobre el cumplimiento y la relación con autoridades y titulares.
-                </p>
+                <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-[#f0f7ff] rounded-full flex items-center justify-center mb-4">
+                      <div className="w-6 h-6 bg-[#005fa3] rounded-full"></div>
+                    </div>
+                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">DPO as a Service</h3>
+                  </div>
+                  <p className="text-gray-700">
+                    también actuamos como DPO as a Service, asumiendo la función de encargado de protección de datos de la organización — con responsabilidad técnica, legal y estratégica sobre el cumplimiento y la relación con autoridades y titulares.
+                  </p>
+                </div>
               </>
             )}
           </div>
