@@ -23,43 +23,42 @@ export default function NessAboutPage() {
       heroSubtitle: "há 33 anos transformando problemas complexos em soluções modulares.",
       manifesto: {
         main: "somos a ness.",
-        p1: "desde 1991, evoluímos de uma consultoria de infraestrutura de TI para uma plataforma confiável de tecnologia e inovação. entregamos soluções com clareza, segurança e propósito.",
-        p2: "nossa equipe projeta, implementa, monitora e sustenta operações críticas — sempre com velocidade, ética e uma mentalidade orientada a resultados.",
-        p3: "somos apaixonados por resolver grandes problemas através da tecnologia e colaboração de longo prazo.",
-        p4: "acreditamos que o essencial é muitas vezes invisível. e que o impacto real começa com decisões simples e arquiteturas seguras."
+        p1: "tecnologia clara. estrutura segura. propósito real.",
+        p2: "desde 1991, operando o essencial com precisão.",
+        p3: "projetamos, conectamos e sustentamos soluções críticas.",
+        p4: "invisível para quem usa. indispensável para quem confia."
       },
       values: {
         title: "nossos valores",
         vision: {
           title: "nossa visão",
-          text: "tornar-se uma referência global em soluções tecnológicas modulares e confiáveis, com um time de alta performance que habilita pessoas e organizações a enfrentarem desafios complexos com segurança, inteligência e velocidade."
+          text: "ser reconhecida como uma plataforma confiável em soluções tecnológicas modulares, que sustenta operações críticas com segurança e inteligência. habilitar pessoas e organizações a enfrentarem desafios complexos com clareza, velocidade e propósito. construir com estrutura. operar com confiança. entregar o essencial."
         },
         mission: {
           title: "nossa missão",
-          text: "expandir o acesso, a eficiência e a qualidade em operações críticas, oferecendo tecnologias que conectam, automatizam e sustentam a transformação digital com clareza e propósito."
+          text: "conectar, automatizar e sustentar operações críticas com velocidade e propósito. expandir o acesso, a eficiência e a resiliência por meio de tecnologia confiável e arquitetura clara. transformar a complexidade em soluções simples e seguras."
         },
         values: {
           title: "nossos valores",
-          p1: "obsessão por excelência no atendimento, um compromisso inegociável com pessoas e confiança, e uma cultura de agilidade e melhoria contínua.",
-          p2: "buscamos equilibrar lucro, pessoas e impacto de forma sustentável, onde a diversidade do nosso time alimenta a inovação e fortalece nosso ecossistema."
+          p1: "confiança é nossa estrutura. decidimos com clareza, entregamos com consistência e crescemos com ética. valorizamos pessoas, diversidade e colaboração de longo prazo.",
+          p2: "buscamos equilíbrio entre resultado, impacto e evolução contínua. inovamos com responsabilidade. operamos com precisão."
         }
       },
       timeline: "nossa trajetória",
       timelineEvents: {
-        "1991": "a ness. é fundada como tercerização da área de tecnologia de um grande grupo econômico.",
-        "1992": "atividades de infraestrutura, processamento de dados e BPO.",
-        "1998": "início na atividade de infraestrutura em grandes eventos por todo diversos países da europa, américas, africa e ásia.",
-        "2005": "início de serviços de privacidade e segurança digital.",
-        "2014": "lançamento da divisão de software e processos.",
-        "2014.2": "incubação de projetos de saúde. NESS Technology healthcare inicia como incubação.",
-        "2016": "incubação da Trustness.",
-        "2017": "criação da unidade de negócios NESS Health como Business Unit da NESS.",
-        "2018": "Trustness como unidade de negócios.",
-        "2019": "spin-off da NESS Health da NESS.",
-        "2020": "NESS Health renomeada como IONIC Health, nova sede no Tech-Park SJC, crescimento local com grandes clientes brasileiros da área de saúde.",
+        "1991": "fundação da ness. como operação terceirizada de tecnologia para um grande grupo econômico.",
+        "1992": "início das atividades em infraestrutura, dados e BPO.",
+        "1998": "infraestrutura de tecnologia para grandes eventos no Brasil e em diversos países da europa, américas, áfrica e ásia.",
+        "2005": "entrada em segurança digital e privacidade.",
+        "2014": "lançamento da divisão de software e processos, com projetos iniciais em saúde.",
+        "2016": "incubação da trustness.",
+        "2017": "criação da unidade de negócios ness health.",
+        "2018": "trustness torna-se unidade de negócios.",
+        "2019": "spin-off da ness health.",
+        "2020": "ness health é renomeada como ionic health e inaugura sede no tech-park sjc.",
         "2021": "incubação da forense.io.",
-        "2022": "forense.io como unidade de negócios.",
-        "2025": "estabelecida como uma plataforma modular para transformação digital confiável."
+        "2022": "forense.io torna-se unidade de negócios.",
+        "2025": "a ness. se consolida como uma plataforma modular para transformação digital confiável."
       },
       cta: {
         title: "quer saber mais sobre a ness.?",
