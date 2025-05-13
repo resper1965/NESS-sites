@@ -86,8 +86,8 @@ export default function SiteNavbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6 items-center">
-            <Link href={`${sitePrefix}/about`} className="text-white hover:text-accent transition duration-200 font-medium lowercase">
+          <div className="hidden md:flex space-x-4 items-center">
+            <Link href={`${sitePrefix}/about`} className="text-white hover:text-accent transition duration-200 text-sm lowercase px-1 py-0.5">
               {t('nav.about')}
             </Link>
             
@@ -95,11 +95,11 @@ export default function SiteNavbar() {
             <div className="relative group">
               <button 
                 onClick={toggleServicesDropdown}
-                className="text-white hover:text-accent transition duration-200 font-medium flex items-center lowercase"
+                className="text-white hover:text-accent transition duration-200 text-sm flex items-center lowercase px-1 py-0.5"
               >
                 {t('nav.services')}
                 <svg 
-                  className={`w-4 h-4 ml-1 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} 
+                  className={`w-3 h-3 ml-1 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor"

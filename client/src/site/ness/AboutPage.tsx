@@ -246,27 +246,27 @@ export default function NessAboutPage() {
         </section>
         
         {/* Manifesto Section */}
-        <section className="py-20 bg-white">
+        <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-['Montserrat'] font-normal text-3xl md:text-4xl mb-8 text-center lowercase">
+              <h2 className="font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase">
                 <span className="font-normal">{language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
               </h2>
               
-              <div className="prose prose-lg mx-auto text-gray-700 lowercase">
-                <p className="mb-6">
+              <div className="prose prose-base mx-auto text-gray-700 lowercase">
+                <p className="mb-4 text-sm md:text-base">
                   {defaultContent.manifesto.p1}
                 </p>
                 
-                <p className="mb-6">
+                <p className="mb-4 text-sm md:text-base">
                   {defaultContent.manifesto.p2}
                 </p>
                 
-                <p className="mb-6">
+                <p className="mb-4 text-sm md:text-base">
                   {defaultContent.manifesto.p3}
                 </p>
                 
-                <p className="mb-6">
+                <p className="mb-4 text-sm md:text-base">
                   {defaultContent.manifesto.p4}
                 </p>
               </div>
