@@ -63,7 +63,7 @@ export default function TrustnessHomePage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
-                href="#services"
+                href="#what-we-do"
                 className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
               >
                 nossos serviços
@@ -247,7 +247,7 @@ export default function TrustnessHomePage() {
       </section>
       
       {/* Services Section - Agora com fundo escuro */}
-      <section id="services" className="py-20 bg-[#1a1a22] text-white">
+      <section id="what-we-do" className="py-20 bg-[#1a1a22] text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-white mb-8 lowercase">
