@@ -44,36 +44,45 @@ export default function ForenseHomePage() {
         <div className="absolute inset-0 opacity-20">
           <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#fff" strokeWidth="0.5"/>
+              <pattern id="dna" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M0,10 C5,5 15,15 20,10 M0,10 C5,15 15,5 20,10" fill="none" stroke="#00ade0" strokeWidth="0.5"/>
+              </pattern>
+              <pattern id="circuit" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M10,0 L10,10 L0,10 M20,0 L20,20 L0,20 M30,10 L20,10 M30,20 L25,20" fill="none" stroke="#fff" strokeWidth="0.5"/>
+              </pattern>
+              <pattern id="combined" width="50" height="50" patternUnits="userSpaceOnUse">
+                <rect width="50" height="50" fill="url(#dna)" />
+                <rect width="50" height="50" fill="url(#circuit)" />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
+            <rect width="100%" height="100%" fill="url(#combined)" />
           </svg>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
-              {pageContent?.content?.heroTitle || 'forense.io'}
+            <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-3 lowercase">
+              Digital Forensic Experts
             </h1>
-            <div className="h-1 w-20 bg-[var(--primary-color)] mx-auto mb-6"></div>
+            <h2 className="text-2xl font-['Montserrat'] font-normal mb-6 lowercase">
+              forense<span className="text-[#00ade0]">.</span>io
+            </h2>
+            <div className="h-1 w-20 bg-[#00ade0] mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 mb-8">
-              {pageContent?.content?.heroSubtitle || 
-                'resposta a incidentes, perícia digital e investigação forense para identificar e remediar violações de segurança'}
+              transformamos a evidência digital em resultados concretos, com precisão e segurança
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
-                href="/site/forense/services/incident-response"
-                className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
+                href="/site/forense/services/forensic-digital"
+                className="bg-[#00ade0] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
               >
-                resposta a incidentes
+                forense digital
               </a>
               <a
-                href="/site/forense/services/digital-forensics"
-                className="border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:bg-opacity-10 px-6 py-3 rounded lowercase"
+                href="/site/forense/services/legal-support"
+                className="border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:bg-opacity-10 px-6 py-3 rounded lowercase"
               >
-                análise forense
+                suporte legal
               </a>
             </div>
           </div>
@@ -141,28 +150,25 @@ export default function ForenseHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-              {pageContent?.content?.servicesSectionTitle || 'serviços especializados'}
+              o que fazemos
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              {pageContent?.content?.servicesSectionDescription || 
-                'oferecemos uma gama completa de serviços forenses e de resposta a incidentes.'}
+              transformamos evidências digitais em resultados concretos para nossos clientes
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Service 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Service 1 - Forense Digital */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-100">
-              <h3 className="text-xl font-medium text-gray-800 mb-4">resposta a incidentes</h3>
-              <ul className="text-gray-600 space-y-2 mb-6 text-sm">
-                <li>• contenção de incidentes em tempo real</li>
-                <li>• investigação de causa raiz</li>
-                <li>• detecção e remoção de malwares</li>
-                <li>• recuperação de sistemas comprometidos</li>
-                <li>• gestão de crise e comunicação</li>
-              </ul>
+              <h3 className="text-xl font-['Montserrat'] font-medium text-gray-800 mb-4 lowercase">
+                forense<span className="text-[#00ade0]">.</span>digital
+              </h3>
+              <p className="text-gray-700 text-sm mb-6">
+                Perícia avançada para coleta, preservação e análise detalhada de dados. Especialização em Produção e Validação de Evidências, Reexame Forense e Contraprova de Relatórios, assegurando integridade e precisão
+              </p>
               <a 
-                href="/site/forense/services/incident-response" 
-                className="text-[var(--primary-color)] hover:text-[var(--primary-color)]/80 inline-flex items-center"
+                href="/site/forense/services/digital-forensics" 
+                className="text-[#00ade0] hover:text-[#00ade0]/80 inline-flex items-center"
               >
                 <span>saiba mais</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
@@ -171,19 +177,36 @@ export default function ForenseHomePage() {
               </a>
             </div>
             
-            {/* Service 2 */}
+            {/* Service 2 - Suporte Legal */}
             <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-100">
-              <h3 className="text-xl font-medium text-gray-800 mb-4">análise forense digital</h3>
-              <ul className="text-gray-600 space-y-2 mb-6 text-sm">
-                <li>• coleta de evidências digitais</li>
-                <li>• análise de discos e memória</li>
-                <li>• investigação de logs e artefatos</li>
-                <li>• reconstrução de eventos</li>
-                <li>• documentação técnica e relatórios</li>
-              </ul>
+              <h3 className="text-xl font-['Montserrat'] font-medium text-gray-800 mb-4 lowercase">
+                forense<span className="text-[#00ade0]">.</span>legal
+              </h3>
+              <p className="text-gray-700 text-sm mb-6">
+                Consultoria estratégica e assistência técnica em litígios, com foco na elaboração de teses, análise crítica de evidências e preparação eficaz para audiências, garantindo uma representação robusta em questões jurídicas complexas
+              </p>
               <a 
-                href="/site/forense/services/digital-forensics" 
-                className="text-[var(--primary-color)] hover:text-[var(--primary-color)]/80 inline-flex items-center"
+                href="/site/forense/services/legal-support" 
+                className="text-[#00ade0] hover:text-[#00ade0]/80 inline-flex items-center"
+              >
+                <span>saiba mais</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
+                  <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                </svg>
+              </a>
+            </div>
+            
+            {/* Service 3 - Investigações Corporativas */}
+            <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-100">
+              <h3 className="text-xl font-['Montserrat'] font-medium text-gray-800 mb-4 lowercase">
+                forense<span className="text-[#00ade0]">.</span>corp
+              </h3>
+              <p className="text-gray-700 text-sm mb-6">
+                Análise aprofundada e auditorias digitais para resolver incidentes internos, fraudes e uso indevido de recursos, fortalecendo a segurança empresarial e a conformidade regulatória
+              </p>
+              <a 
+                href="/site/forense/services/corporate-investigations" 
+                className="text-[#00ade0] hover:text-[#00ade0]/80 inline-flex items-center"
               >
                 <span>saiba mais</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
@@ -196,21 +219,20 @@ export default function ForenseHomePage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-[var(--secondary-color)] text-white">
+      <section className="py-20 bg-[#1a1a22] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">
-            {pageContent?.content?.ctaTitle || 'enfrentando um incidente de segurança?'}
+            precisa de análise forense especializada?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {pageContent?.content?.ctaDescription || 
-              'nossa equipe está disponível 24 horas por dia para ajudar na contenção e investigação de incidentes.'}
+            nossa equipe de especialistas está pronta para transformar evidências digitais em resultados concretos para seu caso
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="/site/forense/contact"
-              className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-8 py-4 rounded text-lg lowercase"
+              className="bg-[#00ade0] hover:bg-opacity-90 text-white px-8 py-4 rounded text-lg lowercase transition-all duration-300"
             >
-              contato emergencial
+              entre em contato
             </a>
           </div>
         </div>
