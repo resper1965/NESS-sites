@@ -5,6 +5,7 @@ import { useSite } from '../../SiteContext';
 import SiteLayout from '../../layout/SiteLayout';
 
 export default function ForenseDigitalForensicsPage() {
+  const DotSpan = () => <span className="text-[#00ade0]">.</span>;
   const { siteConfig } = useSite();
   const { language } = useI18n();
   
@@ -159,7 +160,7 @@ export default function ForenseDigitalForensicsPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl font-['Montserrat'] font-normal mb-6 lowercase">
-                forense<span className="text-[#00ade0]">.</span>digital
+                forense<DotSpan />digital
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 {content.description}
@@ -241,10 +242,7 @@ export default function ForenseDigitalForensicsPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
-                  <div className="mb-4">
-                    <div className="text-[#00ade0] text-center font-['Montserrat'] font-bold text-3xl mb-1">DNS</div>
-                    <div className="text-white text-center text-xs uppercase tracking-wider font-medium">Network Servers</div>
-                  </div>
+
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
                     ambientes <span className="text-[#00ade0]">corporativos</span>
                   </h3>
@@ -263,10 +261,6 @@ export default function ForenseDigitalForensicsPage() {
                 </div>
                 
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
-                  <div className="mb-4">
-                    <div className="text-[#00ade0] text-center font-['Montserrat'] font-bold text-3xl mb-1">ROM</div>
-                    <div className="text-white text-center text-xs uppercase tracking-wider font-medium">Mobile Devices</div>
-                  </div>
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
                     dispositivos <span className="text-[#00ade0]">pessoais</span>
                   </h3>
@@ -285,10 +279,6 @@ export default function ForenseDigitalForensicsPage() {
                 </div>
                 
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
-                  <div className="mb-4">
-                    <div className="text-[#00ade0] text-center font-['Montserrat'] font-bold text-3xl mb-1">VHS</div>
-                    <div className="text-white text-center text-xs uppercase tracking-wider font-medium">Virtual Hosting Systems</div>
-                  </div>
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
                     armazenamento em <span className="text-[#00ade0]">nuvem</span>
                   </h3>
