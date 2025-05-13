@@ -138,10 +138,10 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
-                suporte<DotSpan />legal
+                {t('forense.service.legal').split(' ')[0]}<DotSpan />{t('forense.service.legal').split(' ')[1]}
               </h1>
               <p className={`${styles.fontSizes.hero.subtitle} ${styles.colors.text.light} ${styles.spacing.mb.xl}`}>
-                {content.description}
+                {t('forense.legal.desc')}
               </p>
             </div>
           </div>

@@ -65,6 +65,9 @@ const translations: TranslationsMap = {
     'forense.cta.button': 'entre em contato',
     'forense.digital.title': 'o que é forense digital?',
     'forense.digital.why': 'por que a forense digital é essencial',
+    'forense.legal.title': 'o que é suporte legal?',
+    'forense.legal.why': 'por que o suporte legal é essencial',
+    'forense.legal.desc': 'consultoria técnica especializada em evidências digitais',
   },
   en: {
     'nav.home': 'Home',
@@ -96,6 +99,9 @@ const translations: TranslationsMap = {
     'forense.cta.button': 'contact us',
     'forense.digital.title': 'what is digital forensics?',
     'forense.digital.why': 'why digital forensics is essential',
+    'forense.legal.title': 'what is legal support?',
+    'forense.legal.why': 'why legal support is essential',
+    'forense.legal.desc': 'specialized technical consulting for digital evidence',
   },
   es: {
     'nav.home': 'Inicio',
@@ -127,6 +133,9 @@ const translations: TranslationsMap = {
     'forense.cta.button': 'contáctenos',
     'forense.digital.title': '¿qué es forense digital?',
     'forense.digital.why': 'por qué el forense digital es esencial',
+    'forense.legal.title': '¿qué es soporte legal?',
+    'forense.legal.why': 'por qué el soporte legal es esencial',
+    'forense.legal.desc': 'consultoría técnica especializada en evidencias digitales',
   }
 };
 
