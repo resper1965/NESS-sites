@@ -23,20 +23,20 @@ export default function ForenseLegalSupportPage() {
   const defaultContent = {
     pt: {
       title: 'suporte.legal',
-      description: 'suporte legal e consultoria especializada em evidências digitais',
-      intro: 'nossa divisão de suporte legal oferece serviços especializados em consultoria jurídica e técnica para casos envolvendo evidências digitais, proporcionando clareza e embasamento científico aos argumentos jurídicos.',
+      description: 'consultoria técnica especializada em evidências digitais',
+      intro: 'nossa divisão de suporte técnico-legal oferece serviços especializados de orientação em casos envolvendo evidências digitais, proporcionando clareza e embasamento científico para profissionais e organizações. não prestamos serviços jurídicos, atuamos exclusivamente no suporte técnico especializado a casos com componentes digitais.',
       sections: [
         {
           title: 'consultoria estratégica',
-          content: 'orientação especializada em casos e litígios envolvendo evidências digitais, ajudando na formulação de estratégias jurídicas eficazes baseadas em fundamentos técnicos sólidos.'
+          content: 'orientação especializada em casos e litígios envolvendo evidências digitais, ajudando na compreensão técnica dos elementos digitais e facilitando a formulação de estratégias eficazes baseadas em fundamentos técnicos sólidos.'
         },
         {
-          title: 'assistência técnica judicial',
-          content: 'apoio técnico especializado para a elaboração e sustentação de teses, incluindo a análise crítica dos argumentos e metodologias adversárias para identificar inconsistências e falhas.'
+          title: 'assistência técnica processual',
+          content: 'apoio técnico especializado para a análise de evidências digitais, incluindo a avaliação crítica dos argumentos e metodologias técnicas adversárias para identificar inconsistências e falhas em laudos e relatórios.'
         },
         {
           title: 'esclarecimentos técnicos em audiências',
-          content: 'apresentação de análises técnicas forenses em tribunais, contribuindo para o entendimento claro dos elementos técnicos pelo judiciário e desmistificando conceitos complexos.'
+          content: 'apresentação de análises técnicas forenses quando solicitado, contribuindo para o entendimento claro dos elementos técnicos digitais e desmistificando conceitos complexos relacionados à tecnologia e evidências digitais.'
         }
       ],
       cta: {
@@ -151,53 +151,52 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="flex flex-col md:flex-row gap-16 items-start">
-                <div className="md:w-1/2">
-                  <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
-                    suporte jurídico <span className="text-[#00ade0]">especializado</span>
-                  </h2>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    {content.intro}
-                  </p>
-                  <div className="mt-8 pl-5 border-l-2 border-[#00ade0]">
-                    <p className="text-gray-600 italic text-sm">
-                      "a consultoria jurídica em casos envolvendo evidências digitais exige não apenas conhecimento legal, mas também uma compreensão profunda dos aspectos técnicos e científicos do universo digital."
+                <div className="w-full">
+                  <div className="text-center mb-8">
+                    <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
+                      <span className="text-[#00ade0]">consultoria técnica</span> especializada
+                    </h2>
+                    <p className="text-gray-500 max-w-3xl mx-auto">
+                      <strong>importante:</strong> não oferecemos serviços jurídicos. nossa atuação é exclusivamente técnica.
                     </p>
                   </div>
-                </div>
-                <div className="md:w-1/2">
-                  <div className="bg-gray-50 p-8 rounded-lg border border-gray-100">
-                    <h3 className="text-xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-                      abordagem <span className="text-[#00ade0]">integrada</span>
-                    </h3>
-                    <ul className="space-y-4">
-                      <li className="flex flex-col">
-                        <div className="flex items-center mb-2">
-                          <div className="h-1 w-1 rounded-full bg-[#00ade0] mr-2"></div>
-                          <span className="text-gray-900 font-medium">visão jurídica e técnica</span>
-                        </div>
-                        <p className="text-gray-600 text-sm pl-3">
-                          combinamos expertise jurídica com conhecimento técnico para proporcionar uma compreensão completa do cenário.
+                  
+                  <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 max-w-4xl mx-auto">
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      {content.intro}
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                      <div className="bg-white p-5 rounded-md border border-gray-100 shadow-sm">
+                        <h4 className="font-medium text-gray-900 mb-2 lowercase">
+                          <div className="h-2 w-2 rounded-full bg-[#00ade0] inline-block mr-2"></div>
+                          análise técnica imparcial
+                        </h4>
+                        <p className="text-gray-600 text-sm">
+                          avaliamos evidências digitais com metodologia científica e neutralidade, sem envolvimento nos aspectos jurídicos do caso.
                         </p>
-                      </li>
-                      <li className="flex flex-col">
-                        <div className="flex items-center mb-2">
-                          <div className="h-1 w-1 rounded-full bg-[#00ade0] mr-2"></div>
-                          <span className="text-gray-900 font-medium">comunicação acessível</span>
-                        </div>
-                        <p className="text-gray-600 text-sm pl-3">
-                          traduzimos conceitos técnicos complexos em linguagem acessível para todos os envolvidos no processo.
+                      </div>
+                      
+                      <div className="bg-white p-5 rounded-md border border-gray-100 shadow-sm">
+                        <h4 className="font-medium text-gray-900 mb-2 lowercase">
+                          <div className="h-2 w-2 rounded-full bg-[#00ade0] inline-block mr-2"></div>
+                          tradução de conceitos
+                        </h4>
+                        <p className="text-gray-600 text-sm">
+                          convertemos conceitos técnicos complexos em linguagem acessível, facilitando a compreensão por profissionais de diversas áreas.
                         </p>
-                      </li>
-                      <li className="flex flex-col">
-                        <div className="flex items-center mb-2">
-                          <div className="h-1 w-1 rounded-full bg-[#00ade0] mr-2"></div>
-                          <span className="text-gray-900 font-medium">fundamentação científica</span>
-                        </div>
-                        <p className="text-gray-600 text-sm pl-3">
-                          embasamos todos os argumentos em metodologias científicas e padrões internacionais reconhecidos.
+                      </div>
+                      
+                      <div className="bg-white p-5 rounded-md border border-gray-100 shadow-sm">
+                        <h4 className="font-medium text-gray-900 mb-2 lowercase">
+                          <div className="h-2 w-2 rounded-full bg-[#00ade0] inline-block mr-2"></div>
+                          padrões internacionais
+                        </h4>
+                        <p className="text-gray-600 text-sm">
+                          utilizamos metodologias reconhecidas globalmente para garantir que nossas análises atendam aos mais altos padrões técnicos.
                         </p>
-                      </li>
-                    </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -210,25 +209,27 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-16 text-center lowercase">
-                serviços de <span className="text-[#00ade0]">suporte legal</span>
+                serviços de <span className="text-[#00ade0]">consultoria técnica</span>
               </h2>
+              <div className="max-w-3xl mx-auto text-center mb-10">
+                <p className="text-gray-500 text-sm">nossa atuação tem caráter exclusivamente técnico. não prestamos consultoria jurídica ou advocacia, apenas suporte técnico para casos que envolvam evidências digitais.</p>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Consultoria Estratégica */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
                   <div className="p-8">
-                    <div className="mb-6 h-1 w-12 bg-[#00ade0]"></div>
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
                       consultoria <span className="text-[#00ade0]">estratégica</span>
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      orientação especializada em casos e litígios envolvendo evidências digitais, ajudando na formulação de estratégias jurídicas eficazes baseadas em fundamentos técnicos sólidos.
+                    <p className="text-gray-600 mb-6 leading-relaxed h-20">
+                      {content.sections[0].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
                       <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                        <span>estratégia processual</span>
+                        <span>análise técnica</span>
                         <span>•</span>
-                        <span>análise prévia</span>
+                        <span>avaliação prévia</span>
                         <span>•</span>
                         <span>viabilidade técnica</span>
                       </div>
@@ -236,19 +237,18 @@ export default function ForenseLegalSupportPage() {
                   </div>
                 </div>
                 
-                {/* Assistência Técnica Judicial */}
+                {/* Assistência Técnica Processual */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
                   <div className="p-8">
-                    <div className="mb-6 h-1 w-12 bg-[#00ade0]"></div>
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
-                      assistência <span className="text-[#00ade0]">técnica judicial</span>
+                      assistência <span className="text-[#00ade0]">técnica processual</span>
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      apoio técnico especializado para a elaboração e sustentação de teses, incluindo a análise crítica dos argumentos e metodologias adversárias para identificar inconsistências e falhas.
+                    <p className="text-gray-600 mb-6 leading-relaxed h-20">
+                      {content.sections[1].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
                       <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                        <span>quesitos</span>
+                        <span>formulação técnica</span>
                         <span>•</span>
                         <span>contraprovas</span>
                         <span>•</span>
@@ -261,20 +261,19 @@ export default function ForenseLegalSupportPage() {
                 {/* Esclarecimentos Técnicos em Audiências */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
                   <div className="p-8">
-                    <div className="mb-6 h-1 w-12 bg-[#00ade0]"></div>
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
                       esclarecimentos <span className="text-[#00ade0]">em audiências</span>
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      apresentação de análises técnicas forenses em tribunais, contribuindo para o entendimento claro dos elementos técnicos pelo judiciário e desmistificando conceitos complexos.
+                    <p className="text-gray-600 mb-6 leading-relaxed h-20">
+                      {content.sections[2].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">
                       <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                        <span>depoimento</span>
+                        <span>depoimento técnico</span>
                         <span>•</span>
                         <span>pareceres</span>
                         <span>•</span>
-                        <span>tradução técnica</span>
+                        <span>simplificação técnica</span>
                       </div>
                     </div>
                   </div>
