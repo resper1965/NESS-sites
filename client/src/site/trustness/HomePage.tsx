@@ -155,20 +155,20 @@ export default function TrustnessHomePage() {
       {/* Como Atuamos Section */}
       <section className="py-20 bg-[#1a1a22] text-white">
         <div className="container mx-auto px-4">
-          <div className="text-center md:text-left mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-4 lowercase">
               {language === 'pt' && 'como atuamos'}
               {language === 'en' && 'how we work'}
               {language === 'es' && 'cómo trabajamos'}
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto md:mx-0">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {language === 'pt' && 'programas consultivos em segurança, privacidade e conformidade — personalizados para sua operação'}
               {language === 'en' && 'consultative programs in security, privacy, and compliance — customized for your operation'}
               {language === 'es' && 'programas consultivos en seguridad, privacidad y conformidad — personalizados para su operación'}
             </p>
           </div>
           
-          <div className="space-y-6 text-center md:text-left max-w-4xl">
+          <div className="space-y-6 text-center max-w-4xl mx-auto">
             {language === 'pt' && (
               <>
                 <p className="text-gray-300">
