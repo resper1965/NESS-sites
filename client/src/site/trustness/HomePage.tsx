@@ -43,7 +43,7 @@ export default function TrustnessHomePage() {
       <section 
         className="pt-32 pb-20 text-white bg-[#0b1016] relative"
         style={{
-          backgroundImage: 'url(/assets/images/trustness-hero-bg.png)',
+          backgroundImage: 'url(/assets/images/trustness-bg.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -84,7 +84,7 @@ export default function TrustnessHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-8 lowercase">
-              {pageContent?.content?.servicesSectionTitle || 'serviços'}
+              {pageContent?.content?.servicesSectionTitle || 'o que fazemos'}
             </h2>
           </div>
           
@@ -148,6 +148,98 @@ export default function TrustnessHomePage() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Como Atuamos Section */}
+      <section className="py-20 bg-[#1a1a22] text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center md:text-left mb-16">
+            <h2 className="text-3xl font-['Montserrat'] font-normal mb-4 lowercase">
+              {language === 'pt' && 'como atuamos'}
+              {language === 'en' && 'how we work'}
+              {language === 'es' && 'cómo trabajamos'}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto md:mx-0">
+              {language === 'pt' && 'programas consultivos em segurança, privacidade e conformidade — personalizados para sua operação'}
+              {language === 'en' && 'consultative programs in security, privacy, and compliance — customized for your operation'}
+              {language === 'es' && 'programas consultivos en seguridad, privacidad y conformidad — personalizados para su operación'}
+            </p>
+          </div>
+          
+          <div className="space-y-6 text-center md:text-left max-w-4xl">
+            {language === 'pt' && (
+              <>
+                <p className="text-gray-300">
+                  na trustness, avaliamos, auditamos e estruturamos práticas que sustentam a segurança, a privacidade e a conformidade regulatória.
+                </p>
+                
+                <p className="text-gray-300">
+                  conduzimos assessments com base em frameworks reconhecidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riscos e traçar caminhos reais rumo à certificação e maturidade operacional.
+                </p>
+                
+                <p className="text-gray-300">
+                  atuamos também como auditores externos, avaliando a aderência da organização a normas e requisitos específicos — antes de uma certificação ou como parte de uma estratégia contínua de conformidade.
+                </p>
+                
+                <p className="text-gray-300">
+                  por meio de programas de privacidade como LGPD, GDPR e HIPAA, implementamos controles personalizados, mapeamos fluxos de dados e apoiamos a gestão com relatórios estruturados e ações práticas.
+                </p>
+                
+                <p className="text-gray-300">
+                  nossos controles são ajustados à realidade de cada setor, protegendo operações críticas e fortalecendo a governança frente a ameaças cibernéticas e exigências legais.
+                </p>
+              </>
+            )}
+            
+            {language === 'en' && (
+              <>
+                <p className="text-gray-300">
+                  at trustness, we assess, audit, and structure practices that support security, privacy, and regulatory compliance.
+                </p>
+                
+                <p className="text-gray-300">
+                  we conduct assessments based on recognized frameworks — such as NIST, CIS Controls, and ISO 27001 — to identify vulnerabilities, map risks, and chart real paths toward certification and operational maturity.
+                </p>
+                
+                <p className="text-gray-300">
+                  we also act as external auditors, evaluating the organization's adherence to specific standards and requirements — before certification or as part of an ongoing compliance strategy.
+                </p>
+                
+                <p className="text-gray-300">
+                  through privacy programs such as GDPR, LGPD, and HIPAA, we implement customized controls, map data flows, and support management with structured reports and practical actions.
+                </p>
+                
+                <p className="text-gray-300">
+                  our controls are adjusted to the reality of each sector, protecting critical operations and strengthening governance against cyber threats and legal requirements.
+                </p>
+              </>
+            )}
+            
+            {language === 'es' && (
+              <>
+                <p className="text-gray-300">
+                  en trustness, evaluamos, auditamos y estructuramos prácticas que sustentan la seguridad, la privacidad y el cumplimiento normativo.
+                </p>
+                
+                <p className="text-gray-300">
+                  realizamos evaluaciones basadas en marcos reconocidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riesgos y trazar caminos reales hacia la certificación y madurez operativa.
+                </p>
+                
+                <p className="text-gray-300">
+                  también actuamos como auditores externos, evaluando la adhesión de la organización a normas y requisitos específicos — antes de una certificación o como parte de una estrategia continua de cumplimiento.
+                </p>
+                
+                <p className="text-gray-300">
+                  a través de programas de privacidad como GDPR, LGPD y HIPAA, implementamos controles personalizados, mapeamos flujos de datos y apoyamos la gestión con informes estructurados y acciones prácticas.
+                </p>
+                
+                <p className="text-gray-300">
+                  nuestros controles se ajustan a la realidad de cada sector, protegiendo operaciones críticas y fortaleciendo la gobernanza frente a amenazas cibernéticas y exigencias legales.
+                </p>
+              </>
+            )}
           </div>
         </div>
       </section>
