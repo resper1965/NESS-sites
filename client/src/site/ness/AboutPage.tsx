@@ -363,7 +363,12 @@ export default function NessAboutPage() {
         <section className="py-20 bg-[#4d4d4d] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
-              {defaultContent.cta.title}
+              {language === 'pt' 
+                ? <>quer saber mais sobre a <span className="font-normal">ness<span className="text-[#00ade0]">.</span></span>?</> 
+                : language === 'en'
+                  ? <>want to know more about <span className="font-normal">ness<span className="text-[#00ade0]">.</span></span>?</>
+                  : <>¿quieres saber más sobre <span className="font-normal">ness<span className="text-[#00ade0]">.</span></span>?</>
+              }
             </h2>
             
             <a 
