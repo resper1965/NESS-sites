@@ -157,13 +157,13 @@ export default function Navbar() {
               </button>
               
               {servicesDropdownOpen && (
-                <div className="absolute left-[-250px] mt-2 w-[900px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-6">
+                <div className="absolute z-50 left-[-200px] mt-2 w-[700px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-6">
                   <div className="grid grid-cols-3 gap-6" role="menu" aria-orientation="vertical">
                     {services.map(service => (
                       <Link 
                         key={service.id}
                         href={service.path}
-                        className="block p-4 rounded hover:bg-gray-50 transition-colors duration-200"
+                        className="block p-4 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100"
                         onClick={() => setServicesDropdownOpen(false)}
                       >
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
