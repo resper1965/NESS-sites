@@ -158,7 +158,7 @@ export default function ForenseLegalSupportPage() {
                       <span className="text-[#00ade0]">consultoria técnica</span> especializada
                     </h2>
                     <p className="text-gray-500 max-w-3xl mx-auto">
-                      fornecemos suporte técnico especializado para a área legal.
+                      {t('forense.legal.intro')}
                     </p>
                   </div>
                   
@@ -171,30 +171,30 @@ export default function ForenseLegalSupportPage() {
                       <div className="bg-white p-5 rounded-md border border-gray-100 shadow-sm">
                         <h4 className="font-medium text-gray-900 mb-2 lowercase">
                           <div className="h-2 w-2 rounded-full bg-[#00ade0] inline-block mr-2"></div>
-                          análise técnica imparcial
+                          {t('forense.legal.analysis.title')}
                         </h4>
                         <p className="text-gray-600 text-sm">
-                          avaliamos evidências digitais com metodologia científica e neutralidade, sem envolvimento nos aspectos jurídicos do caso.
+                          {t('forense.legal.analysis.desc')}
                         </p>
                       </div>
                       
                       <div className="bg-white p-5 rounded-md border border-gray-100 shadow-sm">
                         <h4 className="font-medium text-gray-900 mb-2 lowercase">
                           <div className="h-2 w-2 rounded-full bg-[#00ade0] inline-block mr-2"></div>
-                          tradução de conceitos
+                          {t('forense.legal.translation.title')}
                         </h4>
                         <p className="text-gray-600 text-sm">
-                          convertemos conceitos técnicos complexos em linguagem acessível, facilitando a compreensão por profissionais de diversas áreas.
+                          {t('forense.legal.translation.desc')}
                         </p>
                       </div>
                       
                       <div className="bg-white p-5 rounded-md border border-gray-100 shadow-sm">
                         <h4 className="font-medium text-gray-900 mb-2 lowercase">
                           <div className="h-2 w-2 rounded-full bg-[#00ade0] inline-block mr-2"></div>
-                          padrões internacionais
+                          {t('forense.legal.standards.title')}
                         </h4>
                         <p className="text-gray-600 text-sm">
-                          utilizamos metodologias reconhecidas globalmente para garantir que nossas análises atendam aos mais altos padrões técnicos.
+                          {t('forense.legal.standards.desc')}
                         </p>
                       </div>
                     </div>
@@ -210,10 +210,10 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-16 text-center lowercase">
-                serviços de <span className="text-[#00ade0]">consultoria técnica</span>
+                {t('forense.legal.section.title')}
               </h2>
               <div className="max-w-3xl mx-auto text-center mb-10">
-                <p className="text-gray-500 text-sm">oferecemos suporte técnico especializado para profissionais e instituições da área legal em casos que envolvam evidências digitais.</p>
+                <p className="text-gray-500 text-sm">{t('forense.legal.section.desc')}</p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -221,7 +221,7 @@ export default function ForenseLegalSupportPage() {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
                   <div className="p-8">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
-                      consultoria <span className="text-[#00ade0]">estratégica</span>
+                      {t('forense.legal.strategy.title')}
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {content.sections[0].content}
