@@ -212,14 +212,32 @@ export default function NessAboutPage() {
       />
       
       <main>
-        {/* Hero Section simplificada */}
-        <section className="relative py-20 md:py-28 bg-gray-50 border-b border-gray-200">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-['Montserrat'] font-normal mb-6 lowercase">
-                {defaultContent.heroTitle}
+        {/* Hero Section com fundo escuro e estilo consistente */}
+        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+          {/* Background image */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src={import.meta.env.BASE_URL + "/src/assets/images/hero-dark-bg.png"} 
+              alt="Hero background" 
+              className="w-full h-full object-cover" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.1)] to-[rgba(18,18,18,0.3)]"></div>
+          </div>
+          
+          {/* Overlay para garantir boa legibilidade do texto */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.2)] to-[rgba(18,18,18,0.4)]"></div>
+          
+          {/* Content */}
+          <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
+            <div className="hero-main-content text-center">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6">
+                <span style={{color: "#ffffff"}}>ness</span><span style={{color: "#00ade0"}}>.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 lowercase">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+                {defaultContent.heroTitle}
+              </p>
+            
+              <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-white font-['Montserrat'] lowercase">
                 {defaultContent.heroSubtitle}
               </p>
             </div>

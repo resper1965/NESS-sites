@@ -53,8 +53,8 @@ export default function SiteNavbar() {
   const sitePrefix = `/site/${siteConfig.code}`;
   const shouldBeTransparent = location === sitePrefix || location.includes(`${sitePrefix}/about`) || location.includes(`${sitePrefix}/services`);
   const navbarClass = isScrolled || !shouldBeTransparent
-    ? 'bg-gray-50 shadow-md'
-    : 'bg-gray-50';
+    ? 'bg-black shadow-md'
+    : 'bg-transparent';
 
   // Services for dropdown menu
   const services = [
