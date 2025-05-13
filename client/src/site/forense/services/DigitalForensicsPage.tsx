@@ -242,9 +242,8 @@ export default function ForenseDigitalForensicsPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
                   <div className="mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-[#00ade0] mb-2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 019 0m-9 0h9" />
-                    </svg>
+                    <div className="text-[#00ade0] text-center font-['Montserrat'] font-bold text-3xl mb-1">DNS</div>
+                    <div className="text-white text-center text-xs uppercase tracking-wider font-medium">Network Servers</div>
                   </div>
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
                     ambientes <span className="text-[#00ade0]">corporativos</span>
@@ -265,9 +264,8 @@ export default function ForenseDigitalForensicsPage() {
                 
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
                   <div className="mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-[#00ade0] mb-2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                    </svg>
+                    <div className="text-[#00ade0] text-center font-['Montserrat'] font-bold text-3xl mb-1">ROM</div>
+                    <div className="text-white text-center text-xs uppercase tracking-wider font-medium">Mobile Devices</div>
                   </div>
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
                     dispositivos <span className="text-[#00ade0]">pessoais</span>
@@ -288,9 +286,8 @@ export default function ForenseDigitalForensicsPage() {
                 
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
                   <div className="mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 text-[#00ade0] mb-2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
-                    </svg>
+                    <div className="text-[#00ade0] text-center font-['Montserrat'] font-bold text-3xl mb-1">VHS</div>
+                    <div className="text-white text-center text-xs uppercase tracking-wider font-medium">Virtual Hosting Systems</div>
                   </div>
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
                     armazenamento em <span className="text-[#00ade0]">nuvem</span>
