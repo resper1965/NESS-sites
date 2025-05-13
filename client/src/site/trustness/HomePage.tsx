@@ -79,89 +79,16 @@ export default function TrustnessHomePage() {
         </div>
       </section>
       
-      {/* Services Section */}
-      <section id="services" className="py-20 bg-[#f9f9f9]">
+      {/* Como Atuamos Section - Agora com fundo claro */}
+      <section className="py-20 bg-[#f9f9f9] text-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-8 lowercase">
-              {pageContent?.content?.servicesSectionTitle || 'o que fazemos'}
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Serviço 1 - Assessment */}
-            <div className="bg-white rounded p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-              <h3 className="mb-4">
-                <span className="font-['Montserrat'] font-medium text-lg text-gray-800">
-                  <span className="text-[#005fa3]">.</span>assessment
-                </span>
-              </h3>
-              <p className="text-gray-600 text-sm mb-6 lowercase">
-                avaliações de segurança com base nos frameworks NIST e CIS Controls.
-              </p>
-              <div className="text-center">
-                <a 
-                  href="/site/trustness/services/assessment" 
-                  className="text-gray-600 hover:text-[#005fa3] border border-gray-300 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
-                >
-                  saiba mais
-                </a>
-              </div>
-            </div>
-            
-            {/* Serviço 2 - Conformity */}
-            <div className="bg-white rounded p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-              <h3 className="mb-4">
-                <span className="font-['Montserrat'] font-medium text-lg text-gray-800">
-                  <span className="text-[#005fa3]">.</span>conformity
-                </span>
-              </h3>
-              <p className="text-gray-600 text-sm mb-6 lowercase">
-                execução de auditorias e adequação a normas como ISO 27001, SOC 2, PCI DSS, HIPAA, LGPD/GDPR e HITRUST.
-              </p>
-              <div className="text-center">
-                <a 
-                  href="/site/trustness/services/conformity" 
-                  className="text-gray-600 hover:text-[#005fa3] border border-gray-300 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
-                >
-                  saiba mais
-                </a>
-              </div>
-            </div>
-            
-            {/* Serviço 3 - Privacy */}
-            <div className="bg-white rounded p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
-              <h3 className="mb-4">
-                <span className="font-['Montserrat'] font-medium text-lg text-gray-800">
-                  <span className="text-[#005fa3]">.</span>privacy
-                </span>
-              </h3>
-              <p className="text-gray-600 text-sm mb-6 lowercase">
-                implementação de controles de privacidade alinhados a padrões regulatórios nacionais e internacionais.
-              </p>
-              <div className="text-center">
-                <a 
-                  href="/site/trustness/services/privacy" 
-                  className="text-gray-600 hover:text-[#005fa3] border border-gray-300 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
-                >
-                  saiba mais
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Como Atuamos Section */}
-      <section className="py-20 bg-[#1a1a22] text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-4 lowercase">
+            <h2 className="text-3xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800">
               {language === 'pt' && 'como atuamos'}
               {language === 'en' && 'how we work'}
               {language === 'es' && 'cómo trabajamos'}
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {language === 'pt' && 'programas consultivos em segurança, privacidade e conformidade — personalizados para sua operação'}
               {language === 'en' && 'consultative programs in security, privacy, and compliance — customized for your operation'}
               {language === 'es' && 'programas consultivos en seguridad, privacidad y conformidad — personalizados para su operación'}
@@ -171,33 +98,33 @@ export default function TrustnessHomePage() {
           <div className="space-y-6 text-center max-w-4xl mx-auto">
             {language === 'pt' && (
               <>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   na trustness, avaliamos, auditamos e estruturamos práticas que sustentam a segurança, a privacidade e a conformidade regulatória.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   conduzimos assessments com base em frameworks reconhecidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riscos e traçar caminhos reais rumo à certificação e maturidade operacional.
                 </p>
                 
-                <p className="text-gray-300 mb-1">
+                <p className="text-gray-700 mb-1">
                   <span className="text-[#005fa3] font-semibold text-lg">vai se certificar ISO 27001, ou outra certificação?</span>
                 </p>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   atuamos também como auditores externos, avaliando a aderência da organização a normas e requisitos específicos — antes de uma certificação ou como parte de uma estratégia contínua de conformidade.
                 </p>
                 
-                <p className="text-gray-300 mb-1">
+                <p className="text-gray-700 mb-1">
                   <span className="text-[#005fa3] font-semibold text-lg">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
                 </p>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   conduzimos projetos completos de adequação à LGPD, GDPR, HIPAA e outras regulamentações de privacidade, com mapeamento de dados, implantação de controles e apoio contínuo à gestão.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   estruturamos relatórios como ROPA, DPIA e LIA, além de apoiar processos como atendimento a titulares, avaliação de fornecedores e governança da privacidade.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   também atuamos como DPO as a Service, assumindo a função de encarregado de dados da organização — com responsabilidade técnica, legal e estratégica sobre a conformidade e o relacionamento com autoridades e titulares.
                 </p>
               </>
@@ -205,33 +132,33 @@ export default function TrustnessHomePage() {
             
             {language === 'en' && (
               <>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   at trustness, we assess, audit, and structure practices that support security, privacy, and regulatory compliance.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   we conduct assessments based on recognized frameworks — such as NIST, CIS Controls, and ISO 27001 — to identify vulnerabilities, map risks, and chart real paths toward certification and operational maturity.
                 </p>
                 
-                <p className="text-gray-300 mb-1">
+                <p className="text-gray-700 mb-1">
                   <span className="text-[#005fa3] font-semibold text-lg">need ISO 27001 certification or other security standards?</span>
                 </p>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   we also act as external auditors, evaluating the organization's adherence to specific standards and requirements — before certification or as part of an ongoing compliance strategy.
                 </p>
                 
-                <p className="text-gray-300 mb-1">
+                <p className="text-gray-700 mb-1">
                   <span className="text-[#005fa3] font-semibold text-lg">need to comply with GDPR, LGPD or other privacy laws?</span>
                 </p>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   we conduct complete compliance projects for GDPR, LGPD, HIPAA and other privacy regulations, with data mapping, control implementation and continuous management support.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   we structure reports such as ROPA, DPIA and LIA, in addition to supporting processes such as data subject requests, vendor assessment and privacy governance.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   we also act as DPO as a Service, assuming the role of data protection officer — with technical, legal and strategic responsibility for compliance and relationships with authorities and data subjects.
                 </p>
               </>
@@ -239,37 +166,110 @@ export default function TrustnessHomePage() {
             
             {language === 'es' && (
               <>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   en trustness, evaluamos, auditamos y estructuramos prácticas que sustentan la seguridad, la privacidad y el cumplimiento normativo.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   realizamos evaluaciones basadas en marcos reconocidos — como NIST, CIS Controls e ISO 27001 — para identificar vulnerabilidades, mapear riesgos y trazar caminos reales hacia la certificación y madurez operativa.
                 </p>
                 
-                <p className="text-gray-300 mb-1">
+                <p className="text-gray-700 mb-1">
                   <span className="text-[#005fa3] font-semibold text-lg">¿necesita certificarse en ISO 27001 u otros estándares de seguridad?</span>
                 </p>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   también actuamos como auditores externos, evaluando la adhesión de la organización a normas y requisitos específicos — antes de una certificación o como parte de una estrategia continua de cumplimiento.
                 </p>
                 
-                <p className="text-gray-300 mb-1">
+                <p className="text-gray-700 mb-1">
                   <span className="text-[#005fa3] font-semibold text-lg">¿necesita cumplir con GDPR, LGPD u otras leyes de privacidad?</span>
                 </p>
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   realizamos proyectos completos de adecuación a GDPR, LGPD, HIPAA y otras regulaciones de privacidad, con mapeo de datos, implementación de controles y apoyo continuo a la gestión.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   estructuramos informes como ROPA, DPIA y LIA, además de apoyar procesos como atención a titulares, evaluación de proveedores y gobernanza de la privacidad.
                 </p>
                 
-                <p className="text-gray-300">
+                <p className="text-gray-700">
                   también actuamos como DPO as a Service, asumiendo la función de encargado de protección de datos de la organización — con responsabilidad técnica, legal y estratégica sobre el cumplimiento y la relación con autoridades y titulares.
                 </p>
               </>
             )}
+          </div>
+        </div>
+      </section>
+      
+      {/* Services Section - Agora com fundo escuro */}
+      <section id="services" className="py-20 bg-[#1a1a22] text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-white mb-8 lowercase">
+              {pageContent?.content?.servicesSectionTitle || 'o que fazemos'}
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Serviço 1 - Assessment */}
+            <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+              <h3 className="mb-4">
+                <span className="font-['Montserrat'] font-medium text-lg text-white">
+                  <span className="text-[#005fa3]">.</span>assessment
+                </span>
+              </h3>
+              <p className="text-gray-300 text-sm mb-6 lowercase">
+                avaliações de segurança com base nos frameworks NIST e CIS Controls.
+              </p>
+              <div className="text-center">
+                <a 
+                  href="/site/trustness/services/assessment" 
+                  className="text-gray-300 hover:text-[#005fa3] border border-gray-700 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                >
+                  saiba mais
+                </a>
+              </div>
+            </div>
+            
+            {/* Serviço 2 - Conformity */}
+            <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+              <h3 className="mb-4">
+                <span className="font-['Montserrat'] font-medium text-lg text-white">
+                  <span className="text-[#005fa3]">.</span>conformity
+                </span>
+              </h3>
+              <p className="text-gray-300 text-sm mb-6 lowercase">
+                execução de auditorias e adequação a normas como ISO 27001, SOC 2, PCI DSS, HIPAA, LGPD/GDPR e HITRUST.
+              </p>
+              <div className="text-center">
+                <a 
+                  href="/site/trustness/services/conformity" 
+                  className="text-gray-300 hover:text-[#005fa3] border border-gray-700 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                >
+                  saiba mais
+                </a>
+              </div>
+            </div>
+            
+            {/* Serviço 3 - Privacy */}
+            <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+              <h3 className="mb-4">
+                <span className="font-['Montserrat'] font-medium text-lg text-white">
+                  <span className="text-[#005fa3]">.</span>privacy
+                </span>
+              </h3>
+              <p className="text-gray-300 text-sm mb-6 lowercase">
+                implementação de controles de privacidade alinhados a padrões regulatórios nacionais e internacionais.
+              </p>
+              <div className="text-center">
+                <a 
+                  href="/site/trustness/services/privacy" 
+                  className="text-gray-300 hover:text-[#005fa3] border border-gray-700 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                >
+                  saiba mais
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
