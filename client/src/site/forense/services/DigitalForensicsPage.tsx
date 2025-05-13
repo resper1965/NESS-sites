@@ -178,22 +178,22 @@ export default function ForenseDigitalForensicsPage() {
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                  <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
-                    o que é <span className="text-[#00ade0]">forense digital</span>?
+                  <h2 className={`${styles.fontSizes.section.title} font-['Montserrat'] font-normal ${styles.colors.text.dark} ${styles.spacing.mb.large} lowercase`}>
+                    o que é <span className={styles.colors.primary}>forense digital</span>?
                   </h2>
-                  <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                  <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} ${styles.spacing.mb.medium} leading-relaxed`}>
                     a forense digital é uma disciplina que combina elementos da ciência da computação e da investigação criminal para coletar, analisar e preservar evidências digitais seguindo protocolos específicos que garantem sua validade legal.
                   </p>
-                  <p className="text-gray-700 text-sm mb-4 leading-relaxed">
+                  <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} ${styles.spacing.mb.medium} leading-relaxed`}>
                     na forense<DotSpan />io, aplicamos metodologias forenses robustas para extrair, documentar e interpretar dados digitais que podem ser decisivos em processos judiciais, investigações corporativas e auditorias de segurança.
                   </p>
-                  <p className="text-gray-700 text-sm leading-relaxed">
+                  <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} leading-relaxed`}>
                     nossa abordagem científica assegura que cada evidência digital seja tratada com o rigor técnico e a conformidade legal necessários para ser considerada válida perante os tribunais e órgãos reguladores.
                   </p>
                 </div>
                 <div className="md:w-1/2 bg-[#00ade0]/5 rounded-lg p-8 border border-[#00ade0]/20">
-                  <h3 className="text-xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-                    por que a <span className="text-[#00ade0]">forense digital</span> é essencial
+                  <h3 className={`${styles.fontSizes.section.subtitle} font-['Montserrat'] font-normal ${styles.colors.text.dark} ${styles.spacing.mb.medium} lowercase`}>
+                    por que a <span className={styles.colors.primary}>forense digital</span> é essencial
                   </h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">

@@ -16,11 +16,18 @@ export type Language = 'pt' | 'en' | 'es';
 type TranslationRecord = Record<string, string>;
 type TranslationsMap = Record<Language, TranslationRecord>;
 
-// Translation context
+/**
+ * Contexto de internacionalização
+ * Fornece funcionalidades para tradução e gerenciamento de idiomas
+ */
 interface I18nContextType {
+  /** Idioma atual selecionado */
   language: Language;
+  /** Função para mudar o idioma atual */
   setLanguage: (lang: Language) => void;
+  /** Função para traduzir uma chave para o idioma atual */
   t: (key: string) => string;
+  /** Indica se traduções estão carregando */
   isLoading: boolean;
 }
 
