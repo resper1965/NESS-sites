@@ -129,9 +129,17 @@ export default function SiteNavbar() {
                       >
                         {siteConfig.code === 'ness' ? (
                           <>n<span className="text-[#00ade0]">.</span>{service.name.substring(2)}</>
-                        ) : (
+                        ) : siteConfig.code === 'trustness' ? (
                           <><span className="text-[#005fa3]">.</span>{service.name.substring(1)}</>
-                        )}
+                        ) : siteConfig.code === 'forense' ? (
+                          service.name === 'forense.digital' ? (
+                            <>forense<span className="text-[#00ade0]">.</span>digital</>
+                          ) : service.name === 'suporte.legal' ? (
+                            <>suporte<span className="text-[#00ade0]">.</span>legal</>
+                          ) : (
+                            <>investigações<span className="text-[#00ade0]">.</span>corporativas</>
+                          )
+                        ) : null}
                       </Link>
                     ))}
                   </div>
@@ -183,9 +191,31 @@ export default function SiteNavbar() {
               <Link href={`${sitePrefix}/about`} className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.about')}
               </Link>
-              <Link href={`${sitePrefix}/services`} className="text-white hover:text-accent transition duration-200 font-medium lowercase">
+              {/* Dropdown para Serviços no Mobile */}
+              <div className="text-white font-medium lowercase mb-2">
                 {t('nav.services')}
-              </Link>
+              </div>
+              {services.map(service => (
+                <Link 
+                  key={service.id}
+                  href={service.path}
+                  className="text-gray-300 hover:text-accent transition duration-200 pl-3 pb-1 text-sm lowercase block"
+                >
+                  {siteConfig.code === 'ness' ? (
+                    <>n<span className="text-[#00ade0]">.</span>{service.name.substring(2)}</>
+                  ) : siteConfig.code === 'trustness' ? (
+                    <><span className="text-[#005fa3]">.</span>{service.name.substring(1)}</>
+                  ) : siteConfig.code === 'forense' ? (
+                    service.name === 'forense.digital' ? (
+                      <>forense<span className="text-[#00ade0]">.</span>digital</>
+                    ) : service.name === 'suporte.legal' ? (
+                      <>suporte<span className="text-[#00ade0]">.</span>legal</>
+                    ) : (
+                      <>investigações<span className="text-[#00ade0]">.</span>corporativas</>
+                    )
+                  ) : null}
+                </Link>
+              ))}
               <Link href={`${sitePrefix}/jobs`} className="text-white hover:text-accent transition duration-200 font-medium lowercase">
                 {t('nav.jobs')}
               </Link>
