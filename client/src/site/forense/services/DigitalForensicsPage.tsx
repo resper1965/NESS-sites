@@ -179,7 +179,7 @@ export default function ForenseDigitalForensicsPage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10">
                   <h2 className={`${styles.fontSizes.section.title} font-['Montserrat'] font-normal ${styles.colors.text.dark} ${styles.spacing.mb.large} lowercase`}>
-                    o que é <span className={styles.colors.primary}>forense digital</span>?
+                    {t('forense.digital.title')} <span className={styles.colors.primary}>{t('forense.service.digital')}</span>?
                   </h2>
                   <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} ${styles.spacing.mb.medium} leading-relaxed`}>
                     a forense digital é uma disciplina que combina elementos da ciência da computação e da investigação criminal para coletar, analisar e preservar evidências digitais seguindo protocolos específicos que garantem sua validade legal.
@@ -392,13 +392,13 @@ export default function ForenseDigitalForensicsPage() {
         <section className="py-20 bg-[#0d1117] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
-              {content.cta.title}
+              {t('forense.cta.title')}
             </h2>
             <a
               href={`/site/forense/contact`}
               className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
-              {content.cta.button}
+              {t('forense.cta.button')}
             </a>
           </div>
         </section>

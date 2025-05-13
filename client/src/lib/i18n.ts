@@ -118,6 +118,15 @@ const translations: TranslationsMap = {
     'news.title': 'Últimas Noticias',
     'contact.title': 'Contáctenos',
     'footer.rights': 'Todos los derechos reservados',
+    
+    // Textos de páginas de servicio
+    'forense.service.digital': 'forense digital',
+    'forense.service.legal': 'soporte legal',
+    'forense.service.corporate': 'investigaciones corporativas',
+    'forense.cta.title': '¿necesita un servicio especializado?',
+    'forense.cta.button': 'contáctenos',
+    'forense.digital.title': '¿qué es forense digital?',
+    'forense.digital.why': 'por qué el forense digital es esencial',
   }
 };
 
