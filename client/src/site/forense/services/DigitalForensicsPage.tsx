@@ -185,8 +185,7 @@ export default function ForenseDigitalForensicsPage() {
                     {t('forense.digital.description1')}
                   </p>
                   <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} ${styles.spacing.mb.medium} leading-relaxed`}>
-                    {t('forense.digital.description2').replace('at forense.io', 'at forense').replace('en forense.io', 'en forense')}
-                    <DotSpan />io
+                    {t('forense.digital.description2').replace('forense dot io', 'forense')}<DotSpan />io
                   </p>
                   <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} leading-relaxed`}>
                     {t('forense.digital.description3')}
@@ -194,7 +193,7 @@ export default function ForenseDigitalForensicsPage() {
                 </div>
                 <div className="md:w-1/2 bg-[#00ade0]/5 rounded-lg p-8 border border-[#00ade0]/20">
                   <h3 className={`${styles.fontSizes.section.subtitle} font-['Montserrat'] font-normal ${styles.colors.text.dark} ${styles.spacing.mb.medium} lowercase`}>
-                    por que a <span className={styles.colors.primary}>forense digital</span> é essencial
+                    {t('forense.digital.why')}
                   </h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">
