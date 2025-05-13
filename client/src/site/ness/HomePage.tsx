@@ -70,7 +70,7 @@ export default function NessHomePage() {
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               {pageContent?.content?.featuredSectionDescription || 
-                'infraestrutura resiliente, práticas de segurança contínuas e desenvolvimento seguro para soluções tecnológicas confiáveis.'}
+                'desenvolvemos tecnologias invisíveis que estruturam o essencial: segurança, desempenho e governança para operações críticas.'}
             </p>
           </div>
           
