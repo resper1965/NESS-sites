@@ -185,9 +185,12 @@ export default function ForenseDigitalForensicsPage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-8 text-center lowercase">
+                serviços <span className="text-[#00ade0]">especializados</span>
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {content.sections.map((section, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
                     <h3 className="text-xl font-['Montserrat'] text-gray-800 mb-4 lowercase">
                       <span className="text-[#00ade0]">●</span> {section.title}
                     </h3>
@@ -196,6 +199,130 @@ export default function ForenseDigitalForensicsPage() {
                     </p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Metodologias Forenses */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex flex-col md:flex-row items-center mb-12">
+                <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                  <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+                    metodologias <span className="text-[#00ade0]">forenses</span>
+                  </h2>
+                  <p className="text-gray-700 text-sm mb-4">
+                    utilizamos protocolos rigorosos que garantem a admissibilidade jurídica das evidências coletadas, respeitando normas nacionais e internacionais. nossa abordagem inclui:
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <span className="text-[#00ade0] text-xl mr-2 leading-6">•</span>
+                      <span className="text-gray-700 text-sm">documentação precisa de cada etapa da coleta e cadeia de custódia</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#00ade0] text-xl mr-2 leading-6">•</span>
+                      <span className="text-gray-700 text-sm">utilização de ferramentas forenses homologadas internacionalmente</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#00ade0] text-xl mr-2 leading-6">•</span>
+                      <span className="text-gray-700 text-sm">técnicas não destrutivas que preservam a integridade dos dados</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-[#00ade0] text-xl mr-2 leading-6">•</span>
+                      <span className="text-gray-700 text-sm">análise de dados em ambiente isolado e controlado</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="md:w-1/2 bg-[#0d1117] rounded-lg p-8 text-white">
+                  <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
+                    frameworks <span className="text-[#00ade0]">adotados</span>
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="border-b border-gray-700 pb-3">
+                      <h4 className="font-medium text-[#00ade0] mb-1 lowercase">ACPO Guidelines</h4>
+                      <p className="text-sm text-gray-300">princípios para manipulação de evidências digitais reconhecidos internacionalmente</p>
+                    </div>
+                    <div className="border-b border-gray-700 pb-3">
+                      <h4 className="font-medium text-[#00ade0] mb-1 lowercase">ISO/IEC 27037</h4>
+                      <p className="text-sm text-gray-300">diretrizes para identificação, coleta e preservação de evidências digitais</p>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-[#00ade0] mb-1 lowercase">NIST Guidelines</h4>
+                      <p className="text-sm text-gray-300">padrões técnicos para forensics digital e investigações cibernéticas</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Locais de Coleta */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-8 text-center lowercase">
+                ambientes de <span className="text-[#00ade0]">coleta digital</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col">
+                  <div className="bg-[#0d1117] rounded-md h-32 mb-4 flex items-center justify-center">
+                    <span className="text-4xl text-[#00ade0] uppercase">01</span>
+                  </div>
+                  <h3 className="text-lg font-['Montserrat'] font-medium text-gray-800 mb-2 lowercase">
+                    ambientes corporativos
+                  </h3>
+                  <p className="text-gray-700 text-sm flex-grow mb-4">
+                    análise de computadores, servidores, e dispositivos móveis corporativos, mantendo a discrição e minimizando interrupções nas operações empresariais.
+                  </p>
+                  <div className="flex items-center text-xs text-[#00ade0]">
+                    <span className="mr-1">servidores</span>
+                    <span className="mx-1">•</span>
+                    <span className="mx-1">estações</span>
+                    <span className="mx-1">•</span>
+                    <span className="ml-1">rede</span>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col">
+                  <div className="bg-[#0d1117] rounded-md h-32 mb-4 flex items-center justify-center">
+                    <span className="text-4xl text-[#00ade0] uppercase">02</span>
+                  </div>
+                  <h3 className="text-lg font-['Montserrat'] font-medium text-gray-800 mb-2 lowercase">
+                    dispositivos pessoais
+                  </h3>
+                  <p className="text-gray-700 text-sm flex-grow mb-4">
+                    recuperação e análise de dados de smartphones, tablets e computadores pessoais, com atenção especial à privacidade e aos aspectos legais da coleta.
+                  </p>
+                  <div className="flex items-center text-xs text-[#00ade0]">
+                    <span className="mr-1">smartphones</span>
+                    <span className="mx-1">•</span>
+                    <span className="mx-1">laptops</span>
+                    <span className="mx-1">•</span>
+                    <span className="ml-1">tablets</span>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col">
+                  <div className="bg-[#0d1117] rounded-md h-32 mb-4 flex items-center justify-center">
+                    <span className="text-4xl text-[#00ade0] uppercase">03</span>
+                  </div>
+                  <h3 className="text-lg font-['Montserrat'] font-medium text-gray-800 mb-2 lowercase">
+                    armazenamento em nuvem
+                  </h3>
+                  <p className="text-gray-700 text-sm flex-grow mb-4">
+                    extração forense de dados armazenados em serviços de nuvem, incluindo e-mails, documentos e backups, seguindo protocolos legais para acesso autorizado.
+                  </p>
+                  <div className="flex items-center text-xs text-[#00ade0]">
+                    <span className="mr-1">AWS</span>
+                    <span className="mx-1">•</span>
+                    <span className="mx-1">Google Cloud</span>
+                    <span className="mx-1">•</span>
+                    <span className="ml-1">Azure</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
