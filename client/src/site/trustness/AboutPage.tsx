@@ -313,36 +313,35 @@ export default function TrustnessAboutPage() {
         </section>
         
         {/* Timeline Section */}
-        <section className="py-16 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal lowercase text-center mb-16">
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">
               {defaultContent.timeline}
             </h2>
             
-            <div className="max-w-4xl mx-auto relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
-              
-              {/* Timeline events */}
-              <div className="space-y-12 relative">
-                {Object.entries(defaultContent.timelineEvents).map(([year, event], index) => (
-                  <div 
-                    key={year} 
-                    className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center`}
-                  >
-                    <div className="md:w-1/2 text-center md:text-right px-4 pb-4 md:pb-0">
-                      <div className="inline-block bg-[#005fa3] text-white px-4 py-1 font-medium rounded-full text-sm mb-2">
-                        {year}
+            <div className="max-w-5xl mx-auto">
+              <div className="relative">
+                {/* Linha do tempo vertical */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[#00ade0] opacity-50"></div>
+                
+                {/* Eventos na linha do tempo */}
+                {Object.entries(defaultContent.timelineEvents).map(([year, description], index) => (
+                  <div key={year} className={`flex mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                    <div className="w-1/2 px-6">
+                      <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                        <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
+                          {year.includes('.') ? year.split('.')[0] : year}
+                          {year.includes('.') && <span className="text-[#00ade0] text-sm">.{year.split('.')[1]}</span>}
+                        </span>
+                        <p className="mt-2 text-gray-700 lowercase">
+                          {description}
+                        </p>
                       </div>
                     </div>
                     
-                    <div className="relative inline-flex justify-center items-center z-10">
-                      <div className="w-4 h-4 rounded-full bg-[#005fa3] border-2 border-white"></div>
-                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00ade0] rounded-full mt-1"></div>
                     
-                    <div className="md:w-1/2 text-center md:text-left px-4 pt-4 md:pt-0">
-                      <p className="text-gray-700 lowercase">{event}</p>
-                    </div>
+                    <div className="w-1/2 px-6"></div>
                   </div>
                 ))}
               </div>
@@ -351,14 +350,20 @@ export default function TrustnessAboutPage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-[#f5f5f5]">
+        <section className="py-20 bg-[#1a1a22] text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl font-['Montserrat'] font-normal lowercase mb-8">
-              {defaultContent.cta.title}
+            <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
+              {language === 'pt' 
+                ? <>quer saber mais sobre a <span className="font-normal">trustness<span className="text-[#005fa3]">.</span></span>?</> 
+                : language === 'en'
+                  ? <>want to know more about <span className="font-normal">trustness<span className="text-[#005fa3]">.</span></span>?</>
+                  : <>¿quieres saber más sobre <span className="font-normal">trustness<span className="text-[#005fa3]">.</span></span>?</>
+              }
             </h2>
+            
             <a 
               href="/site/trustness/contact" 
-              className="inline-block bg-[#005fa3] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
+              className="inline-block bg-[#005fa3] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {defaultContent.cta.button}
             </a>
