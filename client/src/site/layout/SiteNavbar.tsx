@@ -68,9 +68,9 @@ export default function SiteNavbar() {
   
   // Serviços da forense.io
   const forenseServices = [
-    { id: 'digital-forensics', name: 'forense.digital', path: `/site/forense/services/digital-forensics` },
-    { id: 'legal-support', name: 'suporte.legal', path: `/site/forense/services/legal-support` },
-    { id: 'corporate-investigations', name: 'investigações.corporativas', path: `/site/forense/services/corporate-investigations` }
+    { id: 'digital-forensics', name: 'forense digital', path: `/site/forense/services/digital-forensics` },
+    { id: 'legal-support', name: 'suporte legal', path: `/site/forense/services/legal-support` },
+    { id: 'corporate-investigations', name: 'investigações corporativas', path: `/site/forense/services/corporate-investigations` }
   ];
   
   // Seleciona serviços com base no site atual
@@ -132,12 +132,24 @@ export default function SiteNavbar() {
                         ) : siteConfig.code === 'trustness' ? (
                           <><span className="text-[#005fa3]">.</span>{service.name.substring(1)}</>
                         ) : siteConfig.code === 'forense' ? (
-                          service.name === 'forense.digital' ? (
-                            <>forense<span className="text-[#00ade0]">.</span>digital</>
-                          ) : service.name === 'suporte.legal' ? (
-                            <>suporte<span className="text-[#00ade0]">.</span>legal</>
+                          service.id === 'digital-forensics' ? (
+                            <>
+                              {language === 'pt' && "forense digital"}
+                              {language === 'en' && "digital forensics"}
+                              {language === 'es' && "forense digital"}
+                            </>
+                          ) : service.id === 'legal-support' ? (
+                            <>
+                              {language === 'pt' && "suporte legal"}
+                              {language === 'en' && "legal support"}
+                              {language === 'es' && "soporte legal"}
+                            </>
                           ) : (
-                            <>investigações<span className="text-[#00ade0]">.</span>corporativas</>
+                            <>
+                              {language === 'pt' && "investigações corporativas"}
+                              {language === 'en' && "corporate investigations"}
+                              {language === 'es' && "investigaciones corporativas"}
+                            </>
                           )
                         ) : null}
                       </Link>
@@ -206,12 +218,24 @@ export default function SiteNavbar() {
                   ) : siteConfig.code === 'trustness' ? (
                     <><span className="text-[#005fa3]">.</span>{service.name.substring(1)}</>
                   ) : siteConfig.code === 'forense' ? (
-                    service.name === 'forense.digital' ? (
-                      <>forense<span className="text-[#00ade0]">.</span>digital</>
-                    ) : service.name === 'suporte.legal' ? (
-                      <>suporte<span className="text-[#00ade0]">.</span>legal</>
+                    service.id === 'digital-forensics' ? (
+                      <>
+                        {language === 'pt' && "forense digital"}
+                        {language === 'en' && "digital forensics"}
+                        {language === 'es' && "forense digital"}
+                      </>
+                    ) : service.id === 'legal-support' ? (
+                      <>
+                        {language === 'pt' && "suporte legal"}
+                        {language === 'en' && "legal support"}
+                        {language === 'es' && "soporte legal"}
+                      </>
                     ) : (
-                      <>investigações<span className="text-[#00ade0]">.</span>corporativas</>
+                      <>
+                        {language === 'pt' && "investigações corporativas"}
+                        {language === 'en' && "corporate investigations"}
+                        {language === 'es' && "investigaciones corporativas"}
+                      </>
                     )
                   ) : null}
                 </Link>
