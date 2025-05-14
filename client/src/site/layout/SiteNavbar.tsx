@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useSite } from '../SiteContext';
 import { useI18n, Language } from '@/lib/i18n';
 import { LanguageSwitcher } from '../components/LanguageSwitcher';
@@ -155,7 +155,8 @@ export default function SiteNavbar() {
             </Link>
             
             {/* Language Switcher */}
-            <div className="ml-4">
+            <div className="ml-4 flex items-center">
+              <Globe size={16} className="text-white mr-2" />
               <LanguageSwitcher />
             </div>
             
@@ -224,7 +225,8 @@ export default function SiteNavbar() {
               </Link>
               
               {/* Language Switcher Mobile */}
-              <div className="mb-4 mt-2 flex justify-center">
+              <div className="mb-4 mt-2 flex justify-center items-center">
+                <Globe size={16} className="text-white mr-2" />
                 <LanguageSwitcher />
               </div>
               <Link 
