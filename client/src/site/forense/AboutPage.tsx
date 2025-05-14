@@ -215,7 +215,7 @@ export default function ForenseAboutPage() {
         </section>
         
         {/* Sobre a forense.io Section */}
-        <section className="py-20 bg-white">
+        <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
@@ -262,7 +262,7 @@ export default function ForenseAboutPage() {
         </section>
         
         {/* Values Section */}
-        <section className="py-20 bg-gray-900 text-white">
+        <section className="conteudo bg-gray-900 text-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-white">{defaultContent.values.title}</h2>
             
@@ -291,7 +291,7 @@ export default function ForenseAboutPage() {
         </section>
         
         {/* Timeline Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">
               {defaultContent.timeline}
@@ -328,7 +328,7 @@ export default function ForenseAboutPage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-[#0d1117] text-white">
+        <section className="contato bg-[#0d1117] text-white flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
