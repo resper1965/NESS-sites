@@ -41,16 +41,9 @@ export default function TrustnessHomePage() {
     >
       {/* Hero Section */}
       <section 
-        className="pt-32 pb-20 text-white bg-[#0b1016] relative"
-        style={{
-          backgroundImage: 'url(/assets/images/trustness-bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+        className="intro text-white bg-[#0b1016] relative flex items-center"
+        style={{ minHeight: "60vh" }}
       >
-        {/* Overlay para garantir contraste com o texto */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -88,7 +81,7 @@ export default function TrustnessHomePage() {
       </section>
       
       {/* Como Atuamos Section - Visual moderno */}
-      <section className="py-24 bg-gradient-to-b from-white to-[#f2f8fd] text-gray-800">
+      <section className="conteudo bg-gradient-to-b from-white to-[#f2f8fd] text-gray-800" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800">
@@ -331,7 +324,7 @@ export default function TrustnessHomePage() {
       
       {/* Clients Section, if available */}
       {pageContent?.content?.clients && (
-        <section className="py-20 bg-gray-50">
+        <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
