@@ -88,7 +88,7 @@ export default function SiteNavbar() {
               <h1 className="font-['Montserrat'] font-normal text-3xl">
                 {siteConfig.code === 'forense' 
                   ? <>forense<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>io</>
-                  : <>{siteConfig.name.replace('.', '')}<span style={{color: siteConfig.primaryColor, marginLeft: "1px"}}>.</span></>
+                  : <>{siteConfig.name.replace('.', '')}<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span></>
                 }
               </h1>
             </Link>
@@ -156,7 +156,6 @@ export default function SiteNavbar() {
             
             {/* Language Switcher */}
             <div className="ml-4 flex items-center">
-              <Globe size={16} className="text-white mr-2" />
               <LanguageSwitcher />
             </div>
             
@@ -226,7 +225,6 @@ export default function SiteNavbar() {
               
               {/* Language Switcher Mobile */}
               <div className="mb-4 mt-2 flex justify-center items-center">
-                <Globe size={16} className="text-white mr-2" />
                 <LanguageSwitcher />
               </div>
               <Link 

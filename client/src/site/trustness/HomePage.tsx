@@ -251,7 +251,9 @@ export default function TrustnessHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-white mb-8 lowercase">
-              {pageContent?.content?.servicesSectionTitle || 'o que fazemos'}
+              {language === 'pt' && 'o que fazemos'}
+              {language === 'en' && 'what we do'}
+              {language === 'es' && 'lo que hacemos'}
             </h2>
           </div>
           
