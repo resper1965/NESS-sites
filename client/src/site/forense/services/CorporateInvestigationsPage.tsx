@@ -11,13 +11,19 @@ export default function ForenseCorporateInvestigationsPage() {
   const { language, t } = useI18n();
   
   // Buscar conteúdo da página específico para o serviço
-  const { data: pageContent, isLoading } = useQuery({
+  const { data: pageContent, isLoading, isError } = useQuery({
     queryKey: ['/api/content/services/corporate-investigations', language, siteConfig.code],
     queryFn: async () => {
-      const res = await fetch(`/api/content/services/corporate-investigations?lang=${language}&site=${siteConfig.code}`);
-      if (!res.ok) throw new Error('Failed to fetch content');
-      return res.json();
-    }
+      try {
+        const res = await fetch(`/api/content/services/corporate-investigations?lang=${language}&site=${siteConfig.code}`);
+        if (!res.ok) return null;
+        return res.json();
+      } catch (error) {
+        console.error('Error fetching content:', error);
+        return null;
+      }
+    },
+    retry: false
   });
   
   // Conteúdo padrão caso não haja conteúdo específico no banco de dados
@@ -164,43 +170,59 @@ export default function ForenseCorporateInvestigationsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-                      <span className="text-[#00ade0]">discreta</span> e precisa
+                      {language === 'pt' && (<><span className="text-[#00ade0]">discreta</span> e precisa</>)}
+                      {language === 'en' && (<><span className="text-[#00ade0]">discreet</span> and precise</>)}
+                      {language === 'es' && (<><span className="text-[#00ade0]">discreta</span> y precisa</>)}
                     </h3>
                     <p className="text-gray-600 text-sm mb-6">
-                      nossas investigações são conduzidas com máxima discrição e precisão técnica, minimizando impactos nas operações diárias e preservando a confidencialidade em todas as etapas do processo.
+                      {language === 'pt' && 'nossas investigações são conduzidas com máxima discrição e precisão técnica, minimizando impactos nas operações diárias e preservando a confidencialidade em todas as etapas do processo.'}
+                      {language === 'en' && 'our investigations are conducted with maximum discretion and technical precision, minimizing impacts on daily operations and preserving confidentiality in all stages of the process.'}
+                      {language === 'es' && 'nuestras investigaciones se realizan con máxima discreción y precisión técnica, minimizando el impacto en las operaciones diarias y preservando la confidencialidad en todas las etapas del proceso.'}
                     </p>
                     <p className="text-gray-600 text-sm">
-                      utilizamos metodologias forenses que asseguram a integridade das evidências digitais, permitindo sua utilização em processos internos ou, quando necessário, em procedimentos legais.
+                      {language === 'pt' && 'utilizamos metodologias forenses que asseguram a integridade das evidências digitais, permitindo sua utilização em processos internos ou, quando necessário, em procedimentos legais.'}
+                      {language === 'en' && 'we use forensic methodologies that ensure the integrity of digital evidence, allowing its use in internal processes or, when necessary, in legal proceedings.'}
+                      {language === 'es' && 'utilizamos metodologías forenses que aseguran la integridad de las evidencias digitales, permitiendo su uso en procesos internos o, cuando sea necesario, en procedimientos legales.'}
                     </p>
                   </div>
                   
                   <div className="border-l border-gray-200 pl-8">
                     <h3 className="text-xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-                      benefícios <span className="text-[#00ade0]">estratégicos</span>
+                      {language === 'pt' && <>benefícios <span className="text-[#00ade0]">estratégicos</span></>}
+                      {language === 'en' && <>strategic <span className="text-[#00ade0]">benefits</span></>}
+                      {language === 'es' && <>beneficios <span className="text-[#00ade0]">estratégicos</span></>}
                     </h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <div className="h-1.5 w-1.5 rounded-full bg-[#00ade0] mt-1.5 mr-2 flex-shrink-0"></div>
                         <span className="text-gray-600 text-sm">
-                          identificação precisa de incidentes e violações de políticas internas
+                          {language === 'pt' && 'identificação precisa de incidentes e violações de políticas internas'}
+                          {language === 'en' && 'precise identification of incidents and violations of internal policies'}
+                          {language === 'es' && 'identificación precisa de incidentes y violaciones de políticas internas'}
                         </span>
                       </li>
                       <li className="flex items-start">
                         <div className="h-1.5 w-1.5 rounded-full bg-[#00ade0] mt-1.5 mr-2 flex-shrink-0"></div>
                         <span className="text-gray-600 text-sm">
-                          preservação adequada de evidências para processos disciplinares ou judiciais
+                          {language === 'pt' && 'preservação adequada de evidências para processos disciplinares ou judiciais'}
+                          {language === 'en' && 'proper preservation of evidence for disciplinary or judicial proceedings'}
+                          {language === 'es' && 'preservación adecuada de evidencias para procesos disciplinarios o judiciales'}
                         </span>
                       </li>
                       <li className="flex items-start">
                         <div className="h-1.5 w-1.5 rounded-full bg-[#00ade0] mt-1.5 mr-2 flex-shrink-0"></div>
                         <span className="text-gray-600 text-sm">
-                          recuperação de dados deletados ou ocultos relevantes para investigações internas
+                          {language === 'pt' && 'recuperação de dados deletados ou ocultos relevantes para investigações internas'}
+                          {language === 'en' && 'recovery of deleted or hidden data relevant to internal investigations'}
+                          {language === 'es' && 'recuperación de datos eliminados u ocultos relevantes para investigaciones internas'}
                         </span>
                       </li>
                       <li className="flex items-start">
                         <div className="h-1.5 w-1.5 rounded-full bg-[#00ade0] mt-1.5 mr-2 flex-shrink-0"></div>
                         <span className="text-gray-600 text-sm">
-                          relatórios técnicos detalhados com linguagem acessível para tomada de decisão
+                          {language === 'pt' && 'relatórios técnicos detalhados com linguagem acessível para tomada de decisão'}
+                          {language === 'en' && 'detailed technical reports with accessible language for decision making'}
+                          {language === 'es' && 'informes técnicos detallados con lenguaje accesible para la toma de decisiones'}
                         </span>
                       </li>
                     </ul>
