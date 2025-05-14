@@ -434,7 +434,9 @@ export default function ForenseLegalSupportPage() {
                       <div className="ml-4 h-[1px] flex-grow bg-[#00ade0]/30"></div>
                     </div>
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
-                      execução <span className="text-[#00ade0]">técnica</span>
+                      {language === 'pt' && <>execução <span className="text-[#00ade0]">técnica</span></>}
+                      {language === 'en' && <>technical <span className="text-[#00ade0]">execution</span></>}
+                      {language === 'es' && <>ejecución <span className="text-[#00ade0]">técnica</span></>}
                     </h3>
                   </div>
                   <div className="md:w-2/3">
@@ -453,7 +455,9 @@ export default function ForenseLegalSupportPage() {
                       <div className="ml-4 h-[1px] flex-grow bg-[#00ade0]/30"></div>
                     </div>
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
-                      comunicação <span className="text-[#00ade0]">eficaz</span>
+                      {language === 'pt' && <>comunicação <span className="text-[#00ade0]">eficaz</span></>}
+                      {language === 'en' && <>effective <span className="text-[#00ade0]">communication</span></>}
+                      {language === 'es' && <>comunicación <span className="text-[#00ade0]">eficaz</span></>}
                     </h3>
                   </div>
                   <div className="md:w-2/3">
