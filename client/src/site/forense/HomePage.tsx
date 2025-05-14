@@ -83,7 +83,7 @@ export default function ForenseHomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Forense Digital */}
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="flex mb-4">
                 <div className="w-12 h-12 bg-[#00ade0]/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#00ade0" className="w-6 h-6">
@@ -99,10 +99,10 @@ export default function ForenseHomePage() {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm mt-4 mb-6">
+              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow">
                 recuperação e análise de dados digitais, produção e validação de evidências, reexame forense e contraprova de relatórios
               </p>
-              <div className="mt-auto">
+              <div className="mt-auto text-center">
                 <a href="/site/forense/services/digital-forensics" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
@@ -112,7 +112,7 @@ export default function ForenseHomePage() {
             </div>
             
             {/* Suporte Legal */}
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="flex mb-4">
                 <div className="w-12 h-12 bg-[#00ade0]/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#00ade0" className="w-6 h-6">
@@ -128,10 +128,10 @@ export default function ForenseHomePage() {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm mt-4 mb-6">
+              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow">
                 consultoria estratégica, assistência técnica processual e esclarecimentos técnicos em audiências para profissionais da área jurídica
               </p>
-              <div className="mt-auto">
+              <div className="mt-auto text-center">
                 <a href="/site/forense/services/legal-support" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
@@ -141,7 +141,7 @@ export default function ForenseHomePage() {
             </div>
             
             {/* Investigações Corporativas */}
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="flex mb-4">
                 <div className="w-12 h-12 bg-[#00ade0]/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#00ade0" className="w-6 h-6">
@@ -157,10 +157,10 @@ export default function ForenseHomePage() {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm mt-4 mb-6">
+              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow">
                 investigações de fraude, monitoramento de ativos digitais, análise de riscos e ameaças, e compliance digital para empresas
               </p>
-              <div className="mt-auto">
+              <div className="mt-auto text-center">
                 <a href="/site/forense/services/corporate-investigations" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
@@ -177,16 +177,22 @@ export default function ForenseHomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-['Montserrat'] font-normal mb-6 lowercase">
-              precisando de <span className="text-[#00ade0]">consultoria especializada</span>?
+              {language === 'pt' && <>precisando de <span className="text-[#00ade0]">consultoria especializada</span>?</>}
+              {language === 'en' && <>need <span className="text-[#00ade0]">specialized consulting</span>?</>}
+              {language === 'es' && <>¿necesita <span className="text-[#00ade0]">consultoría especializada</span>?</>}
             </h2>
             <p className="text-gray-300 mb-10">
-              Entre em contato para uma consulta inicial. Nossa equipe de especialistas está pronta para analisar seu caso e oferecer soluções personalizadas.
+              {language === 'pt' && "Entre em contato para uma consulta inicial. Nossa equipe de especialistas está pronta para analisar seu caso e oferecer soluções personalizadas."}
+              {language === 'en' && "Contact us for an initial consultation. Our team of experts is ready to analyze your case and offer tailored solutions."}
+              {language === 'es' && "Póngase en contacto para una consulta inicial. Nuestro equipo de expertos está listo para analizar su caso y ofrecer soluciones personalizadas."}
             </p>
             <a
               href="/site/forense/contact"
               className="bg-[#00ade0] hover:bg-opacity-90 text-white px-10 py-4 rounded lowercase transition-all duration-300 inline-block"
             >
-              agende uma consulta
+              {language === 'pt' && "agende uma consulta"}
+              {language === 'en' && "schedule a consultation"}
+              {language === 'es' && "agendar una consulta"}
             </a>
           </div>
         </div>

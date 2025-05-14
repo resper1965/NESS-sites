@@ -377,9 +377,21 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
-                {language === 'pt' && <>nossa <span className="text-[#00ade0]">metodologia</span></>}
-                {language === 'en' && <>our <span className="text-[#00ade0]">methodology</span></>}
-                {language === 'es' && <>nuestra <span className="text-[#00ade0]">metodología</span></>}
+                {language === 'pt' && (
+                  <>
+                    nossa <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">metodologia</span>
+                  </>
+                )}
+                {language === 'en' && (
+                  <>
+                    our <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">methodology</span>
+                  </>
+                )}
+                {language === 'es' && (
+                  <>
+                    nuestra <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">metodología</span>
+                  </>
+                )}
               </h2>
               <div className="space-y-10">
                 <div className="flex flex-col md:flex-row items-start gap-8">
@@ -459,9 +471,21 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
-                {language === 'pt' && <>benefícios do nosso <span className="text-[#00ade0]">suporte à área legal</span></>}
-                {language === 'en' && <>benefits of our <span className="text-[#00ade0]">technical support for the legal field</span></>}
-                {language === 'es' && <>beneficios de nuestro <span className="text-[#00ade0]">soporte técnico para el área legal</span></>}
+                {language === 'pt' && (
+                  <>
+                    benefícios do nosso <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">suporte à área legal</span>
+                  </>
+                )}
+                {language === 'en' && (
+                  <>
+                    benefits of our <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">technical support for the legal field</span>
+                  </>
+                )}
+                {language === 'es' && (
+                  <>
+                    beneficios de nuestro <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">soporte técnico para el área legal</span>
+                  </>
+                )}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="flex">
