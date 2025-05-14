@@ -40,7 +40,7 @@ export default function ForenseHomePage() {
       canonicalUrl={`https://${siteConfig.domain}`}
     >
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-[#0d1117] text-white relative overflow-hidden">
+      <section className="h-[75vh] min-h-[600px] max-h-[900px] bg-[#0d1117] text-white relative overflow-hidden flex items-center">
         {/* Nenhuma imagem de fundo conforme solicitado */}
         
         <div className="container mx-auto px-4 relative z-10">
@@ -103,11 +103,10 @@ export default function ForenseHomePage() {
                 recuperação e análise de dados digitais, produção e validação de evidências, reexame forense e contraprova de relatórios
               </p>
               <div className="mt-auto">
-                <a href="/site/forense/services/digital-forensics" className="text-[#00ade0] hover:text-[#0096c3] text-sm font-medium flex items-center">
-                  saiba mais
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
-                    <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                  </svg>
+                <a href="/site/forense/services/digital-forensics" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 inline-flex justify-center">
+                  {language === 'pt' && "saiba mais"}
+                  {language === 'en' && "learn more"}
+                  {language === 'es' && "saber más"}
                 </a>
               </div>
             </div>
@@ -133,11 +132,10 @@ export default function ForenseHomePage() {
                 consultoria estratégica, assistência técnica processual e esclarecimentos técnicos em audiências para profissionais da área jurídica
               </p>
               <div className="mt-auto">
-                <a href="/site/forense/services/legal-support" className="text-[#00ade0] hover:text-[#0096c3] text-sm font-medium flex items-center">
-                  saiba mais
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
-                    <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                  </svg>
+                <a href="/site/forense/services/legal-support" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 inline-flex justify-center">
+                  {language === 'pt' && "saiba mais"}
+                  {language === 'en' && "learn more"}
+                  {language === 'es' && "saber más"}
                 </a>
               </div>
             </div>
@@ -163,11 +161,10 @@ export default function ForenseHomePage() {
                 investigações de fraude, monitoramento de ativos digitais, análise de riscos e ameaças, e compliance digital para empresas
               </p>
               <div className="mt-auto">
-                <a href="/site/forense/services/corporate-investigations" className="text-[#00ade0] hover:text-[#0096c3] text-sm font-medium flex items-center">
-                  saiba mais
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 ml-1">
-                    <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                  </svg>
+                <a href="/site/forense/services/corporate-investigations" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 inline-flex justify-center">
+                  {language === 'pt' && "saiba mais"}
+                  {language === 'en' && "learn more"}
+                  {language === 'es' && "saber más"}
                 </a>
               </div>
             </div>

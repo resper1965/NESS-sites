@@ -201,7 +201,7 @@ export default function ForenseAboutPage() {
       
       <main>
         {/* Hero Section com fundo escuro */}
-        <section className="pt-32 pb-20 text-white bg-[#0d1117] relative overflow-hidden">
+        <section className="h-[75vh] min-h-[600px] max-h-[900px] text-white bg-[#0d1117] relative overflow-hidden flex items-center">
           {/* Imagem de fundo otimizada */}
           <div className="absolute inset-0 z-0">
             <img 
@@ -228,10 +228,14 @@ export default function ForenseAboutPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-                sobre a forense<span className="text-[#00ade0]">.</span>io
+                {language === 'pt' && <>sobre a forense<span className="text-[#00ade0]">.</span>io</>}
+                {language === 'en' && <>about forense<span className="text-[#00ade0]">.</span>io</>}
+                {language === 'es' && <>sobre forense<span className="text-[#00ade0]">.</span>io</>}
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto mb-10">
-                convertemos complexidade técnica em resultados judiciais concretos
+                {language === 'pt' && "convertemos complexidade técnica em resultados judiciais concretos"}
+                {language === 'en' && "turning technical complexity into concrete judicial results"}
+                {language === 'es' && "convertimos complejidad técnica en resultados judiciales concretos"}
               </p>
             </div>
             
