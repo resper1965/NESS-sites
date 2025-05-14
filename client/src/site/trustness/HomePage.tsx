@@ -58,21 +58,29 @@ export default function TrustnessHomePage() {
               trustness<span className="text-[#00ade0]">.</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              {pageContent?.content?.heroSubtitle || 
-                'privacidade, segurança da informação e compliance com foco em programas regulatórios e frameworks internacionais'}
+              {language === 'pt' && (pageContent?.content?.heroSubtitle || 
+                'privacidade, segurança da informação e compliance com foco em programas regulatórios e frameworks internacionais')}
+              {language === 'en' && (pageContent?.content?.heroSubtitleEn || 
+                'privacy, information security and compliance focused on regulatory programs and international frameworks')}
+              {language === 'es' && (pageContent?.content?.heroSubtitleEs || 
+                'privacidad, seguridad de la información y compliance con foco en programas regulatorios y frameworks internacionales')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="#what-we-do"
-                className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
+                className="bg-[#00ade0] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
               >
-                nossos serviços
+                {language === 'pt' && 'nossos serviços'}
+                {language === 'en' && 'our services'}
+                {language === 'es' && 'nuestros servicios'}
               </a>
               <a
-                href="/contact"
-                className="border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:bg-opacity-10 px-6 py-3 rounded lowercase"
+                href="/site/trustness/contact"
+                className="border border-[#00ade0] text-white hover:bg-white hover:bg-opacity-10 px-6 py-3 rounded lowercase"
               >
-                fale conosco
+                {language === 'pt' && 'fale conosco'}
+                {language === 'en' && 'contact us'}
+                {language === 'es' && 'contáctenos'}
               </a>
             </div>
           </div>

@@ -15,8 +15,9 @@ export function getOptimizedImagePath(originalPath: string): string {
     return originalPath;
   }
   
-  // Se for do diretório attached_assets, retorna o caminho original
-  if (originalPath.includes('/attached_assets/')) {
+  // Se for do diretório attached_assets, retorna o caminho original diretamente
+  if (originalPath.includes('attached_assets')) {
+    console.log("Usando imagem de attached_assets:", originalPath);
     return originalPath;
   }
   
