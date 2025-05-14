@@ -82,16 +82,20 @@ export default function ForenseHomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Forense Digital */}
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
-              <div className="mb-4">
+              <div className="mb-4 text-center">
                 <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
                   forense<span className="text-[#00ade0]">.</span>digital
                 </h3>
                 <p className="text-sm text-gray-500">
-                  coleta e análise de evidências digitais
+                  {language === 'pt' && "coleta e análise de evidências digitais"}
+                  {language === 'en' && "collection and analysis of digital evidence"}
+                  {language === 'es' && "recolección y análisis de evidencias digitales"}
                 </p>
               </div>
-              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow">
-                recuperação e análise de dados digitais, produção e validação de evidências, reexame forense e contraprova de relatórios
+              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow text-center">
+                {language === 'pt' && "recuperação e análise de dados digitais, produção e validação de evidências, reexame forense e contraprova de relatórios"}
+                {language === 'en' && "recovery and analysis of digital data, production and validation of evidence, forensic review and counter-evidence of reports"}
+                {language === 'es' && "recuperación y análisis de datos digitales, producción y validación de evidencias, revisión forense y contraprueba de informes"}
               </p>
               <div className="mt-auto text-center">
                 <a href="/site/forense/services/digital-forensics" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
@@ -104,16 +108,20 @@ export default function ForenseHomePage() {
             
             {/* Suporte Legal */}
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
-              <div className="mb-4">
+              <div className="mb-4 text-center">
                 <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
                   suporte<span className="text-[#00ade0]">.</span>legal
                 </h3>
                 <p className="text-sm text-gray-500">
-                  consultoria técnica especializada
+                  {language === 'pt' && "consultoria técnica especializada"}
+                  {language === 'en' && "specialized technical consulting"}
+                  {language === 'es' && "consultoría técnica especializada"}
                 </p>
               </div>
-              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow">
-                consultoria estratégica, assistência técnica processual e esclarecimentos técnicos em audiências para profissionais da área jurídica
+              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow text-center">
+                {language === 'pt' && "consultoria estratégica, assistência técnica processual e esclarecimentos técnicos em audiências para profissionais da área jurídica"}
+                {language === 'en' && "strategic consulting, technical procedural assistance and technical clarifications in hearings for legal professionals"}
+                {language === 'es' && "consultoría estratégica, asistencia técnica procesal y aclaraciones técnicas en audiencias para profesionales del área jurídica"}
               </p>
               <div className="mt-auto text-center">
                 <a href="/site/forense/services/legal-support" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
@@ -126,16 +134,20 @@ export default function ForenseHomePage() {
             
             {/* Investigações Corporativas */}
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
-              <div className="mb-4">
+              <div className="mb-4 text-center">
                 <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
                   investigações<span className="text-[#00ade0]">.</span>corporativas
                 </h3>
                 <p className="text-sm text-gray-500">
-                  compliance e segurança empresarial
+                  {language === 'pt' && "compliance e segurança empresarial"}
+                  {language === 'en' && "compliance and corporate security"}
+                  {language === 'es' && "compliance y seguridad empresarial"}
                 </p>
               </div>
-              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow">
-                investigações de fraude, monitoramento de ativos digitais, análise de riscos e ameaças, e compliance digital para empresas
+              <p className="text-gray-600 text-sm mt-4 mb-6 flex-grow text-center">
+                {language === 'pt' && "investigações de fraude, monitoramento de ativos digitais, análise de riscos e ameaças, e compliance digital para empresas"}
+                {language === 'en' && "fraud investigations, digital asset monitoring, risk and threat analysis, and digital compliance for companies"}
+                {language === 'es' && "investigaciones de fraude, monitoreo de activos digitales, análisis de riesgos y amenazas, y compliance digital para empresas"}
               </p>
               <div className="mt-auto text-center">
                 <a href="/site/forense/services/corporate-investigations" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
