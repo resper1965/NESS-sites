@@ -24,7 +24,7 @@ export default function ForenseLegalSupportPage() {
   const defaultContent = {
     pt: {
       title: 'suporte.legal',
-      description: 'consultoria técnica especializada em evidências digitais',
+      description: 'suporte técnico à área legal em evidências digitais',
       intro: 'nossa divisão de suporte técnico-legal oferece serviços especializados de orientação em casos envolvendo evidências digitais, proporcionando clareza e embasamento científico para profissionais e organizações. não prestamos serviços jurídicos, atuamos no suporte técnico especializado a casos com componentes digitais.',
       sections: [
         {
@@ -47,8 +47,8 @@ export default function ForenseLegalSupportPage() {
     },
     en: {
       title: 'legal.support',
-      description: 'legal support and specialized consulting on digital evidence',
-      intro: 'our legal support division offers specialized services in legal and technical consulting for cases involving digital evidence, providing clarity and scientific basis to legal arguments.',
+      description: 'technical support for the legal field on digital evidence',
+      intro: 'our technical support division offers specialized services for legal professionals in cases involving digital evidence, providing clarity and scientific basis to support legal arguments. we do not provide legal services, but rather technical expertise for cases with digital components.',
       sections: [
         {
           title: 'strategic consulting',
@@ -442,7 +442,9 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
-                benefícios do nosso <span className="text-[#00ade0]">suporte legal</span>
+                {language === 'pt' && <>benefícios do nosso <span className="text-[#00ade0]">suporte à área legal</span></>}
+                {language === 'en' && <>benefits of our <span className="text-[#00ade0]">technical support for the legal field</span></>}
+                {language === 'es' && <>beneficios de nuestro <span className="text-[#00ade0]">soporte técnico para el área legal</span></>}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="flex">
