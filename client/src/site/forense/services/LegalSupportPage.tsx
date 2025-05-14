@@ -147,7 +147,9 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
-                {t('forense.service.legal').split(' ')[0]}<DotSpan />{t('forense.service.legal').split(' ')[1]}
+                {language === 'pt' && <>suporte<DotSpan />legal</>}
+                {language === 'en' && <>legal<DotSpan />support</>}
+                {language === 'es' && <>soporte<DotSpan />legal</>}
               </h1>
               <p className={`${styles.fontSizes.hero.subtitle} ${styles.colors.text.light} ${styles.spacing.mb.xl}`}>
                 {t('forense.legal.desc')}
@@ -163,10 +165,25 @@ export default function ForenseLegalSupportPage() {
               <div className="flex flex-col md:flex-row gap-16 items-start">
                 <div className="w-full">
                   <div className="text-center mb-8">
-                    <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
-                      {language === 'pt' && <><span className="text-[#00ade0]">consultoria técnica</span> especializada</>}
-                      {language === 'en' && <>specialized <span className="text-[#00ade0]">technical consulting</span></>}
-                      {language === 'es' && <><span className="text-[#00ade0]">consultoría técnica</span> especializada</>}
+                    <h2 className="text-2xl font-['Montserrat'] font-normal mb-6 lowercase">
+                      {language === 'pt' && (
+                        <>
+                          <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">consultoria técnica</span>
+                          <span className="ml-2">especializada</span>
+                        </>
+                      )}
+                      {language === 'en' && (
+                        <>
+                          <span className="mr-2">specialized</span>
+                          <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">technical consulting</span>
+                        </>
+                      )}
+                      {language === 'es' && (
+                        <>
+                          <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">consultoría técnica</span>
+                          <span className="ml-2">especializada</span>
+                        </>
+                      )}
                     </h2>
                     <p className="text-gray-500 max-w-3xl mx-auto">
                       {t('forense.legal.intro')}
