@@ -110,7 +110,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
   };
   
   return (
-    <section id="services" className="py-20 bg-[#f9f9f9]">
+    <section id="services" className="conteudo bg-[#f9f9f9]" style={{ padding: "4rem 0" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-8 lowercase">{title || titles[language]}</h2>

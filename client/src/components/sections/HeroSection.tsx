@@ -31,19 +31,7 @@ export default function HeroSection({
   }, [backgroundImage]);
   
   return (
-    <section className="relative h-[75vh] min-h-[600px] max-h-[900px] flex items-center justify-center overflow-hidden">
-      {/* Background image otimizada */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={optimizedImage} 
-          alt="Hero background" 
-          className="w-full h-full object-cover" 
-          loading="eager" // Carrega a imagem hero como prioritária
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.1)] to-[rgba(18,18,18,0.3)]"></div>
-      </div>
-      {/* Overlay para garantir boa legibilidade do texto */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.2)] to-[rgba(18,18,18,0.4)]"></div>
+    <section className="intro relative flex items-center justify-center overflow-hidden bg-[#121212]" style={{ minHeight: "60vh" }}>
       
       {/* Content */}
       <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">

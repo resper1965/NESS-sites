@@ -73,7 +73,7 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
   };
   
   return (
-    <section id="spinoffs" className="py-20 bg-[#2f3e4d] text-white">
+    <section id="spinoffs" className="contato bg-[#2f3e4d] text-white flex items-center" style={{ minHeight: "400px" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">{title || titles[language]}</h2>

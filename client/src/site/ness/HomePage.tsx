@@ -62,7 +62,7 @@ export default function NessHomePage() {
       <SpinoffsSection />
       
       {/* Additional sections specific to NESS */}
-      <section className="py-20 bg-white">
+      <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
