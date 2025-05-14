@@ -11,6 +11,9 @@ import NessHomePage from "@/site/ness/HomePage";
 import NessAboutPage from "@/site/ness/AboutPage";
 import TrustnessHomePage from "@/site/trustness/HomePage";
 import TrustnessAboutPage from "@/site/trustness/AboutPage";
+import TrustnessAssessmentPage from "@/site/trustness/services/AssessmentPage";
+import TrustnessPrivacyPage from "@/site/trustness/services/PrivacyPage";
+import TrustnessConformityPage from "@/site/trustness/services/ConformityPage";
 import ForenseHomePage from "@/site/forense/HomePage";
 import ForenseAboutPage from "@/site/forense/AboutPage";
 import ForenseDigitalForensicsPage from "@/site/forense/services/DigitalForensicsPage";
@@ -66,6 +69,24 @@ function Router() {
       <Route path="/site/trustness/about">
         <SiteProvider siteCode="trustness">
           <TrustnessAboutPage />
+        </SiteProvider>
+      </Route>
+
+      <Route path="/site/trustness/services/assessment">
+        <SiteProvider siteCode="trustness">
+          <TrustnessAssessmentPage />
+        </SiteProvider>
+      </Route>
+
+      <Route path="/site/trustness/services/privacy">
+        <SiteProvider siteCode="trustness">
+          <TrustnessPrivacyPage />
+        </SiteProvider>
+      </Route>
+
+      <Route path="/site/trustness/services/conformity">
+        <SiteProvider siteCode="trustness">
+          <TrustnessConformityPage />
         </SiteProvider>
       </Route>
       
