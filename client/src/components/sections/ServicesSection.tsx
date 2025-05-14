@@ -63,37 +63,37 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
       id: "secops",
       name: "n.SecOps",
       description: descriptions[language].secops,
-      url: "/services/secops"
+      url: "/site/ness/services/secops"
     },
     {
       id: "infraops",
       name: "n.InfraOps",
       description: descriptions[language].infraops,
-      url: "/services/infraops"
+      url: "/site/ness/services/infraops"
     },
     {
       id: "devarch",
       name: "n.DevArch",
       description: descriptions[language].devarch,
-      url: "/services/devarch"
+      url: "/site/ness/services/devarch"
     },
     {
       id: "autoops",
       name: "n.AutoOps",
       description: descriptions[language].autoops,
-      url: "/services/autoops"
+      url: "/site/ness/services/autoops"
     },
     {
       id: "crisisops",
       name: "n.CrisisOps",
       description: descriptions[language].crisisops,
-      url: "/services/crisisops"
+      url: "/site/ness/services/crisisops"
     },
     {
       id: "privacy",
       name: "n.Privacy",
       description: descriptions[language].privacy,
-      url: "/services/privacy"
+      url: "/site/ness/services/privacy"
     }
   ];
   

@@ -20,6 +20,14 @@ import ForenseDigitalForensicsPage from "@/site/forense/services/DigitalForensic
 import ForenseLegalSupportPage from "@/site/forense/services/LegalSupportPage";
 import ForenseCorporateInvestigationsPage from "@/site/forense/services/CorporateInvestigationsPage";
 
+// Ness Services
+import NessSecOpsPage from "@/site/ness/services/SecOpsPage";
+import NessInfraOpsPage from "@/site/ness/services/InfraOpsPage";
+import NessDevArchPage from "@/site/ness/services/DevArchPage";
+import NessAutoOpsPage from "@/site/ness/services/AutoOpsPage";
+import NessCrisisOpsPage from "@/site/ness/services/CrisisOpsPage";
+import NessPrivacyPage from "@/site/ness/services/PrivacyPage";
+
 // Legacy pages (will be migrated)
 import HomePage from "@/pages/home-page";
 import AboutPage from "@/pages/about-page";
@@ -56,6 +64,42 @@ function Router() {
       <Route path="/site/ness/about">
         <SiteProvider siteCode="ness">
           <NessAboutPage />
+        </SiteProvider>
+      </Route>
+      
+      <Route path="/site/ness/services/secops">
+        <SiteProvider siteCode="ness">
+          <NessSecOpsPage />
+        </SiteProvider>
+      </Route>
+      
+      <Route path="/site/ness/services/infraops">
+        <SiteProvider siteCode="ness">
+          <NessInfraOpsPage />
+        </SiteProvider>
+      </Route>
+      
+      <Route path="/site/ness/services/devarch">
+        <SiteProvider siteCode="ness">
+          <NessDevArchPage />
+        </SiteProvider>
+      </Route>
+      
+      <Route path="/site/ness/services/autoops">
+        <SiteProvider siteCode="ness">
+          <NessAutoOpsPage />
+        </SiteProvider>
+      </Route>
+      
+      <Route path="/site/ness/services/crisisops">
+        <SiteProvider siteCode="ness">
+          <NessCrisisOpsPage />
+        </SiteProvider>
+      </Route>
+      
+      <Route path="/site/ness/services/privacy">
+        <SiteProvider siteCode="ness">
+          <NessPrivacyPage />
         </SiteProvider>
       </Route>
       
