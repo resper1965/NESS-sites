@@ -569,10 +569,14 @@ export default function ForenseLegalSupportPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                      vantagem <span className="text-[#00ade0]">competitiva</span>
+                      {language === 'pt' && <>vantagem <span className="text-[#00ade0]">competitiva</span></>}
+                      {language === 'en' && <>competitive <span className="text-[#00ade0]">advantage</span></>}
+                      {language === 'es' && <>ventaja <span className="text-[#00ade0]">competitiva</span></>}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      proporcionamos um diferencial estratégico em casos complexos, onde o domínio do aspecto técnico das evidências digitais pode ser decisivo para o resultado final do processo.
+                      {language === 'pt' && 'proporcionamos um diferencial estratégico em casos complexos, onde o domínio do aspecto técnico das evidências digitais pode ser decisivo para o resultado final do processo.'}
+                      {language === 'en' && 'we provide a strategic advantage in complex cases, where mastery of the technical aspects of digital evidence can be decisive for the final outcome of the process.'}
+                      {language === 'es' && 'proporcionamos una ventaja estratégica en casos complejos, donde el dominio del aspecto técnico de las evidencias digitales puede ser decisivo para el resultado final del proceso.'}
                     </p>
                   </div>
                 </div>
