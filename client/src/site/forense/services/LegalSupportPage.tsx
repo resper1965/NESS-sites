@@ -11,13 +11,19 @@ export default function ForenseLegalSupportPage() {
   const { language, t } = useI18n();
   
   // Buscar conteúdo da página específico para o serviço
-  const { data: pageContent, isLoading } = useQuery({
+  const { data: pageContent, isLoading, isError } = useQuery({
     queryKey: ['/api/content/services/legal-support', language, siteConfig.code],
     queryFn: async () => {
-      const res = await fetch(`/api/content/services/legal-support?lang=${language}&site=${siteConfig.code}`);
-      if (!res.ok) throw new Error('Failed to fetch content');
-      return res.json();
-    }
+      try {
+        const res = await fetch(`/api/content/services/legal-support?lang=${language}&site=${siteConfig.code}`);
+        if (!res.ok) return null;
+        return res.json();
+      } catch (error) {
+        console.error('Error fetching content:', error);
+        return null;
+      }
+    },
+    retry: false
   });
   
   // Conteúdo padrão caso não haja conteúdo específico no banco de dados
@@ -503,10 +509,14 @@ export default function ForenseLegalSupportPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                      argumentação <span className="text-[#00ade0]">robusta</span>
+                      {language === 'pt' && <>argumentação <span className="text-[#00ade0]">robusta</span></>}
+                      {language === 'en' && <>robust <span className="text-[#00ade0]">argumentation</span></>}
+                      {language === 'es' && <>argumentación <span className="text-[#00ade0]">sólida</span></>}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      fortalecemos argumentos jurídicos com embasamento técnico sólido, aumentando sua credibilidade e poder de persuasão perante os tribunais e demais autoridades.
+                      {language === 'pt' && 'fortalecemos argumentos jurídicos com embasamento técnico sólido, aumentando sua credibilidade e poder de persuasão perante os tribunais e demais autoridades.'}
+                      {language === 'en' && 'we strengthen legal arguments with solid technical foundation, increasing their credibility and persuasive power before courts and other authorities.'}
+                      {language === 'es' && 'fortalecemos argumentos jurídicos con base técnica sólida, aumentando su credibilidad y poder de persuasión ante los tribunales y demás autoridades.'}
                     </p>
                   </div>
                 </div>
@@ -519,10 +529,14 @@ export default function ForenseLegalSupportPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                      identificação de <span className="text-[#00ade0]">vulnerabilidades</span>
+                      {language === 'pt' && <>identificação de <span className="text-[#00ade0]">vulnerabilidades</span></>}
+                      {language === 'en' && <>vulnerability <span className="text-[#00ade0]">identification</span></>}
+                      {language === 'es' && <>identificación de <span className="text-[#00ade0]">vulnerabilidades</span></>}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      analisamos criticamente as evidências e argumentos técnicos apresentados pela parte contrária, identificando falhas metodológicas e inconsistências que podem ser exploradas estrategicamente.
+                      {language === 'pt' && 'analisamos criticamente as evidências e argumentos técnicos apresentados pela parte contrária, identificando falhas metodológicas e inconsistências que podem ser exploradas estrategicamente.'}
+                      {language === 'en' && 'we critically analyze evidence and technical arguments presented by the opposing party, identifying methodological flaws and inconsistencies that can be strategically exploited.'}
+                      {language === 'es' && 'analizamos críticamente las evidencias y argumentos técnicos presentados por la parte contraria, identificando fallas metodológicas e inconsistencias que pueden ser explotadas estratégicamente.'}
                     </p>
                   </div>
                 </div>
@@ -535,10 +549,14 @@ export default function ForenseLegalSupportPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                      clareza <span className="text-[#00ade0]">técnica</span>
+                      {language === 'pt' && <>clareza <span className="text-[#00ade0]">técnica</span></>}
+                      {language === 'en' && <>technical <span className="text-[#00ade0]">clarity</span></>}
+                      {language === 'es' && <>claridad <span className="text-[#00ade0]">técnica</span></>}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      facilitamos o entendimento de questões técnicas complexas por parte de juízes, advogados e demais envolvidos no processo, evitando mal-entendidos e interpretações equivocadas.
+                      {language === 'pt' && 'facilitamos o entendimento de questões técnicas complexas por parte de juízes, advogados e demais envolvidos no processo, evitando mal-entendidos e interpretações equivocadas.'}
+                      {language === 'en' && 'we facilitate the understanding of complex technical issues by judges, lawyers, and others involved in the process, avoiding misunderstandings and misinterpretations.'}
+                      {language === 'es' && 'facilitamos la comprensión de cuestiones técnicas complejas por parte de jueces, abogados y demás involucrados en el proceso, evitando malentendidos e interpretaciones erróneas.'}
                     </p>
                   </div>
                 </div>
