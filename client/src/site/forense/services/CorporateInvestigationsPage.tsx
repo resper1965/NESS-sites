@@ -431,11 +431,15 @@ export default function ForenseCorporateInvestigationsPage() {
                   </div>
                   <div className="mb-4">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
-                      documentação <span className="text-[#00ade0]">e relatório</span>
+                      {language === 'pt' && <>documentação <span className="text-[#00ade0]">e relatório</span></>}
+                      {language === 'en' && <>documentation <span className="text-[#00ade0]">and reporting</span></>}
+                      {language === 'es' && <>documentación <span className="text-[#00ade0]">e informe</span></>}
                     </h3>
                   </div>
                   <p className="text-gray-400 text-sm">
-                    compilação dos achados em relatório técnico detalhado e compreensível, contendo a metodologia, as evidências encontradas e as conclusões técnicas, apresentadas de forma clara para apoiar a tomada de decisões.
+                    {language === 'pt' && 'compilação dos achados em relatório técnico detalhado e compreensível, contendo a metodologia, as evidências encontradas e as conclusões técnicas, apresentadas de forma clara para apoiar a tomada de decisões.'}
+                    {language === 'en' && 'compilation of findings into a detailed and comprehensible technical report, containing the methodology, evidence found, and technical conclusions, presented clearly to support decision-making.'}
+                    {language === 'es' && 'compilación de hallazgos en un informe técnico detallado y comprensible, que contiene la metodología, las evidencias encontradas y las conclusiones técnicas, presentadas de forma clara para apoyar la toma de decisiones.'}
                   </p>
                 </div>
               </div>
@@ -472,10 +476,14 @@ export default function ForenseCorporateInvestigationsPage() {
                 
                 <div className="bg-gray-50 rounded-lg p-8 border border-gray-100">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase">
-                    verificação de <span className="text-[#00ade0]">conformidade</span>
+                    {language === 'pt' && <>verificação de <span className="text-[#00ade0]">conformidade</span></>}
+                    {language === 'en' && <>compliance <span className="text-[#00ade0]">verification</span></>}
+                    {language === 'es' && <>verificación de <span className="text-[#00ade0]">conformidad</span></>}
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    avaliação técnica do cumprimento de políticas de segurança da informação e normas regulatórias, identificando possíveis violações e fornecendo recomendações para assegurar a conformidade.
+                    {language === 'pt' && 'avaliação técnica do cumprimento de políticas de segurança da informação e normas regulatórias, identificando possíveis violações e fornecendo recomendações para assegurar a conformidade.'}
+                    {language === 'en' && 'technical assessment of compliance with information security policies and regulatory standards, identifying potential violations and providing recommendations to ensure compliance.'}
+                    {language === 'es' && 'evaluación técnica del cumplimiento de políticas de seguridad de la información y normas regulatorias, identificando posibles violaciones y proporcionando recomendaciones para asegurar la conformidad.'}
                   </p>
                 </div>
               </div>
