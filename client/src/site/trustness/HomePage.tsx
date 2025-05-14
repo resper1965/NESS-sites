@@ -248,7 +248,7 @@ export default function TrustnessHomePage() {
       </section>
       
       {/* Services Section - Agora com fundo escuro */}
-      <section id="what-we-do" className="py-20 bg-[#1a1a22] text-white">
+      <section id="what-we-do" className="conteudo bg-[#1a1a22] text-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-white mb-8 lowercase">
