@@ -39,21 +39,21 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
     }
   };
   
-  // Divisões especializadas fixas
+  // Divisões especializadas com links internos
   const spinoffs = [
     {
       id: "trustness",
       name: "trustness.",
       description: descriptions[language].trustness,
-      url: "https://trustness.com.br",
-      isExternal: true
+      url: "/site/trustness",
+      isExternal: false
     },
     {
       id: "forense",
       name: "forense.io",
       description: descriptions[language].forense,
-      url: "https://forense.io",
-      isExternal: true
+      url: "/site/forense",
+      isExternal: false
     }
   ];
   
