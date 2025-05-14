@@ -97,7 +97,7 @@ export default function ForenseHomePage() {
                 <a href="/site/forense/services/digital-forensics" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
-                  {language === 'es' && "saber más"}
+                  {language === 'es' && "conocer más"}
                 </a>
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function ForenseHomePage() {
                 <a href="/site/forense/services/legal-support" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
-                  {language === 'es' && "saber más"}
+                  {language === 'es' && "conocer más"}
                 </a>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function ForenseHomePage() {
                 <a href="/site/forense/services/corporate-investigations" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
-                  {language === 'es' && "saber más"}
+                  {language === 'es' && "conocer más"}
                 </a>
               </div>
             </div>
