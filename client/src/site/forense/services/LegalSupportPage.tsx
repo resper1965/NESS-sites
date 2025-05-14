@@ -164,7 +164,9 @@ export default function ForenseLegalSupportPage() {
                 <div className="w-full">
                   <div className="text-center mb-8">
                     <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
-                      <span className="text-[#00ade0]">consultoria técnica</span> especializada
+                      {language === 'pt' && <><span className="text-[#00ade0]">consultoria técnica</span> especializada</>}
+                      {language === 'en' && <>specialized <span className="text-[#00ade0]">technical consulting</span></>}
+                      {language === 'es' && <><span className="text-[#00ade0]">consultoría técnica</span> especializada</>}
                     </h2>
                     <p className="text-gray-500 max-w-3xl mx-auto">
                       {t('forense.legal.intro')}
@@ -227,20 +229,40 @@ export default function ForenseLegalSupportPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Consultoria Estratégica */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
-                  <div className="p-8">
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30 flex flex-col h-full">
+                  <div className="p-8 flex flex-col h-full">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
-                      {t('forense.legal.strategy.title')}
+                      {language === 'pt' && <>consultoria <span className="text-[#00ade0]">estratégica</span></>}
+                      {language === 'en' && <>strategic <span className="text-[#00ade0]">consulting</span></>}
+                      {language === 'es' && <>consultoría <span className="text-[#00ade0]">estratégica</span></>}
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                       {content.sections[0].content}
                     </p>
-                    <div className="mt-6 pt-6 border-t border-gray-100">
-                      <div className="flex justify-center text-xs text-gray-500">
+                    <div className="mt-auto pt-6 border-t border-gray-100">
+                      <div className="flex justify-center text-xs text-[#00ade0]/80">
                         <div className="grid grid-cols-3 gap-2 w-full">
-                          <span className="text-center">análise técnica</span>
-                          <span className="text-center">avaliação prévia</span>
-                          <span className="text-center">viabilidade técnica</span>
+                          {language === 'pt' && (
+                            <>
+                              <span className="text-center">análise técnica</span>
+                              <span className="text-center">avaliação prévia</span>
+                              <span className="text-center">viabilidade técnica</span>
+                            </>
+                          )}
+                          {language === 'en' && (
+                            <>
+                              <span className="text-center">technical analysis</span>
+                              <span className="text-center">preliminary assessment</span>
+                              <span className="text-center">technical feasibility</span>
+                            </>
+                          )}
+                          {language === 'es' && (
+                            <>
+                              <span className="text-center">análisis técnico</span>
+                              <span className="text-center">evaluación previa</span>
+                              <span className="text-center">viabilidad técnica</span>
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -248,12 +270,14 @@ export default function ForenseLegalSupportPage() {
                 </div>
                 
                 {/* Assistência Técnica Processual */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
-                  <div className="p-8">
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30 flex flex-col h-full">
+                  <div className="p-8 flex flex-col h-full">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
-                      assistência <span className="text-[#00ade0]">técnica processual</span>
+                      {language === 'pt' && <>assistência <span className="text-[#00ade0]">técnica processual</span></>}
+                      {language === 'en' && <>procedural <span className="text-[#00ade0]">technical assistance</span></>}
+                      {language === 'es' && <>asistencia <span className="text-[#00ade0]">técnica procesal</span></>}
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                       {content.sections[1].content}
                     </p>
                     <div className="mt-6 pt-6 border-t border-gray-100">

@@ -386,46 +386,80 @@ export default function ForenseDigitalForensicsPage() {
               <div className="flex flex-col md:flex-row items-stretch md:space-x-10">
                 <div className="md:w-1/2 mb-10 md:mb-0">
                   <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
-                    metodologias <span className="text-[#00ade0]">forenses</span>
+                    {language === 'pt' && <>metodologias <span className="text-[#00ade0]">forenses</span></>}
+                    {language === 'en' && <>forensic <span className="text-[#00ade0]">methodologies</span></>}
+                    {language === 'es' && <>metodologías <span className="text-[#00ade0]">forenses</span></>}
                   </h2>
                   <p className="text-gray-700 text-sm mb-6">
-                    utilizamos protocolos rigorosos que garantem a admissibilidade jurídica das evidências coletadas, respeitando normas nacionais e internacionais. nossa abordagem inclui:
+                    {language === 'pt' && 'utilizamos protocolos rigorosos que garantem a admissibilidade jurídica das evidências coletadas, respeitando normas nacionais e internacionais. nossa abordagem inclui:'}
+                    {language === 'en' && 'we use rigorous protocols that ensure the legal admissibility of collected evidence, respecting national and international standards. our approach includes:'}
+                    {language === 'es' && 'utilizamos protocolos rigurosos que garantizan la admisibilidad jurídica de las evidencias recolectadas, respetando normas nacionales e internacionales. nuestro enfoque incluye:'}
                   </p>
                   <ul className="space-y-4">
                     <li className="bg-white p-4 rounded-lg border border-gray-200 flex items-start">
                       <span className="text-[#00ade0] text-xl mr-3 leading-6 flex-shrink-0">•</span>
-                      <span className="text-gray-700 text-sm">documentação precisa de cada etapa da coleta e cadeia de custódia</span>
+                      <span className="text-gray-700 text-sm">
+                        {language === 'pt' && 'documentação precisa de cada etapa da coleta e cadeia de custódia'}
+                        {language === 'en' && 'precise documentation of each step of the collection and chain of custody'}
+                        {language === 'es' && 'documentación precisa de cada etapa de la recolección y cadena de custodia'}
+                      </span>
                     </li>
                     <li className="bg-white p-4 rounded-lg border border-gray-200 flex items-start">
                       <span className="text-[#00ade0] text-xl mr-3 leading-6 flex-shrink-0">•</span>
-                      <span className="text-gray-700 text-sm">utilização de ferramentas forenses homologadas internacionalmente</span>
+                      <span className="text-gray-700 text-sm">
+                        {language === 'pt' && 'utilização de ferramentas forenses homologadas internacionalmente'}
+                        {language === 'en' && 'use of internationally certified forensic tools'}
+                        {language === 'es' && 'utilización de herramientas forenses homologadas internacionalmente'}
+                      </span>
                     </li>
                     <li className="bg-white p-4 rounded-lg border border-gray-200 flex items-start">
                       <span className="text-[#00ade0] text-xl mr-3 leading-6 flex-shrink-0">•</span>
-                      <span className="text-gray-700 text-sm">técnicas não destrutivas que preservam a integridade dos dados</span>
+                      <span className="text-gray-700 text-sm">
+                        {language === 'pt' && 'técnicas não destrutivas que preservam a integridade dos dados'}
+                        {language === 'en' && 'non-destructive techniques that preserve data integrity'}
+                        {language === 'es' && 'técnicas no destructivas que preservan la integridad de los datos'}
+                      </span>
                     </li>
                     <li className="bg-white p-4 rounded-lg border border-gray-200 flex items-start">
                       <span className="text-[#00ade0] text-xl mr-3 leading-6 flex-shrink-0">•</span>
-                      <span className="text-gray-700 text-sm">análise de dados em ambiente isolado e controlado</span>
+                      <span className="text-gray-700 text-sm">
+                        {language === 'pt' && 'análise de dados em ambiente isolado e controlado'}
+                        {language === 'en' && 'data analysis in an isolated and controlled environment'}
+                        {language === 'es' && 'análisis de datos en ambiente aislado y controlado'}
+                      </span>
                     </li>
                   </ul>
                 </div>
                 <div className="md:w-1/2 bg-[#0d1117] rounded-lg p-8 text-white flex flex-col">
                   <h3 className="text-xl font-['Montserrat'] font-normal mb-6 lowercase">
-                    frameworks <span className="text-[#00ade0]">adotados</span>
+                    {language === 'pt' && <>frameworks <span className="text-[#00ade0]">adotados</span></>}
+                    {language === 'en' && <>adopted <span className="text-[#00ade0]">frameworks</span></>}
+                    {language === 'es' && <>frameworks <span className="text-[#00ade0]">adoptados</span></>}
                   </h3>
                   <div className="space-y-6 flex-grow">
                     <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
                       <h4 className="font-medium text-[#00ade0] mb-2 lowercase">ACPO Guidelines</h4>
-                      <p className="text-sm text-gray-300">princípios para manipulação de evidências digitais reconhecidos internacionalmente</p>
+                      <p className="text-sm text-gray-300">
+                        {language === 'pt' && 'princípios para manipulação de evidências digitais reconhecidos internacionalmente'}
+                        {language === 'en' && 'internationally recognized principles for handling digital evidence'}
+                        {language === 'es' && 'principios para manipulación de evidencias digitales reconocidos internacionalmente'}
+                      </p>
                     </div>
                     <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
                       <h4 className="font-medium text-[#00ade0] mb-2 lowercase">ISO/IEC 27037</h4>
-                      <p className="text-sm text-gray-300">diretrizes para identificação, coleta e preservação de evidências digitais</p>
+                      <p className="text-sm text-gray-300">
+                        {language === 'pt' && 'diretrizes para identificação, coleta e preservação de evidências digitais'}
+                        {language === 'en' && 'guidelines for identification, collection, and preservation of digital evidence'}
+                        {language === 'es' && 'directrices para identificación, recolección y preservación de evidencias digitales'}
+                      </p>
                     </div>
                     <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
                       <h4 className="font-medium text-[#00ade0] mb-2 lowercase">NIST Guidelines</h4>
-                      <p className="text-sm text-gray-300">padrões técnicos para forensics digital e investigações cibernéticas</p>
+                      <p className="text-sm text-gray-300">
+                        {language === 'pt' && 'padrões técnicos para forensics digital e investigações cibernéticas'}
+                        {language === 'en' && 'technical standards for digital forensics and cyber investigations'}
+                        {language === 'es' && 'estándares técnicos para forensics digital e investigaciones cibernéticas'}
+                      </p>
                     </div>
                   </div>
                 </div>
