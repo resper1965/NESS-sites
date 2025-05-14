@@ -238,10 +238,16 @@ export default function ForenseCorporateInvestigationsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-16 text-center lowercase">
-                serviços de <span className="text-[#00ade0]">investigação</span>
+                {language === 'pt' && <>serviços de <span className="text-[#00ade0]">investigação</span></>}
+                {language === 'en' && <>investigation <span className="text-[#00ade0]">services</span></>}
+                {language === 'es' && <>servicios de <span className="text-[#00ade0]">investigación</span></>}
               </h2>
               <div className="max-w-3xl mx-auto text-center mb-10">
-                <p className="text-gray-500 text-sm">oferecemos serviços especializados em investigação digital para ambientes corporativos, com foco em detectar e documentar incidentes.</p>
+                <p className="text-gray-500 text-sm">
+                  {language === 'pt' && 'oferecemos serviços especializados em investigação digital para ambientes corporativos, com foco em detectar e documentar incidentes.'}
+                  {language === 'en' && 'we offer specialized digital investigation services for corporate environments, focusing on detecting and documenting incidents.'}
+                  {language === 'es' && 'ofrecemos servicios especializados en investigación digital para entornos corporativos, con enfoque en detectar y documentar incidentes.'}
+                </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -249,7 +255,9 @@ export default function ForenseCorporateInvestigationsPage() {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
                   <div className="p-8">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
-                      investigação de <span className="text-[#00ade0]">incidentes</span>
+                      {language === 'pt' && <>investigação de <span className="text-[#00ade0]">incidentes</span></>}
+                      {language === 'en' && <>incident <span className="text-[#00ade0]">investigation</span></>}
+                      {language === 'es' && <>investigación de <span className="text-[#00ade0]">incidentes</span></>}
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {content.sections[0].content}
@@ -257,9 +265,21 @@ export default function ForenseCorporateInvestigationsPage() {
                     <div className="mt-6 pt-6 border-t border-gray-100">
                       <div className="flex justify-center text-xs text-gray-500">
                         <div className="grid grid-cols-3 gap-2 w-full">
-                          <span className="text-center">fraudes</span>
-                          <span className="text-center">violações</span>
-                          <span className="text-center">incidentes</span>
+                          <span className="text-center">
+                            {language === 'pt' && 'fraudes'}
+                            {language === 'en' && 'fraud'}
+                            {language === 'es' && 'fraudes'}
+                          </span>
+                          <span className="text-center">
+                            {language === 'pt' && 'violações'}
+                            {language === 'en' && 'violations'}
+                            {language === 'es' && 'violaciones'}
+                          </span>
+                          <span className="text-center">
+                            {language === 'pt' && 'incidentes'}
+                            {language === 'en' && 'incidents'}
+                            {language === 'es' && 'incidentes'}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -270,7 +290,9 @@ export default function ForenseCorporateInvestigationsPage() {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
                   <div className="p-8">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
-                      auditoria <span className="text-[#00ade0]">digital</span>
+                      {language === 'pt' && <>auditoria <span className="text-[#00ade0]">digital</span></>}
+                      {language === 'en' && <>digital <span className="text-[#00ade0]">audit</span></>}
+                      {language === 'es' && <>auditoría <span className="text-[#00ade0]">digital</span></>}
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {content.sections[1].content}
@@ -278,9 +300,21 @@ export default function ForenseCorporateInvestigationsPage() {
                     <div className="mt-6 pt-6 border-t border-gray-100">
                       <div className="flex justify-center text-xs text-gray-500">
                         <div className="grid grid-cols-3 gap-2 w-full">
-                          <span className="text-center">conformidade</span>
-                          <span className="text-center">integridade</span>
-                          <span className="text-center">verificação</span>
+                          <span className="text-center">
+                            {language === 'pt' && 'conformidade'}
+                            {language === 'en' && 'compliance'}
+                            {language === 'es' && 'conformidad'}
+                          </span>
+                          <span className="text-center">
+                            {language === 'pt' && 'integridade'}
+                            {language === 'en' && 'integrity'}
+                            {language === 'es' && 'integridad'}
+                          </span>
+                          <span className="text-center">
+                            {language === 'pt' && 'verificação'}
+                            {language === 'en' && 'verification'}
+                            {language === 'es' && 'verificación'}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -291,7 +325,9 @@ export default function ForenseCorporateInvestigationsPage() {
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
                   <div className="p-8">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
-                      perícia <span className="text-[#00ade0]">computacional</span>
+                      {language === 'pt' && <>perícia <span className="text-[#00ade0]">computacional</span></>}
+                      {language === 'en' && <>computer <span className="text-[#00ade0]">forensics</span></>}
+                      {language === 'es' && <>peritaje <span className="text-[#00ade0]">computacional</span></>}
                     </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {content.sections[2].content}
@@ -299,9 +335,21 @@ export default function ForenseCorporateInvestigationsPage() {
                     <div className="mt-6 pt-6 border-t border-gray-100">
                       <div className="flex justify-center text-xs text-gray-500">
                         <div className="grid grid-cols-3 gap-2 w-full">
-                          <span className="text-center">análise</span>
-                          <span className="text-center">recuperação</span>
-                          <span className="text-center">documentação</span>
+                          <span className="text-center">
+                            {language === 'pt' && 'análise'}
+                            {language === 'en' && 'analysis'}
+                            {language === 'es' && 'análisis'}
+                          </span>
+                          <span className="text-center">
+                            {language === 'pt' && 'recuperação'}
+                            {language === 'en' && 'recovery'}
+                            {language === 'es' && 'recuperación'}
+                          </span>
+                          <span className="text-center">
+                            {language === 'pt' && 'documentação'}
+                            {language === 'en' && 'documentation'}
+                            {language === 'es' && 'documentación'}
+                          </span>
                         </div>
                       </div>
                     </div>
