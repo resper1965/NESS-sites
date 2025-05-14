@@ -84,7 +84,9 @@ export default function ForenseHomePage() {
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="mb-4 text-center">
                 <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
-                  forense<span className="text-[#00ade0]">.</span>digital
+                  {language === 'pt' && "forense digital"}
+                  {language === 'en' && "digital forensics"}
+                  {language === 'es' && "forense digital"}
                 </h3>
                 <p className="text-sm text-gray-500">
                   {language === 'pt' && "coleta e análise de evidências digitais"}
@@ -110,7 +112,9 @@ export default function ForenseHomePage() {
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="mb-4 text-center">
                 <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
-                  suporte<span className="text-[#00ade0]">.</span>legal
+                  {language === 'pt' && "suporte legal"}
+                  {language === 'en' && "legal support"}
+                  {language === 'es' && "soporte legal"}
                 </h3>
                 <p className="text-sm text-gray-500">
                   {language === 'pt' && "consultoria técnica especializada"}
@@ -136,7 +140,9 @@ export default function ForenseHomePage() {
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="mb-4 text-center">
                 <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
-                  investigações<span className="text-[#00ade0]">.</span>corporativas
+                  {language === 'pt' && "investigações corporativas"}
+                  {language === 'en' && "corporate investigations"}
+                  {language === 'es' && "investigaciones corporativas"}
                 </h3>
                 <p className="text-sm text-gray-500">
                   {language === 'pt' && "compliance e segurança empresarial"}
