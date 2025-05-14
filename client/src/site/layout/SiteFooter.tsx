@@ -261,11 +261,7 @@ export default function SiteFooter() {
                 </Link>
               </div>
               
-              {/* Seletor de Idioma */}
-              <div className="flex items-center gap-2 text-gray-300 relative mt-4 md:mt-0 md:ml-4">
-                <Globe size={16} className="text-[var(--primary-color)]" />
-                <FooterLanguageSelector />
-              </div>
+              {/* Seletor de Idioma removido e movido para o header */}
             </div>
           </div>
         </div>
