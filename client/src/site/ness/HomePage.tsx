@@ -46,12 +46,12 @@ export default function NessHomePage() {
     >
       {/* Hero Section */}
       <HeroSection 
-        title={pageContent?.content?.heroTitle || "tecnologia modular para o essencial invisível"}
-        subtitle={pageContent?.content?.heroSubtitle || "arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade"}
-        ctaText1={pageContent?.content?.ctaText1 || "conheça nossos serviços"}
-        ctaUrl1={pageContent?.content?.ctaUrl1 || "/site/ness/services"}
-        ctaText2={pageContent?.content?.ctaText2 || "fale conosco"}
-        ctaUrl2={pageContent?.content?.ctaUrl2 || "/site/ness/contact"}
+        title={pageContent?.content && JSON.parse(pageContent.content).heroTitle || "tecnologia modular para o essencial invisível"}
+        subtitle={pageContent?.content && JSON.parse(pageContent.content).heroSubtitle || "arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade"}
+        ctaText1={pageContent?.content && JSON.parse(pageContent.content).ctaText1 || "conheça nossos serviços"}
+        ctaUrl1={pageContent?.content && JSON.parse(pageContent.content).ctaUrl1 || "/site/ness/services"}
+        ctaText2={pageContent?.content && JSON.parse(pageContent.content).ctaText2 || "fale conosco"}
+        ctaUrl2={pageContent?.content && JSON.parse(pageContent.content).ctaUrl2 || "/site/ness/contact"}
         backgroundImage="/attached_assets/image_1747089936831.png"
       />
       
@@ -66,19 +66,19 @@ export default function NessHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-              {pageContent?.content?.featuredSectionTitle || 'tecnologia modular para o essencial invisível'}
+              {pageContent?.content && JSON.parse(pageContent.content).featuredSectionTitle || 'tecnologia modular para o essencial invisível'}
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              {pageContent?.content?.featuredSectionDescription || 
+              {pageContent?.content && JSON.parse(pageContent.content).featuredSectionDescription || 
                 'nossas soluções são modulares, escaláveis e atuam nos bastidores — porque o essencial, a estrutura que sustenta tudo, deve funcionar com precisão e ser invisível para quem depende dela.'}
             </p>
           </div>
           
           {/* Timeline / História da empresa, se disponível no conteúdo */}
-          {pageContent?.content?.timeline && (
+          {pageContent?.content && JSON.parse(pageContent.content).timeline && (
             <div className="mt-16">
               <ul className="relative border-l border-gray-200 ml-3">
-                {pageContent.content.timeline.map((item: any, index: number) => (
+                {JSON.parse(pageContent.content).timeline.map((item: any, index: number) => (
                   <li key={index} className="mb-10 ml-6">
                     <span className="absolute flex items-center justify-center w-6 h-6 bg-[var(--primary-color)] rounded-full -left-3 ring-8 ring-white">
                       <span className="text-white text-xs">{item.year}</span>
