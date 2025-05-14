@@ -256,7 +256,7 @@ export default function TrustnessAboutPage() {
         </section>
         
         {/* Values Section */}
-        <section className="py-20 bg-[#1a1a22] text-white">
+        <section className="conteudo bg-[#1a1a22] text-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-white">{defaultContent.values.title}</h2>
             
@@ -308,7 +308,7 @@ export default function TrustnessAboutPage() {
         </section>
         
         {/* Timeline Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">
               {defaultContent.timeline}
@@ -345,7 +345,7 @@ export default function TrustnessAboutPage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-[#1a1a22] text-white">
+        <section className="contato bg-[#1a1a22] text-white flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
