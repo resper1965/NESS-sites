@@ -452,25 +452,35 @@ export default function ForenseCorporateInvestigationsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
-                casos de <span className="text-[#00ade0]">uso</span>
+                {language === 'pt' && <>casos de <span className="text-[#00ade0]">uso</span></>}
+                {language === 'en' && <>use <span className="text-[#00ade0]">cases</span></>}
+                {language === 'es' && <>casos de <span className="text-[#00ade0]">uso</span></>}
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="bg-gray-50 rounded-lg p-8 border border-gray-100">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase">
-                    suspeita de <span className="text-[#00ade0]">fraude interna</span>
+                    {language === 'pt' && <>suspeita de <span className="text-[#00ade0]">fraude interna</span></>}
+                    {language === 'en' && <>suspected <span className="text-[#00ade0]">internal fraud</span></>}
+                    {language === 'es' && <>sospecha de <span className="text-[#00ade0]">fraude interno</span></>}
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    investigação de atividades suspeitas de funcionários, como desvio de recursos, manipulação de dados ou uso indevido de informações corporativas, usando técnicas forenses para recuperar e analisar evidências digitais.
+                    {language === 'pt' && 'investigação de atividades suspeitas de funcionários, como desvio de recursos, manipulação de dados ou uso indevido de informações corporativas, usando técnicas forenses para recuperar e analisar evidências digitais.'}
+                    {language === 'en' && 'investigation of suspicious employee activities, such as misappropriation of resources, data manipulation, or misuse of corporate information, using forensic techniques to recover and analyze digital evidence.'}
+                    {language === 'es' && 'investigación de actividades sospechosas de empleados, como desvío de recursos, manipulación de datos o uso indebido de información corporativa, utilizando técnicas forenses para recuperar y analizar evidencias digitales.'}
                   </p>
                 </div>
                 
                 <div className="bg-gray-50 rounded-lg p-8 border border-gray-100">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase">
-                    vazamento de <span className="text-[#00ade0]">informações</span>
+                    {language === 'pt' && <>vazamento de <span className="text-[#00ade0]">informações</span></>}
+                    {language === 'en' && <>information <span className="text-[#00ade0]">leak</span></>}
+                    {language === 'es' && <>filtración de <span className="text-[#00ade0]">información</span></>}
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    identificação da origem e extensão de incidentes de vazamento de dados confidenciais, determinando como ocorreu o incidente, quais dados foram comprometidos e quem teve acesso às informações.
+                    {language === 'pt' && 'identificação da origem e extensão de incidentes de vazamento de dados confidenciais, determinando como ocorreu o incidente, quais dados foram comprometidos e quem teve acesso às informações.'}
+                    {language === 'en' && 'identification of the origin and extent of confidential data leak incidents, determining how the incident occurred, what data was compromised, and who had access to the information.'}
+                    {language === 'es' && 'identificación del origen y extensión de incidentes de filtración de datos confidenciales, determinando cómo ocurrió el incidente, qué datos fueron comprometidos y quién tuvo acceso a la información.'}
                   </p>
                 </div>
                 
