@@ -365,7 +365,9 @@ export default function ForenseCorporateInvestigationsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
-                nossa <span className="text-[#00ade0]">metodologia</span>
+                {language === 'pt' && <>nossa <span className="text-[#00ade0]">metodologia</span></>}
+                {language === 'en' && <>our <span className="text-[#00ade0]">methodology</span></>}
+                {language === 'es' && <>nuestra <span className="text-[#00ade0]">metodología</span></>}
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
@@ -375,11 +377,15 @@ export default function ForenseCorporateInvestigationsPage() {
                   </div>
                   <div className="mb-4">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
-                      avaliação <span className="text-[#00ade0]">inicial</span>
+                      {language === 'pt' && <>avaliação <span className="text-[#00ade0]">inicial</span></>}
+                      {language === 'en' && <>initial <span className="text-[#00ade0]">assessment</span></>}
+                      {language === 'es' && <>evaluación <span className="text-[#00ade0]">inicial</span></>}
                     </h3>
                   </div>
                   <p className="text-gray-400 text-sm">
-                    análise preliminar do cenário, definição do escopo da investigação e identificação dos recursos digitais relevantes para o caso. nesta fase, estabelecemos os objetivos e as limitações da investigação.
+                    {language === 'pt' && 'análise preliminar do cenário, definição do escopo da investigação e identificação dos recursos digitais relevantes para o caso. nesta fase, estabelecemos os objetivos e as limitações da investigação.'}
+                    {language === 'en' && 'preliminary analysis of the scenario, definition of the investigation scope, and identification of relevant digital resources for the case. in this phase, we establish the objectives and limitations of the investigation.'}
+                    {language === 'es' && 'análisis preliminar del escenario, definición del alcance de la investigación e identificación de los recursos digitales relevantes para el caso. en esta fase, establecemos los objetivos y las limitaciones de la investigación.'}
                   </p>
                 </div>
                 
@@ -389,11 +395,15 @@ export default function ForenseCorporateInvestigationsPage() {
                   </div>
                   <div className="mb-4">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
-                      coleta <span className="text-[#00ade0]">forense</span>
+                      {language === 'pt' && <>coleta <span className="text-[#00ade0]">forense</span></>}
+                      {language === 'en' && <>forensic <span className="text-[#00ade0]">collection</span></>}
+                      {language === 'es' && <>recolección <span className="text-[#00ade0]">forense</span></>}
                     </h3>
                   </div>
                   <p className="text-gray-400 text-sm">
-                    aquisição de dados digitais usando técnicas forenses que preservam a integridade das evidências. criamos cópias forenses dos dispositivos ou sistemas relevantes seguindo protocolos rigorosos de cadeia de custódia.
+                    {language === 'pt' && 'aquisição de dados digitais usando técnicas forenses que preservam a integridade das evidências. criamos cópias forenses dos dispositivos ou sistemas relevantes seguindo protocolos rigorosos de cadeia de custódia.'}
+                    {language === 'en' && 'acquisition of digital data using forensic techniques that preserve the integrity of evidence. we create forensic copies of relevant devices or systems following strict chain of custody protocols.'}
+                    {language === 'es' && 'adquisición de datos digitales utilizando técnicas forenses que preservan la integridad de las evidencias. creamos copias forenses de los dispositivos o sistemas relevantes siguiendo protocolos rigurosos de cadena de custodia.'}
                   </p>
                 </div>
                 
@@ -403,11 +413,15 @@ export default function ForenseCorporateInvestigationsPage() {
                   </div>
                   <div className="mb-4">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
-                      análise <span className="text-[#00ade0]">técnica</span>
+                      {language === 'pt' && <>análise <span className="text-[#00ade0]">técnica</span></>}
+                      {language === 'en' && <>technical <span className="text-[#00ade0]">analysis</span></>}
+                      {language === 'es' && <>análisis <span className="text-[#00ade0]">técnico</span></>}
                     </h3>
                   </div>
                   <p className="text-gray-400 text-sm">
-                    exame detalhado das evidências coletadas, incluindo a recuperação de arquivos excluídos, análise de logs, histórico de atividades, comunicações digitais e outros elementos relevantes para a investigação.
+                    {language === 'pt' && 'exame detalhado das evidências coletadas, incluindo a recuperação de arquivos excluídos, análise de logs, histórico de atividades, comunicações digitais e outros elementos relevantes para a investigação.'}
+                    {language === 'en' && 'detailed examination of collected evidence, including recovery of deleted files, log analysis, activity history, digital communications, and other elements relevant to the investigation.'}
+                    {language === 'es' && 'examen detallado de las evidencias recolectadas, incluyendo la recuperación de archivos eliminados, análisis de registros, historial de actividades, comunicaciones digitales y otros elementos relevantes para la investigación.'}
                   </p>
                 </div>
                 
