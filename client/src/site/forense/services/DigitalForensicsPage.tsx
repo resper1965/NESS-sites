@@ -159,7 +159,7 @@ export default function ForenseDigitalForensicsPage() {
     >
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 text-white bg-[#0d1117] relative overflow-hidden">
+        <section className="h-[70vh] min-h-[600px] max-h-[800px] flex items-center justify-center text-white bg-[#0d1117] relative overflow-hidden">
           {/* Imagem de fundo otimizada */}
           <div className="absolute inset-0 z-0">
             <img 

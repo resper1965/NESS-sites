@@ -31,7 +31,7 @@ export default function HeroSection({
   }, [backgroundImage]);
   
   return (
-    <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[70vh] min-h-[600px] max-h-[800px] flex items-center justify-center overflow-hidden">
       {/* Background image otimizada */}
       <div className="absolute inset-0 z-0">
         <img 
