@@ -280,12 +280,30 @@ export default function ForenseLegalSupportPage() {
                     <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                       {content.sections[1].content}
                     </p>
-                    <div className="mt-6 pt-6 border-t border-gray-100">
-                      <div className="flex justify-center text-xs text-gray-500">
+                    <div className="mt-auto pt-6 border-t border-gray-100">
+                      <div className="flex justify-center text-xs text-[#00ade0]/80">
                         <div className="grid grid-cols-3 gap-2 w-full">
-                          <span className="text-center">formulação técnica</span>
-                          <span className="text-center">contraprovas</span>
-                          <span className="text-center">análise de laudo</span>
+                          {language === 'pt' && (
+                            <>
+                              <span className="text-center">formulação técnica</span>
+                              <span className="text-center">contraprovas</span>
+                              <span className="text-center">análise de laudo</span>
+                            </>
+                          )}
+                          {language === 'en' && (
+                            <>
+                              <span className="text-center">technical formulation</span>
+                              <span className="text-center">counter-evidence</span>
+                              <span className="text-center">report analysis</span>
+                            </>
+                          )}
+                          {language === 'es' && (
+                            <>
+                              <span className="text-center">formulación técnica</span>
+                              <span className="text-center">contrapruebas</span>
+                              <span className="text-center">análisis de informe</span>
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -293,20 +311,40 @@ export default function ForenseLegalSupportPage() {
                 </div>
                 
                 {/* Esclarecimentos Técnicos em Audiências */}
-                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30">
-                  <div className="p-8">
+                <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30 flex flex-col h-full">
+                  <div className="p-8 flex flex-col h-full">
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
-                      esclarecimentos <span className="text-[#00ade0]">em audiências</span>
+                      {language === 'pt' && <>esclarecimentos <span className="text-[#00ade0]">em audiências</span></>}
+                      {language === 'en' && <>clarification <span className="text-[#00ade0]">in hearings</span></>}
+                      {language === 'es' && <>aclaraciones <span className="text-[#00ade0]">en audiencias</span></>}
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                       {content.sections[2].content}
                     </p>
-                    <div className="mt-6 pt-6 border-t border-gray-100">
-                      <div className="flex justify-center text-xs text-gray-500">
+                    <div className="mt-auto pt-6 border-t border-gray-100">
+                      <div className="flex justify-center text-xs text-[#00ade0]/80">
                         <div className="grid grid-cols-3 gap-2 w-full">
-                          <span className="text-center">depoimento técnico</span>
-                          <span className="text-center">pareceres</span>
-                          <span className="text-center">simplificação técnica</span>
+                          {language === 'pt' && (
+                            <>
+                              <span className="text-center">depoimento técnico</span>
+                              <span className="text-center">pareceres</span>
+                              <span className="text-center">simplificação técnica</span>
+                            </>
+                          )}
+                          {language === 'en' && (
+                            <>
+                              <span className="text-center">technical testimony</span>
+                              <span className="text-center">expert opinions</span>
+                              <span className="text-center">technical simplification</span>
+                            </>
+                          )}
+                          {language === 'es' && (
+                            <>
+                              <span className="text-center">testimonio técnico</span>
+                              <span className="text-center">dictámenes</span>
+                              <span className="text-center">simplificación técnica</span>
+                            </>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -322,7 +360,9 @@ export default function ForenseLegalSupportPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
-                nossa <span className="text-[#00ade0]">metodologia</span>
+                {language === 'pt' && <>nossa <span className="text-[#00ade0]">metodologia</span></>}
+                {language === 'en' && <>our <span className="text-[#00ade0]">methodology</span></>}
+                {language === 'es' && <>nuestra <span className="text-[#00ade0]">metodología</span></>}
               </h2>
               <div className="space-y-10">
                 <div className="flex flex-col md:flex-row items-start gap-8">
