@@ -136,9 +136,15 @@ export default function SiteFooter() {
               </li>
               <li>
                 <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
-                  <Link href={`${sitePrefix}/services`}>
-                    {t('menu.services')}
-                  </Link>
+                  {siteConfig.code === 'ness' ? (
+                    <Link href={`${sitePrefix}/services/secops`}>
+                      {t('menu.services')}
+                    </Link>
+                  ) : (
+                    <Link href={`${sitePrefix}/services`}>
+                      {t('menu.services')}
+                    </Link>
+                  )}
                 </div>
               </li>
               <li>
@@ -169,41 +175,84 @@ export default function SiteFooter() {
           <div>
             <h4 className="text-lg font-bold mb-6">{t('footer.solutions')}</h4>
             <ul className="space-y-3">
-              <li>
-                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
-                  <Link href={`${sitePrefix}/services#infraops`}>
-                    n.InfraOps
-                  </Link>
-                </div>
-              </li>
-              <li>
-                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
-                  <Link href={`${sitePrefix}/services#secops`}>
-                    n.SecOps
-                  </Link>
-                </div>
-              </li>
-              <li>
-                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
-                  <Link href={`${sitePrefix}/services#devarch`}>
-                    n.DevArch
-                  </Link>
-                </div>
-              </li>
-              <li>
-                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
-                  <Link href={`${sitePrefix}/services#autoops`}>
-                    n.AutoOps
-                  </Link>
-                </div>
-              </li>
-              <li>
-                <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
-                  <Link href={`${sitePrefix}/services#crisisops`}>
-                    n.CrisisOps
-                  </Link>
-                </div>
-              </li>
+              {siteConfig.code === 'ness' && (
+                <>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services/infraops`}>
+                        n.InfraOps
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services/secops`}>
+                        n.SecOps
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services/devarch`}>
+                        n.DevArch
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services/autoops`}>
+                        n.AutoOps
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services/crisisops`}>
+                        n.CrisisOps
+                      </Link>
+                    </div>
+                  </li>
+                </>
+              )}
+              {siteConfig.code !== 'ness' && (
+                <>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services#infraops`}>
+                        n.InfraOps
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services#secops`}>
+                        n.SecOps
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services#devarch`}>
+                        n.DevArch
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services#autoops`}>
+                        n.AutoOps
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300">
+                      <Link href={`${sitePrefix}/services#crisisops`}>
+                        n.CrisisOps
+                      </Link>
+                    </div>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           

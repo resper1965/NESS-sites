@@ -52,12 +52,12 @@ export default function SiteNavbar() {
 
   // Services for dropdown menu - diferentes para cada site
   const nessServices = [
-    { id: 'secops', name: 'n.SecOps', path: `/site/ness/services#secops` },
-    { id: 'infraops', name: 'n.InfraOps', path: `/site/ness/services#infraops` },
-    { id: 'devarch', name: 'n.DevArch', path: `/site/ness/services#devarch` },
-    { id: 'autoops', name: 'n.AutoOps', path: `/site/ness/services#autoops` },
-    { id: 'crisisops', name: 'n.CrisisOps', path: `/site/ness/services#crisisops` },
-    { id: 'privacy', name: 'n.Privacy', path: `/site/ness/services#privacy` }
+    { id: 'secops', name: 'n.SecOps', path: `/site/ness/services/secops` },
+    { id: 'infraops', name: 'n.InfraOps', path: `/site/ness/services/infraops` },
+    { id: 'devarch', name: 'n.DevArch', path: `/site/ness/services/devarch` },
+    { id: 'autoops', name: 'n.AutoOps', path: `/site/ness/services/autoops` },
+    { id: 'crisisops', name: 'n.CrisisOps', path: `/site/ness/services/crisisops` },
+    { id: 'privacy', name: 'n.Privacy', path: `/site/ness/services/privacy` }
   ];
   
   const trustnessServices = [
