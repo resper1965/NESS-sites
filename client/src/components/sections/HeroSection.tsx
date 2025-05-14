@@ -31,7 +31,7 @@ export default function HeroSection({
   }, [backgroundImage]);
   
   return (
-    <section className="relative h-[70vh] min-h-[600px] max-h-[800px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[75vh] min-h-[600px] max-h-[900px] flex items-center justify-center overflow-hidden">
       {/* Background image otimizada */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -49,7 +49,7 @@ export default function HeroSection({
       <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
         <div className="hero-main-content text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6">
-            <span style={{color: "#ffffff"}}>ness</span><span style={{color: "#00ade0"}}>.</span>
+            <span style={{color: "#ffffff"}}>ness</span><span className="text-[#00ade0]">.</span>
           </h1>
           <p className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
             {title}

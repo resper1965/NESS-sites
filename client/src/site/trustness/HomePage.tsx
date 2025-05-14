@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
 import { useSite } from '../SiteContext';
 import SiteLayout from '../layout/SiteLayout';
+import HeroSection from '@/components/sections/HeroSection';
 
 export default function TrustnessHomePage() {
   const { siteConfig } = useSite();
@@ -40,24 +41,24 @@ export default function TrustnessHomePage() {
       canonicalUrl={`https://${siteConfig.domain}`}
     >
       {/* Hero Section */}
-      <section 
-        className="pt-32 pb-20 text-white bg-[#0b1016] relative"
-        style={{
-          backgroundImage: 'url(/assets/images/trustness-bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        {/* Overlay para garantir contraste com o texto */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <HeroSection 
+        title={pageContent?.content && JSON.parse(pageContent.content).heroTitle || "your trusted digital security partner"}
+        subtitle={pageContent?.content && JSON.parse(pageContent.content).heroSubtitle || "protecting digital assets with enterprise-grade security solutions and technical expertise"}
+        ctaText1={pageContent?.content && JSON.parse(pageContent.content).ctaText1 || "our services"}
+        ctaUrl1={pageContent?.content && JSON.parse(pageContent.content).ctaUrl1 || "/site/trustness/services"}
+        ctaText2={pageContent?.content && JSON.parse(pageContent.content).ctaText2 || "contact us"}
+        ctaUrl2={pageContent?.content && JSON.parse(pageContent.content).ctaUrl2 || "/site/trustness/contact"}
+        backgroundImage="/assets/images/optimized/trustness-hero-bg.webp"
+      />
+      
+      {/* Trust Section - Original content moved below */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
-              trustness<span className="text-[#005fa3]">.</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">
+              trustness<span className="text-[#00ade0]">.</span>
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
               {pageContent?.content?.heroSubtitle || 
                 'privacidade, segurança da informação e compliance com foco em programas regulatórios e frameworks internacionais'}
             </p>
