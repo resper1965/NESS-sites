@@ -1,5 +1,7 @@
 import { Link } from 'wouter';
 import { useI18n } from '@/lib/i18n';
+import { getOptimizedImagePath } from '@/lib/image-utils';
+import { useEffect, useState } from 'react';
 
 interface HeroSectionProps {
   title: string;
@@ -21,15 +23,22 @@ export default function HeroSection({
   backgroundImage
 }: HeroSectionProps) {
   const { t } = useI18n();
+  const [optimizedImage, setOptimizedImage] = useState<string>(backgroundImage);
+  
+  // Otimiza a imagem de fundo após o componente ser montado
+  useEffect(() => {
+    setOptimizedImage(getOptimizedImagePath(backgroundImage));
+  }, [backgroundImage]);
   
   return (
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background image otimizada */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={backgroundImage} 
+          src={optimizedImage} 
           alt="Hero background" 
           className="w-full h-full object-cover" 
+          loading="eager" // Carrega a imagem hero como prioritária
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.1)] to-[rgba(18,18,18,0.3)]"></div>
       </div>

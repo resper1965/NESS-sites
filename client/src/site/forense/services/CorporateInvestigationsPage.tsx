@@ -134,7 +134,16 @@ export default function ForenseCorporateInvestigationsPage() {
     >
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 text-white bg-[#0d1117] relative">
+        <section className="pt-32 pb-20 text-white bg-[#0d1117] relative overflow-hidden">
+          {/* Imagem de fundo otimizada */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/assets/optimized/forense-hero-bg.webp" 
+              alt="Corporate Investigations" 
+              className="w-full h-full object-cover opacity-10" 
+              loading="eager"
+            />
+          </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
