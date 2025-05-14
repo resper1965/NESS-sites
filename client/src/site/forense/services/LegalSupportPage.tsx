@@ -138,7 +138,7 @@ export default function ForenseLegalSupportPage() {
           {/* Imagem de fundo otimizada */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/assets/images/optimized/trustness-hero-bg.webp" 
+              src="/assets/images/optimized/forense-hero-bg.webp" 
               alt="Legal Support" 
               className="w-full h-full object-cover opacity-10" 
               loading="eager"

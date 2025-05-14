@@ -138,7 +138,7 @@ export default function ForenseCorporateInvestigationsPage() {
           {/* Imagem de fundo otimizada */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/assets/optimized/forense-hero-bg.webp" 
+              src="/assets/images/optimized/forense-hero-bg.webp" 
               alt="Corporate Investigations" 
               className="w-full h-full object-cover opacity-10" 
               loading="eager"
