@@ -163,7 +163,7 @@ export default function ForenseDigitalForensicsPage() {
           {/* Imagem de fundo otimizada */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/assets/optimized/forense-hero-bg.webp" 
+              src="/assets/images/optimized/trustness-hero-bg.webp" 
               alt="Digital Forensics" 
               className="w-full h-full object-cover opacity-10" 
               loading="eager"
