@@ -250,60 +250,95 @@ export default function ForenseDigitalForensicsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase">
-                ambientes de <span className="text-[#00ade0]">coleta digital</span>
+                {language === 'pt' && <>ambientes de <span className="text-[#00ade0]">coleta digital</span></>}
+                {language === 'en' && <>digital <span className="text-[#00ade0]">collection environments</span></>}
+                {language === 'es' && <>ambientes de <span className="text-[#00ade0]">recolección digital</span></>}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
-
+                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                    ambientes <span className="text-[#00ade0]">corporativos</span>
+                    {language === 'pt' && <>ambientes <span className="text-[#00ade0]">corporativos</span></>}
+                    {language === 'en' && <>corporate <span className="text-[#00ade0]">environments</span></>}
+                    {language === 'es' && <>ambientes <span className="text-[#00ade0]">corporativos</span></>}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-4">
-                    análise de computadores, servidores, e dispositivos móveis corporativos, mantendo a discrição e minimizando interrupções nas operações empresariais.
+                  <p className="text-gray-300 text-sm mb-4 flex-grow">
+                    {language === 'pt' && 'análise de computadores, servidores, e dispositivos móveis corporativos, mantendo a discrição e minimizando interrupções nas operações empresariais.'}
+                    {language === 'en' && 'analysis of corporate computers, servers, and mobile devices, maintaining discretion and minimizing disruptions to business operations.'}
+                    {language === 'es' && 'análisis de computadoras, servidores y dispositivos móviles corporativos, manteniendo la discreción y minimizando interrupciones en las operaciones empresariales.'}
                   </p>
-                  <div className="mt-auto pt-4 border-t border-gray-800">
-                    <div className="flex items-center text-xs text-[#00ade0]/80">
-                      <span className="mr-1">servidores</span>
-                      <span className="mx-1">•</span>
-                      <span className="mx-1">estações</span>
-                      <span className="mx-1">•</span>
-                      <span className="ml-1">rede</span>
+                  <div className="pt-4 border-t border-gray-800 mt-auto">
+                    <div className="flex items-center justify-center text-xs text-[#00ade0]/80">
+                      {language === 'pt' && (
+                        <>
+                          <span>servidores</span>
+                          <span className="mx-1">•</span>
+                          <span>estações</span>
+                          <span className="mx-1">•</span>
+                          <span>rede</span>
+                        </>
+                      )}
+                      {language === 'en' && (
+                        <>
+                          <span>servers</span>
+                          <span className="mx-1">•</span>
+                          <span>workstations</span>
+                          <span className="mx-1">•</span>
+                          <span>network</span>
+                        </>
+                      )}
+                      {language === 'es' && (
+                        <>
+                          <span>servidores</span>
+                          <span className="mx-1">•</span>
+                          <span>estaciones</span>
+                          <span className="mx-1">•</span>
+                          <span>red</span>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
                 
-                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
+                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                    dispositivos <span className="text-[#00ade0]">pessoais</span>
+                    {language === 'pt' && <>dispositivos <span className="text-[#00ade0]">pessoais</span></>}
+                    {language === 'en' && <>personal <span className="text-[#00ade0]">devices</span></>}
+                    {language === 'es' && <>dispositivos <span className="text-[#00ade0]">personales</span></>}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-4">
-                    recuperação e análise de dados de smartphones, tablets e computadores pessoais, com atenção especial à privacidade e aos aspectos legais da coleta.
+                  <p className="text-gray-300 text-sm mb-4 flex-grow">
+                    {language === 'pt' && 'recuperação e análise de dados de smartphones, tablets e computadores pessoais, com atenção especial à privacidade e aos aspectos legais da coleta.'}
+                    {language === 'en' && 'recovery and analysis of data from smartphones, tablets, and personal computers, with special attention to privacy and legal aspects of collection.'}
+                    {language === 'es' && 'recuperación y análisis de datos de smartphones, tablets y computadoras personales, con atención especial a la privacidad y a los aspectos legales de la recolección.'}
                   </p>
-                  <div className="mt-auto pt-4 border-t border-gray-800">
-                    <div className="flex items-center text-xs text-[#00ade0]/80">
-                      <span className="mr-1">smartphones</span>
+                  <div className="pt-4 border-t border-gray-800 mt-auto">
+                    <div className="flex items-center justify-center text-xs text-[#00ade0]/80">
+                      <span>smartphones</span>
                       <span className="mx-1">•</span>
-                      <span className="mx-1">laptops</span>
+                      <span>laptops</span>
                       <span className="mx-1">•</span>
-                      <span className="ml-1">tablets</span>
+                      <span>tablets</span>
                     </div>
                   </div>
                 </div>
                 
-                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300">
+                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                    armazenamento em <span className="text-[#00ade0]">nuvem</span>
+                    {language === 'pt' && <>armazenamento em <span className="text-[#00ade0]">nuvem</span></>}
+                    {language === 'en' && <>cloud <span className="text-[#00ade0]">storage</span></>}
+                    {language === 'es' && <>almacenamiento en <span className="text-[#00ade0]">nube</span></>}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-4">
-                    extração forense de dados armazenados em serviços de nuvem, incluindo e-mails, documentos, redes sociais, sites e backups, seguindo protocolos legais para acesso autorizado.
+                  <p className="text-gray-300 text-sm mb-4 flex-grow">
+                    {language === 'pt' && 'extração forense de dados armazenados em serviços de nuvem, incluindo e-mails, documentos, redes sociais, sites e backups, seguindo protocolos legais para acesso autorizado.'}
+                    {language === 'en' && 'forensic extraction of data stored in cloud services, including emails, documents, social networks, websites, and backups, following legal protocols for authorized access.'}
+                    {language === 'es' && 'extracción forense de datos almacenados en servicios de nube, incluyendo correos electrónicos, documentos, redes sociales, sitios web y copias de seguridad, siguiendo protocolos legales para acceso autorizado.'}
                   </p>
-                  <div className="mt-auto pt-4 border-t border-gray-800">
-                    <div className="flex items-center text-xs text-[#00ade0]/80">
-                      <span className="mr-1">AWS</span>
+                  <div className="pt-4 border-t border-gray-800 mt-auto">
+                    <div className="flex items-center justify-center text-xs text-[#00ade0]/80">
+                      <span>AWS</span>
                       <span className="mx-1">•</span>
-                      <span className="mx-1">Google Cloud</span>
+                      <span>Google Cloud</span>
                       <span className="mx-1">•</span>
-                      <span className="ml-1">Azure</span>
+                      <span>Azure</span>
                     </div>
                   </div>
                 </div>
@@ -317,7 +352,9 @@ export default function ForenseDigitalForensicsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-10 text-center lowercase">
-                serviços <span className="text-[#00ade0]">especializados</span>
+                {language === 'pt' && <>serviços <span className="text-[#00ade0]">especializados</span></>}
+                {language === 'en' && <>specialized <span className="text-[#00ade0]">services</span></>}
+                {language === 'es' && <>servicios <span className="text-[#00ade0]">especializados</span></>}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {content.sections.map((section, index) => (

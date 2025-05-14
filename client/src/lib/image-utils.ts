@@ -15,6 +15,11 @@ export function getOptimizedImagePath(originalPath: string): string {
     return originalPath;
   }
   
+  // Se for do diretório attached_assets, retorna o caminho original
+  if (originalPath.includes('/attached_assets/')) {
+    return originalPath;
+  }
+  
   // Para imagens locais, vamos tentar usar a versão WebP otimizada
   const pathParts = originalPath.split('.');
   const extension = pathParts[pathParts.length - 1];
