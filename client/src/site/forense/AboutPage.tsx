@@ -201,16 +201,7 @@ export default function ForenseAboutPage() {
       
       <main>
         {/* Hero Section com fundo escuro */}
-        <section className="h-[75vh] min-h-[600px] max-h-[900px] text-white bg-[#0d1117] relative overflow-hidden flex items-center">
-          {/* Imagem de fundo otimizada */}
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="/assets/images/optimized/forense-hero-bg.webp" 
-              alt="About forense.io" 
-              className="w-full h-full object-cover opacity-10" 
-              loading="eager"
-            />
-          </div>
+        <section className="intro text-white bg-[#0d1117] relative overflow-hidden flex items-center" style={{ minHeight: "60vh" }}>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
