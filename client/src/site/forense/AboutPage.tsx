@@ -233,28 +233,43 @@ export default function ForenseAboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
-                  expertise forense<span className="text-[#00ade0]">.</span>
+                  {language === 'pt' && 'expertise forense'}
+                  {language === 'en' && 'forensic expertise'}
+                  {language === 'es' && 'experiencia forense'}
+                  <span className="text-[#00ade0]">.</span>
                 </h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  nossa equipe combina conhecimento técnico avançado com compreensão profunda dos requisitos legais, garantindo que cada evidência coletada seja juridicamente válida e tecnicamente robusta.
+                  {language === 'pt' && 'nossa equipe combina conhecimento técnico avançado com compreensão profunda dos requisitos legais, garantindo que cada evidência coletada seja juridicamente válida e tecnicamente robusta.'}
+                  {language === 'en' && 'our team combines advanced technical knowledge with deep understanding of legal requirements, ensuring that each piece of evidence collected is legally valid and technically robust.'}
+                  {language === 'es' && 'nuestro equipo combina conocimiento técnico avanzado con comprensión profunda de los requisitos legales, garantizando que cada evidencia recolectada sea jurídicamente válida y técnicamente robusta.'}
                 </p>
               </div>
               
               <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
-                  tecnologia avançada<span className="text-[#00ade0]">.</span>
+                  {language === 'pt' && 'tecnologia avançada'}
+                  {language === 'en' && 'advanced technology'}
+                  {language === 'es' && 'tecnología avanzada'}
+                  <span className="text-[#00ade0]">.</span>
                 </h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  utilizamos ferramentas e metodologias proprietárias desenvolvidas ao longo de anos para recuperar, analisar e validar evidências digitais com o mais alto padrão de precisão do mercado.
+                  {language === 'pt' && 'utilizamos ferramentas e metodologias proprietárias desenvolvidas ao longo de anos para recuperar, analisar e validar evidências digitais com o mais alto padrão de precisão do mercado.'}
+                  {language === 'en' && 'we use proprietary tools and methodologies developed over years to recover, analyze and validate digital evidence with the highest standard of precision in the market.'}
+                  {language === 'es' && 'utilizamos herramientas y metodologías propietarias desarrolladas a lo largo de años para recuperar, analizar y validar evidencias digitales con el más alto estándar de precisión del mercado.'}
                 </p>
               </div>
               
               <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
-                  resultados concretos<span className="text-[#00ade0]">.</span>
+                  {language === 'pt' && 'resultados concretos'}
+                  {language === 'en' && 'concrete results'}
+                  {language === 'es' && 'resultados concretos'}
+                  <span className="text-[#00ade0]">.</span>
                 </h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  nosso trabalho vai além da simples coleta de dados - transformamos evidências técnicas em narrativas claras e defensáveis que sustentam decisões judiciais e corporativas.
+                  {language === 'pt' && 'nosso trabalho vai além da simples coleta de dados - transformamos evidências técnicas em narrativas claras e defensáveis que sustentam decisões judiciais e corporativas.'}
+                  {language === 'en' && 'our work goes beyond simple data collection - we transform technical evidence into clear and defensible narratives that support judicial and corporate decisions.'}
+                  {language === 'es' && 'nuestro trabajo va más allá de la simple recolección de datos - transformamos evidencias técnicas en narrativas claras y defendibles que sustentan decisiones judiciales y corporativas.'}
                 </p>
               </div>
             </div>
