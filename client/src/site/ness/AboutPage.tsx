@@ -211,19 +211,7 @@ export default function NessAboutPage() {
       
       <main>
         {/* Hero Section com fundo escuro e estilo consistente */}
-        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-          {/* Background image */}
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="/assets/images/hero-dark-bg.png" 
-              alt="Hero background" 
-              className="w-full h-full object-cover" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.1)] to-[rgba(18,18,18,0.3)]"></div>
-          </div>
-          
-          {/* Overlay para garantir boa legibilidade do texto */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,18,18,0.2)] to-[rgba(18,18,18,0.4)]"></div>
+        <section className="intro relative flex items-center justify-center overflow-hidden bg-[#121212]" style={{ minHeight: "60vh" }}>
           
           {/* Content */}
           <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
@@ -243,7 +231,7 @@ export default function NessAboutPage() {
         </section>
         
         {/* Manifesto Section */}
-        <section className="py-12 bg-gray-50">
+        <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase">
@@ -283,7 +271,7 @@ export default function NessAboutPage() {
         </section>
         
         {/* Values Section */}
-        <section className="py-20 bg-[#2c2c34]">
+        <section className="conteudo bg-[#2c2c34]" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-[#00ade0]">{defaultContent.values.title}</h2>
             
@@ -325,7 +313,7 @@ export default function NessAboutPage() {
         </section>
         
         {/* Timeline Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">{defaultContent.timeline}</h2>
             
@@ -360,7 +348,7 @@ export default function NessAboutPage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-[#4d4d4d] text-white">
+        <section className="contato bg-[#4d4d4d] text-white flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
