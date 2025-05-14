@@ -548,7 +548,7 @@ export default function ForenseLegalSupportPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-[#00ade0]">
+        <section className="contato bg-[#00ade0] flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-2xl md:text-3xl font-['Montserrat'] font-normal mb-6 text-white lowercase">

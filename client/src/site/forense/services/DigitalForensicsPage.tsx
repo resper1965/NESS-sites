@@ -159,16 +159,7 @@ export default function ForenseDigitalForensicsPage() {
     >
       <main>
         {/* Hero Section */}
-        <section className="h-[70vh] min-h-[600px] max-h-[800px] flex items-center justify-center text-white bg-[#0d1117] relative overflow-hidden">
-          {/* Imagem de fundo otimizada */}
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="/assets/images/optimized/forense-hero-bg.webp" 
-              alt="Digital Forensics" 
-              className="w-full h-full object-cover opacity-10" 
-              loading="eager"
-            />
-          </div>
+        <section className="intro flex items-center justify-center text-white bg-[#0d1117] relative overflow-hidden" style={{ minHeight: "60vh" }}>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
@@ -182,7 +173,7 @@ export default function ForenseDigitalForensicsPage() {
         </section>
         
         {/* O que é Forense Digital */}
-        <section className="py-20 bg-white">
+        <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row items-center">
@@ -246,7 +237,7 @@ export default function ForenseDigitalForensicsPage() {
         </section>
 
         {/* Ambientes de Coleta */}
-        <section className="py-20 bg-[#0d1117] text-white">
+        <section className="conteudo bg-[#0d1117] text-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase">
@@ -348,7 +339,7 @@ export default function ForenseDigitalForensicsPage() {
         </section>
         
         {/* Serviços Especializados */}
-        <section className="py-20 bg-white">
+        <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-10 text-center lowercase">
@@ -380,7 +371,7 @@ export default function ForenseDigitalForensicsPage() {
         </section>
         
         {/* Metodologias Forenses */}
-        <section className="py-20 bg-gray-50">
+        <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row items-stretch md:space-x-10">
@@ -469,7 +460,7 @@ export default function ForenseDigitalForensicsPage() {
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 bg-[#0d1117] text-white">
+        <section className="contato bg-[#0d1117] text-white flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {t('forense.cta.title')}
