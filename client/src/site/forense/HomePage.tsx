@@ -40,10 +40,8 @@ export default function ForenseHomePage() {
       canonicalUrl={`https://${siteConfig.domain}`}
     >
       {/* Hero Section */}
-      <section className="h-[75vh] min-h-[600px] max-h-[900px] bg-[#0d1117] text-white relative overflow-hidden flex items-center">
-        {/* Nenhuma imagem de fundo conforme solicitado */}
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="intro bg-[#0d1117] text-white relative overflow-hidden flex items-center" style={{ minHeight: "60vh" }}>
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-3 lowercase">
               forense<span className="text-[#00ade0]">.</span>io
@@ -73,7 +71,7 @@ export default function ForenseHomePage() {
       </section>
       
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-['Montserrat'] font-normal text-center mb-16 lowercase">
             {language === 'pt' && <> serviços <span className="text-[#00ade0]">especializados</span></>}
@@ -173,7 +171,7 @@ export default function ForenseHomePage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-[#0d1117] text-white">
+      <section className="contato bg-[#0d1117] text-white flex items-center" style={{ minHeight: "400px" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-['Montserrat'] font-normal mb-6 lowercase">
