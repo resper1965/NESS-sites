@@ -392,12 +392,16 @@ export default function ForenseLegalSupportPage() {
                       <div className="ml-4 h-[1px] flex-grow bg-[#00ade0]/30"></div>
                     </div>
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
-                      análise <span className="text-[#00ade0]">preliminar</span>
+                      {language === 'pt' && <>análise <span className="text-[#00ade0]">preliminar</span></>}
+                      {language === 'en' && <>preliminary <span className="text-[#00ade0]">analysis</span></>}
+                      {language === 'es' && <>análisis <span className="text-[#00ade0]">preliminar</span></>}
                     </h3>
                   </div>
                   <div className="md:w-2/3">
                     <p className="text-gray-300 leading-relaxed">
-                      avaliamos minuciosamente os documentos, relatórios e evidências disponíveis, identificando pontos críticos e oportunidades estratégicas. essa fase estabelece as bases para uma consultoria eficaz e direcionada aos objetivos do cliente.
+                      {language === 'pt' && 'avaliamos minuciosamente os documentos, relatórios e evidências disponíveis, identificando pontos críticos e oportunidades estratégicas. essa fase estabelece as bases para uma consultoria eficaz e direcionada aos objetivos do cliente.'}
+                      {language === 'en' && 'we thoroughly evaluate the available documents, reports, and evidence, identifying critical points and strategic opportunities. this phase establishes the foundation for effective consulting directed at the client\'s objectives.'}
+                      {language === 'es' && 'evaluamos minuciosamente los documentos, informes y evidencias disponibles, identificando puntos críticos y oportunidades estratégicas. esta fase establece las bases para una consultoría eficaz y dirigida a los objetivos del cliente.'}
                     </p>
                   </div>
                 </div>
@@ -409,12 +413,16 @@ export default function ForenseLegalSupportPage() {
                       <div className="ml-4 h-[1px] flex-grow bg-[#00ade0]/30"></div>
                     </div>
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
-                      planejamento <span className="text-[#00ade0]">estratégico</span>
+                      {language === 'pt' && <>planejamento <span className="text-[#00ade0]">estratégico</span></>}
+                      {language === 'en' && <>strategic <span className="text-[#00ade0]">planning</span></>}
+                      {language === 'es' && <>planificación <span className="text-[#00ade0]">estratégica</span></>}
                     </h3>
                   </div>
                   <div className="md:w-2/3">
                     <p className="text-gray-300 leading-relaxed">
-                      desenvolvemos uma estratégia personalizada que integra aspectos jurídicos e técnicos, estabelecendo uma linha de atuação clara e fundamentada. cada ação é meticulosamente planejada para maximizar o impacto positivo no caso.
+                      {language === 'pt' && 'desenvolvemos uma estratégia personalizada que integra aspectos jurídicos e técnicos, estabelecendo uma linha de atuação clara e fundamentada. cada ação é meticulosamente planejada para maximizar o impacto positivo no caso.'}
+                      {language === 'en' && 'we develop a personalized strategy that integrates legal and technical aspects, establishing a clear and well-founded course of action. each action is meticulously planned to maximize the positive impact on the case.'}
+                      {language === 'es' && 'desarrollamos una estrategia personalizada que integra aspectos jurídicos y técnicos, estableciendo una línea de actuación clara y fundamentada. cada acción es meticulosamente planificada para maximizar el impacto positivo en el caso.'}
                     </p>
                   </div>
                 </div>
@@ -431,7 +439,9 @@ export default function ForenseLegalSupportPage() {
                   </div>
                   <div className="md:w-2/3">
                     <p className="text-gray-300 leading-relaxed">
-                      implementamos as estratégias definidas com rigor científico e precisão técnica, garantindo que cada informação apresentada seja verificável e sustentável. toda a atividade é documentada seguindo padrões internacionais.
+                      {language === 'pt' && 'implementamos as estratégias definidas com rigor científico e precisão técnica, garantindo que cada informação apresentada seja verificável e sustentável. toda a atividade é documentada seguindo padrões internacionais.'}
+                      {language === 'en' && 'we implement the defined strategies with scientific rigor and technical precision, ensuring that each piece of information presented is verifiable and sustainable. all activity is documented following international standards.'}
+                      {language === 'es' && 'implementamos las estrategias definidas con rigor científico y precisión técnica, garantizando que cada información presentada sea verificable y sostenible. toda la actividad está documentada siguiendo estándares internacionales.'}
                     </p>
                   </div>
                 </div>
@@ -448,7 +458,9 @@ export default function ForenseLegalSupportPage() {
                   </div>
                   <div className="md:w-2/3">
                     <p className="text-gray-300 leading-relaxed">
-                      traduzimos conceitos técnicos complexos em linguagem acessível e persuasiva, apropriada para o contexto jurídico. nossas apresentações são estruturadas para transmitir clareza e convicção, facilitando o entendimento por todos os envolvidos.
+                      {language === 'pt' && 'traduzimos conceitos técnicos complexos em linguagem acessível e persuasiva, apropriada para o contexto jurídico. nossas apresentações são estruturadas para transmitir clareza e convicção, facilitando o entendimento por todos os envolvidos.'}
+                      {language === 'en' && 'we translate complex technical concepts into accessible and persuasive language, appropriate for the legal context. our presentations are structured to convey clarity and conviction, facilitating understanding by all involved.'}
+                      {language === 'es' && 'traducimos conceptos técnicos complejos en lenguaje accesible y persuasivo, apropiado para el contexto jurídico. nuestras presentaciones están estructuradas para transmitir claridad y convicción, facilitando la comprensión por parte de todos los involucrados.'}
                     </p>
                   </div>
                 </div>
