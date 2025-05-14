@@ -200,15 +200,10 @@ export default function TrustnessAboutPage() {
       />
       
       <main>
-        {/* Hero Section com fundo escuro e estilo consistente */}
+        {/* Hero Section com estilo padronizado */}
         <section 
-          className="pt-32 pb-20 text-white bg-[#0b1016] relative"
-          style={{
-            backgroundImage: 'url(/assets/images/trustness-bg.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
+          className="intro text-white bg-[#0b1016] relative flex items-center"
+          style={{ minHeight: "60vh" }}
         >
           {/* Overlay para garantir contraste com o texto */}
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -226,7 +221,7 @@ export default function TrustnessAboutPage() {
         </section>
         
         {/* Manifesto Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase">
