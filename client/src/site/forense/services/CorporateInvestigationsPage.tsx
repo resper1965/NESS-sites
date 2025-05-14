@@ -134,16 +134,7 @@ export default function ForenseCorporateInvestigationsPage() {
     >
       <main>
         {/* Hero Section */}
-        <section className="h-[70vh] min-h-[600px] max-h-[800px] flex items-center justify-center text-white bg-[#0d1117] relative overflow-hidden">
-          {/* Imagem de fundo otimizada */}
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="/assets/images/optimized/forense-hero-bg.webp" 
-              alt="Corporate Investigations" 
-              className="w-full h-full object-cover opacity-10" 
-              loading="eager"
-            />
-          </div>
+        <section className="intro flex items-center justify-center text-white bg-[#0d1117] relative overflow-hidden" style={{ minHeight: "60vh" }}>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
@@ -157,7 +148,7 @@ export default function ForenseCorporateInvestigationsPage() {
         </section>
 
         {/* Introdução e Visão Geral */}
-        <section className="py-24 bg-white border-b border-gray-100">
+        <section className="conteudo bg-white border-b border-gray-100" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
@@ -221,7 +212,7 @@ export default function ForenseCorporateInvestigationsPage() {
         </section>
 
         {/* Serviços Principais */}
-        <section className="py-24 bg-gray-50">
+        <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-16 text-center lowercase">
@@ -300,7 +291,7 @@ export default function ForenseCorporateInvestigationsPage() {
         </section>
 
         {/* Metodologia */}
-        <section className="py-24 bg-[#0d1117] text-white">
+        <section className="conteudo bg-[#0d1117] text-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
@@ -369,7 +360,7 @@ export default function ForenseCorporateInvestigationsPage() {
         </section>
 
         {/* Casos de Uso */}
-        <section className="py-24 bg-white">
+        <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
@@ -409,7 +400,7 @@ export default function ForenseCorporateInvestigationsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-[#00ade0]">
+        <section className="contato bg-[#00ade0] flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-2xl md:text-3xl font-['Montserrat'] font-normal mb-6 text-white lowercase">
