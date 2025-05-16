@@ -4,7 +4,7 @@ import { getOptimizedImagePath } from '@/lib/image-utils';
 import { useEffect, useState } from 'react';
 
 interface HeroSectionProps {
-  title: string;
+  title: string | React.ReactNode;
   subtitle: string;
   ctaText1: string;
   ctaUrl1: string;
@@ -39,9 +39,9 @@ export default function HeroSection({
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6">
             <span style={{color: "#ffffff"}}>ness</span><span className="text-[#00ade0]">.</span>
           </h1>
-          <p className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+          <div className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
             {title}
-          </p>
+          </div>
         
           <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-white font-['Montserrat'] lowercase">
             {subtitle}
