@@ -15,7 +15,21 @@ interface ServicesSectionProps {
 export default function ServicesSection({ title }: ServicesSectionProps) {
   const { t, language } = useI18n();
   
-  // Títulos traduzidos para a seção
+  // Títulos traduzidos para a seção com formatação JSX
+  const getTitleJSX = (language: string) => {
+    switch (language) {
+      case 'pt':
+        return <>serviços <span className="text-[#00ade0]">modulares</span></>;
+      case 'en':
+        return <><span className="text-[#00ade0]">modular</span> services</>;
+      case 'es':
+        return <>servicios <span className="text-[#00ade0]">modulares</span></>;
+      default:
+        return <>serviços <span className="text-[#00ade0]">modulares</span></>;
+    }
+  };
+  
+  // Versão em string para compatibilidade com código existente
   const titles = {
     pt: "serviços modulares",
     en: "modular services",
@@ -113,7 +127,9 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
     <section id="services" className="conteudo bg-[#f9f9f9]" style={{ padding: "4rem 0" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-8 lowercase">{title || titles[language]}</h2>
+          <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-8 lowercase">
+            {title || getTitleJSX(language)}
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

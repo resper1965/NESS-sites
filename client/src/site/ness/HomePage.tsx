@@ -46,7 +46,21 @@ export default function NessHomePage() {
     >
       {/* Hero Section */}
       <HeroSection 
-        title={pageContent?.content && JSON.parse(pageContent.content).heroTitle || "tecnologia modular para o essencial invisível"}
+        title={
+          language === 'pt' ? (
+            pageContent?.content && JSON.parse(pageContent.content).heroTitle || 
+            <>use <span className="text-[#00ade0]">tecnologia</span> segura, escalável e inteligente para impulsionar sua operação na era digital<span className="text-[#00ade0]">.</span></>
+          ) :
+          language === 'en' ? (
+            pageContent?.content && JSON.parse(pageContent.content).heroTitle_en || 
+            <>use secure, scalable and intelligent <span className="text-[#00ade0]">technology</span> to boost your operation in the digital era<span className="text-[#00ade0]">.</span></>
+          ) :
+          language === 'es' ? (
+            pageContent?.content && JSON.parse(pageContent.content).heroTitle_es || 
+            <>use <span className="text-[#00ade0]">tecnología</span> segura, escalable e inteligente para impulsar su operación en la era digital<span className="text-[#00ade0]">.</span></>
+          ) :
+          <>use <span className="text-[#00ade0]">tecnologia</span> segura, escalável e inteligente para impulsionar sua operação na era digital<span className="text-[#00ade0]">.</span></>
+        }
         subtitle={pageContent?.content && JSON.parse(pageContent.content).heroSubtitle || "arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade"}
         ctaText1={
           language === 'pt' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1 || "conheça nossos serviços") :
