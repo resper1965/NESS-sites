@@ -48,9 +48,19 @@ export default function NessHomePage() {
       <HeroSection 
         title={pageContent?.content && JSON.parse(pageContent.content).heroTitle || "tecnologia modular para o essencial invisível"}
         subtitle={pageContent?.content && JSON.parse(pageContent.content).heroSubtitle || "arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade"}
-        ctaText1={pageContent?.content && JSON.parse(pageContent.content).ctaText1 || "conheça nossos serviços"}
-        ctaUrl1={pageContent?.content && JSON.parse(pageContent.content).ctaUrl1 || "/site/ness/services"}
-        ctaText2={pageContent?.content && JSON.parse(pageContent.content).ctaText2 || "fale conosco"}
+        ctaText1={
+          language === 'pt' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1 || "conheça nossos serviços") :
+          language === 'en' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1_en || "explore our services") :
+          language === 'es' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1_es || "conozca nuestros servicios") :
+          "conheça nossos serviços"
+        }
+        ctaUrl1={pageContent?.content && JSON.parse(pageContent.content).ctaUrl1 || "/site/ness/services/secops"}
+        ctaText2={
+          language === 'pt' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText2 || "fale conosco") :
+          language === 'en' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText2_en || "contact us") :
+          language === 'es' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText2_es || "contáctenos") :
+          "fale conosco"
+        }
         ctaUrl2={pageContent?.content && JSON.parse(pageContent.content).ctaUrl2 || "/site/ness/contact"}
         backgroundImage="/attached_assets/image_1747186663435.png"
       />
