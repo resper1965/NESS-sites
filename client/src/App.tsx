@@ -37,7 +37,6 @@ import NewsPage from "@/pages/news-page";
 import EthicsPage from "@/pages/ethics-page";
 import PrivacyPage from "@/pages/privacy-page";
 import ContactPage from "@/pages/contact-page";
-import AuthPage from "@/pages/auth-page";
 import AdminLoginPage from "@/pages/admin/login-page";
 import AdminDashboardPage from "@/pages/admin/dashboard-page";
 import InfraOpsPage from "@/pages/services/infraops-page";
@@ -181,8 +180,6 @@ function Router() {
       <Route path="/privacy" component={PrivacyPage} />
       <Route path="/contact" component={ContactPage} />
       
-      {/* Auth Route */}
-      <Route path="/auth" component={AuthPage} />
       
       {/* Admin Routes */}
       <Route path="/admin/login" component={AdminLoginPage} />

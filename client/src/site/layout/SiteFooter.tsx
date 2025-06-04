@@ -305,7 +305,7 @@ export default function SiteFooter() {
                 </Link>
               </div>
               <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
-                <Link href="/auth">
+                <Link href="/admin/login">
                   {t('footer.login')}
                 </Link>
               </div>
