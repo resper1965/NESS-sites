@@ -126,8 +126,11 @@ export default function Navbar() {
         <nav className="flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="text-white lowercase">
-              <h1 className="font-['Montserrat'] font-normal text-3xl">
-                ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>
+              <h1 className="logo">
+                <span className="brand-wordmark">
+                  <span className="word">ness</span>
+                  <span className="brand-dot">.</span>
+                </span>
               </h1>
             </Link>
           </div>
