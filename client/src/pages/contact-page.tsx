@@ -104,14 +104,14 @@ export default function ContactPage() {
           <div className="hero-vignette-right" />
           <div className="container mx-auto px-4 z-10 flex items-center h-full">
             <div className="hero-main-content">
-              <h1 className="text-4xl md:text-5xl mb-6 font-['Montserrat'] font-normal text-white">
+              <h1 className="text-[48px] font-['Montserrat'] font-normal text-white mb-6">
                 {t('contact.hero.prefix')}{' '}
                 <span className="relative">
                   {t('contact.hero.highlight')}
                   <span className="absolute bottom-1 left-0 w-full h-1 bg-accent"></span>
                 </span>
               </h1>
-              <p className="text-xl text-gray-200 max-w-3xl">
+              <p className="text-base leading-6 text-[#F5F5F5] max-w-3xl">
                 {t('contact.hero.text')}
               </p>
             </div>
