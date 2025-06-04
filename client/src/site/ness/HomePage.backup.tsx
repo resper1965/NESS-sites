@@ -45,13 +45,9 @@ export default function NessHomePage() {
       canonicalUrl={`https://${siteConfig.domain}`}
     >
       {/* Hero Section */}
-      <HeroSection 
+      <HeroSection
         title={pageContent?.content && JSON.parse(pageContent.content).heroTitle || "tecnologia modular para o essencial invisível"}
         subtitle={pageContent?.content && JSON.parse(pageContent.content).heroSubtitle || "arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade"}
-        ctaText1={pageContent?.content && JSON.parse(pageContent.content).ctaText1 || "conheça nossos serviços"}
-        ctaUrl1={pageContent?.content && JSON.parse(pageContent.content).ctaUrl1 || "/site/ness/services"}
-        ctaText2={pageContent?.content && JSON.parse(pageContent.content).ctaText2 || "fale conosco"}
-        ctaUrl2={pageContent?.content && JSON.parse(pageContent.content).ctaUrl2 || "/site/ness/contact"}
         backgroundImage="/attached_assets/image_1747186663435.png"
       />
       
