@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/hooks/use-auth';
 import { Redirect, Link } from 'wouter';
 import { getQueryFn } from '@/lib/queryClient';
-import { Loader2, Home, FileText, Briefcase, Newspaper, Settings, Users, LogOut } from 'lucide-react';
+import { Loader2, Home, FileText, Briefcase, Newspaper, Settings, Users, LogOut, Palette } from 'lucide-react';
 import { User } from '@shared/schema';
 
 // Inline AdminLayout component to avoid import issues
@@ -48,6 +48,12 @@ function AdminLayout({
       label: 'Notícias', 
       href: '/admin/news',
       id: 'news'
+    },
+    { 
+      icon: <Palette className="w-5 h-5" />, 
+      label: 'Branding', 
+      href: '/admin/branding',
+      id: 'branding'
     },
     { 
       icon: <Settings className="w-5 h-5" />, 

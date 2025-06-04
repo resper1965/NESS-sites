@@ -596,6 +596,208 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Branding & Templates Routes
+  app.get("/api/branding/files", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      const category = req.query.category?.toString();
+      const type = req.query.type?.toString();
+      
+      // Mock data - in production, this would come from a database
+      const files = [
+        {
+          id: '1',
+          name: 'guideline-colors.pdf',
+          category: 'styles',
+          type: 'pdf',
+          description: 'Primary and neutral color codes for all digital materials',
+          version: 'v2.1',
+          uploadDate: '2024-01-15',
+          uploader: 'Marketing Team',
+          isOfficial: true,
+          downloadUrl: '/assets/branding/guideline-colors.pdf',
+          previewUrl: '/assets/branding/previews/guideline-colors-thumb.png'
+        },
+        {
+          id: '2',
+          name: 'typography-guidelines.pdf',
+          category: 'styles',
+          type: 'pdf',
+          description: 'Montserrat font usage guidelines and hierarchy',
+          version: 'v1.3',
+          uploadDate: '2024-01-10',
+          uploader: 'Design Team',
+          isOfficial: true,
+          downloadUrl: '/assets/branding/typography-guidelines.pdf'
+        },
+        {
+          id: '3',
+          name: 'SlideDeck_ness_v1.potx',
+          category: 'templates',
+          type: 'pptx',
+          description: 'Official slide template for internal and client presentations',
+          version: 'v1.0',
+          uploadDate: '2024-01-12',
+          uploader: 'Brand Manager',
+          isOfficial: true,
+          downloadUrl: '/assets/branding/SlideDeck_ness_v1.potx'
+        }
+      ];
+
+      let filteredFiles = files;
+      
+      if (category && category !== 'all') {
+        filteredFiles = filteredFiles.filter(file => file.category === category);
+      }
+      
+      if (type && type !== 'all') {
+        filteredFiles = filteredFiles.filter(file => file.type === type);
+      }
+
+      res.json(filteredFiles);
+    } catch (error) {
+      console.error("Error fetching branding files:", error);
+      res.status(500).json({ message: "Error fetching branding files" });
+    }
+  });
+
+  app.post("/api/branding/upload", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      const { category, description, version, fileName, fileType } = req.body;
+      
+      // Validate required fields
+      if (!category || !description || !version || !fileName) {
+        return res.status(400).json({ message: "Missing required fields" });
+      }
+
+      // In production, you would handle file upload here
+      const newFile = {
+        id: Date.now().toString(),
+        name: fileName,
+        category,
+        type: fileType || 'pdf',
+        description,
+        version,
+        uploadDate: new Date().toISOString().split('T')[0],
+        uploader: req.user!.username,
+        isOfficial: false, // Requires approval
+        downloadUrl: `/assets/branding/${fileName}`,
+        previewUrl: fileType === 'pdf' ? `/assets/branding/previews/${fileName}-thumb.png` : undefined
+      };
+
+      // Log activity
+      await storage.createActivityLog({
+        userId: req.user!.id,
+        action: "upload",
+        entityType: "branding_file",
+        entityId: newFile.id,
+        details: { fileName, category, version }
+      });
+
+      res.status(201).json(newFile);
+    } catch (error) {
+      console.error("Error uploading branding file:", error);
+      res.status(500).json({ message: "Error uploading branding file" });
+    }
+  });
+
+  app.put("/api/branding/files/:id/approve", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      const { id } = req.params;
+      
+      // In production, update the file status in database
+      const updatedFile = {
+        id,
+        isOfficial: true,
+        approvedBy: req.user!.username,
+        approvedDate: new Date().toISOString()
+      };
+
+      // Log activity
+      await storage.createActivityLog({
+        userId: req.user!.id,
+        action: "approve",
+        entityType: "branding_file",
+        entityId: id,
+        details: { action: "approved branding file" }
+      });
+
+      res.json(updatedFile);
+    } catch (error) {
+      console.error("Error approving branding file:", error);
+      res.status(500).json({ message: "Error approving branding file" });
+    }
+  });
+
+  app.delete("/api/branding/files/:id", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      const { id } = req.params;
+      
+      // In production, delete the file and move to archive
+      // Log activity
+      await storage.createActivityLog({
+        userId: req.user!.id,
+        action: "delete",
+        entityType: "branding_file",
+        entityId: id,
+        details: { action: "deleted branding file" }
+      });
+
+      res.json({ success: true, message: "File deleted successfully" });
+    } catch (error) {
+      console.error("Error deleting branding file:", error);
+      res.status(500).json({ message: "Error deleting branding file" });
+    }
+  });
+
+  app.get("/api/branding/files/:id/versions", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      const { id } = req.params;
+      
+      // Mock version history - in production, this would come from database
+      const versions = [
+        {
+          id: `${id}_v2`,
+          version: 'v2.1',
+          uploadDate: '2024-01-15',
+          uploader: 'Marketing Team',
+          isActive: true
+        },
+        {
+          id: `${id}_v1`,
+          version: 'v2.0',
+          uploadDate: '2024-01-10',
+          uploader: 'Design Team',
+          isActive: false
+        }
+      ];
+
+      res.json(versions);
+    } catch (error) {
+      console.error("Error fetching file versions:", error);
+      res.status(500).json({ message: "Error fetching file versions" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
