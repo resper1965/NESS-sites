@@ -3,8 +3,8 @@ import { Language } from '@/lib/i18n';
 const defaultContent: Record<Language, any> = {
     pt: {
       title: 'n.AutoOps',
-      description: 'automação inteligente de processos com IA',
-      intro: 'o n.AutoOps da ness combina tecnologias de automação com inteligência artificial para transformar processos operacionais, aumentar eficiência e reduzir custos, permitindo que as equipes foquem em atividades estratégicas.',
+      description: 'Otimize seus processos com automação inteligente.',
+      intro: 'Tecnologia para produtividade real, conectada à sua operação.',
       sections: [
         {
           title: 'avaliação de processos',
@@ -50,8 +50,8 @@ const defaultContent: Record<Language, any> = {
     },
     en: {
       title: 'n.AutoOps',
-      description: 'intelligent process automation with AI',
-      intro: 'ness\'s n.AutoOps combines automation technologies with artificial intelligence to transform operational processes, increase efficiency, and reduce costs, allowing teams to focus on strategic activities.',
+      description: 'Optimize your processes with intelligent automation.',
+      intro: 'Technology for real productivity, connected to your operation.',
       sections: [
         {
           title: 'process assessment',
@@ -97,8 +97,8 @@ const defaultContent: Record<Language, any> = {
     },
     es: {
       title: 'n.AutoOps',
-      description: 'automatización inteligente de procesos con IA',
-      intro: 'el n.AutoOps de ness combina tecnologías de automatización con inteligencia artificial para transformar procesos operacionales, aumentar eficiencia y reducir costos, permitiendo que los equipos se enfoquen en actividades estratégicas.',
+      description: 'Optimice sus procesos con automatización inteligente.',
+      intro: 'Tecnología para productividad real, conectada a su operación.',
       sections: [
         {
           title: 'evaluación de procesos',

@@ -3,8 +3,8 @@ import { Language } from '@/lib/i18n';
 const defaultContent: Record<Language, any> = {
     pt: {
       title: 'n.InfraOps',
-      description: 'gestão moderna de infraestrutura com alta disponibilidade',
-      intro: 'o n.InfraOps da ness oferece um modelo modular e integrado para gerenciamento de infraestrutura, garantindo operações confiáveis, alta disponibilidade e escalabilidade para ambientes corporativos de qualquer porte.',
+      description: 'gestão de infraestrutura com alta disponibilidade',
+      intro: 'Gerenciamos redes, servidores e nuvem com foco em desempenho e confiabilidade.',
       sections: [
         {
           title: 'arquitetura de nuvem',
@@ -50,8 +50,8 @@ const defaultContent: Record<Language, any> = {
     },
     en: {
       title: 'n.InfraOps',
-      description: 'modern infrastructure management with high availability',
-      intro: 'ness\'s n.InfraOps offers a modular and integrated model for infrastructure management, ensuring reliable operations, high availability, and scalability for corporate environments of any size.',
+      description: 'infrastructure management with high availability',
+      intro: 'We manage networks, servers and cloud with a focus on performance and reliability.',
       sections: [
         {
           title: 'cloud architecture',
@@ -97,8 +97,8 @@ const defaultContent: Record<Language, any> = {
     },
     es: {
       title: 'n.InfraOps',
-      description: 'gestión moderna de infraestructura con alta disponibilidad',
-      intro: 'el n.InfraOps de ness ofrece un modelo modular e integrado para la gestión de infraestructura, garantizando operaciones confiables, alta disponibilidad y escalabilidad para entornos corporativos de cualquier tamaño.',
+      description: 'gestión de infraestructura con alta disponibilidad',
+      intro: 'Gestionamos redes, servidores y nube con enfoque en rendimiento y confiabilidad.',
       sections: [
         {
           title: 'arquitectura de nube',

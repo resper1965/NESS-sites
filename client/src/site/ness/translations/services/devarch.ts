@@ -4,7 +4,7 @@ const defaultContent: Record<Language, any> = {
     pt: {
       title: 'n.DevArch',
       description: 'fundamentos sólidos para desenvolvimento com arquitetura e IA',
-      intro: 'o n.DevArch da ness cria bases sólidas para o desenvolvimento de software com foco em arquitetura moderna, integrando inteligência artificial para elevar a qualidade, eficiência e escalabilidade dos sistemas.',
+      intro: 'Desenvolvimento orientado por arquitetura e boas práticas de segurança.',
       sections: [
         {
           title: 'arquitetura moderna',
@@ -51,7 +51,7 @@ const defaultContent: Record<Language, any> = {
     en: {
       title: 'n.DevArch',
       description: 'solid foundations for development with architecture and AI',
-      intro: 'ness\'s n.DevArch creates solid foundations for software development focusing on modern architecture, integrating artificial intelligence to elevate the quality, efficiency, and scalability of systems.',
+      intro: 'Development driven by architecture and security best practices.',
       sections: [
         {
           title: 'modern architecture',
@@ -98,7 +98,7 @@ const defaultContent: Record<Language, any> = {
     es: {
       title: 'n.DevArch',
       description: 'fundamentos sólidos para desarrollo con arquitectura e IA',
-      intro: 'el n.DevArch de ness crea bases sólidas para el desarrollo de software con enfoque en arquitectura moderna, integrando inteligencia artificial para elevar la calidad, eficiencia y escalabilidad de los sistemas.',
+      intro: 'Desarrollo orientado por arquitectura y buenas prácticas de seguridad.',
       sections: [
         {
           title: 'arquitectura moderna',
