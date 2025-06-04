@@ -40,8 +40,8 @@ export default function ContactPage() {
   const onSubmit = async (data: ContactFormValues) => {
     if (!captchaVerified) {
       toast({
-        title: "Verificação necessária",
-        description: "Por favor, complete a verificação de captcha antes de enviar o formulário.",
+        title: t('contact.toast.verify.title'),
+        description: t('contact.toast.verify.desc'),
         variant: "destructive",
       });
       return;
@@ -55,8 +55,8 @@ export default function ContactPage() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
-        title: "Mensagem enviada",
-        description: "Agradecemos o seu contato. Responderemos em breve.",
+        title: t('contact.toast.success.title'),
+        description: t('contact.toast.success.desc'),
         variant: "default",
       });
       
@@ -65,8 +65,8 @@ export default function ContactPage() {
       setCaptchaVerified(false);
     } catch (error) {
       toast({
-        title: "Erro ao enviar mensagem",
-        description: "Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.",
+        title: t('contact.toast.error.title'),
+        description: t('contact.toast.error.desc'),
         variant: "destructive",
       });
     } finally {
@@ -86,9 +86,9 @@ export default function ContactPage() {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Contato - ness."
-        description="Entre em contato com nossa equipe para saber mais sobre nossos serviços de tecnologia e segurança."
+        description={t('contact.seo.description')}
         structuredData={structuredData}
       />
       
@@ -99,14 +99,13 @@ export default function ContactPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl mb-6 font-['Montserrat'] font-normal">
-                Entre em <span className="relative">
-                  contato
+                {t('contact.hero.prefix')} <span className="relative">
+                  {t('contact.hero.highlight')}
                   <span className="absolute bottom-1 left-0 w-full h-1 bg-accent"></span>
                 </span>
               </h1>
               <p className="text-xl text-gray-200 max-w-3xl">
-                Estamos prontos para ajudar sua empresa a atingir novos patamares 
-                de segurança e eficiência operacional. Converse com nossos especialistas hoje.
+                {t('contact.hero.text')}
               </p>
             </div>
           </div>
@@ -116,12 +115,12 @@ export default function ContactPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <div>
-                <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">Envie sua mensagem</h2>
+                <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">{t('contact.form.title')}</h2>
                 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-gray-700 mb-2">Nome completo *</label>
+                      <label htmlFor="name" className="block text-gray-700 mb-2">{t('contact.form.name')}</label>
                       <input 
                         type="text" 
                         id="name" 
@@ -134,7 +133,7 @@ export default function ContactPage() {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-gray-700 mb-2">E-mail *</label>
+                      <label htmlFor="email" className="block text-gray-700 mb-2">{t('contact.form.email')}</label>
                       <input 
                         type="email" 
                         id="email" 
@@ -149,7 +148,7 @@ export default function ContactPage() {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-gray-700 mb-2">Empresa *</label>
+                      <label htmlFor="company" className="block text-gray-700 mb-2">{t('contact.form.company')}</label>
                       <input 
                         type="text" 
                         id="company" 
@@ -162,7 +161,7 @@ export default function ContactPage() {
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-gray-700 mb-2">Telefone *</label>
+                      <label htmlFor="phone" className="block text-gray-700 mb-2">{t('contact.form.phone')}</label>
                       <input 
                         type="tel" 
                         id="phone" 
@@ -176,7 +175,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-gray-700 mb-2">Assunto *</label>
+                    <label htmlFor="subject" className="block text-gray-700 mb-2">{t('contact.form.subject')}</label>
                     <input 
                       type="text" 
                       id="subject" 
@@ -189,7 +188,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-gray-700 mb-2">Mensagem *</label>
+                    <label htmlFor="message" className="block text-gray-700 mb-2">{t('contact.form.message')}</label>
                     <textarea 
                       id="message" 
                       rows={5} 
@@ -202,7 +201,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div className="mb-6">
-                    <label className="block text-gray-700 mb-2">Verificação *</label>
+                    <label className="block text-gray-700 mb-2">{t('contact.form.verification')}</label>
                     <div 
                       ref={captchaRef}
                       className="border border-gray-300 rounded-md overflow-hidden"
@@ -213,7 +212,7 @@ export default function ContactPage() {
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9a1 1 0 00-1-1z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-sm text-gray-600">Verificação de Segurança</span>
+                          <span className="text-sm text-gray-600">{t('contact.form.security')}</span>
                         </div>
                         <div className="p-4 flex items-center">
                           <div className="flex items-center">
@@ -225,7 +224,7 @@ export default function ContactPage() {
                               checked={captchaVerified}
                             />
                             <label htmlFor="captcha" className="text-gray-700 flex items-center">
-                              <span>Não sou um robô</span>
+                              <span>{t('contact.form.notRobot')}</span>
                               <div className="ml-8 flex items-center space-x-2 pl-2 border-l border-gray-300">
                                 <span className="text-xs text-gray-500">reCAPTCHA</span>
                                 <div className="flex space-x-1">
@@ -239,9 +238,9 @@ export default function ContactPage() {
                           </div>
                         </div>
                         <div className="bg-gray-50 px-2 py-1 border-t border-gray-300">
-                          <p className="text-xs text-gray-500">Protegido por reCAPTCHA - 
-                            <a href="#" className="text-blue-500 hover:underline ml-1">Privacidade</a> -
-                            <a href="#" className="text-blue-500 hover:underline ml-1">Termos</a>
+                          <p className="text-xs text-gray-500">{t('contact.form.protected')}
+                            <a href="#" className="text-blue-500 hover:underline ml-1">{t('contact.form.privacy')}</a> -
+                            <a href="#" className="text-blue-500 hover:underline ml-1">{t('contact.form.terms')}</a>
                           </p>
                         </div>
                       </div>
@@ -253,13 +252,13 @@ export default function ContactPage() {
                     disabled={isSubmitting}
                     className="bg-accent hover:bg-accent-dark text-white py-3 px-8 rounded-md font-medium transition duration-300 inline-block disabled:opacity-70"
                   >
-                    {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
+                    {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                   </button>
                 </form>
               </div>
               
               <div className="mt-8 lg:mt-0">
-                <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">Informações de Contato</h2>
+                <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">{t('contact.info.title')}</h2>
                 
                 <div className="space-y-8 mb-12">
                   <div className="flex items-start">
@@ -270,7 +269,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium text-gray-800 mb-2">Escritório</h3>
+                      <h3 className="text-xl font-medium text-gray-800 mb-2">{t('contact.info.office')}</h3>
                       <p className="text-gray-600">
                         Av. Paulista, 1000, Bela Vista<br />
                         São Paulo, SP - 01310-100<br />
@@ -286,7 +285,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium text-gray-800 mb-2">Telefones</h3>
+                      <h3 className="text-xl font-medium text-gray-800 mb-2">{t('contact.info.phones')}</h3>
                       <p className="text-gray-600 mb-2">
                         <strong>Comercial:</strong> +55 (11) 3456-7890
                       </p>
@@ -303,7 +302,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-medium text-gray-800 mb-2">E-mail</h3>
+                      <h3 className="text-xl font-medium text-gray-800 mb-2">{t('contact.info.email')}</h3>
                       <p className="text-gray-600 mb-2">
                         <strong>Comercial:</strong> comercial@ness.com.br
                       </p>
@@ -315,21 +314,21 @@ export default function ContactPage() {
                 </div>
                 
                 <div className="bg-neutral rounded-lg p-8 shadow">
-                  <h3 className="text-xl font-medium text-gray-800 mb-4">Horário de Atendimento</h3>
+                  <h3 className="text-xl font-medium text-gray-800 mb-4">{t('contact.info.hours')}</h3>
                   
                   <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Segunda - Sexta:</span>
+                      <span className="text-gray-600">{t('contact.info.weekdays')}</span>
                       <span className="text-gray-800 font-medium">9:00 - 18:00</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Suporte Emergencial:</span>
+                      <span className="text-gray-600">{t('contact.info.emergency')}</span>
                       <span className="text-gray-800 font-medium">24/7</span>
                     </div>
                   </div>
                   
                   <div className="mt-8">
-                    <h4 className="text-lg font-medium text-gray-800 mb-4">Siga-nos</h4>
+                    <h4 className="text-lg font-medium text-gray-800 mb-4">{t('contact.info.follow')}</h4>
                     <div className="flex space-x-4">
                       <a href="#" className="bg-primary hover:bg-primary-dark p-2 rounded-full text-white transition duration-300">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -359,9 +358,9 @@ export default function ContactPage() {
           {/* Em produção, incluir um mapa real com a localização */}
           <div className="w-full h-full flex items-center justify-center bg-gray-300">
             <div className="text-center">
-              <h3 className="text-xl font-medium text-gray-800 mb-2">Mapa de Localização</h3>
+              <h3 className="text-xl font-medium text-gray-800 mb-2">{t('contact.map.title')}</h3>
               <p className="text-gray-600">Av. Paulista, 1000, Bela Vista, São Paulo</p>
-              <p className="text-sm text-gray-500 mt-4">Em um site real, um mapa interativo seria carregado aqui.</p>
+              <p className="text-sm text-gray-500 mt-4">{t('contact.map.placeholder')}</p>
             </div>
           </div>
         </section>

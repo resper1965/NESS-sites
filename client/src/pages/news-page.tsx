@@ -33,9 +33,9 @@ export default function NewsPage() {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title={`${t('news.title')} - ness.`}
-        description="Fique por dentro das últimas notícias e atualizações da ness. e do mundo da tecnologia."
+        description={t('news.seo.description')}
         canonicalUrl="/news"
       />
       
@@ -49,7 +49,7 @@ export default function NewsPage() {
               <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6">{t('news.title')}</h1>
               <div className="w-20 h-1 bg-[#00ade0] mx-auto mb-8"></div>
               <p className="text-xl max-w-3xl mx-auto">
-                Fique por dentro das novidades sobre nossa empresa e o mercado de tecnologia.
+                {t('news.hero.subtitle')}
               </p>
             </div>
           </div>
@@ -66,10 +66,10 @@ export default function NewsPage() {
                   onClick={() => setCategoryFilter(category)}
                   className={`px-4 py-2 rounded-full text-sm ${categoryFilter === category ? 'bg-primary text-white' : 'bg-neutral text-gray-700'}`}
                 >
-                  {category === 'all' ? 'Todas as notícias' : 
-                   category === 'company' ? 'Empresa' : 
-                   category === 'technology' ? 'Tecnologia' : 
-                   category === 'events' ? 'Eventos' : category}
+                  {category === 'all' ? t('news.filters.all') :
+                   category === 'company' ? t('news.filters.company') :
+                   category === 'technology' ? t('news.filters.technology') :
+                   category === 'events' ? t('news.filters.events') : category}
                 </button>
               ))}
             </div>
@@ -130,9 +130,9 @@ export default function NewsPage() {
                 <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
                 </svg>
-                <h3 className="text-xl font-medium text-gray-900 mb-2">Nenhuma notícia encontrada</h3>
+                <h3 className="text-xl font-medium text-gray-900 mb-2">{t('news.noNews.title')}</h3>
                 <p className="text-gray-600">
-                  Não há notícias disponíveis com o filtro selecionado.
+                  {t('news.noNews.description')}
                 </p>
               </div>
             )}
@@ -143,26 +143,26 @@ export default function NewsPage() {
         <section className="py-16 bg-neutral">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-primary mb-4">Assine nossa newsletter</h2>
+              <h2 className="text-3xl font-bold text-primary mb-4">{t('news.newsletter.title')}</h2>
               <p className="text-gray-700 mb-8">
-                Receba as últimas novidades e artigos exclusivos diretamente em seu e-mail.
+                {t('news.newsletter.desc')}
               </p>
               <form className="flex flex-col sm:flex-row gap-4 justify-center">
-                <input 
-                  type="email" 
-                  placeholder="Seu e-mail" 
+                <input
+                  type="email"
+                  placeholder={t('news.newsletter.placeholder')}
                   className="px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent flex-grow max-w-md"
                   required
                 />
-                <button 
+                <button
                   type="submit"
                   className="bg-accent hover:bg-accent-dark text-white py-3 px-6 rounded-md font-medium transition duration-300 inline-block"
                 >
-                  Assinar
+                  {t('news.newsletter.subscribe')}
                 </button>
               </form>
               <p className="text-gray-500 text-sm mt-4">
-                Respeitamos sua privacidade. Você pode cancelar a inscrição a qualquer momento.
+                {t('news.newsletter.privacy')}
               </p>
             </div>
           </div>
