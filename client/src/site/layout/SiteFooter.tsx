@@ -313,23 +313,23 @@ export default function SiteFooter() {
               {/* Links para outras marcas */}
               <div className="flex gap-x-4 ml-4 pl-4 border-l border-gray-700">
                 {siteConfig.code !== 'ness' && (
-                  <div className="text-gray-300 hover:text-[#00ade0] transition duration-300 whitespace-nowrap">
+                  <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
                     <Link href="/site/ness">
-                      ness<span className="text-[#00ade0]">.</span>
+                      ness<span className="text-[var(--primary-color)]">.</span>
                     </Link>
                   </div>
                 )}
                 {siteConfig.code !== 'trustness' && (
-                  <div className="text-gray-300 hover:text-[#00ade0] transition duration-300 whitespace-nowrap">
+                  <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
                     <Link href="/site/trustness">
-                      trustness<span className="text-[#00ade0]">.</span>
+                      trustness<span className="text-[var(--primary-color)]">.</span>
                     </Link>
                   </div>
                 )}
                 {siteConfig.code !== 'forense' && (
-                  <div className="text-gray-300 hover:text-[#00ade0] transition duration-300 whitespace-nowrap">
+                  <div className="text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap">
                     <Link href="/site/forense">
-                      forense<span className="text-[#00ade0]">.</span>io
+                      forense<span className="text-[var(--primary-color)]">.</span>io
                     </Link>
                   </div>
                 )}

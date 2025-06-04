@@ -44,7 +44,7 @@ export default function ForenseHomePage() {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-3 lowercase">
-              forense<span className="text-[#00ade0]">.</span>io
+              forense<span className="text-[var(--primary-color)]">.</span>io
             </h1>
             <h2 className="text-xl font-['Montserrat'] font-normal lowercase">
               {language === 'pt' && "Especialistas em Forense Digital"}
@@ -59,7 +59,7 @@ export default function ForenseHomePage() {
             <div className="flex justify-center">
               <a
                 href="/site/forense/contact"
-                className="bg-[#00ade0] hover:bg-opacity-90 text-white px-8 py-3 rounded lowercase transition-all duration-300"
+                className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-8 py-3 rounded lowercase transition-all duration-300"
               >
                 {language === 'pt' && "fale conosco"}
                 {language === 'en' && "contact us"}
@@ -74,9 +74,9 @@ export default function ForenseHomePage() {
       <section id="services" className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-['Montserrat'] font-normal text-center mb-16 lowercase">
-            {language === 'pt' && <> serviços <span className="text-[#00ade0]">especializados</span></>}
-            {language === 'en' && <> specialized <span className="text-[#00ade0]">services</span></>}
-            {language === 'es' && <> servicios <span className="text-[#00ade0]">especializados</span></>}
+            {language === 'pt' && <> serviços <span className="text-[var(--primary-color)]">especializados</span></>}
+            {language === 'en' && <> specialized <span className="text-[var(--primary-color)]">services</span></>}
+            {language === 'es' && <> servicios <span className="text-[var(--primary-color)]">especializados</span></>}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -100,7 +100,7 @@ export default function ForenseHomePage() {
                 {language === 'es' && "recuperación y análisis de datos digitales, producción y validación de evidencias, revisión forense y contraprueba de informes"}
               </p>
               <div className="mt-auto text-center">
-                <a href="/site/forense/services/digital-forensics" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
+                <a href="/site/forense/services/digital-forensics" className="bg-white border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
                   {language === 'es' && "conocer más"}
@@ -128,7 +128,7 @@ export default function ForenseHomePage() {
                 {language === 'es' && "consultoría estratégica, asistencia técnica procesal y aclaraciones técnicas en audiencias para profesionales del área jurídica"}
               </p>
               <div className="mt-auto text-center">
-                <a href="/site/forense/services/legal-support" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
+                <a href="/site/forense/services/legal-support" className="bg-white border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
                   {language === 'es' && "conocer más"}
@@ -156,7 +156,7 @@ export default function ForenseHomePage() {
                 {language === 'es' && "investigaciones de fraude, monitoreo de activos digitales, análisis de riesgos y amenazas, y compliance digital para empresas"}
               </p>
               <div className="mt-auto text-center">
-                <a href="/site/forense/services/corporate-investigations" className="bg-white border border-[#00ade0] text-[#00ade0] hover:bg-[#00ade0] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
+                <a href="/site/forense/services/corporate-investigations" className="bg-white border border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-300 inline-flex justify-center">
                   {language === 'pt' && "saiba mais"}
                   {language === 'en' && "learn more"}
                   {language === 'es' && "conocer más"}
@@ -172,9 +172,9 @@ export default function ForenseHomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-['Montserrat'] font-normal mb-6 lowercase">
-              {language === 'pt' && <>precisando de <span className="text-[#00ade0]">consultoria especializada</span>?</>}
-              {language === 'en' && <>need <span className="text-[#00ade0]">specialized consulting</span>?</>}
-              {language === 'es' && <>¿necesita <span className="text-[#00ade0]">consultoría especializada</span>?</>}
+              {language === 'pt' && <>precisando de <span className="text-[var(--primary-color)]">consultoria especializada</span>?</>}
+              {language === 'en' && <>need <span className="text-[var(--primary-color)]">specialized consulting</span>?</>}
+              {language === 'es' && <>¿necesita <span className="text-[var(--primary-color)]">consultoría especializada</span>?</>}
             </h2>
             <p className="text-gray-300 mb-10">
               {language === 'pt' && "Entre em contato para uma consulta inicial. Nossa equipe de especialistas está pronta para analisar seu caso e oferecer soluções personalizadas."}
@@ -183,7 +183,7 @@ export default function ForenseHomePage() {
             </p>
             <a
               href="/site/forense/contact"
-              className="bg-[#00ade0] hover:bg-opacity-90 text-white px-10 py-4 rounded lowercase transition-all duration-300 inline-block"
+              className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-10 py-4 rounded lowercase transition-all duration-300 inline-block"
             >
               {language === 'pt' && "agende uma consulta"}
               {language === 'en' && "schedule a consultation"}

@@ -38,7 +38,7 @@ export default function NessPrivacyPage() {
     return (
       <SiteLayout>
         <div className="flex justify-center items-center min-h-screen">
-          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]"></div>
+          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[var(--primary-color)]"></div>
         </div>
       </SiteLayout>
     );
@@ -49,7 +49,7 @@ export default function NessPrivacyPage() {
     if (name.startsWith('n.')) {
       return (
         <span className="font-['Montserrat'] font-normal">
-          n<span className="text-[#00ade0]">.</span>{name.substring(2)}
+          n<span className="text-[var(--primary-color)]">.</span>{name.substring(2)}
         </span>
       );
     }
@@ -164,7 +164,7 @@ export default function NessPrivacyPage() {
             <h2 className="text-2xl font-['Montserrat'] font-normal mb-8">
               {content.cta.title}
             </h2>
-            <Link href="/site/ness/contact" className="inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase">
+            <Link href="/site/ness/contact" className="inline-block bg-[var(--primary-color)] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase">
               {content.cta.button}
             </Link>
           </div>

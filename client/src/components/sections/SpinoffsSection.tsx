@@ -64,7 +64,7 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
       return (
         <span className="font-['Montserrat'] font-medium text-xl">
           {parts[0]}
-          <span className="text-[#00ade0]">.</span>
+          <span className="text-[var(--primary-color)]">.</span>
           {parts.length > 1 ? parts[1] : ''}
         </span>
       );
@@ -73,7 +73,7 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
   };
   
   return (
-    <section id="spinoffs" className="contato bg-[#2f3e4d] text-white flex items-center" style={{ minHeight: "400px" }}>
+    <section id="spinoffs" className="contato bg-[var(--secondary-color)] text-white flex items-center" style={{ minHeight: "400px" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">{title || titles[language]}</h2>
@@ -97,7 +97,7 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
                     href={spinoff.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#00ade0] border border-white hover:border-[#00ade0] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-flex items-center lowercase rounded-sm"
+                    className="text-white hover:text-[var(--primary-color)] border border-white hover:border-[var(--primary-color)] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-flex items-center lowercase rounded-sm"
                   >
                     {buttonText[language]}
                     <ExternalLink className="ml-1 h-3 w-3" />
@@ -105,7 +105,7 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
                 ) : (
                   <Link 
                     href={spinoff.url} 
-                    className="text-white hover:text-[#00ade0] border border-white hover:border-[#00ade0] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                    className="text-white hover:text-[var(--primary-color)] border border-white hover:border-[var(--primary-color)] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
                   >
                     {buttonText[language]}
                   </Link>

@@ -60,7 +60,7 @@ export default function TrustnessPrivacyPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
-                <span className="text-[#005fa3]">.</span>privacy
+                <span className="text-[var(--primary-color)]">.</span>privacy
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 {defaultContent.heroSubtitle}
@@ -84,7 +84,7 @@ export default function TrustnessPrivacyPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                 {defaultContent.features?.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-[#005fa3] mr-2">•</span>
+                    <span className="text-[var(--primary-color)] mr-2">•</span>
                     <span className="text-gray-700 lowercase">{feature}</span>
                   </li>
                 ))}
@@ -105,7 +105,7 @@ export default function TrustnessPrivacyPage() {
                 {defaultContent.methodology}
               </p>
               
-              <div className="bg-white p-8 rounded-sm border-l-2 border-[#005fa3] shadow-sm">
+              <div className="bg-white p-8 rounded-sm border-l-2 border-[var(--primary-color)] shadow-sm">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800">
                   {language === 'pt' ? 'benefícios' : language === 'en' ? 'benefits' : 'beneficios'}
                 </h3>
@@ -113,7 +113,7 @@ export default function TrustnessPrivacyPage() {
                 <ul className="space-y-3">
                   {defaultContent.benefits?.map((benefit, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-[#005fa3] mr-2">•</span>
+                      <span className="text-[var(--primary-color)] mr-2">•</span>
                       <span className="text-gray-700 lowercase">{benefit}</span>
                     </li>
                   ))}
@@ -136,7 +136,7 @@ export default function TrustnessPrivacyPage() {
             </h2>
             <a 
               href={language === 'pt' ? "/site/trustness/contact" : language === 'en' ? "/site/trustness/contact" : "/site/trustness/contact"} 
-              className="bg-transparent hover:bg-[#00ade0] text-white border border-[#00ade0] hover:border-transparent px-8 py-3 rounded lowercase inline-block transition-colors duration-300"
+              className="bg-transparent hover:bg-[var(--primary-color)] text-white border border-[var(--primary-color)] hover:border-transparent px-8 py-3 rounded lowercase inline-block transition-colors duration-300"
             >
               {language === 'pt' ? 'fale conosco' : language === 'en' ? 'contact us' : 'contáctenos'}
             </a>

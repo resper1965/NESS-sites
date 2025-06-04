@@ -71,7 +71,7 @@ export default function NessAboutPage() {
           <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
             <div className="hero-main-content text-center max-w-4xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6">
-                <span style={{color: "#ffffff"}}>ness</span><span style={{color: "#00ade0"}}>.</span>
+                <span style={{color: "#ffffff"}}>ness</span><span style={{color: "var(--primary-color)"}}>.</span>
               </h1>
               <p className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-6 text-white lowercase tracking-tight">
                 {defaultContent.heroTitle}
@@ -89,16 +89,16 @@ export default function NessAboutPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase">
-                <span className="font-normal">{language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
+                <span className="font-normal">{language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}</span> <span className="text-black font-normal">ness<span className="text-[var(--primary-color)]">.</span></span>
               </h2>
               
               <div className="prose prose-base mx-auto text-gray-700 lowercase">
                 <p className="mb-6 text-center font-light tracking-wide text-lg">
                   {language === 'pt' 
-                    ? <>tecnologia clara <span className="text-[#00ade0]">•</span> estrutura segura <span className="text-[#00ade0]">•</span> propósito real</>
+                    ? <>tecnologia clara <span className="text-[var(--primary-color)]">•</span> estrutura segura <span className="text-[var(--primary-color)]">•</span> propósito real</>
                     : language === 'en'
-                      ? <>clear technology <span className="text-[#00ade0]">•</span> secure structure <span className="text-[#00ade0]">•</span> real purpose</>
-                      : <>tecnología clara <span className="text-[#00ade0]">•</span> estructura segura <span className="text-[#00ade0]">•</span> propósito real</>
+                      ? <>clear technology <span className="text-[var(--primary-color)]">•</span> secure structure <span className="text-[var(--primary-color)]">•</span> real purpose</>
+                      : <>tecnología clara <span className="text-[var(--primary-color)]">•</span> estructura segura <span className="text-[var(--primary-color)]">•</span> propósito real</>
                   }
                 </p>
                 
@@ -127,11 +127,11 @@ export default function NessAboutPage() {
         {/* Values Section */}
         <section className="conteudo bg-[#2c2c34]" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-[#00ade0]">{defaultContent.values.title}</h2>
+            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-[var(--primary-color)]">{defaultContent.values.title}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Vision */}
-              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
+              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[var(--primary-color)]">
                 <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
                   {defaultContent.values.vision.title}
                 </h3>
@@ -141,7 +141,7 @@ export default function NessAboutPage() {
               </div>
               
               {/* Mission */}
-              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
+              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[var(--primary-color)]">
                 <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
                   {defaultContent.values.mission.title}
                 </h3>
@@ -151,7 +151,7 @@ export default function NessAboutPage() {
               </div>
               
               {/* Values */}
-              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
+              <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[var(--primary-color)]">
                 <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
                   {defaultContent.values.values.title}
                 </h3>
@@ -174,7 +174,7 @@ export default function NessAboutPage() {
             <div className="max-w-5xl mx-auto">
               <div className="relative">
                 {/* Linha do tempo vertical */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[#00ade0] opacity-50"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[var(--primary-color)] opacity-50"></div>
                 
                 {/* Eventos na linha do tempo */}
                 {Object.entries(defaultContent.timelineEvents).map(([year, description], index) => (
@@ -183,7 +183,7 @@ export default function NessAboutPage() {
                       <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                         <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
                           {year.includes('.') ? year.split('.')[0] : year}
-                          {year.includes('.') && <span className="text-[#00ade0] text-sm">.{year.split('.')[1]}</span>}
+                          {year.includes('.') && <span className="text-[var(--primary-color)] text-sm">.{year.split('.')[1]}</span>}
                         </span>
                         <p className="mt-2 text-gray-700 lowercase">
                           {description}
@@ -191,7 +191,7 @@ export default function NessAboutPage() {
                       </div>
                     </div>
                     
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00ade0] rounded-full mt-1"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--primary-color)] rounded-full mt-1"></div>
                     
                     <div className="w-1/2 px-6"></div>
                   </div>
@@ -206,16 +206,16 @@ export default function NessAboutPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
-                ? <>quer saber mais sobre a <span className="font-normal">ness<span className="text-[#00ade0]">.</span></span>?</> 
+                ? <>quer saber mais sobre a <span className="font-normal">ness<span className="text-[var(--primary-color)]">.</span></span>?</> 
                 : language === 'en'
-                  ? <>want to know more about <span className="font-normal">ness<span className="text-[#00ade0]">.</span></span>?</>
-                  : <>¿quieres saber más sobre <span className="font-normal">ness<span className="text-[#00ade0]">.</span></span>?</>
+                  ? <>want to know more about <span className="font-normal">ness<span className="text-[var(--primary-color)]">.</span></span>?</>
+                  : <>¿quieres saber más sobre <span className="font-normal">ness<span className="text-[var(--primary-color)]">.</span></span>?</>
               }
             </h2>
             
             <a 
               href="/site/ness/contact" 
-              className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+              className="inline-block bg-[var(--primary-color)] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {defaultContent.cta.button}
             </a>

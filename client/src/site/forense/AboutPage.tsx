@@ -68,7 +68,7 @@ export default function ForenseAboutPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
-                forense<span className="text-[#00ade0]">.</span>io
+                forense<span className="text-[var(--primary-color)]">.</span>io
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 {defaultContent.heroTitle}
@@ -82,9 +82,9 @@ export default function ForenseAboutPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
-                {language === 'pt' && <>sobre a forense<span className="text-[#00ade0]">.</span>io</>}
-                {language === 'en' && <>about forense<span className="text-[#00ade0]">.</span>io</>}
-                {language === 'es' && <>sobre forense<span className="text-[#00ade0]">.</span>io</>}
+                {language === 'pt' && <>sobre a forense<span className="text-[var(--primary-color)]">.</span>io</>}
+                {language === 'en' && <>about forense<span className="text-[var(--primary-color)]">.</span>io</>}
+                {language === 'es' && <>sobre forense<span className="text-[var(--primary-color)]">.</span>io</>}
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto mb-10">
                 {language === 'pt' && "convertemos complexidade técnica em resultados judiciais concretos"}
@@ -99,7 +99,7 @@ export default function ForenseAboutPage() {
                   {language === 'pt' && 'expertise forense'}
                   {language === 'en' && 'forensic expertise'}
                   {language === 'es' && 'experiencia forense'}
-                  <span className="text-[#00ade0]">.</span>
+                  <span className="text-[var(--primary-color)]">.</span>
                 </h3>
                 <p className="text-gray-300 text-sm mb-4">
                   {language === 'pt' && 'nossa equipe combina conhecimento técnico avançado com compreensão profunda dos requisitos legais, garantindo que cada evidência coletada seja juridicamente válida e tecnicamente robusta.'}
@@ -113,7 +113,7 @@ export default function ForenseAboutPage() {
                   {language === 'pt' && 'tecnologia avançada'}
                   {language === 'en' && 'advanced technology'}
                   {language === 'es' && 'tecnología avanzada'}
-                  <span className="text-[#00ade0]">.</span>
+                  <span className="text-[var(--primary-color)]">.</span>
                 </h3>
                 <p className="text-gray-300 text-sm mb-4">
                   {language === 'pt' && 'utilizamos ferramentas e metodologias proprietárias desenvolvidas ao longo de anos para recuperar, analisar e validar evidências digitais com o mais alto padrão de precisão do mercado.'}
@@ -127,7 +127,7 @@ export default function ForenseAboutPage() {
                   {language === 'pt' && 'resultados concretos'}
                   {language === 'en' && 'concrete results'}
                   {language === 'es' && 'resultados concretos'}
-                  <span className="text-[#00ade0]">.</span>
+                  <span className="text-[var(--primary-color)]">.</span>
                 </h3>
                 <p className="text-gray-300 text-sm mb-4">
                   {language === 'pt' && 'nosso trabalho vai além da simples coleta de dados - transformamos evidências técnicas em narrativas claras e defensáveis que sustentam decisões judiciais e corporativas.'}
@@ -146,7 +146,7 @@ export default function ForenseAboutPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Vision */}
-              <div className="bg-gray-800 p-8 rounded-sm border-l-2 border-[#00ade0]">
+              <div className="bg-gray-800 p-8 rounded-sm border-l-2 border-[var(--primary-color)]">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
                   {defaultContent.values.vision.title}
                 </h3>
@@ -156,7 +156,7 @@ export default function ForenseAboutPage() {
               </div>
               
               {/* Mission */}
-              <div className="bg-gray-800 p-8 rounded-sm border-l-2 border-[#00ade0]">
+              <div className="bg-gray-800 p-8 rounded-sm border-l-2 border-[var(--primary-color)]">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
                   {defaultContent.values.mission.title}
                 </h3>
@@ -178,7 +178,7 @@ export default function ForenseAboutPage() {
             <div className="max-w-5xl mx-auto">
               <div className="relative">
                 {/* Linha do tempo vertical */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[#00ade0] opacity-50"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[var(--primary-color)] opacity-50"></div>
                 
                 {/* Eventos na linha do tempo */}
                 {Object.entries(defaultContent.timelineEvents).map(([year, description], index) => (
@@ -187,7 +187,7 @@ export default function ForenseAboutPage() {
                       <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                         <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
                           {year.includes('.') ? year.split('.')[0] : year}
-                          {year.includes('.') && <span className="text-[#00ade0] text-sm">.{year.split('.')[1]}</span>}
+                          {year.includes('.') && <span className="text-[var(--primary-color)] text-sm">.{year.split('.')[1]}</span>}
                         </span>
                         <p className="mt-2 text-gray-700 lowercase">
                           {description}
@@ -195,7 +195,7 @@ export default function ForenseAboutPage() {
                       </div>
                     </div>
                     
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00ade0] rounded-full mt-1"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--primary-color)] rounded-full mt-1"></div>
                     
                     <div className="w-1/2 px-6"></div>
                   </div>
@@ -210,15 +210,15 @@ export default function ForenseAboutPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
-                ? <>quer saber mais sobre a <span className="font-normal">forense<span className="text-[#00ade0]">.</span>io</span>?</> 
+                ? <>quer saber mais sobre a <span className="font-normal">forense<span className="text-[var(--primary-color)]">.</span>io</span>?</> 
                 : language === 'en'
-                  ? <>want to know more about <span className="font-normal">forense<span className="text-[#00ade0]">.</span>io</span>?</>
-                  : <>¿quieres saber más sobre <span className="font-normal">forense<span className="text-[#00ade0]">.</span>io</span>?</>
+                  ? <>want to know more about <span className="font-normal">forense<span className="text-[var(--primary-color)]">.</span>io</span>?</>
+                  : <>¿quieres saber más sobre <span className="font-normal">forense<span className="text-[var(--primary-color)]">.</span>io</span>?</>
               }
             </h2>
             <a
               href={`/site/forense/contact`}
-              className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+              className="inline-block bg-[var(--primary-color)] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {defaultContent.cta.button}
             </a>
@@ -232,7 +232,7 @@ export default function ForenseAboutPage() {
     return (
       <SiteLayout>
         <div className="flex justify-center items-center py-20">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#00ade0]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[var(--primary-color)]"></div>
         </div>
       </SiteLayout>
     );

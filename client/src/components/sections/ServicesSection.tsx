@@ -19,13 +19,13 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
   const getTitleJSX = (language: string) => {
     switch (language) {
       case 'pt':
-        return <>serviços <span className="text-[#00ade0]">modulares</span></>;
+        return <>serviços <span className="text-[var(--primary-color)]">modulares</span></>;
       case 'en':
-        return <><span className="text-[#00ade0]">modular</span> services</>;
+        return <><span className="text-[var(--primary-color)]">modular</span> services</>;
       case 'es':
-        return <>servicios <span className="text-[#00ade0]">modulares</span></>;
+        return <>servicios <span className="text-[var(--primary-color)]">modulares</span></>;
       default:
-        return <>serviços <span className="text-[#00ade0]">modulares</span></>;
+        return <>serviços <span className="text-[var(--primary-color)]">modulares</span></>;
     }
   };
   
@@ -116,7 +116,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
     if (name.startsWith('n.')) {
       return (
         <span className="font-['Montserrat'] font-medium text-lg text-gray-800">
-          n<span className="text-[#00ade0]">.</span>{name.substring(2)}
+          n<span className="text-[var(--primary-color)]">.</span>{name.substring(2)}
         </span>
       );
     }
@@ -147,7 +147,7 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
               <div className="text-center">
                 <Link 
                   href={service.url} 
-                  className="text-gray-600 hover:text-[#00ade0] border border-gray-300 hover:border-[#00ade0] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                  className="text-gray-600 hover:text-[var(--primary-color)] border border-gray-300 hover:border-[var(--primary-color)] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
                 >
                   {buttonText[language]}
                 </Link>

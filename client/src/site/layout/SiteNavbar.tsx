@@ -87,8 +87,8 @@ export default function SiteNavbar() {
             <Link href={sitePrefix} className="text-white lowercase">
               <h1 className="font-['Montserrat'] font-normal text-3xl">
                 {siteConfig.code === 'forense' 
-                  ? <>forense<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>io</>
-                  : <>{siteConfig.name.replace('.', '')}<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span></>
+                  ? <>forense<span style={{color: "var(--primary-color)", marginLeft: "1px"}}>.</span>io</>
+                  : <>{siteConfig.name.replace('.', '')}<span style={{color: "var(--primary-color)", marginLeft: "1px"}}>.</span></>
                 }
               </h1>
             </Link>
@@ -128,9 +128,9 @@ export default function SiteNavbar() {
                         onClick={() => setServicesDropdownOpen(false)}
                       >
                         {siteConfig.code === 'ness' ? (
-                          <>n<span className="text-[#00ade0]">.</span>{service.name.substring(2)}</>
+                          <>n<span className="text-[var(--primary-color)]">.</span>{service.name.substring(2)}</>
                         ) : siteConfig.code === 'trustness' ? (
-                          <><span className="text-[#005fa3]">.</span>{service.name.substring(1)}</>
+                          <><span className="text-[var(--primary-color)]">.</span>{service.name.substring(1)}</>
                         ) : siteConfig.code === 'forense' ? (
                           service.id === 'digital-forensics' ? (
                             <>
@@ -174,7 +174,7 @@ export default function SiteNavbar() {
             {/* Contact as a button */}
             <Link 
               href={`${sitePrefix}/contact`} 
-              className={`${siteConfig.code === 'forense' ? 'bg-[#00ade0]' : 'bg-[var(--primary-color)]'} hover:bg-opacity-90 text-white py-1.5 px-3 rounded-sm transition duration-200 text-sm lowercase ml-2`}
+              className={`${siteConfig.code === 'forense' ? 'bg-[var(--primary-color)]' : 'bg-[var(--primary-color)]'} hover:bg-opacity-90 text-white py-1.5 px-3 rounded-sm transition duration-200 text-sm lowercase ml-2`}
             >
               {t('nav.contact')}
             </Link>
@@ -214,9 +214,9 @@ export default function SiteNavbar() {
                   className="text-gray-300 hover:text-accent transition duration-200 pl-3 pb-1 text-sm lowercase block"
                 >
                   {siteConfig.code === 'ness' ? (
-                    <>n<span className="text-[#00ade0]">.</span>{service.name.substring(2)}</>
+                    <>n<span className="text-[var(--primary-color)]">.</span>{service.name.substring(2)}</>
                   ) : siteConfig.code === 'trustness' ? (
-                    <><span className="text-[#005fa3]">.</span>{service.name.substring(1)}</>
+                    <><span className="text-[var(--primary-color)]">.</span>{service.name.substring(1)}</>
                   ) : siteConfig.code === 'forense' ? (
                     service.id === 'digital-forensics' ? (
                       <>
@@ -253,7 +253,7 @@ export default function SiteNavbar() {
               </div>
               <Link 
                 href={`${sitePrefix}/contact`} 
-                className={`${siteConfig.code === 'forense' ? 'bg-[#00ade0]' : 'bg-[var(--primary-color)]'} hover:bg-opacity-90 text-white py-2 px-4 rounded-sm transition duration-200 text-center lowercase`}
+                className={`${siteConfig.code === 'forense' ? 'bg-[var(--primary-color)]' : 'bg-[var(--primary-color)]'} hover:bg-opacity-90 text-white py-2 px-4 rounded-sm transition duration-200 text-center lowercase`}
               >
                 {t('nav.contact')}
               </Link>

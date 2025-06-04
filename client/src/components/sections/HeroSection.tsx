@@ -37,7 +37,7 @@ export default function HeroSection({
       <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
         <div className="hero-main-content text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6">
-            <span style={{color: "#ffffff"}}>ness</span><span className="text-[#00ade0]">.</span>
+            <span style={{color: "#ffffff"}}>ness</span><span className="text-[var(--primary-color)]">.</span>
           </h1>
           <div className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
             {title}
@@ -48,10 +48,10 @@ export default function HeroSection({
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-8">
-            <Link href={ctaUrl1} className="bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm font-['Montserrat']">
+            <Link href={ctaUrl1} className="bg-[var(--primary-color)] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm font-['Montserrat']">
               {ctaText1}
             </Link>
-            <Link href={ctaUrl2} className="bg-transparent border border-[#00ade0] text-white hover:text-[#00ade0] py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm font-['Montserrat']">
+            <Link href={ctaUrl2} className="bg-transparent border border-[var(--primary-color)] text-white hover:text-[var(--primary-color)] py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm font-['Montserrat']">
               {ctaText2}
             </Link>
           </div>

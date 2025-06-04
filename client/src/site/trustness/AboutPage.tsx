@@ -65,7 +65,7 @@ export default function TrustnessAboutPage() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
-                trustness<span className="text-[#005fa3]">.</span>
+                trustness<span className="text-[var(--primary-color)]">.</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 {defaultContent.heroSubtitle}
@@ -81,7 +81,7 @@ export default function TrustnessAboutPage() {
               <h2 className="font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase">
                 <span className="font-normal">
                   {language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}
-                </span> <span className="text-black font-normal">trustness<span className="text-[#005fa3]">.</span></span>
+                </span> <span className="text-black font-normal">trustness<span className="text-[var(--primary-color)]">.</span></span>
               </h2>
               
               <div className="prose prose-base mx-auto text-gray-700 lowercase">
@@ -91,7 +91,7 @@ export default function TrustnessAboutPage() {
                     .map((item, index, arr) => (
                       <>
                         {item}
-                        {index < arr.length - 1 && <span className="text-[#005fa3]"> • </span>}
+                        {index < arr.length - 1 && <span className="text-[var(--primary-color)]"> • </span>}
                       </>
                     ))
                   }
@@ -116,7 +116,7 @@ export default function TrustnessAboutPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Vision */}
-              <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[#005fa3]">
+              <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[var(--primary-color)]">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
                   {defaultContent.values.vision.title}
                 </h3>
@@ -126,7 +126,7 @@ export default function TrustnessAboutPage() {
               </div>
               
               {/* Mission */}
-              <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[#005fa3]">
+              <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[var(--primary-color)]">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
                   {defaultContent.values.mission.title}
                 </h3>
@@ -136,7 +136,7 @@ export default function TrustnessAboutPage() {
               </div>
               
               {/* Values */}
-              <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[#005fa3]">
+              <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[var(--primary-color)]">
                 <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
                   {defaultContent.values.values.title}
                 </h3>
@@ -171,7 +171,7 @@ export default function TrustnessAboutPage() {
             <div className="max-w-5xl mx-auto">
               <div className="relative">
                 {/* Linha do tempo vertical */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[#00ade0] opacity-50"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[var(--primary-color)] opacity-50"></div>
                 
                 {/* Eventos na linha do tempo */}
                 {Object.entries(defaultContent.timelineEvents).map(([year, description], index) => (
@@ -180,7 +180,7 @@ export default function TrustnessAboutPage() {
                       <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                         <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
                           {year.includes('.') ? year.split('.')[0] : year}
-                          {year.includes('.') && <span className="text-[#00ade0] text-sm">.{year.split('.')[1]}</span>}
+                          {year.includes('.') && <span className="text-[var(--primary-color)] text-sm">.{year.split('.')[1]}</span>}
                         </span>
                         <p className="mt-2 text-gray-700 lowercase">
                           {description}
@@ -188,7 +188,7 @@ export default function TrustnessAboutPage() {
                       </div>
                     </div>
                     
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00ade0] rounded-full mt-1"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--primary-color)] rounded-full mt-1"></div>
                     
                     <div className="w-1/2 px-6"></div>
                   </div>
@@ -203,16 +203,16 @@ export default function TrustnessAboutPage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
               {language === 'pt' 
-                ? <>quer saber mais sobre a <span className="font-normal">trustness<span className="text-[#00ade0]">.</span></span>?</> 
+                ? <>quer saber mais sobre a <span className="font-normal">trustness<span className="text-[var(--primary-color)]">.</span></span>?</> 
                 : language === 'en'
-                  ? <>want to know more about <span className="font-normal">trustness<span className="text-[#00ade0]">.</span></span>?</>
-                  : <>¿quieres saber más sobre <span className="font-normal">trustness<span className="text-[#00ade0]">.</span></span>?</>
+                  ? <>want to know more about <span className="font-normal">trustness<span className="text-[var(--primary-color)]">.</span></span>?</>
+                  : <>¿quieres saber más sobre <span className="font-normal">trustness<span className="text-[var(--primary-color)]">.</span></span>?</>
               }
             </h2>
             
             <a 
               href="/site/trustness/contact" 
-              className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+              className="inline-block bg-[var(--primary-color)] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {defaultContent.cta.button}
             </a>

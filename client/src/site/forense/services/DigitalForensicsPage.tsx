@@ -7,7 +7,7 @@ import { forenseStyles as styles } from '../styles';
 import { defaultContent as translations } from '../translations/services/digital-forensics';
 
 export default function ForenseDigitalForensicsPage() {
-  const DotSpan = () => <span className="text-[#00ade0]">.</span>;
+  const DotSpan = () => <span className="text-[var(--primary-color)]">.</span>;
   const { siteConfig } = useSite();
   const { language, t } = useI18n();
   
@@ -48,7 +48,7 @@ export default function ForenseDigitalForensicsPage() {
     return (
       <SiteLayout>
         <div className="flex justify-center items-center min-h-screen">
-          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]"></div>
+          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[var(--primary-color)]"></div>
         </div>
       </SiteLayout>
     );
@@ -95,13 +95,13 @@ export default function ForenseDigitalForensicsPage() {
                     {t('forense.digital.description3')}
                   </p>
                 </div>
-                <div className="md:w-1/2 bg-[#00ade0]/5 rounded-lg p-8 border border-[#00ade0]/20">
+                <div className="md:w-1/2 bg-[var(--primary-color)]/5 rounded-lg p-8 border border-[var(--primary-color)]/20">
                   <h3 className={`${styles.fontSizes.section.subtitle} font-['Montserrat'] font-normal ${styles.colors.text.dark} ${styles.spacing.mb.medium} lowercase`}>
                     {t('forense.digital.why')}
                   </h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">
-                      <div className="bg-[#00ade0] rounded-full h-6 w-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <div className="bg-[var(--primary-color)] rounded-full h-6 w-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 text-white">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
@@ -112,7 +112,7 @@ export default function ForenseDigitalForensicsPage() {
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-[#00ade0] rounded-full h-6 w-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <div className="bg-[var(--primary-color)] rounded-full h-6 w-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 text-white">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
@@ -123,7 +123,7 @@ export default function ForenseDigitalForensicsPage() {
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-[#00ade0] rounded-full h-6 w-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <div className="bg-[var(--primary-color)] rounded-full h-6 w-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 text-white">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
@@ -145,16 +145,16 @@ export default function ForenseDigitalForensicsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase">
-                {language === 'pt' && <>ambientes de <span className="text-[#00ade0]">coleta digital</span></>}
-                {language === 'en' && <>digital <span className="text-[#00ade0]">collection environments</span></>}
-                {language === 'es' && <>ambientes de <span className="text-[#00ade0]">recolección digital</span></>}
+                {language === 'pt' && <>ambientes de <span className="text-[var(--primary-color)]">coleta digital</span></>}
+                {language === 'en' && <>digital <span className="text-[var(--primary-color)]">collection environments</span></>}
+                {language === 'es' && <>ambientes de <span className="text-[var(--primary-color)]">recolección digital</span></>}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
+                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[var(--primary-color)]/50 transition-colors duration-300 flex flex-col h-full">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                    {language === 'pt' && <>ambientes <span className="text-[#00ade0]">corporativos</span></>}
-                    {language === 'en' && <>corporate <span className="text-[#00ade0]">environments</span></>}
-                    {language === 'es' && <>ambientes <span className="text-[#00ade0]">corporativos</span></>}
+                    {language === 'pt' && <>ambientes <span className="text-[var(--primary-color)]">corporativos</span></>}
+                    {language === 'en' && <>corporate <span className="text-[var(--primary-color)]">environments</span></>}
+                    {language === 'es' && <>ambientes <span className="text-[var(--primary-color)]">corporativos</span></>}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 flex-grow">
                     {language === 'pt' && 'análise de computadores, servidores, e dispositivos móveis corporativos, mantendo a discrição e minimizando interrupções nas operações empresariais.'}
@@ -162,7 +162,7 @@ export default function ForenseDigitalForensicsPage() {
                     {language === 'es' && 'análisis de computadoras, servidores y dispositivos móviles corporativos, manteniendo la discreción y minimizando interrupciones en las operaciones empresariales.'}
                   </p>
                   <div className="pt-4 border-t border-gray-800 mt-auto">
-                    <div className="flex items-center justify-center text-xs text-[#00ade0]/80">
+                    <div className="flex items-center justify-center text-xs text-[var(--primary-color)]/80">
                       {language === 'pt' && (
                         <>
                           <span>servidores</span>
@@ -194,11 +194,11 @@ export default function ForenseDigitalForensicsPage() {
                   </div>
                 </div>
                 
-                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
+                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[var(--primary-color)]/50 transition-colors duration-300 flex flex-col h-full">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                    {language === 'pt' && <>dispositivos <span className="text-[#00ade0]">pessoais</span></>}
-                    {language === 'en' && <>personal <span className="text-[#00ade0]">devices</span></>}
-                    {language === 'es' && <>dispositivos <span className="text-[#00ade0]">personales</span></>}
+                    {language === 'pt' && <>dispositivos <span className="text-[var(--primary-color)]">pessoais</span></>}
+                    {language === 'en' && <>personal <span className="text-[var(--primary-color)]">devices</span></>}
+                    {language === 'es' && <>dispositivos <span className="text-[var(--primary-color)]">personales</span></>}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 flex-grow">
                     {language === 'pt' && 'recuperação e análise de dados de smartphones, tablets e computadores pessoais, com atenção especial à privacidade e aos aspectos legais da coleta.'}
@@ -206,7 +206,7 @@ export default function ForenseDigitalForensicsPage() {
                     {language === 'es' && 'recuperación y análisis de datos de smartphones, tablets y computadoras personales, con atención especial a la privacidad y a los aspectos legales de la recolección.'}
                   </p>
                   <div className="pt-4 border-t border-gray-800 mt-auto">
-                    <div className="flex items-center justify-center text-xs text-[#00ade0]/80">
+                    <div className="flex items-center justify-center text-xs text-[var(--primary-color)]/80">
                       <span>smartphones</span>
                       <span className="mx-1">•</span>
                       <span>laptops</span>
@@ -216,11 +216,11 @@ export default function ForenseDigitalForensicsPage() {
                   </div>
                 </div>
                 
-                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
+                <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[var(--primary-color)]/50 transition-colors duration-300 flex flex-col h-full">
                   <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
-                    {language === 'pt' && <>armazenamento em <span className="text-[#00ade0]">nuvem</span></>}
-                    {language === 'en' && <>cloud <span className="text-[#00ade0]">storage</span></>}
-                    {language === 'es' && <>almacenamiento en <span className="text-[#00ade0]">nube</span></>}
+                    {language === 'pt' && <>armazenamento em <span className="text-[var(--primary-color)]">nuvem</span></>}
+                    {language === 'en' && <>cloud <span className="text-[var(--primary-color)]">storage</span></>}
+                    {language === 'es' && <>almacenamiento en <span className="text-[var(--primary-color)]">nube</span></>}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 flex-grow">
                     {language === 'pt' && 'extração forense de dados armazenados em serviços de nuvem, incluindo e-mails, documentos, redes sociais, sites e backups, seguindo protocolos legais para acesso autorizado.'}
@@ -228,7 +228,7 @@ export default function ForenseDigitalForensicsPage() {
                     {language === 'es' && 'extracción forense de datos almacenados en servicios de nube, incluyendo correos electrónicos, documentos, redes sociales, sitios web y copias de seguridad, siguiendo protocolos legales para acceso autorizado.'}
                   </p>
                   <div className="pt-4 border-t border-gray-800 mt-auto">
-                    <div className="flex items-center justify-center text-xs text-[#00ade0]/80">
+                    <div className="flex items-center justify-center text-xs text-[var(--primary-color)]/80">
                       <span>AWS</span>
                       <span className="mx-1">•</span>
                       <span>Google Cloud</span>
@@ -247,15 +247,15 @@ export default function ForenseDigitalForensicsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-10 text-center lowercase">
-                {language === 'pt' && <>serviços <span className="text-[#00ade0]">especializados</span></>}
-                {language === 'en' && <>specialized <span className="text-[#00ade0]">services</span></>}
-                {language === 'es' && <>servicios <span className="text-[#00ade0]">especializados</span></>}
+                {language === 'pt' && <>serviços <span className="text-[var(--primary-color)]">especializados</span></>}
+                {language === 'en' && <>specialized <span className="text-[var(--primary-color)]">services</span></>}
+                {language === 'es' && <>servicios <span className="text-[var(--primary-color)]">especializados</span></>}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {content.sections.map((section, index) => (
                   <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300">
                     <div className="flex items-start">
-                      <div className="w-8 h-8 bg-[#00ade0] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                      <div className="w-8 h-8 bg-[var(--primary-color)] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                         <span className="text-white text-lg font-bold">{index + 1}</span>
                       </div>
                       <div>
@@ -281,9 +281,9 @@ export default function ForenseDigitalForensicsPage() {
               <div className="flex flex-col md:flex-row items-stretch md:space-x-10">
                 <div className="md:w-1/2 mb-10 md:mb-0">
                   <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
-                    {language === 'pt' && <>metodologias <span className="text-[#00ade0]">forenses</span></>}
-                    {language === 'en' && <>forensic <span className="text-[#00ade0]">methodologies</span></>}
-                    {language === 'es' && <>metodologías <span className="text-[#00ade0]">forenses</span></>}
+                    {language === 'pt' && <>metodologias <span className="text-[var(--primary-color)]">forenses</span></>}
+                    {language === 'en' && <>forensic <span className="text-[var(--primary-color)]">methodologies</span></>}
+                    {language === 'es' && <>metodologías <span className="text-[var(--primary-color)]">forenses</span></>}
                   </h2>
                   <p className="text-gray-700 text-sm mb-6">
                     {language === 'pt' && 'utilizamos protocolos rigorosos que garantem a admissibilidade jurídica das evidências coletadas, respeitando normas nacionais e internacionais. nossa abordagem inclui:'}
@@ -292,7 +292,7 @@ export default function ForenseDigitalForensicsPage() {
                   </p>
                   <ul className="space-y-4">
                     <li className="bg-white p-4 rounded-lg border border-gray-200 flex items-start">
-                      <span className="text-[#00ade0] text-xl mr-3 leading-6 flex-shrink-0">•</span>
+                      <span className="text-[var(--primary-color)] text-xl mr-3 leading-6 flex-shrink-0">•</span>
                       <span className="text-gray-700 text-sm">
                         {language === 'pt' && 'documentação precisa de cada etapa da coleta e cadeia de custódia'}
                         {language === 'en' && 'precise documentation of each step of the collection and chain of custody'}
@@ -300,7 +300,7 @@ export default function ForenseDigitalForensicsPage() {
                       </span>
                     </li>
                     <li className="bg-white p-4 rounded-lg border border-gray-200 flex items-start">
-                      <span className="text-[#00ade0] text-xl mr-3 leading-6 flex-shrink-0">•</span>
+                      <span className="text-[var(--primary-color)] text-xl mr-3 leading-6 flex-shrink-0">•</span>
                       <span className="text-gray-700 text-sm">
                         {language === 'pt' && 'utilização de ferramentas forenses homologadas internacionalmente'}
                         {language === 'en' && 'use of internationally certified forensic tools'}
@@ -308,7 +308,7 @@ export default function ForenseDigitalForensicsPage() {
                       </span>
                     </li>
                     <li className="bg-white p-4 rounded-lg border border-gray-200 flex items-start">
-                      <span className="text-[#00ade0] text-xl mr-3 leading-6 flex-shrink-0">•</span>
+                      <span className="text-[var(--primary-color)] text-xl mr-3 leading-6 flex-shrink-0">•</span>
                       <span className="text-gray-700 text-sm">
                         {language === 'pt' && 'técnicas não destrutivas que preservam a integridade dos dados'}
                         {language === 'en' && 'non-destructive techniques that preserve data integrity'}
@@ -316,7 +316,7 @@ export default function ForenseDigitalForensicsPage() {
                       </span>
                     </li>
                     <li className="bg-white p-4 rounded-lg border border-gray-200 flex items-start">
-                      <span className="text-[#00ade0] text-xl mr-3 leading-6 flex-shrink-0">•</span>
+                      <span className="text-[var(--primary-color)] text-xl mr-3 leading-6 flex-shrink-0">•</span>
                       <span className="text-gray-700 text-sm">
                         {language === 'pt' && 'análise de dados em ambiente isolado e controlado'}
                         {language === 'en' && 'data analysis in an isolated and controlled environment'}
@@ -327,13 +327,13 @@ export default function ForenseDigitalForensicsPage() {
                 </div>
                 <div className="md:w-1/2 bg-[#0d1117] rounded-lg p-8 text-white flex flex-col">
                   <h3 className="text-xl font-['Montserrat'] font-normal mb-6 lowercase">
-                    {language === 'pt' && <>frameworks <span className="text-[#00ade0]">adotados</span></>}
-                    {language === 'en' && <>adopted <span className="text-[#00ade0]">frameworks</span></>}
-                    {language === 'es' && <>frameworks <span className="text-[#00ade0]">adoptados</span></>}
+                    {language === 'pt' && <>frameworks <span className="text-[var(--primary-color)]">adotados</span></>}
+                    {language === 'en' && <>adopted <span className="text-[var(--primary-color)]">frameworks</span></>}
+                    {language === 'es' && <>frameworks <span className="text-[var(--primary-color)]">adoptados</span></>}
                   </h3>
                   <div className="space-y-6 flex-grow">
                     <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-                      <h4 className="font-medium text-[#00ade0] mb-2 lowercase">ACPO Guidelines</h4>
+                      <h4 className="font-medium text-[var(--primary-color)] mb-2 lowercase">ACPO Guidelines</h4>
                       <p className="text-sm text-gray-300">
                         {language === 'pt' && 'princípios para manipulação de evidências digitais reconhecidos internacionalmente'}
                         {language === 'en' && 'internationally recognized principles for handling digital evidence'}
@@ -341,7 +341,7 @@ export default function ForenseDigitalForensicsPage() {
                       </p>
                     </div>
                     <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-                      <h4 className="font-medium text-[#00ade0] mb-2 lowercase">ISO/IEC 27037</h4>
+                      <h4 className="font-medium text-[var(--primary-color)] mb-2 lowercase">ISO/IEC 27037</h4>
                       <p className="text-sm text-gray-300">
                         {language === 'pt' && 'diretrizes para identificação, coleta e preservação de evidências digitais'}
                         {language === 'en' && 'guidelines for identification, collection, and preservation of digital evidence'}
@@ -349,7 +349,7 @@ export default function ForenseDigitalForensicsPage() {
                       </p>
                     </div>
                     <div className="bg-gray-900 p-5 rounded-lg border border-gray-800">
-                      <h4 className="font-medium text-[#00ade0] mb-2 lowercase">NIST Guidelines</h4>
+                      <h4 className="font-medium text-[var(--primary-color)] mb-2 lowercase">NIST Guidelines</h4>
                       <p className="text-sm text-gray-300">
                         {language === 'pt' && 'padrões técnicos para forensics digital e investigações cibernéticas'}
                         {language === 'en' && 'technical standards for digital forensics and cyber investigations'}
@@ -371,7 +371,7 @@ export default function ForenseDigitalForensicsPage() {
             </h2>
             <a
               href={`/site/forense/contact`}
-              className="inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
+              className="inline-block bg-[var(--primary-color)] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300"
             >
               {t('forense.cta.button')}
             </a>

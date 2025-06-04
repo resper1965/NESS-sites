@@ -44,7 +44,7 @@ export default function LanguageSelector() {
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
-        <svg className="w-4 h-4 mr-0.5 text-[#00ade0]" viewBox="0 0 24 24" fill="currentColor">
+        <svg className="w-4 h-4 mr-0.5 text-[var(--primary-color)]" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" opacity="0.2" />
           <path d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm10-8a8 8 0 100 16 8 8 0 000-16z" strokeWidth="1" stroke="currentColor" fill="none" />
           <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" fill="none" stroke="currentColor" strokeWidth="1" />
@@ -61,13 +61,13 @@ export default function LanguageSelector() {
       </button>
       
       {isOpen && (
-        <div className="absolute right-0 mt-1 w-32 bg-[#1b2838] rounded-md shadow-lg overflow-hidden z-50 border border-[#2f3e4d]">
+        <div className="absolute right-0 mt-1 w-32 bg-[#1b2838] rounded-md shadow-lg overflow-hidden z-50 border border-[var(--secondary-color)]">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
               className={`block w-full text-left px-3 py-1.5 text-xs ${
-                language === lang.code ? 'bg-[#2f3e4d] text-[#00ade0] font-medium' : 'text-gray-300 hover:bg-[#2f3e4d]'
+                language === lang.code ? 'bg-[var(--secondary-color)] text-[var(--primary-color)] font-medium' : 'text-gray-300 hover:bg-[var(--secondary-color)]'
               }`}
             >
               {lang.label}

@@ -127,7 +127,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="text-white lowercase">
               <h1 className="font-['Montserrat'] font-normal text-3xl">
-                ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>
+                ness<span style={{color: "var(--primary-color)", marginLeft: "1px"}}>.</span>
               </h1>
             </Link>
           </div>
@@ -167,7 +167,7 @@ export default function Navbar() {
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
-                          n<span className="text-[#00ade0]">.</span>SecOps
+                          n<span className="text-[var(--primary-color)]">.</span>SecOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
                           {serviceDescriptions[language as keyof typeof serviceDescriptions].secops}
@@ -183,7 +183,7 @@ export default function Navbar() {
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
-                          n<span className="text-[#00ade0]">.</span>InfraOps
+                          n<span className="text-[var(--primary-color)]">.</span>InfraOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
                           {serviceDescriptions[language as keyof typeof serviceDescriptions].infraops}
@@ -199,7 +199,7 @@ export default function Navbar() {
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
-                          n<span className="text-[#00ade0]">.</span>DevArch
+                          n<span className="text-[var(--primary-color)]">.</span>DevArch
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
                           {serviceDescriptions[language as keyof typeof serviceDescriptions].devarch}
@@ -215,7 +215,7 @@ export default function Navbar() {
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
-                          n<span className="text-[#00ade0]">.</span>AutoOps
+                          n<span className="text-[var(--primary-color)]">.</span>AutoOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
                           {serviceDescriptions[language as keyof typeof serviceDescriptions].autoops}
@@ -231,7 +231,7 @@ export default function Navbar() {
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
-                          n<span className="text-[#00ade0]">.</span>CrisisOps
+                          n<span className="text-[var(--primary-color)]">.</span>CrisisOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
                           {serviceDescriptions[language as keyof typeof serviceDescriptions].crisisops}
@@ -247,7 +247,7 @@ export default function Navbar() {
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
                         <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
-                          n<span className="text-[#00ade0]">.</span>Privacy
+                          n<span className="text-[var(--primary-color)]">.</span>Privacy
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
                           {serviceDescriptions[language as keyof typeof serviceDescriptions].privacy}
@@ -279,7 +279,7 @@ export default function Navbar() {
             <LanguageSelector />
             
             {/* Contact as a button */}
-            <Link href="/contact" className="bg-[#00ade0] hover:bg-[#0095c4] text-white py-2 px-4 rounded-sm transition duration-200 lowercase">
+            <Link href="/contact" className="bg-[var(--primary-color)] hover:bg-[#0095c4] text-white py-2 px-4 rounded-sm transition duration-200 lowercase">
               {t('nav.contact')}
             </Link>
             
@@ -376,7 +376,7 @@ export default function Navbar() {
               </div>
               
               {/* Contact as a button */}
-              <Link href="/contact" className="bg-[#00ade0] hover:bg-[#0095c4] text-white py-2 px-4 rounded-sm transition duration-200 text-center lowercase">
+              <Link href="/contact" className="bg-[var(--primary-color)] hover:bg-[#0095c4] text-white py-2 px-4 rounded-sm transition duration-200 text-center lowercase">
                 {t('nav.contact')}
               </Link>
               

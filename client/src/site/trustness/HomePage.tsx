@@ -48,7 +48,7 @@ export default function TrustnessHomePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
-              trustness<span className="text-[#00ade0]">.</span>
+              trustness<span className="text-[var(--primary-color)]">.</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               {language === 'pt' && (pageContent?.content?.heroSubtitle || 
@@ -61,7 +61,7 @@ export default function TrustnessHomePage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="#what-we-do"
-                className="bg-[#00ade0] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
+                className="bg-[var(--primary-color)] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
               >
                 {language === 'pt' && 'nossos serviços'}
                 {language === 'en' && 'our services'}
@@ -69,7 +69,7 @@ export default function TrustnessHomePage() {
               </a>
               <a
                 href="/site/trustness/contact"
-                className="border border-[#00ade0] text-white hover:bg-white hover:bg-opacity-10 px-6 py-3 rounded lowercase"
+                className="border border-[var(--primary-color)] text-white hover:bg-white hover:bg-opacity-10 px-6 py-3 rounded lowercase"
               >
                 {language === 'pt' && 'fale conosco'}
                 {language === 'en' && 'contact us'}
@@ -104,7 +104,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">você sabe como vai sua segurança?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">você sabe como vai sua segurança?</span>
                     <span className="text-gray-700">
                       na trustness, avaliamos, auditamos e estruturamos práticas que sustentam a segurança, a privacidade e a conformidade regulatória.
                     </span>
@@ -119,7 +119,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certificações</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">vai se certificar ISO 27001, ou outra certificação?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">vai se certificar ISO 27001, ou outra certificação?</span>
                     <span className="text-gray-700">
                       atuamos também como auditores externos, avaliando a aderência da organização a normas e requisitos específicos — antes de uma certificação ou como parte de uma estratégia contínua de conformidade.
                     </span>
@@ -131,7 +131,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidade</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
                     <span className="text-gray-700">
                       conduzimos projetos completos de adequação à LGPD, GDPR, HIPAA e outras regulamentações de privacidade, com mapeamento de dados, implantação de controles e apoio contínuo à gestão.
                     </span>
@@ -153,7 +153,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">do you know how your security is doing?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">do you know how your security is doing?</span>
                     <span className="text-gray-700">
                       at trustness, we assess, audit, and structure practices that support security, privacy, and regulatory compliance.
                     </span>
@@ -168,7 +168,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certifications</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">need ISO 27001 certification or other security standards?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">need ISO 27001 certification or other security standards?</span>
                     <span className="text-gray-700">
                       we also act as external auditors, evaluating the organization's adherence to specific standards and requirements — before certification or as part of an ongoing compliance strategy.
                     </span>
@@ -180,7 +180,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacy</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">need to comply with GDPR, LGPD or other privacy laws?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">need to comply with GDPR, LGPD or other privacy laws?</span>
                     <span className="text-gray-700">
                       we conduct complete compliance projects for GDPR, LGPD, HIPAA and other privacy regulations, with data mapping, control implementation and continuous management support.
                     </span>
@@ -202,7 +202,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿sabes cómo va tu seguridad?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">¿sabes cómo va tu seguridad?</span>
                     <span className="text-gray-700">
                       en trustness, evaluamos, auditamos y estructuramos prácticas que sustentan la seguridad, la privacidad y el cumplimiento normativo.
                     </span>
@@ -217,7 +217,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certificaciones</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿necesita certificarse en ISO 27001 u otros estándares de seguridad?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">¿necesita certificarse en ISO 27001 u otros estándares de seguridad?</span>
                     <span className="text-gray-700">
                       también actuamos como auditores externos, evaluando la adhesión de la organización a normas y requisitos específicos — antes de una certificación o como parte de una estrategia continua de cumplimiento.
                     </span>
@@ -229,7 +229,7 @@ export default function TrustnessHomePage() {
                     <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidad</h3>
                   </div>
                   <p className="mb-4">
-                    <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿necesita cumplir con GDPR, LGPD u otras leyes de privacidad?</span>
+                    <span className="text-[var(--primary-color)] font-semibold text-lg block mb-2">¿necesita cumplir con GDPR, LGPD u otras leyes de privacidad?</span>
                     <span className="text-gray-700">
                       realizamos proyectos completos de adecuación a GDPR, LGPD, HIPAA y otras regulaciones de privacidad, con mapeo de datos, implementación de controles y apoyo continuo a la gestión.
                     </span>
@@ -263,7 +263,7 @@ export default function TrustnessHomePage() {
             <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
               <h3 className="mb-4">
                 <span className="font-['Montserrat'] font-medium text-lg text-white">
-                  <span className="text-[#005fa3]">.</span>assessment
+                  <span className="text-[var(--primary-color)]">.</span>assessment
                 </span>
               </h3>
               <p className="text-gray-300 text-sm mb-6 lowercase">
@@ -272,7 +272,7 @@ export default function TrustnessHomePage() {
               <div className="text-center">
                 <a 
                   href="/site/trustness/services/assessment" 
-                  className="text-gray-300 hover:text-[#005fa3] border border-gray-700 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                  className="text-gray-300 hover:text-[var(--primary-color)] border border-gray-700 hover:border-[var(--primary-color)] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
                 >
                   saiba mais
                 </a>
@@ -283,7 +283,7 @@ export default function TrustnessHomePage() {
             <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
               <h3 className="mb-4">
                 <span className="font-['Montserrat'] font-medium text-lg text-white">
-                  <span className="text-[#005fa3]">.</span>conformity
+                  <span className="text-[var(--primary-color)]">.</span>conformity
                 </span>
               </h3>
               <p className="text-gray-300 text-sm mb-6 lowercase">
@@ -292,7 +292,7 @@ export default function TrustnessHomePage() {
               <div className="text-center">
                 <a 
                   href="/site/trustness/services/conformity" 
-                  className="text-gray-300 hover:text-[#005fa3] border border-gray-700 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                  className="text-gray-300 hover:text-[var(--primary-color)] border border-gray-700 hover:border-[var(--primary-color)] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
                 >
                   saiba mais
                 </a>
@@ -303,7 +303,7 @@ export default function TrustnessHomePage() {
             <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
               <h3 className="mb-4">
                 <span className="font-['Montserrat'] font-medium text-lg text-white">
-                  <span className="text-[#005fa3]">.</span>privacy
+                  <span className="text-[var(--primary-color)]">.</span>privacy
                 </span>
               </h3>
               <p className="text-gray-300 text-sm mb-6 lowercase">
@@ -312,7 +312,7 @@ export default function TrustnessHomePage() {
               <div className="text-center">
                 <a 
                   href="/site/trustness/services/privacy" 
-                  className="text-gray-300 hover:text-[#005fa3] border border-gray-700 hover:border-[#005fa3] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
+                  className="text-gray-300 hover:text-[var(--primary-color)] border border-gray-700 hover:border-[var(--primary-color)] py-2 px-4 text-sm font-normal transition-colors duration-300 inline-block lowercase rounded-sm"
                 >
                   saiba mais
                 </a>
