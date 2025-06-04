@@ -87,7 +87,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-300">
           <p>&copy; {currentYear} ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span> {t('footer.rights')}.</p>
           <div className="mt-2">
-            <Link href="/auth" className="text-gray-300 hover:text-accent transition duration-300">{t('nav.login')}</Link>
+            <Link href="/admin/login" className="text-gray-300 hover:text-accent transition duration-300">{t('nav.login')}</Link>
           </div>
         </div>
       </div>

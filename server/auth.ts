@@ -123,34 +123,6 @@ export function setupAuth(app: Express) {
     }
   });
 
-  app.post("/api/register", async (req, res, next) => {
-    try {
-      const { username, password } = req.body;
-      
-      if (!username || !password) {
-        return res.status(400).json({ message: "Username and password are required" });
-      }
-      
-      const existingUser = await storage.getUserByUsername(username);
-      if (existingUser) {
-        return res.status(400).json({ message: "Username already exists" });
-      }
-
-      const hashedPassword = await hashPassword(password);
-      const user = await storage.createUser({
-        username,
-        password: hashedPassword,
-        isAdmin: false, // Usuários registrados normalmente não são admins
-      });
-
-      req.login(user, (err) => {
-        if (err) return next(err);
-        res.status(201).json({ ...user, password: undefined });
-      });
-    } catch (error) {
-      next(error);
-    }
-  });
 
   app.post("/api/login", (req, res, next) => {
     passport.authenticate("local", (err: Error, user: SelectUser, info: any) => {
