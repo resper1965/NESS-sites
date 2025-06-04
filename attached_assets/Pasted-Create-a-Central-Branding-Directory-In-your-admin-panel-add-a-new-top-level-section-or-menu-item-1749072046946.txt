@@ -1,0 +1,160 @@
+Create a Central “Branding” Directory
+
+In your admin panel, add a new top‐level section or menu item called “Branding & Templates.”
+
+Inside that section, set up four subfolders (or tabs):
+
+Styles – PDF guidelines (colors, typography, logos).
+
+Templates – PowerPoint slides, email HTML, social‐media templates.
+
+Governance – policy documents, approval workflows, request forms.
+
+Assets – raw SVG/PNG icons, font files, mockup images.
+
+Design a Simple Navigation Interface
+
+Display four tabs or cards labeled Styles, Templates, Governance, and Assets.
+
+When a user clicks a tab, show a list of files in that category.
+
+Include a brief description or date next to each file so people know what it is and when it was last updated.
+
+Implement File Listings with Download and Preview
+
+For each file, show:
+
+An icon indicating the file type (PDF, PPTX, HTML, SVG).
+
+The file name and a short description.
+
+The date of last update.
+
+A “Preview” button (for PDFs or images) and a “Download” link.
+
+If possible, embed a lightweight PDF viewer so users can skim before downloading.
+
+Add an “Upload New Document” Workflow
+
+Only permitted roles (e.g., Marketing or Branding Admin) should see an “Upload New” button.
+
+The upload form must ask for:
+
+Category (Styles, Templates, Governance, or Assets)
+
+File name (or auto‐fill from the uploaded filename)
+
+Brief description (e.g., “Color palette guidelines” or “2025 email template”)
+
+Version label (e.g., “v20250615”)
+
+The file itself
+
+After upload, automatically place the file into its correct subfolder and update the listing.
+
+Maintain Version History
+
+Whenever a file is re‐uploaded under the same name or ID, keep the previous version in an “archive” subfolder.
+
+Show a “View older versions” link for each document, listing past iterations and their dates.
+
+Encourage clear naming like “template‐email_v2.html” so it’s obvious which version is current.
+
+Implement Role‐Based Access Control
+
+Define two roles:
+
+Branding Admin – can upload, edit, and delete files.
+
+General User – can only view, preview, and download.
+
+Before rendering upload or delete buttons, check the user’s role on the server side.
+
+Offer Search and Filter Capabilities
+
+Add a search box that filters files by name or keyword.
+
+Provide quick filters or dropdowns so users can show only PDFs, or only PowerPoint templates, etc.
+
+Allow filtering by category (Styles, Templates, Governance, Assets).
+
+Organize Content Within Each Category
+
+Styles folder:
+
+Color palette PDF
+
+Typography guidelines PDF
+
+Logo package ZIP (SVG + PNG)
+
+Templates folder subdivided further:
+
+Presentations (SlideDeck.potx)
+
+Emails (email_template.html, with a preview image)
+
+Social (1080×1080 PSD and 1080×1920 PSD)
+
+Signature (HTML + preview PNG)
+
+Governance folder:
+
+Brand usage policy PDF
+
+Approval workflow PDF
+
+Request form PDF or link to online form
+
+Assets folder:
+
+Icons (icon_secops.svg, icon_infraops.svg, etc.)
+
+Fonts (Montserrat .woff/.woff2) if you want to provide offline versions
+
+Example mockup screenshots
+
+Add Brief Document Descriptions
+
+Below each file name, include one or two lines describing its purpose. For example:
+
+“guideline‐colors.pdf – primary and neutral color codes for all digital materials.”
+
+“SlideDeck_ness_v1.potx – official slide template for internal and client presentations.”
+
+Set Up Approval and Review Workflow
+
+Whenever someone uploads or updates a file, send a notification to the Branding Admin group for approval.
+
+After approval, automatically mark the file as “Official.”
+
+Keep a changelog entry (date, uploader’s name, and summary of changes) for transparency.
+
+Provide Download Buttons and Previews
+
+For PDFs: embed a thumbnail preview or use a modal window so users can glance before downloading.
+
+For PowerPoint and Photoshop files: show a static preview image or thumbnail and then link to download.
+
+Document the Process in a README or Help Section
+
+On the same admin page, include a short “How to use this section” guide that explains:
+
+How to upload a new document.
+
+How to check version history.
+
+Where to find the style guide.
+
+Who to contact for questions.
+
+Test and Roll Out
+
+Verify that users with “viewer” permissions cannot upload or delete.
+
+Test uploading a new style PDF, replacing it, and confirming that the old version moves to “archive.”
+
+Ensure that the search and filters work correctly across all categories.
+
+Once everything is stable, announce to the team where to find the new Branding & Templates section and how to request access if needed.
+
