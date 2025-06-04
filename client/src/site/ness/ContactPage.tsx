@@ -201,7 +201,6 @@ export default function NessContactPage() {
           </div>
         </div>
       </section>
-
       {/* Intro Section */}
       <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
@@ -212,7 +211,6 @@ export default function NessContactPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Form and Info */}
       <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
@@ -331,7 +329,7 @@ export default function NessContactPage() {
                   <div className="flex items-start space-x-4">
                     <Mail className="w-6 h-6 text-[#00ade0] mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-['Montserrat'] font-medium text-gray-800 mb-1">Email</h3>
+                      <h3 className="font-['Montserrat'] font-medium text-gray-800 mb-1 text-[15px]">Email</h3>
                       <p className="text-gray-600">{contactInfo?.email || 'contato@ness.com.br'}</p>
                     </div>
                   </div>
