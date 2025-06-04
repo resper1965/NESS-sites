@@ -1,6 +1,6 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { setupAuth } from "./auth";
+import { setupAuth, requireAdmin } from "./auth";
 import { storage } from "./storage";
 import { ContentService } from "./content-service";
 import { SiteCode, SITE_CODES } from "@shared/schema";
@@ -968,6 +968,109 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error fetching job:", error);
       res.status(500).json({ message: "Error fetching job" });
+    }
+  });
+
+  // Settings routes
+  app.get("/api/admin/settings", requireAdmin, async (req, res) => {
+    try {
+      const settings = await storage.getAllSettings();
+      res.json(settings);
+    } catch (error) {
+      console.error("Error fetching settings:", error);
+      res.status(500).json({ message: "Error fetching settings" });
+    }
+  });
+
+  app.post("/api/admin/settings", requireAdmin, async (req, res) => {
+    try {
+      const { key, value, language } = req.body;
+      const setting = await storage.updateSetting(key, language, value);
+      
+      // Log activity
+      await storage.createActivityLog({
+        userId: (req.user as any).id,
+        action: "updated",
+        entityType: "setting",
+        entityId: key,
+        details: { language, value: value.length > 100 ? value.substring(0, 100) + "..." : value }
+      });
+      
+      res.json(setting);
+    } catch (error) {
+      console.error("Error updating setting:", error);
+      res.status(500).json({ message: "Error updating setting" });
+    }
+  });
+
+  app.post("/api/admin/settings/translate", requireAdmin, async (req, res) => {
+    try {
+      const { key, value, targetLanguage } = req.body;
+      
+      if (!process.env.OPENAI_API_KEY) {
+        return res.status(400).json({ message: "OpenAI API key não configurada. Configure OPENAI_API_KEY para usar tradução automática." });
+      }
+      
+      // Usar OpenAI para traduzir o conteúdo
+      const OpenAI = require('openai');
+      const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+      
+      const languageNames = {
+        'en': 'inglês',
+        'es': 'espanhol',
+        'pt': 'português'
+      };
+      
+      const prompt = `Traduza o seguinte texto para ${languageNames[targetLanguage as keyof typeof languageNames]}. Mantenha a formatação e estrutura originais:
+
+${value}`;
+
+      const response = await openai.chat.completions.create({
+        model: "gpt-4o",
+        messages: [{ role: "user", content: prompt }],
+        max_tokens: 2000,
+      });
+
+      const translatedText = response.choices[0].message.content;
+      
+      if (translatedText) {
+        const setting = await storage.updateSetting(key, targetLanguage, translatedText);
+        
+        // Log activity
+        await storage.createActivityLog({
+          userId: (req.user as any).id,
+          action: "translated",
+          entityType: "setting",
+          entityId: key,
+          details: { targetLanguage, originalLanguage: 'pt' }
+        });
+        
+        res.json(setting);
+      } else {
+        res.status(500).json({ message: "Erro na tradução" });
+      }
+    } catch (error) {
+      console.error("Error translating setting:", error);
+      res.status(500).json({ message: "Error translating setting" });
+    }
+  });
+
+  // Public settings routes (for frontend consumption)
+  app.get("/api/settings/:language", async (req, res) => {
+    try {
+      const { language } = req.params;
+      const settings = await storage.getSettings(language);
+      
+      // Convert to key-value pairs for easier frontend consumption
+      const settingsMap = settings.reduce((acc, setting) => {
+        acc[setting.key] = setting.value;
+        return acc;
+      }, {} as Record<string, string>);
+      
+      res.json(settingsMap);
+    } catch (error) {
+      console.error("Error fetching public settings:", error);
+      res.status(500).json({ message: "Error fetching settings" });
     }
   });
 

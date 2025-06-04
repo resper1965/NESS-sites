@@ -7,6 +7,7 @@ import {
   sites, type Site, type InsertSite,
   contentSites, type ContentSite, type InsertContentSite,
   landingPages, type LandingPage, type InsertLandingPage,
+  siteSettings, type SiteSetting, type InsertSiteSetting,
   type SiteCode
 } from "@shared/schema";
 import session from "express-session";
@@ -1250,6 +1251,57 @@ export class DatabaseStorage implements IStorage {
     return await db.select().from(activityLogs)
       .orderBy(desc(activityLogs.createdAt))
       .limit(5);
+  }
+
+  // Settings methods
+  async getSetting(key: string, language: string): Promise<SiteSetting | undefined> {
+    const [setting] = await db
+      .select()
+      .from(siteSettings)
+      .where(and(eq(siteSettings.key, key), eq(siteSettings.language, language)));
+    return setting || undefined;
+  }
+
+  async getSettings(language: string): Promise<SiteSetting[]> {
+    const settings = await db
+      .select()
+      .from(siteSettings)
+      .where(eq(siteSettings.language, language));
+    return settings;
+  }
+
+  async getAllSettings(): Promise<SiteSetting[]> {
+    const settings = await db
+      .select()
+      .from(siteSettings)
+      .orderBy(siteSettings.key, siteSettings.language);
+    return settings;
+  }
+
+  async createSetting(setting: InsertSiteSetting): Promise<SiteSetting> {
+    const [newSetting] = await db
+      .insert(siteSettings)
+      .values(setting)
+      .returning();
+    return newSetting;
+  }
+
+  async updateSetting(key: string, language: string, value: string): Promise<SiteSetting> {
+    const existingSetting = await this.getSetting(key, language);
+    
+    if (existingSetting) {
+      const [updatedSetting] = await db
+        .update(siteSettings)
+        .set({ 
+          value, 
+          updatedAt: new Date() 
+        })
+        .where(and(eq(siteSettings.key, key), eq(siteSettings.language, language)))
+        .returning();
+      return updatedSetting;
+    } else {
+      return await this.createSetting({ key, value, language });
+    }
   }
 }
 
