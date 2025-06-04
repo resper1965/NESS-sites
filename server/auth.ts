@@ -77,7 +77,8 @@ async function ensureAdminUser() {
 export function setupAuth(app: Express) {
   const sessionSecret = process.env.SESSION_SECRET;
   if (!sessionSecret) {
-    throw new Error("SESSION_SECRET environment variable is required");
+    console.error("SESSION_SECRET environment variable is required");
+    process.exit(1);
   }
   
   const sessionSettings: session.SessionOptions = {

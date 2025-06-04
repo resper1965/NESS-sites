@@ -18,7 +18,8 @@ Run it whenever page content changes so the backups stay in sync.
 ## Environment variables
 
 The server requires a `SESSION_SECRET` environment variable to sign session
-cookies. Set it to a random string before starting the application, e.g.:
+cookies. If it is missing the server fails to start, so set it to a random
+string before running the application. For example:
 
 ```bash
 export SESSION_SECRET="a long random string"
