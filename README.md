@@ -32,12 +32,15 @@ temporary hack has been removed.
 
 ## Environment variables
 
-The server requires a `SESSION_SECRET` environment variable to sign session
-cookies. If it is missing the server fails to start, so set it to a random
-string before running the application. For example:
+Several values are read from the environment when the server starts. Copy
+`.env.example` to `.env` and fill in the following variables:
+
+- `DATABASE_URL` - connection string for your database
+- `SESSION_SECRET` - random string used to sign session cookies
+
+Once the variables are defined you can start the development server:
 
 ```bash
-export SESSION_SECRET="a long random string"
 npm run dev
 ```
 
