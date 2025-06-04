@@ -46,6 +46,7 @@ import AdminLoginPage from "@/pages/admin/login-page";
 import AdminDashboardPage from "@/pages/admin/dashboard-page";
 import BrandingPage from "@/pages/admin/branding-page";
 import AdminJobsPage from "@/pages/admin/jobs-page";
+import AdminSettingsPage from "@/pages/admin/settings-page";
 import PublicJobsPage from "@/pages/public-jobs-page";
 import InfraOpsPage from "@/pages/services/infraops-page";
 import SecOpsPage from "@/pages/services/secops-page";
@@ -230,6 +231,7 @@ function Router() {
       <ProtectedRoute path="/admin/dashboard" component={AdminDashboardPage} />
       <ProtectedRoute path="/admin/branding" component={BrandingPage} />
       <ProtectedRoute path="/admin/jobs" component={AdminJobsPage} />
+      <ProtectedRoute path="/admin/settings" component={AdminSettingsPage} />
       
       {/* Fallback to 404 */}
       <Route component={NotFound} />
