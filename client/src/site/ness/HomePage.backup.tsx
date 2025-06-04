@@ -65,7 +65,7 @@ export default function NessHomePage() {
       <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+            <h2 className="text-3xl  font-normal text-gray-800 mb-4 lowercase">
               {pageContent?.content && JSON.parse(pageContent.content).featuredSectionTitle || 'tecnologia modular para o essencial invisível'}
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">

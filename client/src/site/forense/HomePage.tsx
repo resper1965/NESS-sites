@@ -43,10 +43,10 @@ export default function ForenseHomePage() {
       <section className="intro bg-[#0d1117] text-white relative overflow-hidden flex items-center" style={{ minHeight: "60vh" }}>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-3 lowercase">
+            <h1 className="text-4xl md:text-5xl  font-normal mb-3 lowercase">
               forense<span className="text-[#00ade0]">.</span>io
             </h1>
-            <h2 className="text-xl font-['Montserrat'] font-normal lowercase">
+            <h2 className="text-xl  font-normal lowercase">
               {language === 'pt' && "Especialistas em Forense Digital"}
               {language === 'en' && "Digital Forensic Experts"}
               {language === 'es' && "Expertos en Forense Digital"}
@@ -73,7 +73,7 @@ export default function ForenseHomePage() {
       {/* Services Section */}
       <section id="services" className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-['Montserrat'] font-normal text-center mb-16 lowercase">
+          <h2 className="text-2xl  font-normal text-center mb-16 lowercase">
             {language === 'pt' && <> serviços <span className="text-[#00ade0]">especializados</span></>}
             {language === 'en' && <> specialized <span className="text-[#00ade0]">services</span></>}
             {language === 'es' && <> servicios <span className="text-[#00ade0]">especializados</span></>}
@@ -83,7 +83,7 @@ export default function ForenseHomePage() {
             {/* Forense Digital */}
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="mb-4 text-center">
-                <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
+                <h3 className="text-xl  font-normal lowercase mb-1">
                   {language === 'pt' && "forense digital"}
                   {language === 'en' && "digital forensics"}
                   {language === 'es' && "forense digital"}
@@ -111,7 +111,7 @@ export default function ForenseHomePage() {
             {/* Suporte Legal */}
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="mb-4 text-center">
-                <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
+                <h3 className="text-xl  font-normal lowercase mb-1">
                   {language === 'pt' && "suporte legal"}
                   {language === 'en' && "legal support"}
                   {language === 'es' && "soporte legal"}
@@ -139,7 +139,7 @@ export default function ForenseHomePage() {
             {/* Investigações Corporativas */}
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full">
               <div className="mb-4 text-center">
-                <h3 className="text-xl font-['Montserrat'] font-normal lowercase mb-1">
+                <h3 className="text-xl  font-normal lowercase mb-1">
                   {language === 'pt' && "investigações corporativas"}
                   {language === 'en' && "corporate investigations"}
                   {language === 'es' && "investigaciones corporativas"}
@@ -171,7 +171,7 @@ export default function ForenseHomePage() {
       <section className="contato bg-[#0d1117] text-white flex items-center" style={{ minHeight: "400px" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-['Montserrat'] font-normal mb-6 lowercase">
+            <h2 className="text-2xl  font-normal mb-6 lowercase">
               {language === 'pt' && <>precisando de <span className="text-[#00ade0]">consultoria especializada</span>?</>}
               {language === 'en' && <>need <span className="text-[#00ade0]">specialized consulting</span>?</>}
               {language === 'es' && <>¿necesita <span className="text-[#00ade0]">consultoría especializada</span>?</>}

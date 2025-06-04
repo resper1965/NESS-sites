@@ -98,7 +98,7 @@ export default function ContactPage() {
         <section className="w-full py-32 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl mb-6 font-['Montserrat'] font-normal">
+              <h1 className="text-4xl md:text-5xl mb-6  font-normal">
                 {t('contact.hero.prefix')} <span className="relative">
                   {t('contact.hero.highlight')}
                   <span className="absolute bottom-1 left-0 w-full h-1 bg-accent"></span>
@@ -115,7 +115,7 @@ export default function ContactPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <div>
-                <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">{t('contact.form.title')}</h2>
+                <h2 className="text-3xl  text-primary mb-8">{t('contact.form.title')}</h2>
                 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -258,7 +258,7 @@ export default function ContactPage() {
               </div>
               
               <div className="mt-8 lg:mt-0">
-                <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">{t('contact.info.title')}</h2>
+                <h2 className="text-3xl  text-primary mb-8">{t('contact.info.title')}</h2>
                 
                 <div className="space-y-8 mb-12">
                   <div className="flex items-start">

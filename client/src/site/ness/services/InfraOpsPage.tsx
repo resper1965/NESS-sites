@@ -48,12 +48,12 @@ export default function NessInfraOpsPage() {
   const formatServiceName = (name: string) => {
     if (name.startsWith('n.')) {
       return (
-        <span className="font-['Montserrat'] font-normal">
+        <span className=" font-normal">
           n<span className="text-[#00ade0]">.</span>{name.substring(2)}
         </span>
       );
     }
-    return <span className="font-['Montserrat'] font-normal">{name}</span>;
+    return <span className=" font-normal">{name}</span>;
   };
   
   return (
@@ -67,10 +67,10 @@ export default function NessInfraOpsPage() {
       <section className="intro bg-[#121212] relative flex items-center justify-center" style={{ minHeight: "60vh" }}>
         <div className="container mx-auto px-4 z-10">
           <div className="text-center">
-            <h1 className="text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white">
+            <h1 className="text-6xl md:text-7xl  font-normal mb-6 text-white">
               {formatServiceName(content.title)}
             </h1>
-            <p className="text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase">
+            <p className="text-xl md:text-2xl  font-light mb-8 max-w-4xl mx-auto text-white lowercase">
               {content.description}
             </p>
           </div>
@@ -92,7 +92,7 @@ export default function NessInfraOpsPage() {
       <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase">
+            <h2 className="text-2xl  font-normal mb-12 text-center lowercase">
               {language === 'pt' && 'soluções'}
               {language === 'en' && 'solutions'}
               {language === 'es' && 'soluciones'}
@@ -101,7 +101,7 @@ export default function NessInfraOpsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {content.sections.map((section: any, index: number) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase">
+                  <h3 className="text-lg  font-medium mb-4 text-gray-800 lowercase">
                     {section.title}
                   </h3>
                   <p className="text-gray-600 text-sm">{section.content}</p>
@@ -116,7 +116,7 @@ export default function NessInfraOpsPage() {
       <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase">
+            <h2 className="text-2xl  font-normal mb-12 text-center lowercase">
               {language === 'pt' && 'diferenciais'}
               {language === 'en' && 'differentials'}
               {language === 'es' && 'diferenciales'}
@@ -125,7 +125,7 @@ export default function NessInfraOpsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {content.features.map((feature: any, index: number) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase">
+                  <h3 className="text-lg  font-medium mb-4 text-gray-800 lowercase">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 text-sm">{feature.content}</p>
@@ -140,7 +140,7 @@ export default function NessInfraOpsPage() {
       <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase">
+            <h2 className="text-2xl  font-normal mb-10 text-center lowercase">
               {language === 'pt' && 'benefícios'}
               {language === 'en' && 'benefits'}
               {language === 'es' && 'beneficios'}
@@ -161,10 +161,10 @@ export default function NessInfraOpsPage() {
       <section className="conteudo bg-[#121212] text-white" style={{ padding: "4rem 0", minHeight: "400px" }}>
         <div className="container mx-auto px-4 flex items-center justify-center h-full">
           <div className="text-center max-w-3xl">
-            <h2 className="text-2xl font-['Montserrat'] font-normal mb-8">
+            <h2 className="text-2xl  font-normal mb-8">
               {content.cta.title}
             </h2>
-            <Link href="/site/ness/contact" className="inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase">
+            <Link href="/site/ness/contact" className="inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm  lowercase">
               {content.cta.button}
             </Link>
           </div>

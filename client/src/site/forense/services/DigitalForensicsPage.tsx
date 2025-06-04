@@ -66,7 +66,7 @@ export default function ForenseDigitalForensicsPage() {
         <section className="intro flex items-center justify-center text-white bg-[#0d1117] relative overflow-hidden" style={{ minHeight: "60vh" }}>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
+              <h1 className={`${styles.fontSizes.hero.title}  font-normal mb-6 lowercase`}>
                 forense<DotSpan />digital
               </h1>
               <p className={`${styles.fontSizes.hero.subtitle} ${styles.colors.text.light} ${styles.spacing.mb.xl}`}>
@@ -82,7 +82,7 @@ export default function ForenseDigitalForensicsPage() {
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                  <h2 className={`${styles.fontSizes.section.title} font-['Montserrat'] font-normal ${styles.colors.text.dark} ${styles.spacing.mb.large} lowercase`}>
+                  <h2 className={`${styles.fontSizes.section.title}  font-normal ${styles.colors.text.dark} ${styles.spacing.mb.large} lowercase`}>
                     {t('forense.digital.title')} <span className={styles.colors.primary}>{t('forense.service.digital')}</span>?
                   </h2>
                   <p className={`${styles.colors.text.medium} ${styles.fontSizes.text.regular} ${styles.spacing.mb.medium} leading-relaxed`}>
@@ -96,7 +96,7 @@ export default function ForenseDigitalForensicsPage() {
                   </p>
                 </div>
                 <div className="md:w-1/2 bg-[#00ade0]/5 rounded-lg p-8 border border-[#00ade0]/20">
-                  <h3 className={`${styles.fontSizes.section.subtitle} font-['Montserrat'] font-normal ${styles.colors.text.dark} ${styles.spacing.mb.medium} lowercase`}>
+                  <h3 className={`${styles.fontSizes.section.subtitle}  font-normal ${styles.colors.text.dark} ${styles.spacing.mb.medium} lowercase`}>
                     {t('forense.digital.why')}
                   </h3>
                   <ul className="space-y-4">
@@ -144,14 +144,14 @@ export default function ForenseDigitalForensicsPage() {
         <section className="conteudo bg-[#0d1117] text-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase">
+              <h2 className="text-2xl  font-normal mb-12 text-center lowercase">
                 {language === 'pt' && <>ambientes de <span className="text-[#00ade0]">coleta digital</span></>}
                 {language === 'en' && <>digital <span className="text-[#00ade0]">collection environments</span></>}
                 {language === 'es' && <>ambientes de <span className="text-[#00ade0]">recolección digital</span></>}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
-                  <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
+                  <h3 className="text-lg  font-medium mb-3 lowercase">
                     {language === 'pt' && <>ambientes <span className="text-[#00ade0]">corporativos</span></>}
                     {language === 'en' && <>corporate <span className="text-[#00ade0]">environments</span></>}
                     {language === 'es' && <>ambientes <span className="text-[#00ade0]">corporativos</span></>}
@@ -195,7 +195,7 @@ export default function ForenseDigitalForensicsPage() {
                 </div>
                 
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
-                  <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
+                  <h3 className="text-lg  font-medium mb-3 lowercase">
                     {language === 'pt' && <>dispositivos <span className="text-[#00ade0]">pessoais</span></>}
                     {language === 'en' && <>personal <span className="text-[#00ade0]">devices</span></>}
                     {language === 'es' && <>dispositivos <span className="text-[#00ade0]">personales</span></>}
@@ -217,7 +217,7 @@ export default function ForenseDigitalForensicsPage() {
                 </div>
                 
                 <div className="border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full">
-                  <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
+                  <h3 className="text-lg  font-medium mb-3 lowercase">
                     {language === 'pt' && <>armazenamento em <span className="text-[#00ade0]">nuvem</span></>}
                     {language === 'en' && <>cloud <span className="text-[#00ade0]">storage</span></>}
                     {language === 'es' && <>almacenamiento en <span className="text-[#00ade0]">nube</span></>}
@@ -246,7 +246,7 @@ export default function ForenseDigitalForensicsPage() {
         <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-10 text-center lowercase">
+              <h2 className="text-2xl  font-normal text-gray-800 mb-10 text-center lowercase">
                 {language === 'pt' && <>serviços <span className="text-[#00ade0]">especializados</span></>}
                 {language === 'en' && <>specialized <span className="text-[#00ade0]">services</span></>}
                 {language === 'es' && <>servicios <span className="text-[#00ade0]">especializados</span></>}
@@ -259,7 +259,7 @@ export default function ForenseDigitalForensicsPage() {
                         <span className="text-white text-lg font-bold">{index + 1}</span>
                       </div>
                       <div>
-                        <h3 className="text-xl font-['Montserrat'] text-gray-800 mb-3 lowercase">
+                        <h3 className="text-xl  text-gray-800 mb-3 lowercase">
                           {section.title}
                         </h3>
                         <p className="text-gray-700 text-sm">
@@ -280,7 +280,7 @@ export default function ForenseDigitalForensicsPage() {
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row items-stretch md:space-x-10">
                 <div className="md:w-1/2 mb-10 md:mb-0">
-                  <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase">
+                  <h2 className="text-2xl  font-normal text-gray-800 mb-6 lowercase">
                     {language === 'pt' && <>metodologias <span className="text-[#00ade0]">forenses</span></>}
                     {language === 'en' && <>forensic <span className="text-[#00ade0]">methodologies</span></>}
                     {language === 'es' && <>metodologías <span className="text-[#00ade0]">forenses</span></>}
@@ -326,7 +326,7 @@ export default function ForenseDigitalForensicsPage() {
                   </ul>
                 </div>
                 <div className="md:w-1/2 bg-[#0d1117] rounded-lg p-8 text-white flex flex-col">
-                  <h3 className="text-xl font-['Montserrat'] font-normal mb-6 lowercase">
+                  <h3 className="text-xl  font-normal mb-6 lowercase">
                     {language === 'pt' && <>frameworks <span className="text-[#00ade0]">adotados</span></>}
                     {language === 'en' && <>adopted <span className="text-[#00ade0]">frameworks</span></>}
                     {language === 'es' && <>frameworks <span className="text-[#00ade0]">adoptados</span></>}
@@ -366,7 +366,7 @@ export default function ForenseDigitalForensicsPage() {
         {/* CTA Section */}
         <section className="contato bg-[#0d1117] text-white flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
+            <h2 className="text-3xl  font-normal mb-8 lowercase">
               {t('forense.cta.title')}
             </h2>
             <a

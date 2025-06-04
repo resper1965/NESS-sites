@@ -115,19 +115,19 @@ export default function ServicesSection({ title }: ServicesSectionProps) {
   const formatServiceName = (name: string) => {
     if (name.startsWith('n.')) {
       return (
-        <span className="font-['Montserrat'] font-medium text-lg text-gray-800">
+        <span className=" font-medium text-lg text-gray-800">
           n<span className="text-[#00ade0]">.</span>{name.substring(2)}
         </span>
       );
     }
-    return <span className="font-['Montserrat'] font-medium text-lg text-gray-800">{name}</span>;
+    return <span className=" font-medium text-lg text-gray-800">{name}</span>;
   };
   
   return (
     <section id="services" className="conteudo bg-[#f9f9f9]" style={{ padding: "4rem 0" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-8 lowercase">
+          <h2 className="text-3xl  font-normal text-gray-800 mb-8 lowercase">
             {title || getTitleJSX(language)}
           </h2>
         </div>

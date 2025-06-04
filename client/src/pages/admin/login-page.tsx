@@ -69,7 +69,7 @@ export default function AdminLoginPage() {
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="p-6 sm:p-8">
             <div className="text-center mb-8">
-              <h1 className="text-3xl font-['Montserrat'] font-normal text-primary mb-2">
+              <h1 className="text-3xl  font-normal text-primary mb-2">
                 ness<span className="text-accent">.</span> <span className="font-medium">admin</span>
               </h1>
               <p className="text-gray-600">Área restrita de administração</p>

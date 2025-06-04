@@ -140,18 +140,18 @@ intro relative flex items-center justify-center overflow-hidden bg-[#121212]
 60vh
 container mx-auto px-4 z-10 flex justify-center items-center h-full
 hero-main-content text-center max-w-4xl
-text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6
+text-5xl md:text-6xl lg:text-7xl  font-normal mb-6
 #ffffff
 ness
 #00ade0
 .
-text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-6 text-white lowercase tracking-tight
-text-lg md:text-xl lg:text-2xl mb-8 mx-auto text-white font-['Montserrat'] lowercase font-light
+text-2xl md:text-3xl lg:text-4xl  font-normal mb-6 text-white lowercase tracking-tight
+text-lg md:text-xl lg:text-2xl mb-8 mx-auto text-white  lowercase font-light
 conteudo bg-gray-50
 4rem 0
 container mx-auto px-4
 max-w-3xl mx-auto
-font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase
+ font-normal text-2xl md:text-3xl mb-6 text-center lowercase
 font-normal
 somos a
 es
@@ -176,13 +176,13 @@ we design, connect and sustain critical solutions
 diseñamos, conectamos y sostenemos soluciones críticas
 mt-8 text-center font-light text-md
 conteudo bg-[#2c2c34]
-text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-[#00ade0]
+text-3xl  font-normal text-center mb-12 lowercase text-[#00ade0]
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]
-text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white
+text-xl  font-medium mb-4 lowercase text-white
 text-gray-200 lowercase
 text-gray-200 lowercase mb-4
-text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase
+text-3xl  font-normal text-center mb-12 lowercase
 max-w-5xl mx-auto
 relative
 absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[#00ade0] opacity-50
@@ -191,14 +191,14 @@ flex-row-reverse
 w-1/2 px-6
 text-right
 text-left
-text-2xl font-['Montserrat'] font-medium text-gray-900
+text-2xl  font-medium text-gray-900
 text-[#00ade0] text-sm
 mt-2 text-gray-700 lowercase
 absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00ade0] rounded-full mt-1
 contato bg-[#4d4d4d] text-white flex items-center
 400px
 container mx-auto px-4 text-center
-text-3xl font-['Montserrat'] font-normal mb-8 lowercase
+text-3xl  font-normal mb-8 lowercase
 quer saber mais sobre a
 ?
 want to know more about
@@ -220,7 +220,7 @@ conteudo bg-white
 4rem 0
 container mx-auto px-4
 text-center mb-12
-text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase
+text-3xl  font-normal text-gray-800 mb-4 lowercase
 text-gray-600 max-w-3xl mx-auto
 nossas soluções são modulares, escaláveis e atuam nos bastidores — porque o essencial, a estrutura que sustenta tudo, deve funcionar com precisão e ser invisível para quem depende dela.
 mt-16
@@ -261,7 +261,7 @@ conteudo bg-white
 4rem 0
 container mx-auto px-4
 text-center mb-12
-text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase
+text-3xl  font-normal text-gray-800 mb-4 lowercase
 tecnologia modular para o essencial invisível
 text-gray-600 max-w-3xl mx-auto
 nossas soluções são modulares, escaláveis e atuam nos bastidores — porque o essencial, a estrutura que sustenta tudo, deve funcionar com precisão e ser invisível para quem depende dela.
@@ -345,7 +345,7 @@ solicite una evaluación
 flex justify-center items-center min-h-screen
 animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
 n.
-font-['Montserrat'] font-normal
+ font-normal
 n
 text-[#00ade0]
 .
@@ -353,8 +353,8 @@ intro bg-[#121212] relative flex items-center justify-center
 60vh
 container mx-auto px-4 z-10
 text-center
-text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
-text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+text-6xl md:text-7xl  font-normal mb-6 text-white
+text-xl md:text-2xl  font-light mb-8 max-w-4xl mx-auto text-white lowercase
 conteudo bg-white
 4rem 0
 container mx-auto px-4
@@ -362,7 +362,7 @@ max-w-4xl mx-auto text-center
 text-lg text-gray-700 leading-relaxed
 conteudo bg-gray-50
 max-w-5xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+text-2xl  font-normal mb-12 text-center lowercase
 pt
 componentes essenciais
 en
@@ -371,7 +371,7 @@ es
 componentes esenciales
 grid grid-cols-1 md:grid-cols-2 gap-10
 bg-white p-6 rounded-lg shadow-sm
-text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-lg  font-medium mb-4 text-gray-800 lowercase
 text-gray-600 text-sm
 tecnologias avançadas
 advanced technologies
@@ -379,7 +379,7 @@ tecnologías avanzadas
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-gray-50 p-6 rounded-lg
 max-w-4xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+text-2xl  font-normal mb-10 text-center lowercase
 benefícios
 benefits
 beneficios
@@ -390,9 +390,9 @@ conteudo bg-[#121212] text-white
 400px
 container mx-auto px-4 flex items-center justify-center h-full
 text-center max-w-3xl
-text-2xl font-['Montserrat'] font-normal mb-8
+text-2xl  font-normal mb-8
 /site/ness/contact
-inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm  lowercase
 /api/content/services/crisisops
 Failed to fetch content
 Error fetching content:
@@ -466,7 +466,7 @@ contáctenos
 flex justify-center items-center min-h-screen
 animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
 n.
-font-['Montserrat'] font-normal
+ font-normal
 n
 text-[#00ade0]
 .
@@ -474,8 +474,8 @@ intro bg-[#121212] relative flex items-center justify-center
 60vh
 container mx-auto px-4 z-10
 text-center
-text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
-text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+text-6xl md:text-7xl  font-normal mb-6 text-white
+text-xl md:text-2xl  font-light mb-8 max-w-4xl mx-auto text-white lowercase
 conteudo bg-white
 4rem 0
 container mx-auto px-4
@@ -483,7 +483,7 @@ max-w-4xl mx-auto text-center
 text-lg text-gray-700 leading-relaxed
 conteudo bg-gray-50
 max-w-5xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+text-2xl  font-normal mb-12 text-center lowercase
 pt
 capacidades principais
 en
@@ -492,7 +492,7 @@ es
 capacidades principales
 grid grid-cols-1 md:grid-cols-2 gap-10
 bg-white p-6 rounded-lg shadow-sm
-text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-lg  font-medium mb-4 text-gray-800 lowercase
 text-gray-600 text-sm
 diferenciais
 differentials
@@ -500,7 +500,7 @@ diferenciales
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-gray-50 p-6 rounded-lg
 max-w-4xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+text-2xl  font-normal mb-10 text-center lowercase
 benefícios
 benefits
 beneficios
@@ -511,9 +511,9 @@ conteudo bg-[#121212] text-white
 400px
 container mx-auto px-4 flex items-center justify-center h-full
 text-center max-w-3xl
-text-2xl font-['Montserrat'] font-normal mb-8
+text-2xl  font-normal mb-8
 /site/ness/contact
-inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm  lowercase
 /api/content/services/devarch
 Failed to fetch content
 Error fetching content:
@@ -587,7 +587,7 @@ vamos a conversar
 flex justify-center items-center min-h-screen
 animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
 n.
-font-['Montserrat'] font-normal
+ font-normal
 n
 text-[#00ade0]
 .
@@ -595,8 +595,8 @@ intro bg-[#121212] relative flex items-center justify-center
 60vh
 container mx-auto px-4 z-10
 text-center
-text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
-text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+text-6xl md:text-7xl  font-normal mb-6 text-white
+text-xl md:text-2xl  font-light mb-8 max-w-4xl mx-auto text-white lowercase
 conteudo bg-white
 4rem 0
 container mx-auto px-4
@@ -604,7 +604,7 @@ max-w-4xl mx-auto text-center
 text-lg text-gray-700 leading-relaxed
 conteudo bg-gray-50
 max-w-5xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+text-2xl  font-normal mb-12 text-center lowercase
 pt
 pilares técnicos
 en
@@ -612,7 +612,7 @@ technical pillars
 es
 grid grid-cols-1 md:grid-cols-2 gap-10
 bg-white p-6 rounded-lg shadow-sm
-text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-lg  font-medium mb-4 text-gray-800 lowercase
 text-gray-600 text-sm
 metodologias
 methodologies
@@ -620,7 +620,7 @@ metodologías
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-gray-50 p-6 rounded-lg
 max-w-4xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+text-2xl  font-normal mb-10 text-center lowercase
 benefícios
 benefits
 beneficios
@@ -631,9 +631,9 @@ conteudo bg-[#121212] text-white
 400px
 container mx-auto px-4 flex items-center justify-center h-full
 text-center max-w-3xl
-text-2xl font-['Montserrat'] font-normal mb-8
+text-2xl  font-normal mb-8
 /site/ness/contact
-inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm  lowercase
 /api/content/services/infraops
 Failed to fetch content
 Error fetching content:
@@ -707,7 +707,7 @@ converse con nuestro equipo
 flex justify-center items-center min-h-screen
 animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
 n.
-font-['Montserrat'] font-normal
+ font-normal
 n
 text-[#00ade0]
 .
@@ -715,8 +715,8 @@ intro bg-[#121212] relative flex items-center justify-center
 60vh
 container mx-auto px-4 z-10
 text-center
-text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
-text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+text-6xl md:text-7xl  font-normal mb-6 text-white
+text-xl md:text-2xl  font-light mb-8 max-w-4xl mx-auto text-white lowercase
 conteudo bg-white
 4rem 0
 container mx-auto px-4
@@ -724,7 +724,7 @@ max-w-4xl mx-auto text-center
 text-lg text-gray-700 leading-relaxed
 conteudo bg-gray-50
 max-w-5xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+text-2xl  font-normal mb-12 text-center lowercase
 pt
 soluções
 en
@@ -733,7 +733,7 @@ es
 soluciones
 grid grid-cols-1 md:grid-cols-2 gap-10
 bg-white p-6 rounded-lg shadow-sm
-text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-lg  font-medium mb-4 text-gray-800 lowercase
 text-gray-600 text-sm
 diferenciais
 differentials
@@ -741,7 +741,7 @@ diferenciales
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-gray-50 p-6 rounded-lg
 max-w-4xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+text-2xl  font-normal mb-10 text-center lowercase
 benefícios
 benefits
 beneficios
@@ -752,9 +752,9 @@ conteudo bg-[#121212] text-white
 400px
 container mx-auto px-4 flex items-center justify-center h-full
 text-center max-w-3xl
-text-2xl font-['Montserrat'] font-normal mb-8
+text-2xl  font-normal mb-8
 /site/ness/contact
-inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm  lowercase
 /api/content/services/privacy
 Failed to fetch content
 Error fetching content:
@@ -828,7 +828,7 @@ solicite una evaluación
 flex justify-center items-center min-h-screen
 animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
 n.
-font-['Montserrat'] font-normal
+ font-normal
 n
 text-[#00ade0]
 .
@@ -836,8 +836,8 @@ intro bg-[#121212] relative flex items-center justify-center
 60vh
 container mx-auto px-4 z-10
 text-center
-text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
-text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+text-6xl md:text-7xl  font-normal mb-6 text-white
+text-xl md:text-2xl  font-light mb-8 max-w-4xl mx-auto text-white lowercase
 conteudo bg-white
 4rem 0
 container mx-auto px-4
@@ -845,7 +845,7 @@ max-w-4xl mx-auto text-center
 text-lg text-gray-700 leading-relaxed
 conteudo bg-gray-50
 max-w-5xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+text-2xl  font-normal mb-12 text-center lowercase
 pt
 soluções de privacidade
 en
@@ -854,7 +854,7 @@ es
 soluciones de privacidad
 grid grid-cols-1 md:grid-cols-2 gap-10
 bg-white p-6 rounded-lg shadow-sm
-text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-lg  font-medium mb-4 text-gray-800 lowercase
 text-gray-600 text-sm
 nossos diferenciais
 our differentials
@@ -862,7 +862,7 @@ nuestros diferenciales
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-gray-50 p-6 rounded-lg
 max-w-4xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+text-2xl  font-normal mb-10 text-center lowercase
 benefícios
 benefits
 beneficios
@@ -873,9 +873,9 @@ conteudo bg-[#121212] text-white
 400px
 container mx-auto px-4 flex items-center justify-center h-full
 text-center max-w-3xl
-text-2xl font-['Montserrat'] font-normal mb-8
+text-2xl  font-normal mb-8
 /site/ness/contact
-inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm  lowercase
 /api/content/services/secops
 Failed to fetch content
 Error fetching content:
@@ -949,7 +949,7 @@ hable con un especialista
 flex justify-center items-center min-h-screen
 animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
 n.
-font-['Montserrat'] font-normal
+ font-normal
 n
 text-[#00ade0]
 .
@@ -957,8 +957,8 @@ intro bg-[#121212] relative flex items-center justify-center
 60vh
 container mx-auto px-4 z-10
 text-center
-text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
-text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+text-6xl md:text-7xl  font-normal mb-6 text-white
+text-xl md:text-2xl  font-light mb-8 max-w-4xl mx-auto text-white lowercase
 conteudo bg-white
 4rem 0
 container mx-auto px-4
@@ -966,7 +966,7 @@ max-w-4xl mx-auto text-center
 text-lg text-gray-700 leading-relaxed
 conteudo bg-gray-50
 max-w-5xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+text-2xl  font-normal mb-12 text-center lowercase
 pt
 recursos principais
 en
@@ -975,7 +975,7 @@ es
 características principales
 grid grid-cols-1 md:grid-cols-2 gap-10
 bg-white p-6 rounded-lg shadow-sm
-text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-lg  font-medium mb-4 text-gray-800 lowercase
 text-gray-600 text-sm
 tecnologia e diferenciais
 technology and differentials
@@ -983,7 +983,7 @@ tecnología y diferenciales
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-gray-50 p-6 rounded-lg
 max-w-4xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+text-2xl  font-normal mb-10 text-center lowercase
 benefícios
 benefits
 beneficios
@@ -994,6 +994,6 @@ conteudo bg-[#121212] text-white
 400px
 container mx-auto px-4 flex items-center justify-center h-full
 text-center max-w-3xl
-text-2xl font-['Montserrat'] font-normal mb-8
+text-2xl  font-normal mb-8
 /site/ness/contact
-inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm  lowercase

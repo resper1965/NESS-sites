@@ -72,7 +72,7 @@ export default function InfraOpsPage() {
           {/* Conteúdo */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl">
-              <h1 className="font-['Montserrat'] font-normal text-5xl md:text-6xl text-white mb-8">
+              <h1 className=" font-normal text-5xl md:text-6xl text-white mb-8">
                 n<span className="text-[#00ade0]">.</span>InfraOps
               </h1>
               <p className="text-xl text-white/90 max-w-3xl">
@@ -99,7 +99,7 @@ export default function InfraOpsPage() {
         <section id="details" className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">O que oferecemos</h2>
+              <h2 className="text-3xl  text-primary mb-8">O que oferecemos</h2>
               
               <p className="text-lg mb-8 text-gray-700">
                 Na ness., entendemos que uma infraestrutura robusta e bem gerenciada é o alicerce para operações de negócios confiáveis e seguras. Nossa equipe de especialistas em n.InfraOps combina experiência técnica profunda, metodologias comprovadas e ferramentas de ponta para oferecer soluções que transformam sua infraestrutura em uma vantagem competitiva.
@@ -112,13 +112,13 @@ export default function InfraOpsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 {offerings.map((offering, index) => (
                   <div key={index} className="bg-neutral p-6 rounded-lg shadow">
-                    <h3 className="text-xl font-['Montserrat'] text-primary mb-4">{offering.title}</h3>
+                    <h3 className="text-xl  text-primary mb-4">{offering.title}</h3>
                     <p className="text-gray-700">{offering.description}</p>
                   </div>
                 ))}
               </div>
               
-              <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">Por que escolher a ness.</h2>
+              <h2 className="text-3xl  text-primary mb-8">Por que escolher a ness.</h2>
               
               <ul className="space-y-6 mb-12">
                 <li className="flex items-start">
@@ -168,7 +168,7 @@ export default function InfraOpsPage() {
               </ul>
               
               <div className="bg-neutral p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-['Montserrat'] text-primary mb-4">Entre em contato</h3>
+                <h3 className="text-2xl  text-primary mb-4">Entre em contato</h3>
                 <p className="text-gray-700 mb-6">
                   Pronto para transformar sua infraestrutura em uma vantagem competitiva? Nossa equipe de especialistas está pronta para ajudar.
                 </p>

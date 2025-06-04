@@ -46,7 +46,7 @@ export default function NewsPage() {
         <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
           <div className="container mx-auto px-4 pt-16">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6">{t('news.title')}</h1>
+              <h1 className="text-4xl md:text-5xl  font-normal mb-6">{t('news.title')}</h1>
               <div className="w-20 h-1 bg-[#00ade0] mx-auto mb-8"></div>
               <p className="text-xl max-w-3xl mx-auto">
                 {t('news.hero.subtitle')}

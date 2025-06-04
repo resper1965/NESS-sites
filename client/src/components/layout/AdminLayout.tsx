@@ -60,7 +60,7 @@ export default function AdminLayout({
         <div className="flex flex-col flex-grow p-4">
           <div className="py-4 border-b border-gray-200 mb-4">
             <Link href="/admin/dashboard" className="flex items-center">
-              <h1 className="text-xl font-['Montserrat'] font-normal text-primary">
+              <h1 className="text-xl  font-normal text-primary">
                 ness<span className="text-accent">.</span> <span className="font-medium">admin</span>
               </h1>
             </Link>

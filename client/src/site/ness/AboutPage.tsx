@@ -70,14 +70,14 @@ export default function NessAboutPage() {
           {/* Content */}
           <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
             <div className="hero-main-content text-center max-w-4xl">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl  font-normal mb-6">
                 <span style={{color: "#ffffff"}}>ness</span><span style={{color: "#00ade0"}}>.</span>
               </h1>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-6 text-white lowercase tracking-tight">
+              <p className="text-2xl md:text-3xl lg:text-4xl  font-normal mb-6 text-white lowercase tracking-tight">
                 {defaultContent.heroTitle}
               </p>
             
-              <p className="text-lg md:text-xl lg:text-2xl mb-8 mx-auto text-white font-['Montserrat'] lowercase font-light">
+              <p className="text-lg md:text-xl lg:text-2xl mb-8 mx-auto text-white  lowercase font-light">
                 {defaultContent.heroSubtitle}
               </p>
             </div>
@@ -88,7 +88,7 @@ export default function NessAboutPage() {
         <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase">
+              <h2 className=" font-normal text-2xl md:text-3xl mb-6 text-center lowercase">
                 <span className="font-normal">{language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
               </h2>
               
@@ -127,12 +127,12 @@ export default function NessAboutPage() {
         {/* Values Section */}
         <section className="conteudo bg-[#2c2c34]" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-[#00ade0]">{defaultContent.values.title}</h2>
+            <h2 className="text-3xl  font-normal text-center mb-12 lowercase text-[#00ade0]">{defaultContent.values.title}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Vision */}
               <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
-                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
+                <h3 className="text-xl  font-medium mb-4 lowercase text-white">
                   {defaultContent.values.vision.title}
                 </h3>
                 <p className="text-gray-200 lowercase">
@@ -142,7 +142,7 @@ export default function NessAboutPage() {
               
               {/* Mission */}
               <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
-                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
+                <h3 className="text-xl  font-medium mb-4 lowercase text-white">
                   {defaultContent.values.mission.title}
                 </h3>
                 <p className="text-gray-200 lowercase">
@@ -152,7 +152,7 @@ export default function NessAboutPage() {
               
               {/* Values */}
               <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
-                <h3 className="text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white">
+                <h3 className="text-xl  font-medium mb-4 lowercase text-white">
                   {defaultContent.values.values.title}
                 </h3>
                 <p className="text-gray-200 lowercase mb-4">
@@ -169,7 +169,7 @@ export default function NessAboutPage() {
         {/* Timeline Section */}
         <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">{defaultContent.timeline}</h2>
+            <h2 className="text-3xl  font-normal text-center mb-12 lowercase">{defaultContent.timeline}</h2>
             
             <div className="max-w-5xl mx-auto">
               <div className="relative">
@@ -181,7 +181,7 @@ export default function NessAboutPage() {
                   <div key={year} className={`flex mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                     <div className="w-1/2 px-6">
                       <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                        <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
+                        <span className="text-2xl  font-medium text-gray-900">
                           {year.includes('.') ? year.split('.')[0] : year}
                           {year.includes('.') && <span className="text-[#00ade0] text-sm">.{year.split('.')[1]}</span>}
                         </span>
@@ -204,7 +204,7 @@ export default function NessAboutPage() {
         {/* CTA Section */}
         <section className="contato bg-[#4d4d4d] text-white flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
+            <h2 className="text-3xl  font-normal mb-8 lowercase">
               {language === 'pt' 
                 ? <>quer saber mais sobre a <span className="font-normal">ness<span className="text-[#00ade0]">.</span></span>?</> 
                 : language === 'en'

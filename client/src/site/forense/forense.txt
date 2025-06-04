@@ -127,7 +127,7 @@ intro text-white bg-[#0d1117] relative overflow-hidden flex items-center
 60vh
 container mx-auto px-4 relative z-10
 max-w-3xl mx-auto text-center
-text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase
+text-4xl md:text-5xl  font-normal mb-6 lowercase
 forense
 text-[#00ade0]
 .
@@ -137,7 +137,7 @@ conteudo bg-white
 4rem 0
 container mx-auto px-4
 text-center mb-12
-text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase
+text-3xl  font-normal text-gray-800 mb-4 lowercase
 sobre a forense
 about forense
 es
@@ -148,7 +148,7 @@ turning technical complexity into concrete judicial results
 convertimos complejidad técnica en resultados judiciales concretos
 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto
 bg-[#0d1117] p-8 rounded-lg shadow-md
-text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase
+text-xl  font-normal mb-4 text-white lowercase
 expertise forense
 forensic expertise
 experiencia forense
@@ -168,13 +168,13 @@ nosso trabalho vai além da simples coleta de dados - transformamos evidências 
 our work goes beyond simple data collection - we transform technical evidence into clear and defensible narratives that support judicial and corporate decisions.
 nuestro trabajo va más allá de la simple recolección de datos - transformamos evidencias técnicas en narrativas claras y defendibles que sustentan decisiones judiciales y corporativas.
 conteudo bg-gray-900 text-white
-text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-white
+text-3xl  font-normal text-center mb-12 lowercase text-white
 grid grid-cols-1 md:grid-cols-2 gap-8
 bg-gray-800 p-8 rounded-sm border-l-2 border-[#00ade0]
-text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white
+text-xl  font-normal mb-4 lowercase text-white
 text-gray-300 lowercase
 conteudo bg-gray-50
-text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase
+text-3xl  font-normal text-center mb-12 lowercase
 max-w-5xl mx-auto
 relative
 absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[#00ade0] opacity-50
@@ -183,14 +183,14 @@ flex-row-reverse
 w-1/2 px-6
 text-right
 text-left
-text-2xl font-['Montserrat'] font-medium text-gray-900
+text-2xl  font-medium text-gray-900
 text-[#00ade0] text-sm
 mt-2 text-gray-700 lowercase
 absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00ade0] rounded-full mt-1
 contato bg-[#0d1117] text-white flex items-center
 400px
 container mx-auto px-4 text-center
-text-3xl font-['Montserrat'] font-normal mb-8 lowercase
+text-3xl  font-normal mb-8 lowercase
 quer saber mais sobre a
 font-normal
 ?
@@ -208,12 +208,12 @@ intro bg-[#0d1117] text-white relative overflow-hidden flex items-center
 60vh
 container mx-auto px-4 relative
 max-w-3xl mx-auto text-center
-text-4xl md:text-5xl font-['Montserrat'] font-normal mb-3 lowercase
+text-4xl md:text-5xl  font-normal mb-3 lowercase
 forense
 text-[#00ade0]
 .
 io
-text-xl font-['Montserrat'] font-normal lowercase
+text-xl  font-normal lowercase
 pt
 Especialistas em Forense Digital
 en
@@ -234,7 +234,7 @@ services
 conteudo bg-white
 4rem 0
 container mx-auto px-4
-text-2xl font-['Montserrat'] font-normal text-center mb-16 lowercase
+text-2xl  font-normal text-center mb-16 lowercase
 serviços
 especializados
 specialized
@@ -242,7 +242,7 @@ servicios
 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto
 bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 flex flex-col h-full
 mb-4 text-center
-text-xl font-['Montserrat'] font-normal lowercase mb-1
+text-xl  font-normal lowercase mb-1
 forense digital
 digital forensics
 text-sm text-gray-500
@@ -282,7 +282,7 @@ investigaciones de fraude, monitoreo de activos digitales, análisis de riesgos 
 contato bg-[#0d1117] text-white flex items-center
 400px
 max-w-4xl mx-auto text-center
-text-2xl font-['Montserrat'] font-normal mb-6 lowercase
+text-2xl  font-normal mb-6 lowercase
 precisando de
 consultoria especializada
 ?
@@ -360,12 +360,12 @@ conteudo bg-white border-b border-gray-100
 container mx-auto px-4
 max-w-5xl mx-auto
 text-center mb-12
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase
+text-2xl  font-normal text-gray-800 mb-6 lowercase
 forense.corporate.title
 text-gray-600 max-w-3xl mx-auto mb-12
 bg-gray-50 p-8 rounded-lg border border-gray-100
 grid grid-cols-1 md:grid-cols-2 gap-8
-text-xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase
+text-xl  font-normal text-gray-800 mb-4 lowercase
 pt
 discreta
 e precisa
@@ -405,7 +405,7 @@ detailed technical reports with accessible language for decision making
 informes técnicos detallados con lenguaje accesible para la toma de decisiones
 conteudo bg-gray-50
 max-w-6xl mx-auto
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-16 text-center lowercase
+text-2xl  font-normal text-gray-800 mb-16 text-center lowercase
 serviços de
 investigação
 investigation
@@ -420,7 +420,7 @@ ofrecemos servicios especializados en investigación digital para entornos corpo
 grid grid-cols-1 md:grid-cols-3 gap-10
 bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30
 p-8
-text-xl font-['Montserrat'] font-normal mb-4 lowercase
+text-xl  font-normal mb-4 lowercase
 investigação de
 incidentes
 incident
@@ -464,7 +464,7 @@ documentação
 documentation
 documentación
 conteudo bg-[#0d1117] text-white
-text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase
+text-2xl  font-normal mb-16 text-center lowercase
 nossa
 metodologia
 our
@@ -477,7 +477,7 @@ absolute left-0 top-0 flex items-center justify-center h-8 w-8 rounded-full bg-[
 text-xl font-light
 1
 mb-4
-text-xl font-['Montserrat'] font-normal mb-3 lowercase
+text-xl  font-normal mb-3 lowercase
 avaliação
 inicial
 initial
@@ -517,7 +517,7 @@ use
 cases
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-gray-50 rounded-lg p-8 border border-gray-100
-text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-lg  font-medium mb-4 text-gray-800 lowercase
 suspeita de
 fraude interna
 suspected
@@ -544,7 +544,7 @@ evaluación técnica del cumplimiento de políticas de seguridad de la informaci
 contato bg-[#00ade0] flex items-center
 400px
 max-w-4xl mx-auto text-center
-text-2xl md:text-3xl font-['Montserrat'] font-normal mb-6 text-white lowercase
+text-2xl md:text-3xl  font-normal mb-6 text-white lowercase
 forense.cta.title
 mt-8
 /site/forense/contact
@@ -653,7 +653,7 @@ análise cronológica de eventos digitais para estabelecer sequências precisas 
 recuperação de dados ocultos
 acesso a informações deletadas, ocultas ou corrompidas que seriam inacessíveis por meios convencionais
 conteudo bg-[#0d1117] text-white
-text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+text-2xl  font-normal mb-12 text-center lowercase
 pt
 ambientes de
 coleta digital
@@ -663,7 +663,7 @@ es
 recolección digital
 grid grid-cols-1 md:grid-cols-3 gap-8
 border border-gray-800 rounded-lg p-6 bg-gray-900 hover:border-[#00ade0]/50 transition-colors duration-300 flex flex-col h-full
-text-lg font-['Montserrat'] font-medium mb-3 lowercase
+text-lg  font-medium mb-3 lowercase
 ambientes
 corporativos
 corporate
@@ -707,7 +707,7 @@ extracción forense de datos almacenados en servicios de nube, incluyendo correo
 AWS
 Google Cloud
 Azure
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-10 text-center lowercase
+text-2xl  font-normal text-gray-800 mb-10 text-center lowercase
 serviços
 especializados
 specialized
@@ -717,12 +717,12 @@ grid grid-cols-1 md:grid-cols-2 gap-8
 bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300
 w-8 h-8 bg-[#00ade0] rounded-full flex items-center justify-center mr-4 flex-shrink-0
 text-white text-lg font-bold
-text-xl font-['Montserrat'] text-gray-800 mb-3 lowercase
+text-xl  text-gray-800 mb-3 lowercase
 text-gray-700 text-sm
 conteudo bg-gray-50
 flex flex-col md:flex-row items-stretch md:space-x-10
 md:w-1/2 mb-10 md:mb-0
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase
+text-2xl  font-normal text-gray-800 mb-6 lowercase
 metodologias
 forenses
 forensic
@@ -747,7 +747,7 @@ análise de dados em ambiente isolado e controlado
 data analysis in an isolated and controlled environment
 análisis de datos en ambiente aislado y controlado
 md:w-1/2 bg-[#0d1117] rounded-lg p-8 text-white flex flex-col
-text-xl font-['Montserrat'] font-normal mb-6 lowercase
+text-xl  font-normal mb-6 lowercase
 frameworks
 adotados
 adopted
@@ -771,7 +771,7 @@ estándares técnicos para forensics digital e investigaciones cibernéticas
 contato bg-[#0d1117] text-white flex items-center
 400px
 container mx-auto px-4 text-center
-text-3xl font-['Montserrat'] font-normal mb-8 lowercase
+text-3xl  font-normal mb-8 lowercase
 forense.cta.title
 /site/forense/contact
 inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300
@@ -846,7 +846,7 @@ max-w-4xl mx-auto
 flex flex-col md:flex-row gap-16 items-start
 w-full
 text-center mb-8
-text-2xl font-['Montserrat'] font-normal mb-6 lowercase
+text-2xl  font-normal mb-6 lowercase
 text-white bg-[#00ade0] px-2 py-1 rounded-sm
 consultoria técnica
 ml-2
@@ -872,7 +872,7 @@ forense.legal.standards.title
 forense.legal.standards.desc
 conteudo bg-gray-50
 max-w-6xl mx-auto
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-16 text-center lowercase
+text-2xl  font-normal text-gray-800 mb-16 text-center lowercase
 forense.legal.section.title
 max-w-3xl mx-auto text-center mb-10
 text-gray-500 text-sm
@@ -880,7 +880,7 @@ forense.legal.section.desc
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30 flex flex-col h-full
 p-8 flex flex-col h-full
-text-xl font-['Montserrat'] font-normal mb-4 lowercase
+text-xl  font-normal mb-4 lowercase
 consultoria
 estratégica
 strategic
@@ -932,7 +932,7 @@ dictámenes
 simplificación técnica
 conteudo bg-[#0d1117] text-white
 max-w-5xl mx-auto
-text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase
+text-2xl  font-normal mb-16 text-center lowercase
 nossa
 metodologia
 our
@@ -946,7 +946,7 @@ mb-4 flex items-center
 text-4xl font-light text-[#00ade0]
 01
 ml-4 h-[1px] flex-grow bg-[#00ade0]/30
-text-xl font-['Montserrat'] font-normal mb-3 lowercase
+text-xl  font-normal mb-3 lowercase
 análise
 preliminar
 preliminary
@@ -994,7 +994,7 @@ flex
 mr-6
 h-12 w-12 border border-[#00ade0] rounded-full flex items-center justify-center
 h-8 w-8 bg-[#00ade0] rounded-full
-text-lg font-['Montserrat'] font-medium mb-3 lowercase
+text-lg  font-medium mb-3 lowercase
 argumentação
 robusta
 robust
@@ -1030,7 +1030,7 @@ proporcionamos una ventaja estratégica en casos complejos, donde el dominio del
 contato bg-[#00ade0] flex items-center
 400px
 max-w-4xl mx-auto text-center
-text-2xl md:text-3xl font-['Montserrat'] font-normal mb-6 text-white lowercase
+text-2xl md:text-3xl  font-normal mb-6 text-white lowercase
 mt-8
 /contato
 inline-block py-3 px-8 bg-white text-[#00ade0] rounded-md font-medium transition-all hover:shadow-lg hover:bg-gray-50

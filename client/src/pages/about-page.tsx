@@ -268,7 +268,7 @@ export default function AboutPage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-['Montserrat'] font-normal text-3xl md:text-4xl mb-8 text-center lowercase">
+              <h2 className=" font-normal text-3xl md:text-4xl mb-8 text-center lowercase">
                 <span className="font-normal">{language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
               </h2>
               
@@ -296,24 +296,24 @@ export default function AboutPage() {
         {/* Values Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">{defaultContent.values.title}</h2>
+            <h2 className="text-3xl  font-normal text-center mb-12 lowercase">{defaultContent.values.title}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Vision */}
               <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-['Montserrat'] font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.vision.title}</h3>
+                <h3 className="text-xl  font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.vision.title}</h3>
                 <p className="text-gray-700 lowercase">{defaultContent.values.vision.text}</p>
               </div>
               
               {/* Mission */}
               <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-['Montserrat'] font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.mission.title}</h3>
+                <h3 className="text-xl  font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.mission.title}</h3>
                 <p className="text-gray-700 lowercase">{defaultContent.values.mission.text}</p>
               </div>
               
               {/* Values */}
               <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-['Montserrat'] font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.values.title}</h3>
+                <h3 className="text-xl  font-medium text-[#00ade0] mb-4 lowercase">{defaultContent.values.values.title}</h3>
                 <p className="text-gray-700 mb-4 lowercase">{defaultContent.values.values.p1}</p>
                 <p className="text-gray-700 lowercase">{defaultContent.values.values.p2}</p>
               </div>
@@ -324,7 +324,7 @@ export default function AboutPage() {
         {/* Timeline Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">{defaultContent.timeline}</h2>
+            <h2 className="text-3xl  font-normal text-center mb-12 lowercase">{defaultContent.timeline}</h2>
             
             <div className="max-w-4xl mx-auto relative">
               {/* Timeline line */}
@@ -535,7 +535,7 @@ export default function AboutPage() {
         {/* CTA Section */}
         <section className="py-16 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-6 lowercase">{defaultContent.cta.title}</h2>
+            <h2 className="text-3xl  font-normal mb-6 lowercase">{defaultContent.cta.title}</h2>
             <a href="/contact" className="inline-block bg-[#00ade0] hover:bg-[#00ade0]/90 text-white px-8 py-3 rounded-sm transition duration-300 lowercase">
               {defaultContent.cta.button}
             </a>

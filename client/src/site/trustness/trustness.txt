@@ -125,7 +125,7 @@ intro text-white bg-[#0b1016] relative flex items-center
 absolute inset-0 bg-black bg-opacity-40
 container mx-auto px-4 relative z-10
 max-w-3xl mx-auto text-center
-text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase
+text-4xl md:text-5xl  font-normal mb-6 lowercase
 trustness
 text-[#005fa3]
 .
@@ -134,7 +134,7 @@ conteudo bg-gray-50
 4rem 0
 container mx-auto px-4
 max-w-3xl mx-auto
-font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase
+ font-normal text-2xl md:text-3xl mb-6 text-center lowercase
 font-normal
 somos a
 es
@@ -147,13 +147,13 @@ mb-6 text-center font-light tracking-wide text-lg
 mb-4 text-center text-lg
 mt-8 text-center font-light text-md
 conteudo bg-[#1a1a22] text-white
-text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-white
+text-3xl  font-normal text-center mb-12 lowercase text-white
 grid grid-cols-1 md:grid-cols-3 gap-8
 bg-[#21212b] p-8 rounded-sm border-l-2 border-[#005fa3]
-text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white
+text-xl  font-normal mb-4 lowercase text-white
 text-gray-300 lowercase
 text-gray-300 lowercase mb-3
-text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase
+text-3xl  font-normal text-center mb-12 lowercase
 max-w-5xl mx-auto
 relative
 absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[#00ade0] opacity-50
@@ -162,14 +162,14 @@ flex-row-reverse
 w-1/2 px-6
 text-right
 text-left
-text-2xl font-['Montserrat'] font-medium text-gray-900
+text-2xl  font-medium text-gray-900
 text-[#00ade0] text-sm
 mt-2 text-gray-700 lowercase
 absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00ade0] rounded-full mt-1
 contato bg-[#1a1a22] text-white flex items-center
 400px
 container mx-auto px-4 text-center
-text-3xl font-['Montserrat'] font-normal mb-8 lowercase
+text-3xl  font-normal mb-8 lowercase
 quer saber mais sobre a
 text-[#00ade0]
 ?
@@ -187,7 +187,7 @@ intro text-white bg-[#0b1016] relative flex items-center
 60vh
 container mx-auto px-4 relative z-10
 max-w-3xl mx-auto text-center
-text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase
+text-4xl md:text-5xl  font-normal mb-6 lowercase
 trustness
 text-[#00ade0]
 .
@@ -213,7 +213,7 @@ conteudo bg-gradient-to-b from-white to-[#f2f8fd] text-gray-800
 4rem 0
 container mx-auto px-4
 text-center mb-16
-text-4xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800
+text-4xl  font-normal mb-4 lowercase text-gray-800
 como atuamos
 how we work
 cómo trabajamos
@@ -224,7 +224,7 @@ programas consultivos en seguridad, privacidad y conformidad — personalizados 
 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 max-w-6xl mx-auto
 bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300
 mb-6
-text-xl font-['Montserrat'] font-normal mb-4 text-gray-800
+text-xl  font-normal mb-4 text-gray-800
 assessment
 mb-4
 text-[#005fa3] font-semibold text-lg block mb-2
@@ -266,13 +266,13 @@ estructuramos informes como ROPA, DPIA y LIA, además de apoyar procesos como at
 también actuamos como DPO as a Service, asumiendo la función de encargado de protección de datos de la organización — con responsabilidad técnica, legal y estratégica sobre el cumplimiento y la relación con autoridades y titulares.
 what-we-do
 conteudo bg-[#1a1a22] text-white
-text-3xl font-['Montserrat'] font-normal text-white mb-8 lowercase
+text-3xl  font-normal text-white mb-8 lowercase
 o que fazemos
 what we do
 lo que hacemos
 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
 bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center
-font-['Montserrat'] font-medium text-lg text-white
+ font-medium text-lg text-white
 text-[#005fa3]
 text-gray-300 text-sm mb-6 lowercase
 avaliações de segurança com base nos frameworks NIST e CIS Controls.
@@ -286,7 +286,7 @@ execução de auditorias e adequação a normas como ISO 27001, SOC 2, PCI DSS, 
 implementação de controles de privacidade alinhados a padrões regulatórios nacionais e internacionais.
 /site/trustness/services/privacy
 conteudo bg-gray-50
-text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase
+text-3xl  font-normal text-gray-800 mb-4 lowercase
 clientes
 text-gray-600 max-w-3xl mx-auto
 empresas e organizações que confiam em nossa expertise.
@@ -368,7 +368,7 @@ intro text-white bg-[#0b1016] relative flex items-center
 60vh
 container mx-auto px-4 relative z-10
 max-w-3xl
-text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase
+text-4xl md:text-5xl  font-normal mb-6 lowercase
 text-[#005fa3]
 .
 assessment
@@ -378,7 +378,7 @@ conteudo bg-white
 container mx-auto px-4
 max-w-4xl mx-auto
 text-lg text-gray-700 mb-8 lowercase
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase
+text-2xl  font-normal text-gray-800 mb-6 lowercase
 o que fazemos
 what we do
 qué hacemos
@@ -388,13 +388,13 @@ text-[#005fa3] mr-2
 •
 text-gray-700 lowercase
 conteudo bg-gray-50
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 text-center lowercase
+text-2xl  font-normal text-gray-800 mb-6 text-center lowercase
 nossa metodologia
 our methodology
 nuestra metodología
 text-lg text-gray-700 mb-12 lowercase
 bg-white p-8 rounded-sm border-l-2 border-[#005fa3] shadow-sm
-text-xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800
+text-xl  font-normal mb-4 lowercase text-gray-800
 benefícios
 benefits
 beneficios
@@ -402,7 +402,7 @@ space-y-3
 contato bg-[#1a1a22] text-white flex items-center
 400px
 container mx-auto px-4 text-center
-text-3xl font-['Montserrat'] font-normal mb-8 lowercase
+text-3xl  font-normal mb-8 lowercase
 precisa de uma
 text-white
 avaliação de segurança
@@ -496,7 +496,7 @@ intro text-white bg-[#0b1016] relative flex items-center
 60vh
 container mx-auto px-4 relative z-10
 max-w-3xl
-text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase
+text-4xl md:text-5xl  font-normal mb-6 lowercase
 text-[#005fa3]
 .
 conformity
@@ -506,7 +506,7 @@ conteudo bg-white
 container mx-auto px-4
 max-w-4xl mx-auto
 text-lg text-gray-700 mb-8 lowercase
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase
+text-2xl  font-normal text-gray-800 mb-6 lowercase
 nossas soluções
 our solutions
 nuestras soluciones
@@ -516,13 +516,13 @@ text-[#005fa3] mr-2
 •
 text-gray-700 lowercase
 conteudo bg-gray-50
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 text-center lowercase
+text-2xl  font-normal text-gray-800 mb-6 text-center lowercase
 nossa abordagem
 our approach
 nuestro enfoque
 text-lg text-gray-700 mb-12 lowercase
 bg-white p-8 rounded-sm border-l-2 border-[#005fa3] shadow-sm
-text-xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800
+text-xl  font-normal mb-4 lowercase text-gray-800
 benefícios
 benefits
 beneficios
@@ -530,7 +530,7 @@ space-y-3
 contato bg-[#1a1a22] text-white flex items-center
 400px
 container mx-auto px-4 text-center
-text-3xl font-['Montserrat'] font-normal mb-8 lowercase
+text-3xl  font-normal mb-8 lowercase
 precisa implementar
 text-white
 frameworks de conformidade
@@ -625,7 +625,7 @@ intro text-white bg-[#0b1016] relative flex items-center
 60vh
 container mx-auto px-4 relative z-10
 max-w-3xl
-text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase
+text-4xl md:text-5xl  font-normal mb-6 lowercase
 text-[#005fa3]
 .
 privacy
@@ -635,7 +635,7 @@ conteudo bg-white
 container mx-auto px-4
 max-w-4xl mx-auto
 text-lg text-gray-700 mb-8 lowercase
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 lowercase
+text-2xl  font-normal text-gray-800 mb-6 lowercase
 nossos serviços
 our services
 nuestros servicios
@@ -645,11 +645,11 @@ text-[#005fa3] mr-2
 •
 text-gray-700 lowercase
 conteudo bg-gray-50
-text-2xl font-['Montserrat'] font-normal text-gray-800 mb-6 text-center lowercase
+text-2xl  font-normal text-gray-800 mb-6 text-center lowercase
 privacy by design
 text-lg text-gray-700 mb-12 lowercase
 bg-white p-8 rounded-sm border-l-2 border-[#005fa3] shadow-sm
-text-xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800
+text-xl  font-normal mb-4 lowercase text-gray-800
 benefícios
 benefits
 beneficios
@@ -657,7 +657,7 @@ space-y-3
 contato bg-[#1a1a22] text-white flex items-center
 400px
 container mx-auto px-4 text-center
-text-3xl font-['Montserrat'] font-normal mb-8 lowercase
+text-3xl  font-normal mb-8 lowercase
 precisa de suporte em
 text-white
 proteção de dados

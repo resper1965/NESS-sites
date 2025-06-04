@@ -62,21 +62,21 @@ export default function SpinoffsSection({ title }: SpinoffsSectionProps) {
     if (name.includes('.')) {
       const parts = name.split('.');
       return (
-        <span className="font-['Montserrat'] font-medium text-xl">
+        <span className=" font-medium text-xl">
           {parts[0]}
           <span className="text-[#00ade0]">.</span>
           {parts.length > 1 ? parts[1] : ''}
         </span>
       );
     }
-    return <span className="font-['Montserrat'] font-medium text-xl">{name}</span>;
+    return <span className=" font-medium text-xl">{name}</span>;
   };
   
   return (
     <section id="spinoffs" className="contato bg-[#2f3e4d] text-white flex items-center" style={{ minHeight: "400px" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">{title || titles[language]}</h2>
+          <h2 className="text-3xl  font-normal mb-8 lowercase">{title || titles[language]}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">

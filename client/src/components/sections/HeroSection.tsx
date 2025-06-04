@@ -36,22 +36,22 @@ export default function HeroSection({
       {/* Content */}
       <div className="container mx-auto px-4 z-10 flex justify-center items-center h-full">
         <div className="hero-main-content text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl  font-normal mb-6">
             <span style={{color: "#ffffff"}}>ness</span><span className="text-[#00ade0]">.</span>
           </h1>
-          <div className="text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+          <div className="text-2xl md:text-3xl lg:text-4xl  font-normal mb-4 text-white lowercase">
             {title}
           </div>
         
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-white font-['Montserrat'] lowercase">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-white  lowercase">
             {subtitle}
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-8">
-            <Link href={ctaUrl1} className="bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm font-['Montserrat']">
+            <Link href={ctaUrl1} className="bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm ">
               {ctaText1}
             </Link>
-            <Link href={ctaUrl2} className="bg-transparent border border-[#00ade0] text-white hover:text-[#00ade0] py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm font-['Montserrat']">
+            <Link href={ctaUrl2} className="bg-transparent border border-[#00ade0] text-white hover:text-[#00ade0] py-3 px-8 font-normal transition duration-300 inline-block lowercase rounded-sm ">
               {ctaText2}
             </Link>
           </div>

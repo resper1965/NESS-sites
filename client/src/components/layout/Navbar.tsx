@@ -126,7 +126,7 @@ export default function Navbar() {
         <nav className="flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="text-white lowercase">
-              <h1 className="font-['Montserrat'] font-normal text-3xl">
+              <h1 className=" font-normal text-3xl">
                 ness<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>
               </h1>
             </Link>
@@ -166,7 +166,7 @@ export default function Navbar() {
                       onClick={() => setServicesDropdownOpen(false)}
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
-                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                        <h3 className=" text-gray-800 text-lg mb-2">
                           n<span className="text-[#00ade0]">.</span>SecOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
@@ -182,7 +182,7 @@ export default function Navbar() {
                       onClick={() => setServicesDropdownOpen(false)}
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
-                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                        <h3 className=" text-gray-800 text-lg mb-2">
                           n<span className="text-[#00ade0]">.</span>InfraOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
@@ -198,7 +198,7 @@ export default function Navbar() {
                       onClick={() => setServicesDropdownOpen(false)}
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
-                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                        <h3 className=" text-gray-800 text-lg mb-2">
                           n<span className="text-[#00ade0]">.</span>DevArch
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
@@ -214,7 +214,7 @@ export default function Navbar() {
                       onClick={() => setServicesDropdownOpen(false)}
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
-                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                        <h3 className=" text-gray-800 text-lg mb-2">
                           n<span className="text-[#00ade0]">.</span>AutoOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
@@ -230,7 +230,7 @@ export default function Navbar() {
                       onClick={() => setServicesDropdownOpen(false)}
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
-                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                        <h3 className=" text-gray-800 text-lg mb-2">
                           n<span className="text-[#00ade0]">.</span>CrisisOps
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">
@@ -246,7 +246,7 @@ export default function Navbar() {
                       onClick={() => setServicesDropdownOpen(false)}
                     >
                       <div className="p-3 rounded hover:bg-gray-50 transition-colors duration-200 border border-gray-100 h-full">
-                        <h3 className="font-['Montserrat'] text-gray-800 text-lg mb-2">
+                        <h3 className=" text-gray-800 text-lg mb-2">
                           n<span className="text-[#00ade0]">.</span>Privacy
                         </h3>
                         <p className="text-sm text-gray-600 leading-snug">

@@ -72,7 +72,7 @@ export default function SecOpsPage() {
           {/* Conteúdo */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl">
-              <h1 className="font-['Montserrat'] font-normal text-5xl md:text-6xl text-white mb-8">
+              <h1 className=" font-normal text-5xl md:text-6xl text-white mb-8">
                 n<span className="text-[#00ade0]">.</span>SecOps
               </h1>
               <p className="text-xl text-white/90 max-w-3xl">
@@ -99,7 +99,7 @@ export default function SecOpsPage() {
         <section id="details" className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">Nossa Abordagem</h2>
+              <h2 className="text-3xl  text-primary mb-8">Nossa Abordagem</h2>
               
               <p className="text-lg mb-8 text-gray-700">
                 Na ness., combinamos tecnologia de ponta, inteligência de ameaças e expertise humana para oferecer proteção abrangente contra os riscos cibernéticos mais sofisticados. Nossa abordagem de segurança em camadas garante que sua organização esteja protegida em todos os níveis.
@@ -112,13 +112,13 @@ export default function SecOpsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 {offerings.map((offering, index) => (
                   <div key={index} className="bg-neutral p-6 rounded-lg shadow">
-                    <h3 className="text-xl font-['Montserrat'] text-primary mb-4">{offering.title}</h3>
+                    <h3 className="text-xl  text-primary mb-4">{offering.title}</h3>
                     <p className="text-gray-700">{offering.description}</p>
                   </div>
                 ))}
               </div>
               
-              <h2 className="text-3xl font-['Montserrat'] text-primary mb-8">Nossos Diferenciais</h2>
+              <h2 className="text-3xl  text-primary mb-8">Nossos Diferenciais</h2>
               
               <ul className="space-y-6 mb-12">
                 <li className="flex items-start">
@@ -168,7 +168,7 @@ export default function SecOpsPage() {
               </ul>
               
               <div className="bg-neutral p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-['Montserrat'] text-primary mb-4">Agende uma avaliação de segurança</h3>
+                <h3 className="text-2xl  text-primary mb-4">Agende uma avaliação de segurança</h3>
                 <p className="text-gray-700 mb-6">
                   Descubra como sua organização está protegida contra as ameaças cibernéticas atuais. Nossa avaliação de segurança identifica vulnerabilidades e fornece um roadmap claro para fortalecer suas defesas.
                 </p>

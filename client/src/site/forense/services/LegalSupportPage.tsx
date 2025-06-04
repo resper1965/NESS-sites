@@ -73,7 +73,7 @@ export default function ForenseLegalSupportPage() {
         <section className="intro flex items-center justify-center text-white bg-[#0d1117] relative overflow-hidden" style={{ minHeight: "60vh" }}>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className={`${styles.fontSizes.hero.title} font-['Montserrat'] font-normal mb-6 lowercase`}>
+              <h1 className={`${styles.fontSizes.hero.title}  font-normal mb-6 lowercase`}>
                 {language === 'pt' && <>suporte<DotSpan />legal</>}
                 {language === 'en' && <>legal<DotSpan />support</>}
                 {language === 'es' && <>soporte<DotSpan />legal</>}
@@ -92,7 +92,7 @@ export default function ForenseLegalSupportPage() {
               <div className="flex flex-col md:flex-row gap-16 items-start">
                 <div className="w-full">
                   <div className="text-center mb-8">
-                    <h2 className="text-2xl font-['Montserrat'] font-normal mb-6 lowercase">
+                    <h2 className="text-2xl  font-normal mb-6 lowercase">
                       {language === 'pt' && (
                         <>
                           <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">consultoria técnica</span>
@@ -164,7 +164,7 @@ export default function ForenseLegalSupportPage() {
         <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl font-['Montserrat'] font-normal text-gray-800 mb-16 text-center lowercase">
+              <h2 className="text-2xl  font-normal text-gray-800 mb-16 text-center lowercase">
                 {t('forense.legal.section.title')}
               </h2>
               <div className="max-w-3xl mx-auto text-center mb-10">
@@ -175,7 +175,7 @@ export default function ForenseLegalSupportPage() {
                 {/* Consultoria Estratégica */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30 flex flex-col h-full">
                   <div className="p-8 flex flex-col h-full">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
+                    <h3 className="text-xl  font-normal mb-4 lowercase">
                       {language === 'pt' && <>consultoria <span className="text-[#00ade0]">estratégica</span></>}
                       {language === 'en' && <>strategic <span className="text-[#00ade0]">consulting</span></>}
                       {language === 'es' && <>consultoría <span className="text-[#00ade0]">estratégica</span></>}
@@ -216,7 +216,7 @@ export default function ForenseLegalSupportPage() {
                 {/* Assistência Técnica Processual */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30 flex flex-col h-full">
                   <div className="p-8 flex flex-col h-full">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
+                    <h3 className="text-xl  font-normal mb-4 lowercase">
                       {language === 'pt' && <>assistência <span className="text-[#00ade0]">técnica processual</span></>}
                       {language === 'en' && <>procedural <span className="text-[#00ade0]">technical assistance</span></>}
                       {language === 'es' && <>asistencia <span className="text-[#00ade0]">técnica procesal</span></>}
@@ -257,7 +257,7 @@ export default function ForenseLegalSupportPage() {
                 {/* Esclarecimentos Técnicos em Audiências */}
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 transition-all hover:shadow-md hover:border-[#00ade0]/30 flex flex-col h-full">
                   <div className="p-8 flex flex-col h-full">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase">
+                    <h3 className="text-xl  font-normal mb-4 lowercase">
                       {language === 'pt' && <>esclarecimentos <span className="text-[#00ade0]">em audiências</span></>}
                       {language === 'en' && <>clarification <span className="text-[#00ade0]">in hearings</span></>}
                       {language === 'es' && <>aclaraciones <span className="text-[#00ade0]">en audiencias</span></>}
@@ -303,7 +303,7 @@ export default function ForenseLegalSupportPage() {
         <section className="conteudo bg-[#0d1117] text-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
+              <h2 className="text-2xl  font-normal mb-16 text-center lowercase">
                 {language === 'pt' && (
                   <>
                     nossa <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">metodologia</span>
@@ -327,7 +327,7 @@ export default function ForenseLegalSupportPage() {
                       <span className="text-4xl font-light text-[#00ade0]">01</span>
                       <div className="ml-4 h-[1px] flex-grow bg-[#00ade0]/30"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
+                    <h3 className="text-xl  font-normal mb-3 lowercase">
                       {language === 'pt' && <>análise <span className="text-[#00ade0]">preliminar</span></>}
                       {language === 'en' && <>preliminary <span className="text-[#00ade0]">analysis</span></>}
                       {language === 'es' && <>análisis <span className="text-[#00ade0]">preliminar</span></>}
@@ -348,7 +348,7 @@ export default function ForenseLegalSupportPage() {
                       <span className="text-4xl font-light text-[#00ade0]">02</span>
                       <div className="ml-4 h-[1px] flex-grow bg-[#00ade0]/30"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
+                    <h3 className="text-xl  font-normal mb-3 lowercase">
                       {language === 'pt' && <>planejamento <span className="text-[#00ade0]">estratégico</span></>}
                       {language === 'en' && <>strategic <span className="text-[#00ade0]">planning</span></>}
                       {language === 'es' && <>planificación <span className="text-[#00ade0]">estratégica</span></>}
@@ -369,7 +369,7 @@ export default function ForenseLegalSupportPage() {
                       <span className="text-4xl font-light text-[#00ade0]">03</span>
                       <div className="ml-4 h-[1px] flex-grow bg-[#00ade0]/30"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
+                    <h3 className="text-xl  font-normal mb-3 lowercase">
                       {language === 'pt' && <>execução <span className="text-[#00ade0]">técnica</span></>}
                       {language === 'en' && <>technical <span className="text-[#00ade0]">execution</span></>}
                       {language === 'es' && <>ejecución <span className="text-[#00ade0]">técnica</span></>}
@@ -390,7 +390,7 @@ export default function ForenseLegalSupportPage() {
                       <span className="text-4xl font-light text-[#00ade0]">04</span>
                       <div className="ml-4 h-[1px] flex-grow bg-[#00ade0]/30"></div>
                     </div>
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-3 lowercase">
+                    <h3 className="text-xl  font-normal mb-3 lowercase">
                       {language === 'pt' && <>comunicação <span className="text-[#00ade0]">eficaz</span></>}
                       {language === 'en' && <>effective <span className="text-[#00ade0]">communication</span></>}
                       {language === 'es' && <>comunicación <span className="text-[#00ade0]">eficaz</span></>}
@@ -413,7 +413,7 @@ export default function ForenseLegalSupportPage() {
         <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl font-['Montserrat'] font-normal mb-16 text-center lowercase">
+              <h2 className="text-2xl  font-normal mb-16 text-center lowercase">
                 {language === 'pt' && (
                   <>
                     benefícios do nosso <span className="text-white bg-[#00ade0] px-2 py-1 rounded-sm">suporte à área legal</span>
@@ -438,7 +438,7 @@ export default function ForenseLegalSupportPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
+                    <h3 className="text-lg  font-medium mb-3 lowercase">
                       {language === 'pt' && <>argumentação <span className="text-[#00ade0]">robusta</span></>}
                       {language === 'en' && <>robust <span className="text-[#00ade0]">argumentation</span></>}
                       {language === 'es' && <>argumentación <span className="text-[#00ade0]">sólida</span></>}
@@ -458,7 +458,7 @@ export default function ForenseLegalSupportPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
+                    <h3 className="text-lg  font-medium mb-3 lowercase">
                       {language === 'pt' && <>identificação de <span className="text-[#00ade0]">vulnerabilidades</span></>}
                       {language === 'en' && <>vulnerability <span className="text-[#00ade0]">identification</span></>}
                       {language === 'es' && <>identificación de <span className="text-[#00ade0]">vulnerabilidades</span></>}
@@ -478,7 +478,7 @@ export default function ForenseLegalSupportPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
+                    <h3 className="text-lg  font-medium mb-3 lowercase">
                       {language === 'pt' && <>clareza <span className="text-[#00ade0]">técnica</span></>}
                       {language === 'en' && <>technical <span className="text-[#00ade0]">clarity</span></>}
                       {language === 'es' && <>claridad <span className="text-[#00ade0]">técnica</span></>}
@@ -498,7 +498,7 @@ export default function ForenseLegalSupportPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-['Montserrat'] font-medium mb-3 lowercase">
+                    <h3 className="text-lg  font-medium mb-3 lowercase">
                       {language === 'pt' && <>vantagem <span className="text-[#00ade0]">competitiva</span></>}
                       {language === 'en' && <>competitive <span className="text-[#00ade0]">advantage</span></>}
                       {language === 'es' && <>ventaja <span className="text-[#00ade0]">competitiva</span></>}
@@ -519,7 +519,7 @@ export default function ForenseLegalSupportPage() {
         <section className="contato bg-[#00ade0] flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-['Montserrat'] font-normal mb-6 text-white lowercase">
+              <h2 className="text-2xl md:text-3xl  font-normal mb-6 text-white lowercase">
                 {content.cta.title}
               </h2>
               <div className="mt-8">

@@ -67,7 +67,7 @@ export default function ForenseAboutPage() {
         <section className="intro text-white bg-[#0d1117] relative overflow-hidden flex items-center" style={{ minHeight: "60vh" }}>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
+              <h1 className="text-4xl md:text-5xl  font-normal mb-6 lowercase">
                 forense<span className="text-[#00ade0]">.</span>io
               </h1>
               <p className="text-xl text-gray-300 mb-8">
@@ -81,7 +81,7 @@ export default function ForenseAboutPage() {
         <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+              <h2 className="text-3xl  font-normal text-gray-800 mb-4 lowercase">
                 {language === 'pt' && <>sobre a forense<span className="text-[#00ade0]">.</span>io</>}
                 {language === 'en' && <>about forense<span className="text-[#00ade0]">.</span>io</>}
                 {language === 'es' && <>sobre forense<span className="text-[#00ade0]">.</span>io</>}
@@ -95,7 +95,7 @@ export default function ForenseAboutPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+                <h3 className="text-xl  font-normal mb-4 text-white lowercase">
                   {language === 'pt' && 'expertise forense'}
                   {language === 'en' && 'forensic expertise'}
                   {language === 'es' && 'experiencia forense'}
@@ -109,7 +109,7 @@ export default function ForenseAboutPage() {
               </div>
               
               <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+                <h3 className="text-xl  font-normal mb-4 text-white lowercase">
                   {language === 'pt' && 'tecnologia avançada'}
                   {language === 'en' && 'advanced technology'}
                   {language === 'es' && 'tecnología avanzada'}
@@ -123,7 +123,7 @@ export default function ForenseAboutPage() {
               </div>
               
               <div className="bg-[#0d1117] p-8 rounded-lg shadow-md">
-                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-white lowercase">
+                <h3 className="text-xl  font-normal mb-4 text-white lowercase">
                   {language === 'pt' && 'resultados concretos'}
                   {language === 'en' && 'concrete results'}
                   {language === 'es' && 'resultados concretos'}
@@ -142,12 +142,12 @@ export default function ForenseAboutPage() {
         {/* Values Section */}
         <section className="conteudo bg-gray-900 text-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-white">{defaultContent.values.title}</h2>
+            <h2 className="text-3xl  font-normal text-center mb-12 lowercase text-white">{defaultContent.values.title}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Vision */}
               <div className="bg-gray-800 p-8 rounded-sm border-l-2 border-[#00ade0]">
-                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
+                <h3 className="text-xl  font-normal mb-4 lowercase text-white">
                   {defaultContent.values.vision.title}
                 </h3>
                 <p className="text-gray-300 lowercase">
@@ -157,7 +157,7 @@ export default function ForenseAboutPage() {
               
               {/* Mission */}
               <div className="bg-gray-800 p-8 rounded-sm border-l-2 border-[#00ade0]">
-                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
+                <h3 className="text-xl  font-normal mb-4 lowercase text-white">
                   {defaultContent.values.mission.title}
                 </h3>
                 <p className="text-gray-300 lowercase">
@@ -171,7 +171,7 @@ export default function ForenseAboutPage() {
         {/* Timeline Section */}
         <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">
+            <h2 className="text-3xl  font-normal text-center mb-12 lowercase">
               {defaultContent.timeline}
             </h2>
             
@@ -185,7 +185,7 @@ export default function ForenseAboutPage() {
                   <div key={year} className={`flex mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                     <div className="w-1/2 px-6">
                       <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                        <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
+                        <span className="text-2xl  font-medium text-gray-900">
                           {year.includes('.') ? year.split('.')[0] : year}
                           {year.includes('.') && <span className="text-[#00ade0] text-sm">.{year.split('.')[1]}</span>}
                         </span>
@@ -208,7 +208,7 @@ export default function ForenseAboutPage() {
         {/* CTA Section */}
         <section className="contato bg-[#0d1117] text-white flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
+            <h2 className="text-3xl  font-normal mb-8 lowercase">
               {language === 'pt' 
                 ? <>quer saber mais sobre a <span className="font-normal">forense<span className="text-[#00ade0]">.</span>io</span>?</> 
                 : language === 'en'
