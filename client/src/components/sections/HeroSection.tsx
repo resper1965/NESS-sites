@@ -34,21 +34,21 @@ export default function HeroSection({
       <div className="hero-content">
         <h1 className="logo">
           <span className="brand-wordmark">
-            <span className="word">ness</span><span className="brand-dot">.</span>
+            <span className="word">ness</span>
+            <span className="brand-dot">.</span>
           </span>
         </h1>
         <h2 className="hero-title">
-          {typeof title === 'string' ? (
-            <>
-              <span className="title-light">{title.split('\n')[0]}</span>
-              <br />
-              <span className="title-accent">{title.split('\n')[1]}</span>
-            </>
-          ) : (
-            title
-          )}
+          <span className="title-light">invisible strength</span>
+          <br />
+          <span className="title-accent">visible results</span>
         </h2>
-        <p className="hero-subtitle">{subtitle}</p>
+        <p className="hero-subtitle">
+          Experts in technological innovation, process automation, IT
+          <br />
+          infrastructure, cybersecurity, and software architecture.
+        </p>
+        {/* <a href="#servicos" className="btn btn-primary">Saiba Mais</a> */}
       </div>
     </section>
   );
