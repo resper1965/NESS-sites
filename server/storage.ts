@@ -7,13 +7,13 @@ import {
   sites, type Site, type InsertSite,
   contentSites, type ContentSite, type InsertContentSite,
   landingPages, type LandingPage, type InsertLandingPage,
-  type SiteCode, SITE_CODES
+  type SiteCode
 } from "@shared/schema";
 import session from "express-session";
 import createMemoryStore from "memorystore";
 import connectPg from "connect-pg-simple";
 import { db } from "./db";
-import { eq, desc, and, asc } from "drizzle-orm";
+import { eq, desc, and } from "drizzle-orm";
 
 // Create memory store for sessions
 const MemoryStore = createMemoryStore(session);
