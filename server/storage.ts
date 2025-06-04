@@ -160,6 +160,13 @@ export interface IStorage {
   createActivityLog(log: InsertActivityLog): Promise<ActivityLog>;
   getRecentActivities(): Promise<ActivityLog[]>;
   
+  // Settings methods
+  getSetting(key: string, language: string): Promise<SiteSetting | undefined>;
+  getSettings(language: string): Promise<SiteSetting[]>;
+  getAllSettings(): Promise<SiteSetting[]>;
+  createSetting(setting: InsertSiteSetting): Promise<SiteSetting>;
+  updateSetting(key: string, language: string, value: string): Promise<SiteSetting>;
+  
   // Session store
   sessionStore: session.SessionStore;
 }

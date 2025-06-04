@@ -129,6 +129,22 @@ export const insertJobApplicationSchema = createInsertSchema(jobApplications).pi
   status: true,
 });
 
+// Site Settings table
+export const siteSettings = pgTable("site_settings", {
+  id: serial("id").primaryKey(),
+  key: varchar("key", { length: 255 }).notNull(),
+  value: text("value"),
+  language: varchar("language", { length: 10 }).notNull().default("pt"),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+export const insertSiteSettingSchema = createInsertSchema(siteSettings).pick({
+  key: true,
+  value: true,
+  language: true,
+});
+
 // News table
 export const news = pgTable("news", {
   id: serial("id").primaryKey(),
@@ -280,6 +296,9 @@ export type Job = typeof jobs.$inferSelect;
 
 export type InsertJobApplication = z.infer<typeof insertJobApplicationSchema>;
 export type JobApplication = typeof jobApplications.$inferSelect;
+
+export type InsertSiteSetting = z.infer<typeof insertSiteSettingSchema>;
+export type SiteSetting = typeof siteSettings.$inferSelect;
 
 export type InsertNews = z.infer<typeof insertNewsSchema>;
 export type News = typeof news.$inferSelect;
