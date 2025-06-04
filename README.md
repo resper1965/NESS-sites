@@ -16,6 +16,14 @@ This command scans every folder inside `client/src/site` and `client/src/pages`,
 Run it whenever page content changes so the backups stay in sync.
 
 
+## Admin credentials
+
+The API creates an administrator account at startup using the
+`ADMIN_USER` and `ADMIN_PASSWORD` environment variables.
+Define these variables (for example in a `.env` file) before running the
+development server so the admin user is created automatically.
+=======
+
 ## Database Notes
 
 The backend stores site specific content using a `content_sites` mapping table.
