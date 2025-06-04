@@ -64,7 +64,7 @@ export default function TrustnessAboutPage() {
           
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
+              <h1 className="mb-6 lowercase">
                 trustness<span className="text-[#005fa3]">.</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8">
@@ -78,7 +78,7 @@ export default function TrustnessAboutPage() {
         <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase">
+              <h2 className="text-center mb-6 lowercase">
                 <span className="font-normal">
                   {language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}
                 </span> <span className="text-black font-normal">trustness<span className="text-[#005fa3]">.</span></span>
@@ -112,12 +112,12 @@ export default function TrustnessAboutPage() {
         {/* Values Section */}
         <section className="conteudo bg-[#1a1a22] text-white" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-white">{defaultContent.values.title}</h2>
+            <h2 className="text-center mb-12 lowercase text-white">{defaultContent.values.title}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Vision */}
               <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[#005fa3]">
-                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
+                <h3 className="mb-4 lowercase text-white">
                   {defaultContent.values.vision.title}
                 </h3>
                 <p className="text-gray-300 lowercase">
@@ -127,7 +127,7 @@ export default function TrustnessAboutPage() {
               
               {/* Mission */}
               <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[#005fa3]">
-                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
+                <h3 className="mb-4 lowercase text-white">
                   {defaultContent.values.mission.title}
                 </h3>
                 <p className="text-gray-300 lowercase">
@@ -137,7 +137,7 @@ export default function TrustnessAboutPage() {
               
               {/* Values */}
               <div className="bg-[#21212b] p-8 rounded-sm border-l-2 border-[#005fa3]">
-                <h3 className="text-xl font-['Montserrat'] font-normal mb-4 lowercase text-white">
+                <h3 className="mb-4 lowercase text-white">
                   {defaultContent.values.values.title}
                 </h3>
                 <p className="text-gray-300 lowercase mb-3">
@@ -164,7 +164,7 @@ export default function TrustnessAboutPage() {
         {/* Timeline Section */}
         <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase">
+            <h2 className="text-center mb-12 lowercase">
               {defaultContent.timeline}
             </h2>
             
@@ -178,7 +178,7 @@ export default function TrustnessAboutPage() {
                   <div key={year} className={`flex mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                     <div className="w-1/2 px-6">
                       <div className={`${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                        <span className="text-2xl font-['Montserrat'] font-medium text-gray-900">
+                        <span className="text-gray-900 text-2xl font-medium">
                           {year.includes('.') ? year.split('.')[0] : year}
                           {year.includes('.') && <span className="text-[#00ade0] text-sm">.{year.split('.')[1]}</span>}
                         </span>
@@ -201,7 +201,7 @@ export default function TrustnessAboutPage() {
         {/* CTA Section */}
         <section className="contato bg-[#1a1a22] text-white flex items-center" style={{ minHeight: "400px" }}>
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-['Montserrat'] font-normal mb-8 lowercase">
+            <h2 className="mb-8 lowercase">
               {language === 'pt' 
                 ? <>quer saber mais sobre a <span className="font-normal">trustness<span className="text-[#00ade0]">.</span></span>?</> 
                 : language === 'en'

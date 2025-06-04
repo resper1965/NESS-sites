@@ -47,7 +47,7 @@ export default function TrustnessHomePage() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-['Montserrat'] font-normal mb-6 lowercase">
+            <h1 className="mb-6 lowercase">
               trustness<span className="text-[#00ade0]">.</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
@@ -84,7 +84,7 @@ export default function TrustnessHomePage() {
       <section className="conteudo bg-gradient-to-b from-white to-[#f2f8fd] text-gray-800" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-['Montserrat'] font-normal mb-4 lowercase text-gray-800">
+            <h2 className="mb-4 lowercase text-gray-800">
               {language === 'pt' && 'como atuamos'}
               {language === 'en' && 'how we work'}
               {language === 'es' && 'cómo trabajamos'}
@@ -101,7 +101,7 @@ export default function TrustnessHomePage() {
               <>
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
+                    <h3 className="mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">você sabe como vai sua segurança?</span>
@@ -116,7 +116,7 @@ export default function TrustnessHomePage() {
                 
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certificações</h3>
+                    <h3 className="mb-4 text-gray-800">certificações</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">vai se certificar ISO 27001, ou outra certificação?</span>
@@ -128,7 +128,7 @@ export default function TrustnessHomePage() {
                 
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 md:col-span-2">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidade</h3>
+                    <h3 className="mb-4 text-gray-800">privacidade</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">precisa se adequar à LGPD, ou outra norma de privacidade?</span>
@@ -150,7 +150,7 @@ export default function TrustnessHomePage() {
               <>
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
+                    <h3 className="mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">do you know how your security is doing?</span>
@@ -165,7 +165,7 @@ export default function TrustnessHomePage() {
                 
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certifications</h3>
+                    <h3 className="mb-4 text-gray-800">certifications</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">need ISO 27001 certification or other security standards?</span>
@@ -177,7 +177,7 @@ export default function TrustnessHomePage() {
                 
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 md:col-span-2">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacy</h3>
+                    <h3 className="mb-4 text-gray-800">privacy</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">need to comply with GDPR, LGPD or other privacy laws?</span>
@@ -199,7 +199,7 @@ export default function TrustnessHomePage() {
               <>
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">assessment</h3>
+                    <h3 className="mb-4 text-gray-800">assessment</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿sabes cómo va tu seguridad?</span>
@@ -214,7 +214,7 @@ export default function TrustnessHomePage() {
                 
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">certificaciones</h3>
+                    <h3 className="mb-4 text-gray-800">certificaciones</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿necesita certificarse en ISO 27001 u otros estándares de seguridad?</span>
@@ -226,7 +226,7 @@ export default function TrustnessHomePage() {
                 
                 <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 md:col-span-2">
                   <div className="mb-6">
-                    <h3 className="text-xl font-['Montserrat'] font-normal mb-4 text-gray-800">privacidad</h3>
+                    <h3 className="mb-4 text-gray-800">privacidad</h3>
                   </div>
                   <p className="mb-4">
                     <span className="text-[#005fa3] font-semibold text-lg block mb-2">¿necesita cumplir con GDPR, LGPD u otras leyes de privacidad?</span>
@@ -251,7 +251,7 @@ export default function TrustnessHomePage() {
       <section id="what-we-do" className="conteudo bg-[#1a1a22] text-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-['Montserrat'] font-normal text-white mb-8 lowercase">
+            <h2 className="text-white mb-8 lowercase">
               {language === 'pt' && 'o que fazemos'}
               {language === 'en' && 'what we do'}
               {language === 'es' && 'lo que hacemos'}
@@ -262,7 +262,7 @@ export default function TrustnessHomePage() {
             {/* Serviço 1 - Assessment */}
             <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
               <h3 className="mb-4">
-                <span className="font-['Montserrat'] font-medium text-lg text-white">
+                <span className="font-medium text-lg text-white">
                   <span className="text-[#005fa3]">.</span>assessment
                 </span>
               </h3>
@@ -282,7 +282,7 @@ export default function TrustnessHomePage() {
             {/* Serviço 2 - Conformity */}
             <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
               <h3 className="mb-4">
-                <span className="font-['Montserrat'] font-medium text-lg text-white">
+                <span className="font-medium text-lg text-white">
                   <span className="text-[#005fa3]">.</span>conformity
                 </span>
               </h3>
@@ -302,7 +302,7 @@ export default function TrustnessHomePage() {
             {/* Serviço 3 - Privacy */}
             <div className="bg-[#21212b] rounded p-6 border border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
               <h3 className="mb-4">
-                <span className="font-['Montserrat'] font-medium text-lg text-white">
+                <span className="font-medium text-lg text-white">
                   <span className="text-[#005fa3]">.</span>privacy
                 </span>
               </h3>
@@ -327,7 +327,7 @@ export default function TrustnessHomePage() {
         <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase">
+              <h2 className="text-gray-800 mb-4 lowercase">
                 {pageContent?.content?.clientsSectionTitle || 'clientes'}
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
