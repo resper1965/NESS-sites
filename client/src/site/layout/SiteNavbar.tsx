@@ -85,7 +85,7 @@ export default function SiteNavbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href={sitePrefix} className="text-white lowercase">
-              <h1 className="font-['Montserrat'] font-normal text-3xl">
+              <h1 className="font-normal text-3xl">
                 {siteConfig.code === 'forense' 
                   ? <>forense<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span>io</>
                   : <>{siteConfig.name.replace('.', '')}<span style={{color: "#00ade0", marginLeft: "1px"}}>.</span></>
