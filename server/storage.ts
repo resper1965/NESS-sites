@@ -815,31 +815,29 @@ export class DatabaseStorage implements IStorage {
   
   // Content methods
   async getContent(pageId: string, language: string, siteCode?: SiteCode): Promise<Content | undefined> {
-    let content;
-    
     if (siteCode) {
-      // Buscar conteúdo específico para o site
-      const [result] = await db.select().from(contents)
-        .innerJoin(contentSites, and(
-          eq(contentSites.contentId, contents.id),
+      const [row] = await db
+        .select({ content: contents })
+        .from(contentSites)
+        .innerJoin(contents, eq(contentSites.contentId, contents.id))
+        .where(and(
           eq(contentSites.contentType, 'content'),
-          eq(contentSites.siteCode, siteCode)
-        ))
-        .where(and(
+          eq(contentSites.siteCode, siteCode),
           eq(contents.pageId, pageId),
-          eq(contents.language, language)
+          eq(contents.language, language),
         ));
-      content = result ? result.contents : undefined;
-    } else {
-      // Buscar conteúdo genérico
-      const [result] = await db.select().from(contents)
-        .where(and(
-          eq(contents.pageId, pageId),
-          eq(contents.language, language)
-        ));
-      content = result;
+
+      return row?.content;
     }
-    
+
+    const [content] = await db
+      .select()
+      .from(contents)
+      .where(and(
+        eq(contents.pageId, pageId),
+        eq(contents.language, language),
+      ));
+
     return content;
   }
   
