@@ -798,6 +798,179 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Jobs Management Routes
+  app.get("/api/jobs/applications", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      // Mock applications data - in production, this would come from database
+      const applications = [
+        {
+          id: 1,
+          jobId: 1,
+          name: "Maria Silva",
+          email: "maria.silva@email.com",
+          phone: "+55 11 99999-9999",
+          coverLetter: "Tenho grande interesse na vaga de Desenvolvedor React. Possuo 3 anos de experiência com React, TypeScript e Node.js. Trabalhei em projetos de e-commerce e sistemas de gestão.",
+          resumeUrl: "/uploads/resumes/maria-silva-cv.pdf",
+          status: "pending",
+          appliedAt: "2024-01-15T10:30:00Z"
+        },
+        {
+          id: 2,
+          jobId: 1,
+          name: "João Santos",
+          email: "joao.santos@email.com",
+          phone: "+55 11 88888-8888",
+          coverLetter: "Sou desenvolvedor fullstack com foco em React e Python. Tenho experiência em desenvolvimento de APIs REST e integração com bancos de dados.",
+          resumeUrl: "/uploads/resumes/joao-santos-cv.pdf",
+          status: "reviewing",
+          appliedAt: "2024-01-14T14:20:00Z"
+        },
+        {
+          id: 3,
+          jobId: 2,
+          name: "Ana Costa",
+          email: "ana.costa@email.com",
+          phone: "+55 11 77777-7777",
+          coverLetter: "Especialista em marketing digital com 5 anos de experiência. Tenho conhecimento em SEO, Google Ads, redes sociais e análise de dados.",
+          status: "accepted",
+          appliedAt: "2024-01-12T09:15:00Z"
+        }
+      ];
+
+      res.json(applications);
+    } catch (error) {
+      console.error("Error fetching job applications:", error);
+      res.status(500).json({ message: "Error fetching job applications" });
+    }
+  });
+
+  app.post("/api/jobs/apply", async (req, res) => {
+    try {
+      const { jobId, name, email, phone, coverLetter } = req.body;
+      
+      // Validate required fields
+      if (!jobId || !name || !email || !coverLetter) {
+        return res.status(400).json({ message: "Missing required fields" });
+      }
+
+      // Create new application
+      const newApplication = {
+        id: Date.now(),
+        jobId: parseInt(jobId),
+        name,
+        email,
+        phone,
+        coverLetter,
+        status: "pending",
+        appliedAt: new Date().toISOString()
+      };
+
+      // Log activity
+      await storage.createActivityLog({
+        userId: 0, // System user for job applications
+        action: "job_application",
+        entityType: "job_application",
+        entityId: newApplication.id.toString(),
+        details: { jobId, name, email }
+      });
+
+      res.status(201).json(newApplication);
+    } catch (error) {
+      console.error("Error creating job application:", error);
+      res.status(500).json({ message: "Error creating job application" });
+    }
+  });
+
+  app.put("/api/jobs/applications/:id/status", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      const { id } = req.params;
+      const { status } = req.body;
+      
+      // Validate status
+      const validStatuses = ['pending', 'reviewing', 'accepted', 'rejected'];
+      if (!validStatuses.includes(status)) {
+        return res.status(400).json({ message: "Invalid status" });
+      }
+
+      // Update application status
+      const updatedApplication = {
+        id: parseInt(id),
+        status,
+        updatedAt: new Date().toISOString(),
+        updatedBy: req.user!.username
+      };
+
+      // Log activity
+      await storage.createActivityLog({
+        userId: req.user!.id,
+        action: "update",
+        entityType: "job_application",
+        entityId: id,
+        details: { status, action: "status updated" }
+      });
+
+      res.json(updatedApplication);
+    } catch (error) {
+      console.error("Error updating application status:", error);
+      res.status(500).json({ message: "Error updating application status" });
+    }
+  });
+
+  // Public job listing for candidates
+  app.get("/api/public/jobs", async (req, res) => {
+    try {
+      const lang = req.query.lang?.toString() || "pt";
+      const site = req.query.site?.toString();
+      
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+      
+      const jobs = await storage.getJobs(lang, siteCode);
+      
+      // Filter only active jobs for public API
+      const activeJobs = jobs.filter(job => job.isActive);
+      
+      res.json(activeJobs);
+    } catch (error) {
+      console.error("Error fetching public jobs:", error);
+      res.status(500).json({ message: "Error fetching jobs" });
+    }
+  });
+
+  app.get("/api/public/jobs/:slug", async (req, res) => {
+    try {
+      const { slug } = req.params;
+      const lang = req.query.lang?.toString() || "pt";
+      const site = req.query.site?.toString();
+      
+      // Verifica se o site é válido
+      const siteCode = site && (SITE_CODES as readonly string[]).includes(site) 
+        ? site as SiteCode 
+        : undefined;
+      
+      const job = await storage.getJobBySlug(slug, lang, siteCode);
+      
+      if (!job || !job.isActive) {
+        return res.status(404).json({ message: "Job not found" });
+      }
+      
+      res.json(job);
+    } catch (error) {
+      console.error("Error fetching job:", error);
+      res.status(500).json({ message: "Error fetching job" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
