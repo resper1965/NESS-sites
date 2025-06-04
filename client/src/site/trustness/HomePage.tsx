@@ -40,25 +40,26 @@ export default function TrustnessHomePage() {
       canonicalUrl={`https://${siteConfig.domain}`}
     >
       {/* Hero Section */}
-      <section 
-        className="intro text-white bg-[#0b1016] relative flex items-center"
-        style={{ minHeight: "60vh" }}
+      <section
+        className="intro text-white bg-hero-gradient relative flex items-center overflow-hidden"
+        style={{ minHeight: '60vh' }}
       >
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-6 lowercase">
+        <div className="hero-vignette-right" />
+
+        <div className="container mx-auto px-4 relative z-10 flex items-center h-full">
+          <div className="hero-main-content">
+            <h1 className="text-[32px] font-['Montserrat'] font-medium mt-12 mb-6 lowercase">
               trustness<span className="text-[#00ade0]">.</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              {language === 'pt' && (pageContent?.content?.heroSubtitle || 
+            <p className="text-base leading-6 text-[#F5F5F5] mb-8">
+              {language === 'pt' && (pageContent?.content?.heroSubtitle ||
                 'privacidade, segurança da informação e compliance com foco em programas regulatórios e frameworks internacionais')}
-              {language === 'en' && (pageContent?.content?.heroSubtitleEn || 
+              {language === 'en' && (pageContent?.content?.heroSubtitleEn ||
                 'privacy, information security and compliance focused on regulatory programs and international frameworks')}
-              {language === 'es' && (pageContent?.content?.heroSubtitleEs || 
+              {language === 'es' && (pageContent?.content?.heroSubtitleEs ||
                 'privacidad, seguridad de la información y compliance con foco en programas regulatorios y frameworks internacionales')}
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-start gap-4">
               <a
                 href="#what-we-do"
                 className="bg-[#00ade0] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
