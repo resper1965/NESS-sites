@@ -22,7 +22,6 @@ The API creates an administrator account at startup using the
 `ADMIN_USER` and `ADMIN_PASSWORD` environment variables.
 Define these variables (for example in a `.env` file) before running the
 development server so the admin user is created automatically.
-=======
 
 ## Database Notes
 
