@@ -4,7 +4,7 @@ const defaultContent: Record<Language, any> = {
     pt: {
       title: 'n.SecOps',
       description: 'segurança integrada às operações com monitoramento contínuo',
-      intro: 'o n.SecOps da ness integra segurança às operações com foco em monitoramento contínuo e resposta imediata, protegendo sua infraestrutura de forma inteligente e adaptativa.',
+      intro: 'Do SOC à resposta a incidentes, sua resiliência começa com a gente.',
       sections: [
         {
           title: 'monitoramento avançado',
@@ -50,8 +50,8 @@ const defaultContent: Record<Language, any> = {
     },
     en: {
       title: 'n.SecOps',
-      description: 'integrated security operations with continuous monitoring',
-      intro: 'ness\'s n.SecOps integrates security into operations with a focus on continuous monitoring and immediate response, protecting your infrastructure intelligently and adaptively.',
+      description: 'security integrated into operations with continuous monitoring',
+      intro: 'From SOC to incident response, your resilience starts with us.',
       sections: [
         {
           title: 'advanced monitoring',
@@ -98,7 +98,7 @@ const defaultContent: Record<Language, any> = {
     es: {
       title: 'n.SecOps',
       description: 'seguridad integrada a las operaciones con monitoreo continuo',
-      intro: 'el n.SecOps de ness integra seguridad a las operaciones con enfoque en monitoreo continuo y respuesta inmediata, protegiendo su infraestructura de forma inteligente y adaptativa.',
+      intro: 'Del SOC a la respuesta a incidentes, su resiliencia comienza con nosotros.',
       sections: [
         {
           title: 'monitoreo avanzado',

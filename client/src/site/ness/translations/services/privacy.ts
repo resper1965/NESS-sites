@@ -3,8 +3,8 @@ import { Language } from '@/lib/i18n';
 const defaultContent: Record<Language, any> = {
     pt: {
       title: 'n.Privacy',
-      description: 'gestão completa de privacidade para conformidade com LGPD/GDPR',
-      intro: 'o n.Privacy da ness oferece uma abordagem estruturada para governança de privacidade e proteção de dados, ajudando organizações a atenderem requisitos regulatórios como LGPD e GDPR, enquanto transformam privacidade em vantagem competitiva.',
+      description: 'Conformidade e privacidade desde a origem.',
+      intro: 'Uma plataforma completa para LGPD, GDPR e gestão de titulares.',
       sections: [
         {
           title: 'diagnóstico e mapeamento',
@@ -50,8 +50,8 @@ const defaultContent: Record<Language, any> = {
     },
     en: {
       title: 'n.Privacy',
-      description: 'complete privacy management for LGPD/GDPR compliance',
-      intro: 'ness\'s n.Privacy offers a structured approach to privacy governance and data protection, helping organizations meet regulatory requirements such as LGPD and GDPR, while transforming privacy into a competitive advantage.',
+      description: 'Compliance and privacy from the source.',
+      intro: 'A complete platform for LGPD, GDPR and data subject management.',
       sections: [
         {
           title: 'diagnosis and mapping',
@@ -97,8 +97,8 @@ const defaultContent: Record<Language, any> = {
     },
     es: {
       title: 'n.Privacy',
-      description: 'gestión completa de privacidad para conformidad con LGPD/GDPR',
-      intro: 'el n.Privacy de ness ofrece un enfoque estructurado para gobernanza de privacidad y protección de datos, ayudando a organizaciones a atender requisitos regulatorios como LGPD y GDPR, mientras transforman la privacidad en ventaja competitiva.',
+      description: 'Conformidad y privacidad desde el origen.',
+      intro: 'Una plataforma completa para LGPD, GDPR y gestión de titulares.',
       sections: [
         {
           title: 'diagnóstico y mapeo',
