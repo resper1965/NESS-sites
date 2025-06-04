@@ -67,7 +67,7 @@ export default function NessSecOpsPage() {
       <section className="intro bg-hero-gradient relative flex items-center overflow-hidden" style={{ minHeight: '60vh' }}>
         <div className="hero-vignette-right" />
         <div className="container mx-auto px-4 z-10 flex items-center h-full">
-          <div className="hero-main-content">
+          <div className="hero-main-content ml-[0px] mr-[0px] pl-[0px] pr-[0px]">
             <h1 className="text-[48px] font-['Montserrat'] font-normal text-white mb-6">
               {formatServiceName(content.title)}
             </h1>
@@ -77,7 +77,6 @@ export default function NessSecOpsPage() {
           </div>
         </div>
       </section>
-      
       {/* Intro Section */}
       <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
@@ -88,7 +87,6 @@ export default function NessSecOpsPage() {
           </div>
         </div>
       </section>
-      
       {/* Main Features */}
       <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
@@ -112,7 +110,6 @@ export default function NessSecOpsPage() {
           </div>
         </div>
       </section>
-      
       {/* Tecnologia e Diferenciais */}
       <section className="conteudo bg-white" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
@@ -136,7 +133,6 @@ export default function NessSecOpsPage() {
           </div>
         </div>
       </section>
-      
       {/* Benefícios */}
       <section className="conteudo bg-gray-50" style={{ padding: "4rem 0" }}>
         <div className="container mx-auto px-4">
@@ -157,7 +153,6 @@ export default function NessSecOpsPage() {
           </div>
         </div>
       </section>
-      
       {/* CTA Section */}
       <section className="conteudo bg-[#121212] text-white" style={{ padding: "4rem 0", minHeight: "400px" }}>
         <div className="container mx-auto px-4 flex items-center justify-center h-full">
