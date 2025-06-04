@@ -31,7 +31,7 @@ export default function HeroSection({
       }}
     >
       <div className="hero-overlay"></div>
-      <div className="hero-content ml-[62px] mr-[62px]">
+      <div className="hero-content ml-[65px] mr-[65px]">
         <h1 className="logo">
           <span className="brand-wordmark">
             <span className="word">ness</span>
