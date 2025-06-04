@@ -1,0 +1,999 @@
+quem somos
+modularidade que transforma o complexo em confiável
+tecnologia invisível que sustenta o essencial desde 1991
+somos a ness.
+tecnologia clara. estrutura segura. propósito real.
+desde 1991, operando o essencial com precisão.
+projetamos, conectamos e sustentamos soluções críticas.
+invisível para quem usa. indispensável para quem confia.
+nossos valores
+nossa visão
+ser reconhecida como uma plataforma confiável em soluções tecnológicas modulares, que sustenta operações críticas com segurança e inteligência. habilitar pessoas e organizações a enfrentarem desafios complexos com clareza, velocidade e propósito. construir com estrutura. operar com confiança. entregar o essencial.
+nossa missão
+conectar, automatizar e sustentar operações críticas com velocidade e propósito. expandir o acesso, a eficiência e a resiliência por meio de tecnologia confiável e arquitetura clara. transformar a complexidade em soluções simples e seguras.
+confiança é nossa estrutura. decidimos com clareza, entregamos com consistência e crescemos com ética. valorizamos pessoas, diversidade e colaboração de longo prazo.
+buscamos equilíbrio entre resultado, impacto e evolução contínua. inovamos com responsabilidade. operamos com precisão.
+nossa trajetória
+1991
+fundação da ness. como operação terceirizada de tecnologia para um grande grupo econômico.
+1992
+início das atividades em infraestrutura, dados e BPO.
+1998
+infraestrutura de tecnologia para grandes eventos no Brasil e em diversos países da europa, américas, áfrica e ásia.
+2005
+entrada em segurança digital e privacidade.
+2014
+lançamento da divisão de software e processos, com projetos iniciais em saúde.
+2016
+incubação da trustness.
+2017
+criação da unidade de negócios ness health.
+2018
+trustness torna-se unidade de negócios.
+2019
+spin-off da ness health.
+2020
+ness health é renomeada como ionic health e inaugura sede no tech-park sjc.
+2021
+incubação da forense.io.
+2022
+forense.io torna-se unidade de negócios.
+2025
+a ness. se consolida como uma plataforma modular para transformação digital confiável.
+quer saber mais sobre a ness.?
+fale conosco
+about us
+modularity that transforms complexity into reliability
+invisible technology sustaining the essential since 1991
+we are ness.
+clear technology • secure structure • real purpose
+operating the essential with precision since 1991.
+we design, connect and sustain critical solutions.
+invisible to users. indispensable to those who rely on it.
+our values
+our vision
+to be recognized as a trusted platform for modular technological solutions that sustains critical operations with security and intelligence. to enable people and organizations to face complex challenges with clarity, speed and purpose. build with structure. operate with confidence. deliver the essential.
+our mission
+to connect, automate and sustain critical operations with speed and purpose. to expand access, efficiency and resilience through reliable technology and clear architecture. to transform complexity into simple and secure solutions.
+trust is our structure. we decide with clarity, deliver with consistency and grow with ethics. we value people, diversity and long-term collaboration.
+we seek balance between results, impact and continuous evolution. we innovate with responsibility. we operate with precision.
+our journey
+founding of ness. as an outsourced technology operation for a large economic group.
+start of activities in infrastructure, data and BPO.
+technology infrastructure for major events in Brazil and various countries in Europe, Americas, Africa, and Asia.
+entry into digital security and privacy.
+launch of the software and processes division, with initial healthcare projects.
+incubation of trustness.
+creation of the ness health business unit.
+trustness becomes a business unit.
+spin-off of ness health.
+ness health is renamed to ionic health and inaugurates headquarters at tech-park sjc.
+incubation of forense.io.
+forense.io becomes a business unit.
+ness. consolidates as a modular platform for reliable digital transformation.
+want to know more about ness.?
+contact us
+quiénes somos
+modularidad que transforma lo complejo en confiable
+tecnología invisible que sustenta lo esencial desde 1991
+somos ness.
+tecnología clara • estructura segura • propósito real
+desde 1991, operando lo esencial con precisión.
+diseñamos, conectamos y sostenemos soluciones críticas.
+invisible para quien usa. indispensable para quien confía.
+nuestros valores
+nuestra visión
+ser reconocida como una plataforma confiable en soluciones tecnológicas modulares, que sustenta operaciones críticas con seguridad e inteligencia. habilitar a personas y organizaciones a enfrentar desafíos complejos con claridad, velocidad y propósito. construir con estructura. operar con confianza. entregar lo esencial.
+nuestra misión
+conectar, automatizar y sustentar operaciones críticas con velocidad y propósito. expandir el acceso, la eficiencia y la resiliencia a través de tecnología confiable y arquitectura clara. transformar la complejidad en soluciones simples y seguras.
+confianza es nuestra estructura. decidimos con claridad, entregamos con consistencia y crecemos con ética. valoramos personas, diversidad y colaboración de largo plazo.
+buscamos equilibrio entre resultado, impacto y evolución continua. innovamos con responsabilidad. operamos con precisión.
+nuestra trayectoria
+fundación de ness. como operación tercerizada de tecnología para un gran grupo económico.
+inicio de actividades en infraestructura, datos y BPO.
+infraestructura de tecnología para grandes eventos en Brasil y en diversos países de Europa, América, África y Asia.
+entrada en seguridad digital y privacidad.
+lanzamiento de la división de software y procesos, con proyectos iniciales en salud.
+incubación de trustness.
+creación de la unidad de negocios ness health.
+trustness se convierte en unidad de negocios.
+spin-off de ness health.
+ness health es renombrada como ionic health e inaugura sede en tech-park sjc.
+incubación de forense.io.
+forense.io se convierte en unidad de negocios.
+ness. se consolida como una plataforma modular para transformación digital confiable.
+¿quieres saber más sobre ness.?
+contáctanos
+about.title
+@context
+https://schema.org
+@type
+Organization
+name
+ness.
+url
+https://www.ness.com.br
+logo
+https://www.ness.com.br/logo.png
+foundingDate
+description
+Empresa especializada em serviços de tecnologia, incluindo infraestrutura, segurança cibernética e desenvolvimento de software.
+address
+PostalAddress
+streetAddress
+Av. Paulista, 1000
+addressLocality
+São Paulo
+addressRegion
+SP
+postalCode
+01310-100
+addressCountry
+BR
+pt
+Conheça a história da ness., empresa com mais de 30 anos de experiência em serviços de tecnologia, infraestrutura e segurança cibernética.
+en
+Learn about ness.'s history, a company with over 30 years of experience in technology services, infrastructure, and cybersecurity.
+Conozca la historia de ness., empresa con más de 30 años de experiencia en servicios de tecnología, infraestructura y seguridad cibernética.
+/about
+intro relative flex items-center justify-center overflow-hidden bg-[#121212]
+60vh
+container mx-auto px-4 z-10 flex justify-center items-center h-full
+hero-main-content text-center max-w-4xl
+text-5xl md:text-6xl lg:text-7xl font-['Montserrat'] font-normal mb-6
+#ffffff
+ness
+#00ade0
+.
+text-2xl md:text-3xl lg:text-4xl font-['Montserrat'] font-normal mb-6 text-white lowercase tracking-tight
+text-lg md:text-xl lg:text-2xl mb-8 mx-auto text-white font-['Montserrat'] lowercase font-light
+conteudo bg-gray-50
+4rem 0
+container mx-auto px-4
+max-w-3xl mx-auto
+font-['Montserrat'] font-normal text-2xl md:text-3xl mb-6 text-center lowercase
+font-normal
+somos a
+es
+somos
+we are
+text-black font-normal
+text-[#00ade0]
+prose prose-base mx-auto text-gray-700 lowercase
+mb-6 text-center font-light tracking-wide text-lg
+tecnologia clara
+•
+estrutura segura
+propósito real
+clear technology
+secure structure
+real purpose
+tecnología clara
+estructura segura
+mb-4 text-center text-lg
+projetamos, conectamos e sustentamos soluções críticas
+we design, connect and sustain critical solutions
+diseñamos, conectamos y sostenemos soluciones críticas
+mt-8 text-center font-light text-md
+conteudo bg-[#2c2c34]
+text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase text-[#00ade0]
+grid grid-cols-1 md:grid-cols-3 gap-8
+bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]
+text-xl font-['Montserrat'] font-medium mb-4 lowercase text-white
+text-gray-200 lowercase
+text-gray-200 lowercase mb-4
+text-3xl font-['Montserrat'] font-normal text-center mb-12 lowercase
+max-w-5xl mx-auto
+relative
+absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-[#00ade0] opacity-50
+flex-row
+flex-row-reverse
+w-1/2 px-6
+text-right
+text-left
+text-2xl font-['Montserrat'] font-medium text-gray-900
+text-[#00ade0] text-sm
+mt-2 text-gray-700 lowercase
+absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#00ade0] rounded-full mt-1
+contato bg-[#4d4d4d] text-white flex items-center
+400px
+container mx-auto px-4 text-center
+text-3xl font-['Montserrat'] font-normal mb-8 lowercase
+quer saber mais sobre a
+?
+want to know more about
+¿quieres saber más sobre
+/site/ness/contact
+inline-block bg-[#00ade0] hover:bg-opacity-90 text-white py-3 px-8 rounded lowercase transition duration-300
+/api/content/home
+Failed to fetch content
+flex justify-center items-center min-h-screen
+animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[var(--primary-color)]
+tecnologia modular para o essencial invisível
+arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade
+conheça nossos serviços
+/site/ness/services
+fale conosco
+/site/ness/contact
+/attached_assets/image_1747186663435.png
+conteudo bg-white
+4rem 0
+container mx-auto px-4
+text-center mb-12
+text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase
+text-gray-600 max-w-3xl mx-auto
+nossas soluções são modulares, escaláveis e atuam nos bastidores — porque o essencial, a estrutura que sustenta tudo, deve funcionar com precisão e ser invisível para quem depende dela.
+mt-16
+relative border-l border-gray-200 ml-3
+mb-10 ml-6
+absolute flex items-center justify-center w-6 h-6 bg-[var(--primary-color)] rounded-full -left-3 ring-8 ring-white
+text-white text-xs
+flex items-center mb-1 text-lg font-semibold text-gray-900 lowercase
+mb-4 text-base font-normal text-gray-500 lowercase
+/api/content/home
+Failed to fetch content
+flex justify-center items-center min-h-screen
+animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[var(--primary-color)]
+pt
+use
+text-[#00ade0]
+tecnologia
+segura, escalável e inteligente para impulsionar sua operação na era digital
+.
+en
+use secure, scalable and intelligent
+technology
+to boost your operation in the digital era
+es
+tecnología
+segura, escalable e inteligente para impulsar su operación en la era digital
+arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade
+conheça nossos serviços
+explore our services
+conozca nuestros servicios
+/site/ness/services/secops
+fale conosco
+contact us
+contáctenos
+/site/ness/contact
+/attached_assets/image_1747186663435.png
+conteudo bg-white
+4rem 0
+container mx-auto px-4
+text-center mb-12
+text-3xl font-['Montserrat'] font-normal text-gray-800 mb-4 lowercase
+tecnologia modular para o essencial invisível
+text-gray-600 max-w-3xl mx-auto
+nossas soluções são modulares, escaláveis e atuam nos bastidores — porque o essencial, a estrutura que sustenta tudo, deve funcionar com precisão e ser invisível para quem depende dela.
+mt-16
+relative border-l border-gray-200 ml-3
+mb-10 ml-6
+absolute flex items-center justify-center w-6 h-6 bg-[var(--primary-color)] rounded-full -left-3 ring-8 ring-white
+text-white text-xs
+flex items-center mb-1 text-lg font-semibold text-gray-900 lowercase
+mb-4 text-base font-normal text-gray-500 lowercase
+/api/content/services/autoops
+Failed to fetch content
+Error fetching content:
+n.AutoOps
+automação inteligente de processos com IA
+o n.AutoOps da ness combina tecnologias de automação com inteligência artificial para transformar processos operacionais, aumentar eficiência e reduzir custos, permitindo que as equipes foquem em atividades estratégicas.
+avaliação de processos
+análise detalhada do fluxo de trabalho atual para identificar oportunidades de automação, gargalos operacionais e potenciais ganhos de eficiência.
+automação inteligente
+implementação de soluções de automação potencializadas por IA que podem aprender e se adaptar, executando tarefas complexas com mínima intervenção humana.
+orquestração de processos
+integração e coordenação de múltiplos sistemas e fluxos de trabalho para criar processos fim-a-fim coesos e eficientes.
+monitoramento contínuo
+acompanhamento em tempo real dos processos automatizados com análise de desempenho e detecção proativa de problemas.
+hyper-automação
+abordagem que combina RPA, IA/ML e outras tecnologias avançadas para maximizar o escopo e a profundidade da automação em toda a organização.
+processamento cognitivo
+capacidade de interpretar dados não estruturados, como texto, imagens e voz, permitindo a automação de tarefas que tradicionalmente requeriam inteligência humana.
+análise preditiva
+utilização de dados históricos e atuais para prever tendências e comportamentos futuros, otimizando processos antes de problemas ocorrerem.
+aumento de produtividade e eficiência
+redução de erros operacionais
+escalabilidade sem aumento proporcional de custos
+liberação de recursos para inovação
+pronto para automatizar suas operações com inteligência?
+solicite uma avaliação
+intelligent process automation with AI
+ness's n.AutoOps combines automation technologies with artificial intelligence to transform operational processes, increase efficiency, and reduce costs, allowing teams to focus on strategic activities.
+process assessment
+detailed analysis of current workflow to identify automation opportunities, operational bottlenecks, and potential efficiency gains.
+intelligent automation
+implementation of AI-powered automation solutions that can learn and adapt, executing complex tasks with minimal human intervention.
+process orchestration
+integration and coordination of multiple systems and workflows to create cohesive and efficient end-to-end processes.
+continuous monitoring
+real-time tracking of automated processes with performance analysis and proactive problem detection.
+hyper-automation
+approach that combines RPA, AI/ML, and other advanced technologies to maximize the scope and depth of automation across the organization.
+cognitive processing
+ability to interpret unstructured data, such as text, images, and voice, allowing for automation of tasks that traditionally required human intelligence.
+predictive analytics
+utilization of historical and current data to predict future trends and behaviors, optimizing processes before problems occur.
+increased productivity and efficiency
+reduction of operational errors
+scalability without proportional cost increase
+resource liberation for innovation
+ready to intelligently automate your operations?
+request an assessment
+automatización inteligente de procesos con IA
+el n.AutoOps de ness combina tecnologías de automatización con inteligencia artificial para transformar procesos operacionales, aumentar eficiencia y reducir costos, permitiendo que los equipos se enfoquen en actividades estratégicas.
+evaluación de procesos
+análisis detallado del flujo de trabajo actual para identificar oportunidades de automatización, cuellos de botella operacionales y potenciales ganancias de eficiencia.
+automatización inteligente
+implementación de soluciones de automatización potenciadas por IA que pueden aprender y adaptarse, ejecutando tareas complejas con mínima intervención humana.
+orquestación de procesos
+integración y coordinación de múltiples sistemas y flujos de trabajo para crear procesos de extremo a extremo cohesivos y eficientes.
+monitoreo continuo
+seguimiento en tiempo real de los procesos automatizados con análisis de desempeño y detección proactiva de problemas.
+hiper-automatización
+enfoque que combina RPA, IA/ML y otras tecnologías avanzadas para maximizar el alcance y la profundidad de la automatización en toda la organización.
+procesamiento cognitivo
+capacidad de interpretar datos no estructurados, como texto, imágenes y voz, permitiendo la automatización de tareas que tradicionalmente requerían inteligencia humana.
+análisis predictivo
+utilización de datos históricos y actuales para predecir tendencias y comportamientos futuros, optimizando procesos antes de que ocurran problemas.
+aumento de productividad y eficiencia
+reducción de errores operacionales
+escalabilidad sin aumento proporcional de costos
+liberación de recursos para innovación
+¿listo para automatizar sus operaciones con inteligencia?
+solicite una evaluación
+flex justify-center items-center min-h-screen
+animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
+n.
+font-['Montserrat'] font-normal
+n
+text-[#00ade0]
+.
+intro bg-[#121212] relative flex items-center justify-center
+60vh
+container mx-auto px-4 z-10
+text-center
+text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
+text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+conteudo bg-white
+4rem 0
+container mx-auto px-4
+max-w-4xl mx-auto text-center
+text-lg text-gray-700 leading-relaxed
+conteudo bg-gray-50
+max-w-5xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+pt
+componentes essenciais
+en
+essential components
+es
+componentes esenciales
+grid grid-cols-1 md:grid-cols-2 gap-10
+bg-white p-6 rounded-lg shadow-sm
+text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-gray-600 text-sm
+tecnologias avançadas
+advanced technologies
+tecnologías avanzadas
+grid grid-cols-1 md:grid-cols-3 gap-8
+bg-gray-50 p-6 rounded-lg
+max-w-4xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+benefícios
+benefits
+beneficios
+flex flex-wrap justify-center gap-4
+bg-white px-5 py-3 rounded-full shadow-sm
+text-gray-700 text-sm lowercase
+conteudo bg-[#121212] text-white
+400px
+container mx-auto px-4 flex items-center justify-center h-full
+text-center max-w-3xl
+text-2xl font-['Montserrat'] font-normal mb-8
+/site/ness/contact
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+/api/content/services/crisisops
+Failed to fetch content
+Error fetching content:
+n.CrisisOps
+resposta imediata para incidentes e gestão de crises cibernéticas
+o n.CrisisOps da ness oferece uma abordagem completa para gerenciamento de incidentes e crises cibernéticas, combinando metodologias estruturadas, equipes especializadas e tecnologias avançadas para minimizar impactos e restaurar operações rapidamente.
+resposta a incidentes
+equipe dedicada para investigação e contenção de incidentes de segurança em tempo real, com protocolos claros para isolamento de ameaças e recuperação de ambientes comprometidos.
+planos de crise
+desenvolvimento de estratégias e procedimentos detalhados para gerenciamento de crises, incluindo protocolos de comunicação, matriz de responsabilidades e planos de continuidade de negócios.
+simulações e treinamentos
+exercícios regulares de simulação de incidentes e crises para preparar equipes internas, testar procedimentos e identificar pontos de melhoria na resposta organizacional.
+análise forense digital
+capacidade técnica para investigação detalhada de incidentes, coleta e preservação de evidências com validade legal, identificação de vetores de ataque e elaboração de relatórios técnicos.
+monitoramento contínuo
+vigilância 24x7 de ambientes e sistemas críticos, com detecção antecipada de anomalias e ameaças potenciais antes que se tornem crises.
+equipe multidisciplinar
+profissionais com experiência em diferentes áreas de segurança, infraestrutura, comunicação e aspectos legais, proporcionando uma resposta abrangente em situações críticas.
+gestão de comunicação
+estratégias para comunicação eficaz com stakeholders internos e externos durante crises, minimizando danos reputacionais e atendendo requisitos regulatórios.
+redução do tempo de resposta a incidentes
+minimização de impactos operacionais e financeiros
+preservação da reputação organizacional
+conformidade com requisitos regulatórios
+está preparado para lidar com incidentes críticos?
+entre em contato
+immediate response for incidents and cybernetic crisis management
+ness's n.CrisisOps offers a comprehensive approach to incident management and cybernetic crises, combining structured methodologies, specialized teams, and advanced technologies to minimize impacts and quickly restore operations.
+incident response
+dedicated team for real-time investigation and containment of security incidents, with clear protocols for threat isolation and recovery of compromised environments.
+crisis plans
+development of detailed strategies and procedures for crisis management, including communication protocols, responsibility matrix, and business continuity plans.
+simulations and training
+regular incident and crisis simulation exercises to prepare internal teams, test procedures, and identify improvement points in organizational response.
+digital forensics
+technical capability for detailed incident investigation, collection and preservation of legally valid evidence, identification of attack vectors, and preparation of technical reports.
+continuous monitoring
+24x7 surveillance of critical environments and systems, with early detection of anomalies and potential threats before they become crises.
+multidisciplinary team
+professionals with experience in different areas of security, infrastructure, communication, and legal aspects, providing a comprehensive response in critical situations.
+communication management
+strategies for effective communication with internal and external stakeholders during crises, minimizing reputational damage and meeting regulatory requirements.
+reduced incident response time
+minimization of operational and financial impacts
+preservation of organizational reputation
+compliance with regulatory requirements
+are you prepared to handle critical incidents?
+contact us
+respuesta inmediata para incidentes y gestión de crisis cibernéticas
+el n.CrisisOps de ness ofrece un enfoque completo para la gestión de incidentes y crisis cibernéticas, combinando metodologías estructuradas, equipos especializados y tecnologías avanzadas para minimizar impactos y restaurar operaciones rápidamente.
+respuesta a incidentes
+equipo dedicado para investigación y contención de incidentes de seguridad en tiempo real, con protocolos claros para aislamiento de amenazas y recuperación de entornos comprometidos.
+planes de crisis
+desarrollo de estrategias y procedimientos detallados para gestión de crisis, incluyendo protocolos de comunicación, matriz de responsabilidades y planes de continuidad de negocios.
+simulaciones y entrenamientos
+ejercicios regulares de simulación de incidentes y crisis para preparar equipos internos, probar procedimientos e identificar puntos de mejora en la respuesta organizacional.
+análisis forense digital
+capacidad técnica para investigación detallada de incidentes, recolección y preservación de evidencias con validez legal, identificación de vectores de ataque y elaboración de informes técnicos.
+monitoreo continuo
+vigilancia 24x7 de entornos y sistemas críticos, con detección anticipada de anomalías y amenazas potenciales antes de que se conviertan en crisis.
+equipo multidisciplinario
+profesionales con experiencia en diferentes áreas de seguridad, infraestructura, comunicación y aspectos legales, proporcionando una respuesta integral en situaciones críticas.
+gestión de comunicación
+estrategias para comunicación eficaz con stakeholders internos y externos durante crisis, minimizando daños reputacionales y atendiendo requisitos regulatorios.
+reducción del tiempo de respuesta a incidentes
+minimización de impactos operacionales y financieros
+preservación de la reputación organizacional
+conformidad con requisitos regulatorios
+¿está preparado para lidiar con incidentes críticos?
+contáctenos
+flex justify-center items-center min-h-screen
+animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
+n.
+font-['Montserrat'] font-normal
+n
+text-[#00ade0]
+.
+intro bg-[#121212] relative flex items-center justify-center
+60vh
+container mx-auto px-4 z-10
+text-center
+text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
+text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+conteudo bg-white
+4rem 0
+container mx-auto px-4
+max-w-4xl mx-auto text-center
+text-lg text-gray-700 leading-relaxed
+conteudo bg-gray-50
+max-w-5xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+pt
+capacidades principais
+en
+main capabilities
+es
+capacidades principales
+grid grid-cols-1 md:grid-cols-2 gap-10
+bg-white p-6 rounded-lg shadow-sm
+text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-gray-600 text-sm
+diferenciais
+differentials
+diferenciales
+grid grid-cols-1 md:grid-cols-3 gap-8
+bg-gray-50 p-6 rounded-lg
+max-w-4xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+benefícios
+benefits
+beneficios
+flex flex-wrap justify-center gap-4
+bg-white px-5 py-3 rounded-full shadow-sm
+text-gray-700 text-sm lowercase
+conteudo bg-[#121212] text-white
+400px
+container mx-auto px-4 flex items-center justify-center h-full
+text-center max-w-3xl
+text-2xl font-['Montserrat'] font-normal mb-8
+/site/ness/contact
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+/api/content/services/devarch
+Failed to fetch content
+Error fetching content:
+n.DevArch
+fundamentos sólidos para desenvolvimento com arquitetura e IA
+o n.DevArch da ness cria bases sólidas para o desenvolvimento de software com foco em arquitetura moderna, integrando inteligência artificial para elevar a qualidade, eficiência e escalabilidade dos sistemas.
+arquitetura moderna
+concepção de arquiteturas escaláveis e resilientes utilizando padrões como microserviços, event-driven e serverless, adaptadas às necessidades específicas de cada negócio.
+infraestrutura como código
+automação da configuração e provisionamento de ambientes, garantindo consistência e reprodutibilidade em todo o ciclo de desenvolvimento.
+integração com IA
+implementação de componentes de inteligência artificial para otimização de processos, tomada de decisões e automação avançada dentro dos sistemas desenvolvidos.
+pipeline de entrega contínua
+configuração de pipelines automatizados com integração, testes e entrega contínuas para garantir rapidez e confiabilidade nas atualizações de software.
+padrões de design
+implementação de padrões consagrados e emergentes que garantem sistemas manuteníveis, flexíveis e facilmente adaptáveis a novas necessidades.
+modernização de legacy
+estratégias para modernizar gradualmente sistemas legados sem interrupções operacionais, incluindo abordagens como strangler pattern e refatoração incremental.
+qualidade de código
+práticas e ferramentas para garantir a qualidade e consistência do código, incluindo revisão automatizada, análise estática e cobertura de testes.
+redução do tempo de desenvolvimento
+maior adaptabilidade a mudanças
+integração nativa com IA
+escalabilidade garantida
+precisa de uma base sólida para seus projetos de software?
+vamos conversar
+solid foundations for development with architecture and AI
+ness's n.DevArch creates solid foundations for software development focusing on modern architecture, integrating artificial intelligence to elevate the quality, efficiency, and scalability of systems.
+modern architecture
+conception of scalable and resilient architectures using patterns such as microservices, event-driven, and serverless, adapted to the specific needs of each business.
+infrastructure as code
+automation of environment configuration and provisioning, ensuring consistency and reproducibility throughout the development cycle.
+AI integration
+implementation of artificial intelligence components for process optimization, decision making, and advanced automation within developed systems.
+continuous delivery pipeline
+configuration of automated pipelines with continuous integration, testing, and delivery to ensure speed and reliability in software updates.
+design patterns
+implementation of established and emerging patterns that ensure systems are maintainable, flexible, and easily adaptable to new needs.
+legacy modernization
+strategies to gradually modernize legacy systems without operational interruptions, including approaches such as strangler pattern and incremental refactoring.
+code quality
+practices and tools to ensure code quality and consistency, including automated review, static analysis, and test coverage.
+reduced development time
+greater adaptability to changes
+native integration with AI
+guaranteed scalability
+need a solid foundation for your software projects?
+let's talk
+fundamentos sólidos para desarrollo con arquitectura e IA
+el n.DevArch de ness crea bases sólidas para el desarrollo de software con enfoque en arquitectura moderna, integrando inteligencia artificial para elevar la calidad, eficiencia y escalabilidad de los sistemas.
+arquitectura moderna
+concepción de arquitecturas escalables y resilientes utilizando patrones como microservicios, event-driven y serverless, adaptadas a las necesidades específicas de cada negocio.
+infraestructura como código
+automatización de la configuración y aprovisionamiento de entornos, garantizando consistencia y reproducibilidad en todo el ciclo de desarrollo.
+integración con IA
+implementación de componentes de inteligencia artificial para optimización de procesos, toma de decisiones y automatización avanzada dentro de los sistemas desarrollados.
+pipeline de entrega continua
+configuración de pipelines automatizados con integración, pruebas y entrega continuas para garantizar rapidez y confiabilidad en las actualizaciones de software.
+patrones de diseño
+implementación de patrones consagrados y emergentes que garantizan sistemas mantenibles, flexibles y fácilmente adaptables a nuevas necesidades.
+modernización de legacy
+estrategias para modernizar gradualmente sistemas heredados sin interrupciones operacionales, incluyendo enfoques como strangler pattern y refactorización incremental.
+calidad de código
+prácticas y herramientas para garantizar la calidad y consistencia del código, incluyendo revisión automatizada, análisis estático y cobertura de pruebas.
+reducción del tiempo de desarrollo
+mayor adaptabilidad a cambios
+integración nativa con IA
+escalabilidad garantizada
+¿necesita una base sólida para sus proyectos de software?
+vamos a conversar
+flex justify-center items-center min-h-screen
+animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
+n.
+font-['Montserrat'] font-normal
+n
+text-[#00ade0]
+.
+intro bg-[#121212] relative flex items-center justify-center
+60vh
+container mx-auto px-4 z-10
+text-center
+text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
+text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+conteudo bg-white
+4rem 0
+container mx-auto px-4
+max-w-4xl mx-auto text-center
+text-lg text-gray-700 leading-relaxed
+conteudo bg-gray-50
+max-w-5xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+pt
+pilares técnicos
+en
+technical pillars
+es
+grid grid-cols-1 md:grid-cols-2 gap-10
+bg-white p-6 rounded-lg shadow-sm
+text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-gray-600 text-sm
+metodologias
+methodologies
+metodologías
+grid grid-cols-1 md:grid-cols-3 gap-8
+bg-gray-50 p-6 rounded-lg
+max-w-4xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+benefícios
+benefits
+beneficios
+flex flex-wrap justify-center gap-4
+bg-white px-5 py-3 rounded-full shadow-sm
+text-gray-700 text-sm lowercase
+conteudo bg-[#121212] text-white
+400px
+container mx-auto px-4 flex items-center justify-center h-full
+text-center max-w-3xl
+text-2xl font-['Montserrat'] font-normal mb-8
+/site/ness/contact
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+/api/content/services/infraops
+Failed to fetch content
+Error fetching content:
+n.InfraOps
+gestão moderna de infraestrutura com alta disponibilidade
+o n.InfraOps da ness oferece um modelo modular e integrado para gerenciamento de infraestrutura, garantindo operações confiáveis, alta disponibilidade e escalabilidade para ambientes corporativos de qualquer porte.
+arquitetura de nuvem
+projeto e implementação de infraestruturas otimizadas para ambientes multi-cloud e híbridos, com foco em segurança, desempenho e custo-benefício.
+monitoramento contínuo
+solução completa de observabilidade que integra métricas, logs e traces para visibilidade total da infraestrutura, com alertas inteligentes e diagnósticos automatizados.
+automação de infraestrutura
+implementação da infraestrutura como código (IaC) e automação de processos para garantir consistência, governança e agilidade na entrega de recursos.
+backup e recuperação
+estratégias avançadas de proteção de dados e sistemas com políticas personalizadas de retenção e recuperação rápida em caso de falhas.
+abordagem devops
+integração de processos e ferramentas para permitir entregas mais rápidas e confiáveis, promovendo colaboração entre desenvolvimento e operações.
+gestão de contêineres
+soluções completas para orquestração de contêineres com Kubernetes, incluindo segurança, monitoramento e estratégias de implantação.
+otimização de recursos
+análise contínua do uso de recursos para identificar oportunidades de economia e melhorias de desempenho na infraestrutura.
+redução de downtime e incidentes operacionais
+escalabilidade sob demanda
+otimização de custos de infraestrutura
+agilidade para inovação
+sua infraestrutura está preparada para os desafios atuais?
+converse com nosso time
+modern infrastructure management with high availability
+ness's n.InfraOps offers a modular and integrated model for infrastructure management, ensuring reliable operations, high availability, and scalability for corporate environments of any size.
+cloud architecture
+design and implementation of optimized infrastructures for multi-cloud and hybrid environments, focusing on security, performance, and cost-effectiveness.
+continuous monitoring
+complete observability solution that integrates metrics, logs, and traces for total infrastructure visibility, with intelligent alerts and automated diagnostics.
+infrastructure automation
+implementation of infrastructure as code (IaC) and process automation to ensure consistency, governance, and agility in resource delivery.
+backup and recovery
+advanced data and systems protection strategies with customized retention policies and rapid recovery in case of failures.
+devops approach
+integration of processes and tools to enable faster and more reliable deliveries, promoting collaboration between development and operations.
+container management
+complete solutions for container orchestration with Kubernetes, including security, monitoring, and deployment strategies.
+resource optimization
+continuous analysis of resource usage to identify opportunities for savings and performance improvements in infrastructure.
+reduction of downtime and operational incidents
+on-demand scalability
+infrastructure cost optimization
+agility for innovation
+is your infrastructure prepared for current challenges?
+talk to our team
+gestión moderna de infraestructura con alta disponibilidad
+el n.InfraOps de ness ofrece un modelo modular e integrado para la gestión de infraestructura, garantizando operaciones confiables, alta disponibilidad y escalabilidad para entornos corporativos de cualquier tamaño.
+arquitectura de nube
+diseño e implementación de infraestructuras optimizadas para entornos multi-cloud e híbridos, con enfoque en seguridad, rendimiento y costo-beneficio.
+monitoreo continuo
+solución completa de observabilidad que integra métricas, logs y traces para visibilidad total de la infraestructura, con alertas inteligentes y diagnósticos automatizados.
+automatización de infraestructura
+implementación de infraestructura como código (IaC) y automatización de procesos para garantizar consistencia, gobernanza y agilidad en la entrega de recursos.
+backup y recuperación
+estrategias avanzadas de protección de datos y sistemas con políticas personalizadas de retención y recuperación rápida en caso de fallos.
+enfoque devops
+integración de procesos y herramientas para permitir entregas más rápidas y confiables, promoviendo la colaboración entre desarrollo y operaciones.
+gestión de contenedores
+soluciones completas para orquestación de contenedores con Kubernetes, incluyendo seguridad, monitoreo y estrategias de implementación.
+optimización de recursos
+análisis continuo del uso de recursos para identificar oportunidades de ahorro y mejoras de rendimiento en la infraestructura.
+reducción de downtime e incidentes operacionales
+escalabilidad bajo demanda
+optimización de costos de infraestructura
+agilidad para innovación
+¿su infraestructura está preparada para los desafíos actuales?
+converse con nuestro equipo
+flex justify-center items-center min-h-screen
+animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
+n.
+font-['Montserrat'] font-normal
+n
+text-[#00ade0]
+.
+intro bg-[#121212] relative flex items-center justify-center
+60vh
+container mx-auto px-4 z-10
+text-center
+text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
+text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+conteudo bg-white
+4rem 0
+container mx-auto px-4
+max-w-4xl mx-auto text-center
+text-lg text-gray-700 leading-relaxed
+conteudo bg-gray-50
+max-w-5xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+pt
+soluções
+en
+solutions
+es
+soluciones
+grid grid-cols-1 md:grid-cols-2 gap-10
+bg-white p-6 rounded-lg shadow-sm
+text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-gray-600 text-sm
+diferenciais
+differentials
+diferenciales
+grid grid-cols-1 md:grid-cols-3 gap-8
+bg-gray-50 p-6 rounded-lg
+max-w-4xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+benefícios
+benefits
+beneficios
+flex flex-wrap justify-center gap-4
+bg-white px-5 py-3 rounded-full shadow-sm
+text-gray-700 text-sm lowercase
+conteudo bg-[#121212] text-white
+400px
+container mx-auto px-4 flex items-center justify-center h-full
+text-center max-w-3xl
+text-2xl font-['Montserrat'] font-normal mb-8
+/site/ness/contact
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+/api/content/services/privacy
+Failed to fetch content
+Error fetching content:
+n.Privacy
+gestão completa de privacidade para conformidade com LGPD/GDPR
+o n.Privacy da ness oferece uma abordagem estruturada para governança de privacidade e proteção de dados, ajudando organizações a atenderem requisitos regulatórios como LGPD e GDPR, enquanto transformam privacidade em vantagem competitiva.
+diagnóstico e mapeamento
+identificação abrangente do fluxo de dados pessoais na organização, avaliação de riscos e lacunas de conformidade, com mapeamento detalhado de processos e sistemas que tratam dados sensíveis.
+implementação de controles
+desenvolvimento e implementação de políticas, procedimentos e controles técnicos necessários para garantir a privacidade por design e por padrão em todas as operações de tratamento de dados.
+automação de privacidade
+ferramentas para automatizar processos críticos de privacidade, como gerenciamento de consentimento, atendimento a solicitações de titulares e manutenção de registros de tratamento.
+monitoramento contínuo
+soluções para acompanhamento permanente da conformidade, detecção de violações de privacidade e gerenciamento de incidentes relacionados a dados pessoais.
+consultoria especializada
+equipe multidisciplinar com especialistas em direito, tecnologia e governança para auxiliar em todas as etapas do programa de privacidade, desde a concepção até a maturidade.
+DPO como serviço
+atuação como Encarregado de Dados (DPO) para organizações que necessitam dessa função, gerenciando a interface com titulares, autoridades e demais stakeholders.
+capacitação e conscientização
+programas de treinamento customizados para diferentes perfis organizacionais, desenvolvendo a cultura de privacidade e reduzindo riscos operacionais.
+redução de riscos regulatórios e reputacionais
+confiança e transparência com clientes
+vantagem competitiva por diferenciação
+preparação para novas regulamentações
+sua organização está em conformidade com as leis de privacidade?
+solicite uma avaliação
+complete privacy management for LGPD/GDPR compliance
+ness's n.Privacy offers a structured approach to privacy governance and data protection, helping organizations meet regulatory requirements such as LGPD and GDPR, while transforming privacy into a competitive advantage.
+diagnosis and mapping
+comprehensive identification of personal data flow in the organization, risk assessment and compliance gaps, with detailed mapping of processes and systems that handle sensitive data.
+control implementation
+development and implementation of policies, procedures, and technical controls necessary to ensure privacy by design and by default in all data processing operations.
+privacy automation
+tools to automate critical privacy processes, such as consent management, fulfillment of data subject requests, and maintenance of processing records.
+continuous monitoring
+solutions for permanent compliance monitoring, detection of privacy violations, and management of incidents related to personal data.
+specialized consulting
+multidisciplinary team with experts in law, technology, and governance to assist in all stages of the privacy program, from conception to maturity.
+DPO as a service
+acting as Data Protection Officer (DPO) for organizations that need this function, managing the interface with data subjects, authorities, and other stakeholders.
+training and awareness
+customized training programs for different organizational profiles, developing a privacy culture and reducing operational risks.
+reduction of regulatory and reputational risks
+trust and transparency with customers
+competitive advantage through differentiation
+preparation for new regulations
+is your organization in compliance with privacy laws?
+request an assessment
+gestión completa de privacidad para conformidad con LGPD/GDPR
+el n.Privacy de ness ofrece un enfoque estructurado para gobernanza de privacidad y protección de datos, ayudando a organizaciones a atender requisitos regulatorios como LGPD y GDPR, mientras transforman la privacidad en ventaja competitiva.
+diagnóstico y mapeo
+identificación integral del flujo de datos personales en la organización, evaluación de riesgos y brechas de conformidad, con mapeo detallado de procesos y sistemas que tratan datos sensibles.
+implementación de controles
+desarrollo e implementación de políticas, procedimientos y controles técnicos necesarios para garantizar la privacidad por diseño y por defecto en todas las operaciones de tratamiento de datos.
+automatización de privacidad
+herramientas para automatizar procesos críticos de privacidad, como gestión de consentimiento, atención a solicitudes de titulares y mantenimiento de registros de tratamiento.
+monitoreo continuo
+soluciones para seguimiento permanente de la conformidad, detección de violaciones de privacidad y gestión de incidentes relacionados con datos personales.
+consultoría especializada
+equipo multidisciplinario con especialistas en derecho, tecnología y gobernanza para auxiliar en todas las etapas del programa de privacidad, desde la concepción hasta la madurez.
+DPO como servicio
+actuación como Encargado de Datos (DPO) para organizaciones que necesitan esta función, gestionando la interfaz con titulares, autoridades y demás stakeholders.
+capacitación y concientización
+programas de entrenamiento personalizados para diferentes perfiles organizacionales, desarrollando la cultura de privacidad y reduciendo riesgos operacionales.
+reducción de riesgos regulatorios y reputacionales
+confianza y transparencia con clientes
+ventaja competitiva por diferenciación
+preparación para nuevas regulaciones
+¿su organización está en conformidad con las leyes de privacidad?
+solicite una evaluación
+flex justify-center items-center min-h-screen
+animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
+n.
+font-['Montserrat'] font-normal
+n
+text-[#00ade0]
+.
+intro bg-[#121212] relative flex items-center justify-center
+60vh
+container mx-auto px-4 z-10
+text-center
+text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
+text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+conteudo bg-white
+4rem 0
+container mx-auto px-4
+max-w-4xl mx-auto text-center
+text-lg text-gray-700 leading-relaxed
+conteudo bg-gray-50
+max-w-5xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+pt
+soluções de privacidade
+en
+privacy solutions
+es
+soluciones de privacidad
+grid grid-cols-1 md:grid-cols-2 gap-10
+bg-white p-6 rounded-lg shadow-sm
+text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-gray-600 text-sm
+nossos diferenciais
+our differentials
+nuestros diferenciales
+grid grid-cols-1 md:grid-cols-3 gap-8
+bg-gray-50 p-6 rounded-lg
+max-w-4xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+benefícios
+benefits
+beneficios
+flex flex-wrap justify-center gap-4
+bg-white px-5 py-3 rounded-full shadow-sm
+text-gray-700 text-sm lowercase
+conteudo bg-[#121212] text-white
+400px
+container mx-auto px-4 flex items-center justify-center h-full
+text-center max-w-3xl
+text-2xl font-['Montserrat'] font-normal mb-8
+/site/ness/contact
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase
+/api/content/services/secops
+Failed to fetch content
+Error fetching content:
+n.SecOps
+segurança integrada às operações com monitoramento contínuo
+o n.SecOps da ness integra segurança às operações com foco em monitoramento contínuo e resposta imediata, protegendo sua infraestrutura de forma inteligente e adaptativa.
+monitoramento avançado
+vigilância contínua de sistemas, redes e aplicações, identificando ameaças em tempo real com análise comportamental e detecção de anomalias para antecipar riscos.
+resposta a incidentes
+equipe especializada pronta para atuar em caso de incidentes de segurança, com protocolos estruturados para contenção, erradicação e recuperação eficiente.
+avaliações de segurança
+testes periódicos de penetração, análise de vulnerabilidades e verificação de configurações para identificar e corrigir falhas antes que sejam exploradas.
+proteção de endpoints
+soluções modulares para proteção de dispositivos finais, desde antimalware avançado até controles de aplicações e prevenção contra vazamento de dados.
+tecnologia adaptativa
+soluções que evoluem constantemente para acompanhar as mudanças no cenário de ameaças, utilizando machine learning para melhorar continuamente.
+integração nativa
+ferramentas que se integram perfeitamente à sua infraestrutura existente, sem interromper ou prejudicar operações em andamento.
+visibilidade centralizada
+painel único de controle que consolida informações de segurança de toda a organização, facilitando o gerenciamento e a tomada de decisões.
+proteção contínua sem impacto em performance
+redução do tempo de resposta a incidentes
+adaptação rápida a novas ameaças
+visibilidade total do ambiente de TI
+precisa elevar o nível de segurança da sua operação?
+fale com um especialista
+integrated security operations with continuous monitoring
+ness's n.SecOps integrates security into operations with a focus on continuous monitoring and immediate response, protecting your infrastructure intelligently and adaptively.
+advanced monitoring
+continuous surveillance of systems, networks, and applications, identifying threats in real-time with behavioral analysis and anomaly detection to anticipate risks.
+incident response
+specialized team ready to act in case of security incidents, with structured protocols for containment, eradication, and efficient recovery.
+security assessments
+periodic penetration tests, vulnerability analysis, and configuration verification to identify and fix flaws before they are exploited.
+endpoint protection
+modular solutions for endpoint protection, from advanced anti-malware to application controls and data leak prevention.
+adaptive technology
+solutions that constantly evolve to keep pace with changes in the threat landscape, using machine learning to continuously improve.
+native integration
+tools that seamlessly integrate with your existing infrastructure, without disrupting or impairing ongoing operations.
+centralized visibility
+single control panel that consolidates security information from across the organization, facilitating management and decision-making.
+continuous protection without performance impact
+reduced incident response time
+rapid adaptation to new threats
+complete visibility of the IT environment
+need to elevate your operation's security level?
+talk to a specialist
+seguridad integrada a las operaciones con monitoreo continuo
+el n.SecOps de ness integra seguridad a las operaciones con enfoque en monitoreo continuo y respuesta inmediata, protegiendo su infraestructura de forma inteligente y adaptativa.
+monitoreo avanzado
+vigilancia continua de sistemas, redes y aplicaciones, identificando amenazas en tiempo real con análisis comportamental y detección de anomalías para anticipar riesgos.
+respuesta a incidentes
+equipo especializado listo para actuar en caso de incidentes de seguridad, con protocolos estructurados para contención, erradicación y recuperación eficiente.
+evaluaciones de seguridad
+pruebas periódicas de penetración, análisis de vulnerabilidades y verificación de configuraciones para identificar y corregir fallas antes de que sean explotadas.
+protección de endpoints
+soluciones modulares para la protección de dispositivos finales, desde antimalware avanzado hasta controles de aplicaciones y prevención contra fugas de datos.
+tecnología adaptativa
+soluciones que evolucionan constantemente para acompañar los cambios en el panorama de amenazas, utilizando machine learning para mejorar continuamente.
+integración nativa
+herramientas que se integran perfectamente a su infraestructura existente, sin interrumpir o perjudicar operaciones en curso.
+visibilidad centralizada
+panel único de control que consolida información de seguridad de toda la organización, facilitando la gestión y la toma de decisiones.
+protección continua sin impacto en rendimiento
+reducción del tiempo de respuesta a incidentes
+adaptación rápida a nuevas amenazas
+visibilidad total del entorno de TI
+¿necesita elevar el nivel de seguridad de su operación?
+hable con un especialista
+flex justify-center items-center min-h-screen
+animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#00ade0]
+n.
+font-['Montserrat'] font-normal
+n
+text-[#00ade0]
+.
+intro bg-[#121212] relative flex items-center justify-center
+60vh
+container mx-auto px-4 z-10
+text-center
+text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white
+text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase
+conteudo bg-white
+4rem 0
+container mx-auto px-4
+max-w-4xl mx-auto text-center
+text-lg text-gray-700 leading-relaxed
+conteudo bg-gray-50
+max-w-5xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-12 text-center lowercase
+pt
+recursos principais
+en
+main features
+es
+características principales
+grid grid-cols-1 md:grid-cols-2 gap-10
+bg-white p-6 rounded-lg shadow-sm
+text-lg font-['Montserrat'] font-medium mb-4 text-gray-800 lowercase
+text-gray-600 text-sm
+tecnologia e diferenciais
+technology and differentials
+tecnología y diferenciales
+grid grid-cols-1 md:grid-cols-3 gap-8
+bg-gray-50 p-6 rounded-lg
+max-w-4xl mx-auto
+text-2xl font-['Montserrat'] font-normal mb-10 text-center lowercase
+benefícios
+benefits
+beneficios
+flex flex-wrap justify-center gap-4
+bg-white px-5 py-3 rounded-full shadow-sm
+text-gray-700 text-sm lowercase
+conteudo bg-[#121212] text-white
+400px
+container mx-auto px-4 flex items-center justify-center h-full
+text-center max-w-3xl
+text-2xl font-['Montserrat'] font-normal mb-8
+/site/ness/contact
+inline-block bg-[#00ade0] hover:bg-[#0095c4] text-white py-3 px-8 font-normal transition duration-300 rounded-sm font-['Montserrat'] lowercase

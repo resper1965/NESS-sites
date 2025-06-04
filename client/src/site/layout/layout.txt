@@ -1,0 +1,176 @@
+linkedin
+twitter
+facebook
+instagram
+youtube
+bg-gray-900 text-white
+container mx-auto px-4 py-12
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8
+text-white text-xl mb-6 inline-block
+text-gray-300 mb-6
+footer.description
+flex space-x-4
+_blank
+noopener noreferrer
+text-gray-300 hover:text-[var(--primary-color)] transition duration-300
+text-lg font-bold mb-6
+footer.quickLinks
+space-y-3
+menu.home
+menu.about
+ness
+menu.services
+menu.jobs
+menu.news
+menu.contact
+footer.solutions
+n.InfraOps
+n.SecOps
+n.DevArch
+n.AutoOps
+n.CrisisOps
+footer.contact
+space-y-4
+flex items-start
+mr-3 text-[var(--primary-color)] mt-1 flex-shrink-0
+text-gray-300
+footer.address
+flex items-center
+mr-3 text-[var(--primary-color)] flex-shrink-0
++55 11 4002-8922
+border-t border-gray-700 mt-12 pt-8 text-center text-gray-300
+flex flex-col md:flex-row justify-between items-center
+&copy;
+footer.rights
+flex flex-wrap justify-center gap-x-4 mt-4 md:mt-0
+text-gray-300 hover:text-[var(--primary-color)] transition duration-300 whitespace-nowrap
+footer.privacy
+footer.terms
+footer.cookies
+/auth
+footer.login
+flex gap-x-4 ml-4 pl-4 border-l border-gray-700
+text-gray-300 hover:text-[#00ade0] transition duration-300 whitespace-nowrap
+/site/ness
+text-[#00ade0]
+.
+trustness
+/site/trustness
+forense
+/site/forense
+io
+description
+canonical
+og:type
+website
+og:title
+og:description
+og:image
+og:url
+twitter:card
+summary_large_image
+twitter:title
+twitter:description
+twitter:image
+application/ld+json
+icon
+image/png
+#00ade0
+#2f3e4d
+flex flex-col min-h-screen
+flex-grow
+scroll
+bg-black shadow-md
+bg-transparent
+secops
+n.SecOps
+/site/ness/services/secops
+infraops
+n.InfraOps
+/site/ness/services/infraops
+devarch
+n.DevArch
+/site/ness/services/devarch
+autoops
+n.AutoOps
+/site/ness/services/autoops
+crisisops
+n.CrisisOps
+/site/ness/services/crisisops
+privacy
+n.Privacy
+/site/ness/services/privacy
+assessment
+.assessment
+/site/trustness/services#assessment
+conformity
+.conformity
+/site/trustness/services#conformity
+.privacy
+/site/trustness/services#privacy
+digital-forensics
+forense digital
+/site/forense/services/digital-forensics
+legal-support
+suporte legal
+/site/forense/services/legal-support
+corporate-investigations
+investigações corporativas
+/site/forense/services/corporate-investigations
+ness
+trustness
+forense
+container mx-auto px-4 py-2
+flex justify-between items-center
+flex items-center
+text-white lowercase
+font-['Montserrat'] font-normal text-3xl
+#00ade0
+1px
+.
+io
+hidden md:flex space-x-4 items-center
+text-white hover:text-accent transition duration-200 text-sm lowercase px-1 py-0.5
+nav.about
+relative group
+text-white hover:text-accent transition duration-200 text-sm flex items-center lowercase px-1 py-0.5
+nav.services
+rotate-180
+none
+0 0 24 24
+currentColor
+round
+M19 9l-7 7-7-7
+absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-gray-50 border border-gray-200 z-50
+py-1
+menu
+vertical
+block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition-colors duration-150
+n
+text-[#00ade0]
+text-[#005fa3]
+pt
+en
+digital forensics
+es
+legal support
+soporte legal
+corporate investigations
+investigaciones corporativas
+nav.jobs
+nav.news
+ml-4 flex items-center
+bg-[#00ade0]
+bg-[var(--primary-color)]
+nav.contact
+md:hidden
+text-white p-2
+Close Menu
+Open Menu
+h-6 w-6
+md:hidden bg-gray-900 mt-2 p-4 rounded-md
+flex flex-col space-y-4
+text-white hover:text-accent transition duration-200 font-medium lowercase
+text-white font-medium lowercase mb-2
+text-gray-300 hover:text-accent transition duration-200 pl-3 pb-1 text-sm lowercase block
+mb-4 mt-2 flex justify-center items-center

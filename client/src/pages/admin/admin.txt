@@ -1,0 +1,718 @@
+min-h-screen bg-gray-100
+Painel administrativo da ness.
+/admin
+bg-primary text-white shadow-md
+container mx-auto px-4 py-4
+flex justify-between items-center
+/admin/dashboard
+text-white font-bold text-xl
+text-accent
+Corp
+Tech
+text-sm font-normal
+Admin
+flex items-center gap-4
+text-sm hidden md:inline-block
+Olá,
+outline
+sm
+bg-transparent text-white hover:bg-primary-light border-white
+h-4 w-4 mr-2
+Sair
+container mx-auto px-4 py-8
+flex flex-col md:flex-row gap-8
+w-full md:w-64 space-y-2
+bg-primary text-white
+bg-white hover:bg-gray-50
+h-5 w-5 mr-3
+Dashboard
+/admin/content
+Conteúdo
+/admin/jobs
+Vagas
+/admin/news
+Notícias
+flex-1
+text-2xl font-bold mb-6
+home
+PUT
+Conteúdo atualizado
+O conteúdo foi atualizado com sucesso.
+Erro ao atualizar
+destructive
+POST
+Conteúdo traduzido
+O conteúdo foi traduzido com sucesso.
+Erro na tradução
+Página Inicial
+about
+Quem Somos
+services
+O Que Fazemos
+ethics
+Código de Ética
+privacy
+Política de Segurança
+Editor de Conteúdo
+mb-6 flex flex-col md:flex-row justify-between gap-4 items-start
+flex flex-col md:flex-row gap-4
+page-select
+Página
+w-[180px]
+Selecione uma página
+language-select
+Idioma
+Selecione um idioma
+pt
+Português
+en
+English
+es
+Español
+flex gap-2
+mr-2 h-4 w-4 animate-spin
+Salvando...
+mr-2 h-4 w-4
+Salvar
+Traduzir para...
+Traduzir para Português
+Traduzir para Inglês
+Traduzir para Espanhol
+flex items-center justify-center h-64
+h-8 w-8 animate-spin text-primary
+p-6
+space-y-6
+title
+Título
+mt-1
+description
+Descrição
+content
+mt-1 min-h-[300px]
+text-sm text-gray-500 mt-1
+Você pode usar tags HTML para formatação.
+mt-6 flex justify-end
+Salvar Alterações
+mt-6
+text-lg font-medium mb-4
+Visualização
+prose max-w-none
+text-gray-500
+w-5 h-5
+Dashboard
+/admin/dashboard
+overview
+Conteúdos
+/admin/content
+content
+Vagas
+/admin/jobs
+jobs
+Notícias
+/admin/news
+news
+Configurações
+/admin/settings
+settings
+flex h-screen bg-gray-100
+hidden md:flex md:flex-col md:w-64 md:bg-white md:border-r md:border-gray-200
+flex flex-col flex-grow p-4
+py-4 border-b border-gray-200 mb-4
+flex items-center
+text-xl font-['Montserrat'] font-normal text-primary
+ness
+text-accent
+.
+font-medium
+admin
+flex-grow
+space-y-1
+bg-primary text-white
+hover:bg-gray-100
+ml-3
+border-t border-gray-200 pt-4
+flex items-center justify-between mb-4
+text-sm font-medium text-gray-900
+text-xs text-gray-500
+Administrador
+p-1.5 rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors
+Sair
+flex-1 flex flex-col overflow-hidden
+bg-white shadow-sm z-10
+px-4 py-3 sm:px-6 flex justify-between items-center
+text-lg font-semibold text-gray-900
+flex items-center md:hidden
+ml-2 p-1.5 rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-colors
+md:hidden border-t border-gray-200
+flex overflow-x-auto space-x-2 px-4 py-2
+bg-gray-100 text-gray-700 hover:bg-gray-200
+ml-1.5
+flex-1 overflow-auto bg-gray-50
+/api/admin/content/count
+throw
+/api/admin/jobs/count
+/api/admin/news/count
+/api/admin/activities
+Erro ao fazer logout:
+/admin/login
+flex items-center justify-center min-h-screen
+h-8 w-8 animate-spin text-primary
+h-8 w-8 text-blue-500
+bg-blue-100
+h-8 w-8 text-green-500
+bg-green-100
+h-8 w-8 text-amber-500
+bg-amber-100
+p-6
+mb-8
+text-2xl font-semibold text-gray-800 mb-2
+Bem-vindo,
+text-gray-600
+Painel de administração do site ness.
+flex justify-center p-8
+grid grid-cols-1 md:grid-cols-3 gap-6 mb-8
+block p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100
+text-xl font-semibold text-gray-800
+bg-white rounded-lg shadow-sm border border-gray-100 mb-8
+px-6 py-4 border-b border-gray-100
+text-lg font-semibold text-gray-800
+Atividades Recentes
+divide-y divide-gray-100
+py-3 flex items-start
+mr-4 mt-1
+h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center
+text-primary text-sm
+text-gray-800
+text-sm text-gray-500
+pt-BR
+2-digit
+numeric
+Data não disponível
+text-gray-500 text-center py-4
+Nenhuma atividade recente encontrada.
+grid grid-cols-1 lg:grid-cols-2 gap-8
+bg-white rounded-lg shadow-sm border border-gray-100
+Links Rápidos
+grid grid-cols-2 gap-4
+p-4 bg-gray-50 rounded-lg text-center hover:bg-gray-100 transition-colors
+h-6 w-6 mx-auto mb-2 text-primary
+Novo Conteúdo
+Nova Vaga
+Nova Notícia
+Visão Geral
+text-gray-700 mb-4
+Acesse o painel de administração para gerenciar conteúdos, vagas, notícias e configurações do site ness.
+Use o menu lateral para navegar entre as diferentes seções do painel.
+flex justify-end
+inline-flex items-center text-primary hover:text-primary-dark
+mr-1
+Ver site
+http://www.w3.org/2000/svg
+h-4 w-4
+none
+0 0 24 24
+currentColor
+round
+M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14
+min-h-screen bg-gray-100
+Painel administrativo da ness.
+/admin
+bg-primary text-white shadow-md
+container mx-auto px-4 py-4
+flex justify-between items-center
+/admin/dashboard
+text-white font-bold text-xl
+text-accent
+Corp
+Tech
+text-sm font-normal
+Admin
+flex items-center gap-4
+text-sm hidden md:inline-block
+Olá,
+outline
+sm
+bg-transparent text-white hover:bg-primary-light border-white
+h-4 w-4 mr-2
+Sair
+container mx-auto px-4 py-8
+flex flex-col md:flex-row gap-8
+w-full md:w-64 space-y-2
+bg-primary text-white
+bg-white hover:bg-gray-50
+h-5 w-5 mr-3
+Dashboard
+/admin/content
+Conteúdo
+/admin/jobs
+Vagas
+/admin/news
+Notícias
+flex-1
+text-2xl font-bold mb-6
+content
+edit
+admin
+Página Principal
+2023-06-15T14:32:00
+job
+create
+Desenvolvedor Full Stack
+2023-06-14T10:15:00
+news
+Nova parceria estratégica
+2023-06-13T16:45:00
+Política de Privacidade
+2023-06-12T09:20:00
+Especialista em Segurança
+2023-06-10T11:30:00
+pt-BR
+2-digit
+numeric
+h-4 w-4
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8
+pb-2
+text-sm font-medium text-gray-500
+Visitantes
+text-2xl font-bold
+text-xs text-gray-500 mt-1
+Últimos 7 dias
+Visualizações
+Vagas Ativas
+Total publicado
+grid grid-cols-1 lg:grid-cols-3 gap-6
+lg:col-span-1
+Ações Rápidas
+Acesse funcionalidades comuns
+space-y-4
+w-full justify-between
+flex items-center
+Editar Conteúdo
+Gerenciar Vagas
+Gerenciar Notícias
+lg:col-span-2
+Atividades Recentes
+Histórico de alterações no sistema
+flex items-start border-l-4 border-primary pl-4 py-2
+bg-primary-light p-2 rounded-full text-white mr-4
+flex justify-between items-start
+font-medium
+Criou
+Editou
+text-xs text-gray-500
+text-sm text-gray-600
+Usuário:
+ghost
+ml-auto
+Ver todas as atividades
+mt-8
+overview
+grid w-full grid-cols-3
+Visão Geral
+performance
+Desempenho
+tasks
+Tarefas
+Visão Geral do Site
+Resumo dos principais indicadores
+space-y-6
+p-2 bg-blue-100 rounded-full mr-4
+h-5 w-5 text-blue-600
+flex justify-between
+Usuários Cadastrados
+font-bold
+43
+w-full bg-gray-200 h-2 rounded-full mt-2
+bg-blue-600 h-2 rounded-full
+65%
+p-2 bg-green-100 rounded-full mr-4
+h-5 w-5 text-green-600
+Taxa de Conversão
+3.2%
+bg-green-600 h-2 rounded-full
+32%
+p-2 bg-purple-100 rounded-full mr-4
+h-5 w-5 text-purple-600
+Tempo Médio na Página
+2m 45s
+bg-purple-600 h-2 rounded-full
+75%
+Desempenho do Site
+Análise de velocidade e performance
+w-full
+flex justify-between mb-2
+text-sm font-medium
+Tempo de Carregamento
+text-sm font-bold
+1.8s
+w-full bg-gray-200 h-2 rounded-full
+bg-green-500 h-2 rounded-full
+80%
+First Contentful Paint
+0.9s
+90%
+Time to Interactive
+2.3s
+bg-yellow-500 h-2 rounded-full
+70%
+Cumulative Layout Shift
+0.05
+95%
+Tarefas Pendentes
+Ações que requerem atenção
+flex items-start border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50 rounded-r-lg
+h-5 w-5 text-yellow-500 mr-3 mt-0.5
+Atualizar política de privacidade
+Prazo: 30/06/2023
+flex items-start border-l-4 border-blue-500 pl-4 py-2 bg-blue-50 rounded-r-lg
+h-5 w-5 text-blue-500 mr-3 mt-0.5
+Revisar conteúdo da página sobre nós
+Prazo: 25/06/2023
+flex items-start border-l-4 border-purple-500 pl-4 py-2 bg-purple-50 rounded-r-lg
+h-5 w-5 text-purple-500 mr-3 mt-0.5
+Publicar 3 novas vagas de emprego
+Prazo: 28/06/2023
+Ver todas as tarefas
+min-h-screen bg-gray-100
+Painel administrativo da ness.
+/admin
+bg-primary text-white shadow-md
+container mx-auto px-4 py-4
+flex justify-between items-center
+/admin/dashboard
+text-white font-bold text-xl
+text-accent
+Corp
+Tech
+text-sm font-normal
+Admin
+flex items-center gap-4
+text-sm hidden md:inline-block
+Olá,
+outline
+sm
+bg-transparent text-white hover:bg-primary-light border-white
+h-4 w-4 mr-2
+Sair
+container mx-auto px-4 py-8
+flex flex-col md:flex-row gap-8
+w-full md:w-64 space-y-2
+bg-primary text-white
+bg-white hover:bg-gray-50
+h-5 w-5 mr-3
+Dashboard
+/admin/content
+Conteúdo
+/admin/jobs
+Vagas
+/admin/news
+Notícias
+flex-1
+text-2xl font-bold mb-6
+office
+Integral
+POST
+Vaga criada
+A vaga foi criada com sucesso.
+Erro ao criar vaga
+destructive
+PUT
+Vaga atualizada
+A vaga foi atualizada com sucesso.
+Erro ao atualizar vaga
+DELETE
+Vaga excluída
+A vaga foi excluída com sucesso.
+Erro ao excluir vaga
+Tem certeza que deseja excluir esta vaga?
+Campos obrigatórios
+Preencha todos os campos obrigatórios.
+Gerenciador de Vagas
+mb-6 flex justify-between items-center
+flex gap-4 items-center
+w-[180px]
+Selecione um idioma
+pt
+Português
+en
+English
+es
+Español
+text-sm text-gray-500
+vagas encontradas
+Nova Vaga
+flex items-center justify-center h-64
+h-8 w-8 animate-spin text-primary
+bg-white rounded-lg shadow overflow-hidden
+w-[300px]
+Título
+Localização
+Tipo
+Tags
+Status
+text-right
+Ações
+font-medium
+flex flex-wrap gap-1
++
+bg-green-100 text-green-800
+bg-gray-100 text-gray-800
+Ativa
+Inativa
+flex justify-end gap-2
+ghost
+h-4 w-4
+h-4 w-4 text-red-500
+flex flex-col items-center justify-center py-12
+h-12 w-12 text-gray-300 mb-4
+text-xl font-medium text-gray-900 mb-2
+Nenhuma vaga cadastrada
+text-gray-500 text-center max-w-md mb-6
+Você ainda não tem vagas cadastradas. Clique no botão abaixo para criar sua primeira vaga.
+Criar Vaga
+max-w-3xl
+Editar Vaga
+Preencha os detalhes da vaga. Os campos marcados com * são obrigatórios.
+grid grid-cols-1 md:grid-cols-2 gap-6 py-4
+space-y-4
+title
+Título *
+mt-1
+Ex: Desenvolvedor Full Stack
+location
+Localização *
+Ex: São Paulo, SP
+locationType
+Tipo de Localização
+Selecione o tipo de localização
+remote
+Remoto
+Presencial
+hybrid
+Híbrido
+type
+Tipo de Contrato
+Selecione o tipo de contrato
+Meio Período
+Freelancer
+Estágio
+active
+flex items-center space-x-2 mt-2
+text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70
+Vaga ativa
+flex items-center space-x-2 mt-1
+Adicionar tag
+button
+flex flex-wrap gap-2 mt-2
+secondary
+flex items-center gap-1
+hover:text-red-500
+&times;
+summary
+Resumo *
+Breve descrição da vaga
+description
+Descrição Completa
+Descrição detalhada da vaga
+requirements
+Requisitos
+Requisitos para a vaga
+Cancelar
+mr-2 h-4 w-4 animate-spin
+Salvando...
+mr-2 h-4 w-4
+Salvar
+Usuário é obrigatório
+Senha é obrigatória
+Login realizado com sucesso
+Bem-vindo à área administrativa
+default
+Erro ao fazer login
+Credenciais inválidas
+destructive
+/admin/dashboard
+/
+flex items-center justify-center min-h-screen bg-gray-100
+h-8 w-8 animate-spin text-primary
+w-full max-w-md
+bg-white rounded-lg shadow-lg overflow-hidden
+p-6 sm:p-8
+text-center mb-8
+text-3xl font-['Montserrat'] font-normal text-primary mb-2
+ness
+text-accent
+.
+font-medium
+admin
+text-gray-600
+Área restrita de administração
+space-y-6
+username
+block text-sm font-medium text-gray-700 mb-1
+Usuário
+text
+border-red-500
+border-gray-300
+Digite seu e-mail
+mt-1 text-sm text-red-500
+password
+Senha
+Digite sua senha
+submit
+w-full py-3 px-4 bg-primary hover:bg-primary-dark text-white font-medium rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-70
+flex items-center justify-center
+h-5 w-5 mr-2 animate-spin
+Entrando...
+Entrar
+mt-6 text-center
+text-sm text-primary hover:text-primary-dark
+Voltar para o site
+mt-8 text-center text-sm text-gray-600
+Área restrita apenas para administradores autorizados.
+Em caso de problemas, entre em contato com o suporte.
+min-h-screen bg-gray-100
+Painel administrativo da ness.
+/admin
+bg-primary text-white shadow-md
+container mx-auto px-4 py-4
+flex justify-between items-center
+/admin/dashboard
+text-white font-bold text-xl
+text-accent
+Corp
+Tech
+text-sm font-normal
+Admin
+flex items-center gap-4
+text-sm hidden md:inline-block
+Olá,
+outline
+sm
+bg-transparent text-white hover:bg-primary-light border-white
+h-4 w-4 mr-2
+Sair
+container mx-auto px-4 py-8
+flex flex-col md:flex-row gap-8
+w-full md:w-64 space-y-2
+bg-primary text-white
+bg-white hover:bg-gray-50
+h-5 w-5 mr-3
+Dashboard
+/admin/content
+Conteúdo
+/admin/jobs
+Vagas
+/admin/news
+Notícias
+flex-1
+text-2xl font-bold mb-6
+https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500
+T
+company
+all
+POST
+Notícia criada
+A notícia foi criada com sucesso.
+Erro ao criar notícia
+destructive
+PUT
+Notícia atualizada
+A notícia foi atualizada com sucesso.
+Erro ao atualizar notícia
+DELETE
+Notícia excluída
+A notícia foi excluída com sucesso.
+Erro ao excluir notícia
+Tem certeza que deseja excluir esta notícia?
+Campos obrigatórios
+Preencha todos os campos obrigatórios.
+technology
+events
+Gerenciador de Notícias
+mb-6 flex flex-col md:flex-row justify-between gap-4 items-start
+flex flex-col md:flex-row gap-4
+language-select
+Idioma
+w-[180px]
+Selecione um idioma
+pt
+Português
+en
+English
+es
+Español
+category-filter
+Categoria
+Filtrar por categoria
+Todas as categorias
+Empresa
+Tecnologia
+Eventos
+Nova Notícia
+flex items-center justify-center h-64
+h-8 w-8 animate-spin text-primary
+bg-white rounded-lg shadow overflow-hidden
+w-[300px]
+Título
+Data
+Status
+text-right
+Ações
+font-medium
+bg-blue-100 text-blue-800
+Destaque
+flex justify-end gap-2
+ghost
+h-4 w-4
+h-4 w-4 text-red-500
+flex flex-col items-center justify-center py-12
+h-12 w-12 text-gray-300 mb-4
+text-xl font-medium text-gray-900 mb-2
+Nenhuma notícia encontrada
+text-gray-500 text-center max-w-md mb-6
+Você ainda não tem notícias cadastradas ou nenhuma notícia corresponde ao filtro selecionado.
+Criar Notícia
+max-w-3xl
+Editar Notícia
+Preencha os detalhes da notícia. Os campos marcados com * são obrigatórios.
+grid grid-cols-1 md:grid-cols-2 gap-6 py-4
+space-y-4
+title
+Título *
+mt-1
+Ex: Nova parceria estratégica para expansão internacional
+date
+Data de Publicação *
+category
+Selecione uma categoria
+partnerships
+Parcerias
+awards
+Prêmios
+image
+URL da Imagem *
+URL da imagem da notícia
+text-xs text-gray-500 mt-1
+Recomendado: 800x500px
+flex items-center space-x-2 mt-4
+featured
+text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70
+Destacar na página inicial
+mt-4
+Prévia da Imagem
+mt-2 border rounded-md overflow-hidden
+Prévia
+w-full h-40 object-cover
+https://via.placeholder.com/800x500?text=Imagem+Indisponivel
+summary
+Resumo *
+Breve resumo da notícia
+content
+Conteúdo Completo
+Conteúdo completo da notícia (suporta HTML)
+Você pode usar tags HTML para formatação.
+Cancelar
+mr-2 h-4 w-4 animate-spin
+Salvando...
+mr-2 h-4 w-4
+Salvar

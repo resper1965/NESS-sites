@@ -1,0 +1,28 @@
+pt
+Português
+🇧🇷
+en
+English
+🇺🇸
+es
+Español
+🇪🇸
+mousedown
+relative
+flex items-center text-gray-300 hover:text-white transition duration-200 text-sm px-2 py-1 rounded
+true
+mr-2
+flex items-center
+uppercase font-medium
+rotate-180
+none
+0 0 24 24
+currentColor
+round
+M19 9l-7 7-7-7
+absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-gray-800 z-50
+py-1 rounded-md
+menu
+vertical
+bg-gray-700 text-white font-medium
+text-gray-300 hover:bg-gray-700 hover:text-white
