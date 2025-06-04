@@ -1,8 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import { Content, Service } from '@shared/schema';
 
 interface ServiceItemProps {
@@ -103,15 +102,11 @@ export default function ServicesPage() {
   ];
 
   return (
-    <>
-      <SEOHead 
-        title={`${t('services.title')} - ness.`}
-        description="Conheça nossas soluções em segurança da informação, transformação digital e análise de dados para impulsionar seu negócio."
-        canonicalUrl="/services"
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title={`${t('services.title')} - ness.`}
+      description="Conheça nossas soluções em segurança da informação, transformação digital e análise de dados para impulsionar seu negócio."
+      canonicalUrl="/services"
+    >
       <main>
         {/* Hero Section */}
         <section className="relative py-20 bg-primary text-white">
@@ -162,7 +157,6 @@ export default function ServicesPage() {
         </section>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

@@ -1,8 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import { Content } from '@shared/schema';
 
 export default function EthicsPage() {
@@ -103,15 +102,11 @@ export default function EthicsPage() {
   };
 
   return (
-    <>
-      <SEOHead 
-        title={`${content?.title || defaultContent.title} - ness.`}
-        description="Conheça o Código de Ética da ness. e nossos princípios fundamentais para a condução de negócios responsáveis e éticos."
-        canonicalUrl="/ethics"
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title={`${content?.title || defaultContent.title} - ness.`}
+      description="Conheça o Código de Ética da ness. e nossos princípios fundamentais para a condução de negócios responsáveis e éticos."
+      canonicalUrl="/ethics"
+    >
       <main>
         {/* Hero Section */}
         <section className="relative py-20 bg-primary text-white">
@@ -146,7 +141,6 @@ export default function EthicsPage() {
         </section>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

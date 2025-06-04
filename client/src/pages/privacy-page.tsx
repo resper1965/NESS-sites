@@ -1,8 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import { Content } from '@shared/schema';
 
 export default function PrivacyPage() {
@@ -142,15 +141,11 @@ export default function PrivacyPage() {
   };
 
   return (
-    <>
-      <SEOHead 
-        title={`${content?.title || defaultContent.title} - ness.`}
-        description="Conheça nossa Política de Segurança e Privacidade e como tratamos seus dados pessoais com o máximo de segurança e transparência."
-        canonicalUrl="/privacy"
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title={`${content?.title || defaultContent.title} - ness.`}
+      description="Conheça nossa Política de Segurança e Privacidade e como tratamos seus dados pessoais com o máximo de segurança e transparência."
+      canonicalUrl="/privacy"
+    >
       <main>
         {/* Hero Section */}
         <section className="relative py-20 bg-primary text-white">
@@ -185,7 +180,6 @@ export default function PrivacyPage() {
         </section>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

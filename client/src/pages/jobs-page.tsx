@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import { Job } from '@shared/schema';
 
 export default function JobsPage() {
@@ -26,15 +25,11 @@ export default function JobsPage() {
   const filteredJobs = filterJobs(jobs);
 
   return (
-    <>
-      <SEOHead 
-        title={`${t('jobs.title')} - ness.`}
-        description="Explore as oportunidades de carreira na ness. e junte-se a nossa equipe de especialistas em tecnologia."
-        canonicalUrl="/jobs"
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title={`${t('jobs.title')} - ness.`}
+      description="Explore as oportunidades de carreira na ness. e junte-se a nossa equipe de especialistas em tecnologia."
+      canonicalUrl="/jobs"
+    >
       <main>
         {/* Hero Section */}
         <section className="relative py-20 bg-primary text-white">
@@ -193,7 +188,6 @@ export default function JobsPage() {
         </section>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

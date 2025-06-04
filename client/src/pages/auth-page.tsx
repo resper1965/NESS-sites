@@ -5,9 +5,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useAuth } from '@/hooks/use-auth';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -79,15 +78,11 @@ export default function AuthPage() {
   }
   
   return (
-    <>
-      <SEOHead 
-        title="Login - ness."
-        description="Faça login para acessar a área administrativa da ness."
-        canonicalUrl="/auth"
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title="Login - ness."
+      description="Faça login para acessar a área administrativa da ness."
+      canonicalUrl="/auth"
+    >
       <main className="py-20 bg-neutral min-h-screen">
         <div className="container mx-auto px-4 pt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -305,7 +300,6 @@ export default function AuthPage() {
         </div>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

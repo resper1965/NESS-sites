@@ -1,8 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import { Content } from '@shared/schema';
 
 export default function AboutPage() {
@@ -197,22 +196,18 @@ export default function AboutPage() {
   };
 
   return (
-    <>
-      <SEOHead 
-        title={`${defaultContent.title} | ness.`}
-        description={
-          language === 'pt' 
-            ? "Conheça a história da ness., empresa com mais de 30 anos de experiência em serviços de tecnologia, infraestrutura e segurança cibernética."
-            : language === 'en'
-              ? "Learn about ness.'s history, a company with over 30 years of experience in technology services, infrastructure, and cybersecurity."
-              : "Conozca la historia de ness., empresa con más de 30 años de experiencia en servicios de tecnología, infraestructura y seguridad cibernética."
-        }
-        canonicalUrl="/about"
-        structuredData={structuredData}
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title={`${defaultContent.title} | ness.`}
+      description={
+        language === 'pt'
+          ? "Conheça a história da ness., empresa com mais de 30 anos de experiência em serviços de tecnologia, infraestrutura e segurança cibernética."
+          : language === 'en'
+            ? "Learn about ness.'s history, a company with over 30 years of experience in technology services, infrastructure, and cybersecurity."
+            : "Conozca la historia de ness., empresa con más de 30 años de experiencia en servicios de tecnología, infraestructura y seguridad cibernética."
+      }
+      canonicalUrl="/about"
+      structuredData={structuredData}
+    >
       <main>
         {/* Hero Section com estilo abstrato geométrico */}
         <section className="hero-abstract">
@@ -542,8 +537,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

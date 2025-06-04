@@ -1,7 +1,6 @@
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 
 export default function SecOpsPage() {
   const { t } = useI18n();
@@ -47,15 +46,11 @@ export default function SecOpsPage() {
   const heroBackground = "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1920&h=1080&q=80";
 
   return (
-    <>
-      <SEOHead 
-        title="n.SecOps - Serviços Avançados de Segurança Cibernética | ness."
-        description="Proteja sua organização contra ameaças digitais com nossos serviços avançados de segurança cibernética, incluindo SOC 24x7, gestão de vulnerabilidades e resposta a incidentes."
-        structuredData={structuredData}
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title="n.SecOps - Serviços Avançados de Segurança Cibernética | ness."
+      description="Proteja sua organização contra ameaças digitais com nossos serviços avançados de segurança cibernética, incluindo SOC 24x7, gestão de vulnerabilidades e resposta a incidentes."
+      structuredData={structuredData}
+    >
       <main>
         {/* Hero Section com imagem escurecida */}
         <section className="relative w-full py-32 overflow-hidden">
@@ -181,7 +176,6 @@ export default function SecOpsPage() {
         </section>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

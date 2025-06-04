@@ -1,8 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import HeroSection from '@/components/sections/HeroSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import SpinoffsSection from '@/components/sections/SpinoffsSection';
@@ -56,17 +55,13 @@ export default function HomePage() {
   };
 
   return (
-    <>
-      <SEOHead 
-        title="ness. - Transformamos Operações Críticas em Vantagem Estratégica"
-        description="Desde 1991 fornecendo soluções especializadas em segurança, infraestrutura e operações críticas para empresas que buscam vantagem competitiva através da tecnologia."
-        structuredData={structuredData}
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title="ness. - Transformamos Operações Críticas em Vantagem Estratégica"
+      description="Desde 1991 fornecendo soluções especializadas em segurança, infraestrutura e operações críticas para empresas que buscam vantagem competitiva através da tecnologia."
+      structuredData={structuredData}
+    >
       <main>
-        <HeroSection 
+        <HeroSection
           title={t('home.hero.title')}
           subtitle={t('home.hero.subtitle')}
           ctaText1={t('home.hero.cta1')}
@@ -80,13 +75,11 @@ export default function HomePage() {
         
         <SpinoffsSection />
         
-        <StatsSection 
+        <StatsSection
           backgroundImage={statsProps.backgroundImage}
           stats={statsProps.stats}
         />
       </main>
-      
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

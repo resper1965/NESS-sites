@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import { News } from '@shared/schema';
 import { formatDate } from '@/lib/utils';
 
@@ -32,15 +31,11 @@ export default function NewsPage() {
     : ['all', 'company', 'technology', 'events'];
 
   return (
-    <>
-      <SEOHead 
-        title={`${t('news.title')} - ness.`}
-        description="Fique por dentro das últimas notícias e atualizações da ness. e do mundo da tecnologia."
-        canonicalUrl="/news"
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title={`${t('news.title')} - ness.`}
+      description="Fique por dentro das últimas notícias e atualizações da ness. e do mundo da tecnologia."
+      canonicalUrl="/news"
+    >
       <main>
         {/* Hero Section com fundo gradiente azul, sem imagem */}
         <section className="relative py-20 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
@@ -169,7 +164,6 @@ export default function NewsPage() {
         </section>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

@@ -1,8 +1,7 @@
 import { useState, useRef } from 'react';
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -85,15 +84,11 @@ export default function ContactPage() {
   const heroBackground = "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1920&h=1080&q=80";
 
   return (
-    <>
-      <SEOHead 
-        title="Contato - ness."
-        description="Entre em contato com nossa equipe para saber mais sobre nossos serviços de tecnologia e segurança."
-        structuredData={structuredData}
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title="Contato - ness."
+      description="Entre em contato com nossa equipe para saber mais sobre nossos serviços de tecnologia e segurança."
+      structuredData={structuredData}
+    >
       <main>
         <section className="w-full py-32 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
           <div className="container mx-auto px-4">
@@ -367,7 +362,6 @@ export default function ContactPage() {
         </section>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }

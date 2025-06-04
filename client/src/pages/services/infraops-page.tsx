@@ -1,7 +1,6 @@
 import { useI18n } from '@/lib/i18n';
-import SEOHead from '@/components/common/SEOHead';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
+import SiteLayout from '@/site/layout/SiteLayout';
 
 export default function InfraOpsPage() {
   const { t } = useI18n();
@@ -47,15 +46,11 @@ export default function InfraOpsPage() {
   const heroBackground = "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=1920&h=1080&q=80";
 
   return (
-    <>
-      <SEOHead 
-        title="n.InfraOps - Infraestrutura de TI como Vantagem Estratégica | ness."
-        description="Serviços de infraestrutura de TI que garantem disponibilidade, escalabilidade e segurança para suas operações críticas, com monitoramento 24x7 e resposta imediata a incidentes."
-        structuredData={structuredData}
-      />
-      
-      <Navbar />
-      
+    <SiteLayout
+      title="n.InfraOps - Infraestrutura de TI como Vantagem Estratégica | ness."
+      description="Serviços de infraestrutura de TI que garantem disponibilidade, escalabilidade e segurança para suas operações críticas, com monitoramento 24x7 e resposta imediata a incidentes."
+      structuredData={structuredData}
+    >
       <main>
         {/* Hero Section com imagem escurecida */}
         <section className="relative w-full py-32 overflow-hidden">
@@ -181,7 +176,6 @@ export default function InfraOpsPage() {
         </section>
       </main>
       
-      <Footer />
-    </>
+    </SiteLayout>
   );
 }
