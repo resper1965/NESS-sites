@@ -75,7 +75,10 @@ async function ensureAdminUser() {
 }
 
 export function setupAuth(app: Express) {
-  const sessionSecret = process.env.SESSION_SECRET || "ness-secret-key-change-in-production";
+  const sessionSecret = process.env.SESSION_SECRET;
+  if (!sessionSecret) {
+    throw new Error("SESSION_SECRET environment variable is required");
+  }
   
   const sessionSettings: session.SessionOptions = {
     secret: sessionSecret,
