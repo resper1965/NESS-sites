@@ -149,7 +149,7 @@ export interface IStorage {
   // News methods
   getNewsItems(language: string, siteCode?: SiteCode): Promise<News[]>;
   getLatestNews(language: string, siteCode?: SiteCode): Promise<News[]>;
-  getNewsItem(id: number, language: string): Promise<News | undefined>;
+  getNewsItem(id: number, language: string, siteCode?: SiteCode): Promise<News | undefined>;
   getNewsBySlug(slug: string, language: string, siteCode?: SiteCode): Promise<News | undefined>;
   createNewsItem(newsItem: InsertNews): Promise<News>;
   updateNewsItem(id: number, newsItem: Partial<News>): Promise<News>;
@@ -344,7 +344,8 @@ export class MemStorage implements IStorage {
   }
 
   // Content methods
-  async getContent(pageId: string, language: string): Promise<Content | undefined> {
+  async getContent(pageId: string, language: string, siteCode?: SiteCode): Promise<Content | undefined> {
+    // TODO: site-specific filtering is not yet implemented
     return Array.from(this.contents.values()).find(
       (content) => content.pageId === pageId && content.language === language
     );
@@ -379,20 +380,23 @@ export class MemStorage implements IStorage {
     return updated;
   }
 
-  async getContentCount(language: string): Promise<number> {
+  async getContentCount(language: string, siteCode?: SiteCode): Promise<number> {
+    // TODO: site-specific filtering is not yet implemented
     return Array.from(this.contents.values()).filter(
       (content) => content.language === language
     ).length;
   }
 
   // Job methods
-  async getJobs(language: string): Promise<Job[]> {
+  async getJobs(language: string, siteCode?: SiteCode): Promise<Job[]> {
+    // TODO: site-specific filtering is not yet implemented
     return Array.from(this.jobsData.values())
       .filter(job => job.language === language)
       .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
   }
 
-  async getFeaturedJobs(language: string): Promise<Job[]> {
+  async getFeaturedJobs(language: string, siteCode?: SiteCode): Promise<Job[]> {
+    // TODO: site-specific filtering is not yet implemented
     return Array.from(this.jobsData.values())
       .filter(job => job.language === language && job.active)
       .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
@@ -440,27 +444,31 @@ export class MemStorage implements IStorage {
     this.jobsData.delete(id);
   }
 
-  async getJobCount(language: string): Promise<number> {
+  async getJobCount(language: string, siteCode?: SiteCode): Promise<number> {
+    // TODO: site-specific filtering is not yet implemented
     return Array.from(this.jobsData.values()).filter(
       (job) => job.language === language
     ).length;
   }
 
   // News methods
-  async getNewsItems(language: string): Promise<News[]> {
+  async getNewsItems(language: string, siteCode?: SiteCode): Promise<News[]> {
+    // TODO: site-specific filtering is not yet implemented
     return Array.from(this.newsData.values())
       .filter(news => news.language === language)
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
-  async getLatestNews(language: string): Promise<News[]> {
+  async getLatestNews(language: string, siteCode?: SiteCode): Promise<News[]> {
+    // TODO: site-specific filtering is not yet implemented
     return Array.from(this.newsData.values())
       .filter(news => news.language === language)
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
       .slice(0, 3);
   }
 
-  async getNewsItem(id: number, language: string): Promise<News | undefined> {
+  async getNewsItem(id: number, language: string, siteCode?: SiteCode): Promise<News | undefined> {
+    // TODO: site-specific filtering is not yet implemented
     const newsItem = this.newsData.get(id);
     if (newsItem && newsItem.language === language) {
       return newsItem;
@@ -501,7 +509,8 @@ export class MemStorage implements IStorage {
     this.newsData.delete(id);
   }
 
-  async getNewsCount(language: string): Promise<number> {
+  async getNewsCount(language: string, siteCode?: SiteCode): Promise<number> {
+    // TODO: site-specific filtering is not yet implemented
     return Array.from(this.newsData.values()).filter(
       (news) => news.language === language
     ).length;
@@ -859,7 +868,8 @@ export class DatabaseStorage implements IStorage {
     return updated;
   }
   
-  async getContentCount(language: string): Promise<number> {
+  async getContentCount(language: string, siteCode?: SiteCode): Promise<number> {
+    // TODO: site-specific filtering is not yet implemented
     const result = await db.select({ count: contents.id })
       .from(contents)
       .where(eq(contents.language, language));
@@ -867,13 +877,15 @@ export class DatabaseStorage implements IStorage {
   }
   
   // Job methods
-  async getJobs(language: string): Promise<Job[]> {
+  async getJobs(language: string, siteCode?: SiteCode): Promise<Job[]> {
+    // TODO: site-specific filtering is not yet implemented
     return await db.select().from(jobs)
       .where(eq(jobs.language, language))
       .orderBy(desc(jobs.createdAt));
   }
   
-  async getFeaturedJobs(language: string): Promise<Job[]> {
+  async getFeaturedJobs(language: string, siteCode?: SiteCode): Promise<Job[]> {
+    // TODO: site-specific filtering is not yet implemented
     return await db.select().from(jobs)
       .where(and(eq(jobs.language, language), eq(jobs.active, true)))
       .orderBy(desc(jobs.createdAt))
@@ -908,7 +920,8 @@ export class DatabaseStorage implements IStorage {
     await db.delete(jobs).where(eq(jobs.id, id));
   }
   
-  async getJobCount(language: string): Promise<number> {
+  async getJobCount(language: string, siteCode?: SiteCode): Promise<number> {
+    // TODO: site-specific filtering is not yet implemented
     const result = await db.select({ count: jobs.id })
       .from(jobs)
       .where(eq(jobs.language, language));
@@ -916,20 +929,23 @@ export class DatabaseStorage implements IStorage {
   }
   
   // News methods
-  async getNewsItems(language: string): Promise<News[]> {
+  async getNewsItems(language: string, siteCode?: SiteCode): Promise<News[]> {
+    // TODO: site-specific filtering is not yet implemented
     return await db.select().from(news)
       .where(eq(news.language, language))
       .orderBy(desc(news.date));
   }
   
-  async getLatestNews(language: string): Promise<News[]> {
+  async getLatestNews(language: string, siteCode?: SiteCode): Promise<News[]> {
+    // TODO: site-specific filtering is not yet implemented
     return await db.select().from(news)
       .where(eq(news.language, language))
       .orderBy(desc(news.date))
       .limit(3);
   }
   
-  async getNewsItem(id: number, language: string): Promise<News | undefined> {
+  async getNewsItem(id: number, language: string, siteCode?: SiteCode): Promise<News | undefined> {
+    // TODO: site-specific filtering is not yet implemented
     const [newsItem] = await db.select().from(news)
       .where(and(eq(news.id, id), eq(news.language, language)));
     return newsItem;
@@ -957,7 +973,8 @@ export class DatabaseStorage implements IStorage {
     await db.delete(news).where(eq(news.id, id));
   }
   
-  async getNewsCount(language: string): Promise<number> {
+  async getNewsCount(language: string, siteCode?: SiteCode): Promise<number> {
+    // TODO: site-specific filtering is not yet implemented
     const result = await db.select({ count: news.id })
       .from(news)
       .where(eq(news.language, language));
