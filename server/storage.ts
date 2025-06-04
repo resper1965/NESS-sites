@@ -171,6 +171,7 @@ export class MemStorage implements IStorage {
   private jobsData: Map<number, Job>;
   private newsData: Map<number, News>;
   private activities: Map<number, ActivityLog>;
+  private contentSiteLinks: ContentSite[];
   
   sessionStore: session.SessionStore;
   currentId: number;
@@ -185,6 +186,7 @@ export class MemStorage implements IStorage {
     this.jobsData = new Map();
     this.newsData = new Map();
     this.activities = new Map();
+    this.contentSiteLinks = [];
     
     this.sessionStore = new MemoryStore({
       checkPeriod: 86400000, // 24h
@@ -345,10 +347,21 @@ export class MemStorage implements IStorage {
 
   // Content methods
   async getContent(pageId: string, language: string, siteCode?: SiteCode): Promise<Content | undefined> {
-    // TODO: site-specific filtering is not yet implemented
-    return Array.from(this.contents.values()).find(
+    const matches = Array.from(this.contents.values()).filter(
       (content) => content.pageId === pageId && content.language === language
     );
+
+    if (siteCode) {
+      return matches.find(content =>
+        this.contentSiteLinks.some(link =>
+          link.contentId === content.id &&
+          link.contentType === 'content' &&
+          link.siteCode === siteCode
+        )
+      );
+    }
+
+    return matches[0];
   }
 
   async createContent(content: InsertContent): Promise<Content> {
@@ -381,24 +394,74 @@ export class MemStorage implements IStorage {
   }
 
   async getContentCount(language: string, siteCode?: SiteCode): Promise<number> {
-    // TODO: site-specific filtering is not yet implemented
-    return Array.from(this.contents.values()).filter(
+    let items = Array.from(this.contents.values()).filter(
       (content) => content.language === language
-    ).length;
+    );
+
+    if (siteCode) {
+      items = items.filter(content =>
+        this.contentSiteLinks.some(link =>
+          link.contentId === content.id &&
+          link.contentType === 'content' &&
+          link.siteCode === siteCode
+        )
+      );
+    }
+
+    return items.length;
+  }
+
+  async associateContentToSite(contentId: number, contentType: string, siteCode: SiteCode): Promise<ContentSite> {
+    const link: ContentSite = { contentId, contentType, siteCode };
+    this.contentSiteLinks.push(link);
+    return link;
+  }
+
+  async removeContentFromSite(contentId: number, contentType: string, siteCode: SiteCode): Promise<void> {
+    this.contentSiteLinks = this.contentSiteLinks.filter(
+      l => !(l.contentId === contentId && l.contentType === contentType && l.siteCode === siteCode)
+    );
+  }
+
+  async getContentSites(contentId: number, contentType: string): Promise<SiteCode[]> {
+    return this.contentSiteLinks
+      .filter(l => l.contentId === contentId && l.contentType === contentType)
+      .map(l => l.siteCode);
   }
 
   // Job methods
   async getJobs(language: string, siteCode?: SiteCode): Promise<Job[]> {
-    // TODO: site-specific filtering is not yet implemented
-    return Array.from(this.jobsData.values())
-      .filter(job => job.language === language)
-      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+    let items = Array.from(this.jobsData.values())
+      .filter(job => job.language === language);
+
+    if (siteCode) {
+      items = items.filter(job =>
+        this.contentSiteLinks.some(link =>
+          link.contentId === job.id &&
+          link.contentType === 'job' &&
+          link.siteCode === siteCode
+        )
+      );
+    }
+
+    return items.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
   }
 
   async getFeaturedJobs(language: string, siteCode?: SiteCode): Promise<Job[]> {
-    // TODO: site-specific filtering is not yet implemented
-    return Array.from(this.jobsData.values())
-      .filter(job => job.language === language && job.active)
+    let items = Array.from(this.jobsData.values())
+      .filter(job => job.language === language && job.active);
+
+    if (siteCode) {
+      items = items.filter(job =>
+        this.contentSiteLinks.some(link =>
+          link.contentId === job.id &&
+          link.contentType === 'job' &&
+          link.siteCode === siteCode
+        )
+      );
+    }
+
+    return items
       .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
       .slice(0, 4);
   }
@@ -451,35 +514,62 @@ export class MemStorage implements IStorage {
   }
 
   async getJobCount(language: string, siteCode?: SiteCode): Promise<number> {
-    // TODO: site-specific filtering is not yet implemented
-    return Array.from(this.jobsData.values()).filter(
+    let items = Array.from(this.jobsData.values()).filter(
       (job) => job.language === language
-    ).length;
+    );
+
+    if (siteCode) {
+      items = items.filter(job =>
+        this.contentSiteLinks.some(link =>
+          link.contentId === job.id &&
+          link.contentType === 'job' &&
+          link.siteCode === siteCode
+        )
+      );
+    }
+
+    return items.length;
   }
 
   // News methods
   async getNewsItems(language: string, siteCode?: SiteCode): Promise<News[]> {
-    // TODO: site-specific filtering is not yet implemented
-    return Array.from(this.newsData.values())
-      .filter(news => news.language === language)
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    let items = Array.from(this.newsData.values())
+      .filter(news => news.language === language);
+
+    if (siteCode) {
+      items = items.filter(news =>
+        this.contentSiteLinks.some(link =>
+          link.contentId === news.id &&
+          link.contentType === 'news' &&
+          link.siteCode === siteCode
+        )
+      );
+    }
+
+    return items.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }
 
   async getLatestNews(language: string, siteCode?: SiteCode): Promise<News[]> {
-    // TODO: site-specific filtering is not yet implemented
-    return Array.from(this.newsData.values())
-      .filter(news => news.language === language)
-      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-      .slice(0, 3);
+    const items = await this.getNewsItems(language, siteCode);
+    return items.slice(0, 3);
   }
 
   async getNewsItem(id: number, language: string, siteCode?: SiteCode): Promise<News | undefined> {
-    // TODO: site-specific filtering is not yet implemented
     const newsItem = this.newsData.get(id);
-    if (newsItem && newsItem.language === language) {
-      return newsItem;
+    if (!newsItem || newsItem.language !== language) {
+      return undefined;
     }
-    return undefined;
+
+    if (siteCode) {
+      const match = this.contentSiteLinks.some(link =>
+        link.contentId === id &&
+        link.contentType === 'news' &&
+        link.siteCode === siteCode
+      );
+      if (!match) return undefined;
+    }
+
+    return newsItem;
   }
 
   async getNewsBySlug(slug: string, language: string, _siteCode?: SiteCode): Promise<News | undefined> {
@@ -522,10 +612,21 @@ export class MemStorage implements IStorage {
   }
 
   async getNewsCount(language: string, siteCode?: SiteCode): Promise<number> {
-    // TODO: site-specific filtering is not yet implemented
-    return Array.from(this.newsData.values()).filter(
+    let items = Array.from(this.newsData.values()).filter(
       (news) => news.language === language
-    ).length;
+    );
+
+    if (siteCode) {
+      items = items.filter(news =>
+        this.contentSiteLinks.some(link =>
+          link.contentId === news.id &&
+          link.contentType === 'news' &&
+          link.siteCode === siteCode
+        )
+      );
+    }
+
+    return items.length;
   }
 
   // Activity logs
@@ -881,23 +982,60 @@ export class DatabaseStorage implements IStorage {
   }
   
   async getContentCount(language: string, siteCode?: SiteCode): Promise<number> {
-    // TODO: site-specific filtering is not yet implemented
-    const result = await db.select({ count: contents.id })
-      .from(contents)
-      .where(eq(contents.language, language));
+    let result;
+    if (siteCode) {
+      result = await db.select({ count: contents.id })
+        .from(contentSites)
+        .innerJoin(contents, eq(contentSites.contentId, contents.id))
+        .where(and(
+          eq(contentSites.contentType, 'content'),
+          eq(contentSites.siteCode, siteCode),
+          eq(contents.language, language)
+        ));
+    } else {
+      result = await db.select({ count: contents.id })
+        .from(contents)
+        .where(eq(contents.language, language));
+    }
+
     return parseInt(result[0].count as unknown as string, 10) || 0;
   }
   
   // Job methods
   async getJobs(language: string, siteCode?: SiteCode): Promise<Job[]> {
-    // TODO: site-specific filtering is not yet implemented
+    if (siteCode) {
+      const rows = await db.select({ job: jobs })
+        .from(jobs)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, jobs.id),
+          eq(contentSites.contentType, 'job'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(eq(jobs.language, language))
+        .orderBy(desc(jobs.createdAt));
+      return rows.map(r => r.job ?? r.jobs);
+    }
+
     return await db.select().from(jobs)
       .where(eq(jobs.language, language))
       .orderBy(desc(jobs.createdAt));
   }
   
   async getFeaturedJobs(language: string, siteCode?: SiteCode): Promise<Job[]> {
-    // TODO: site-specific filtering is not yet implemented
+    if (siteCode) {
+      const rows = await db.select({ job: jobs })
+        .from(jobs)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, jobs.id),
+          eq(contentSites.contentType, 'job'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(and(eq(jobs.language, language), eq(jobs.active, true)))
+        .orderBy(desc(jobs.createdAt))
+        .limit(4);
+      return rows.map(r => r.job ?? r.jobs);
+    }
+
     return await db.select().from(jobs)
       .where(and(eq(jobs.language, language), eq(jobs.active, true)))
       .orderBy(desc(jobs.createdAt))
@@ -962,31 +1100,63 @@ export class DatabaseStorage implements IStorage {
   }
   
   async getJobCount(language: string, siteCode?: SiteCode): Promise<number> {
-    // TODO: site-specific filtering is not yet implemented
-    const result = await db.select({ count: jobs.id })
-      .from(jobs)
-      .where(eq(jobs.language, language));
+    let result;
+    if (siteCode) {
+      result = await db.select({ count: jobs.id })
+        .from(contentSites)
+        .innerJoin(jobs, eq(contentSites.contentId, jobs.id))
+        .where(and(
+          eq(contentSites.contentType, 'job'),
+          eq(contentSites.siteCode, siteCode),
+          eq(jobs.language, language)
+        ));
+    } else {
+      result = await db.select({ count: jobs.id })
+        .from(jobs)
+        .where(eq(jobs.language, language));
+    }
+
     return parseInt(result[0].count as unknown as string, 10) || 0;
   }
   
   // News methods
   async getNewsItems(language: string, siteCode?: SiteCode): Promise<News[]> {
-    // TODO: site-specific filtering is not yet implemented
+    if (siteCode) {
+      const rows = await db.select({ item: news })
+        .from(news)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, news.id),
+          eq(contentSites.contentType, 'news'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(eq(news.language, language))
+        .orderBy(desc(news.date));
+      return rows.map(r => r.item ?? r.news);
+    }
+
     return await db.select().from(news)
       .where(eq(news.language, language))
       .orderBy(desc(news.date));
   }
   
   async getLatestNews(language: string, siteCode?: SiteCode): Promise<News[]> {
-    // TODO: site-specific filtering is not yet implemented
-    return await db.select().from(news)
-      .where(eq(news.language, language))
-      .orderBy(desc(news.date))
-      .limit(3);
+    const items = await this.getNewsItems(language, siteCode);
+    return items.slice(0, 3);
   }
   
   async getNewsItem(id: number, language: string, siteCode?: SiteCode): Promise<News | undefined> {
-    // TODO: site-specific filtering is not yet implemented
+    if (siteCode) {
+      const [result] = await db.select({ item: news })
+        .from(news)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, news.id),
+          eq(contentSites.contentType, 'news'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(and(eq(news.id, id), eq(news.language, language)));
+      return result ? result.item ?? result.news : undefined;
+    }
+
     const [newsItem] = await db.select().from(news)
       .where(and(eq(news.id, id), eq(news.language, language)));
     return newsItem;
@@ -1044,10 +1214,22 @@ export class DatabaseStorage implements IStorage {
   }
   
   async getNewsCount(language: string, siteCode?: SiteCode): Promise<number> {
-    // TODO: site-specific filtering is not yet implemented
-    const result = await db.select({ count: news.id })
-      .from(news)
-      .where(eq(news.language, language));
+    let result;
+    if (siteCode) {
+      result = await db.select({ count: news.id })
+        .from(contentSites)
+        .innerJoin(news, eq(contentSites.contentId, news.id))
+        .where(and(
+          eq(contentSites.contentType, 'news'),
+          eq(contentSites.siteCode, siteCode),
+          eq(news.language, language)
+        ));
+    } else {
+      result = await db.select({ count: news.id })
+        .from(news)
+        .where(eq(news.language, language));
+    }
+
     return parseInt(result[0].count as unknown as string, 10) || 0;
   }
   
