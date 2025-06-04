@@ -238,6 +238,7 @@
   }
 }
 
+
 @media (max-width: 1024px) {
   .hero {
     padding-left: 0;
@@ -262,3 +263,4 @@
     line-height: 1.4;
   }
 }
+
