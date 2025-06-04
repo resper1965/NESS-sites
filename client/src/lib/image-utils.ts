@@ -4,6 +4,8 @@
  * Esta função retorna o caminho otimizado de uma imagem,
  * priorizando o formato WebP quando disponível
  */
+import { debugLog } from './debug'
+
 export function getOptimizedImagePath(originalPath: string): string {
   // Se já for um caminho WebP, retorna o mesmo
   if (originalPath.endsWith('.webp')) {
@@ -17,10 +19,8 @@ export function getOptimizedImagePath(originalPath: string): string {
   
   // Se for do diretório attached_assets, retorna o caminho original diretamente
   if (originalPath.includes('attached_assets')) {
-    if (import.meta.env.DEV) {
-      console.debug("Usando imagem de attached_assets:", originalPath);
-    }
-    return originalPath;
+    debugLog("Usando imagem de attached_assets:", originalPath)
+    return originalPath
   }
   
   // Para imagens locais, vamos tentar usar a versão WebP otimizada
