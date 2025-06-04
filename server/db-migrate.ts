@@ -141,8 +141,25 @@ async function migrate() {
           `contato@${domain}`
         ]);
         
+
         console.log(`Site ${code} checked.`);
       }
+    }
+
+    // Associate existing contents with all sites when table is empty
+    const mappingCountQuery = await db.execute('SELECT COUNT(*) as count FROM content_sites');
+    const mappingCount = mappingCountQuery.rows[0]?.count || '0';
+    if (mappingCount === '0') {
+      const contentsQuery = await db.execute('SELECT id FROM contents');
+      for (const row of contentsQuery.rows) {
+        for (const code of SITE_CODES) {
+          await db.execute(
+            'INSERT INTO content_sites (content_id, content_type, site_code) VALUES ($1, $2, $3) ON CONFLICT DO NOTHING',
+            [row.id, 'content', code]
+          );
+        }
+      }
+      console.log('Content-site associations created.');
     }
     
     console.log('Database migration completed successfully.');

@@ -312,6 +312,23 @@ export class MemStorage implements IStorage {
     }
   }
 
+  // Ensure existing content entries are associated with all sites
+  private async ensureContentSiteMappings() {
+    const result = await db.select({ count: contentSites.contentId }).from(contentSites);
+    const count = parseInt(result[0]?.count as unknown as string, 10) || 0;
+    if (count === 0) {
+      console.log("Associating existing content with sites...");
+      const all = await db.select({ id: contents.id }).from(contents);
+      for (const entry of all) {
+        for (const code of SITE_CODES) {
+          await db.insert(contentSites)
+            .values({ contentId: entry.id, contentType: 'content', siteCode: code })
+            .onConflictDoNothing();
+        }
+      }
+    }
+  }
+
   // User methods
   async getUser(id: number): Promise<User | undefined> {
     return this.users.get(id);
@@ -552,10 +569,12 @@ export class DatabaseStorage implements IStorage {
       }
     });
     
-    // Initialize the database with default content
-    this.initializeDefaults().catch(err => {
-      console.error("Error initializing database:", err);
-    });
+    // Initialize the database with default content and ensure site mappings exist
+    this.initializeDefaults()
+      .then(() => this.ensureContentSiteMappings())
+      .catch(err => {
+        console.error("Error initializing database:", err);
+      });
   }
 
   // Site methods
@@ -832,32 +851,22 @@ export class DatabaseStorage implements IStorage {
   
   // Content methods
   async getContent(pageId: string, language: string, siteCode?: SiteCode): Promise<Content | undefined> {
-    let content;
-    
+    const conditions = [
+      eq(contentSites.contentId, contents.id),
+      eq(contentSites.contentType, 'content')
+    ];
     if (siteCode) {
-      // Buscar conteúdo específico para o site
-      const [result] = await db.select().from(contents)
-        .innerJoin(contentSites, and(
-          eq(contentSites.contentId, contents.id),
-          eq(contentSites.contentType, 'content'),
-          eq(contentSites.siteCode, siteCode)
-        ))
-        .where(and(
-          eq(contents.pageId, pageId),
-          eq(contents.language, language)
-        ));
-      content = result ? result.contents : undefined;
-    } else {
-      // Buscar conteúdo genérico
-      const [result] = await db.select().from(contents)
-        .where(and(
-          eq(contents.pageId, pageId),
-          eq(contents.language, language)
-        ));
-      content = result;
+      conditions.push(eq(contentSites.siteCode, siteCode));
     }
-    
-    return content;
+
+    const [result] = await db.select().from(contents)
+      .innerJoin(contentSites, and(...conditions))
+      .where(and(
+        eq(contents.pageId, pageId),
+        eq(contents.language, language)
+      ));
+
+    return result ? result.contents : undefined;
   }
   
   async createContent(content: InsertContent): Promise<Content> {

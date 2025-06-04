@@ -24,3 +24,10 @@ cookies. Set it to a random string before starting the application, e.g.:
 export SESSION_SECRET="a long random string"
 npm run dev
 ```
+
+Before starting the server the database schema must be pushed so the
+`content_sites` table exists:
+
+```bash
+npm run db:push
+```
