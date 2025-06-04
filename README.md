@@ -15,6 +15,14 @@ npx tsx scripts/export-content.ts
 This command scans every folder inside `client/src/site` and `client/src/pages`, collects the strings from their `.tsx` files and writes them into a `<foldername>.txt` file inside that folder.  
 Run it whenever page content changes so the backups stay in sync.
 
+
+## Database Notes
+
+The backend stores site specific content using a `content_sites` mapping table.
+Earlier versions temporarily patched the storage layer to ignore this table with
+`fixGetContentMethod`, but the mapping table is now part of the schema and the
+temporary hack has been removed.
+
 ## Environment variables
 
 The server requires a `SESSION_SECRET` environment variable to sign session
@@ -24,3 +32,4 @@ cookies. Set it to a random string before starting the application, e.g.:
 export SESSION_SECRET="a long random string"
 npm run dev
 ```
+
