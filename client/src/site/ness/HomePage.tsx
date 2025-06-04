@@ -69,20 +69,6 @@ export default function NessHomePage() {
               ? 'Expertos en innovación tecnológica, automatización de procesos, infraestructura de TI, ciberseguridad y arquitectura de software.'
               : 'Especialistas em inovação tecnológica, automação de processos, infraestrutura de TI, cibersegurança e arquitetura de software.')
         }
-        ctaText1={
-          language === 'pt' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1 || "conheça nossos serviços") :
-          language === 'en' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1_en || "explore our services") :
-          language === 'es' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1_es || "conozca nuestros servicios") :
-          "conheça nossos serviços"
-        }
-        ctaUrl1={pageContent?.content && JSON.parse(pageContent.content).ctaUrl1 || "/site/ness/services/secops"}
-        ctaText2={
-          language === 'pt' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText2 || "fale conosco") :
-          language === 'en' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText2_en || "contact us") :
-          language === 'es' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText2_es || "contáctenos") :
-          "fale conosco"
-        }
-        ctaUrl2={pageContent?.content && JSON.parse(pageContent.content).ctaUrl2 || "/site/ness/contact"}
         backgroundImage="/attached_assets/image_1747186663435.png"
       />
       
