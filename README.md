@@ -42,3 +42,7 @@ export SESSION_SECRET="a long random string"
 npm run dev
 ```
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
