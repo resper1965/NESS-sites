@@ -144,6 +144,12 @@ function Router() {
         </SiteProvider>
       </Route>
       
+      <Route path="/site/trustness/contact">
+        <SiteProvider siteCode="trustness">
+          <TrustnessContactPage />
+        </SiteProvider>
+      </Route>
+      
       {/* Site-specific routes - FORENSE */}
       <Route path="/site/forense">
         <SiteProvider siteCode="forense">
@@ -172,6 +178,12 @@ function Router() {
       <Route path="/site/forense/services/corporate-investigations">
         <SiteProvider siteCode="forense">
           <ForenseCorporateInvestigationsPage />
+        </SiteProvider>
+      </Route>
+      
+      <Route path="/site/forense/contact">
+        <SiteProvider siteCode="forense">
+          <ForenseContactPage />
         </SiteProvider>
       </Route>
       
