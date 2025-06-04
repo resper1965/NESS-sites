@@ -28,6 +28,11 @@ import NessAutoOpsPage from "@/site/ness/services/AutoOpsPage";
 import NessCrisisOpsPage from "@/site/ness/services/CrisisOpsPage";
 import NessPrivacyPage from "@/site/ness/services/PrivacyPage";
 
+// Contact Pages
+import NessContactPage from "@/site/ness/ContactPage";
+import TrustnessContactPage from "@/site/trustness/ContactPage";
+import ForenseContactPage from "@/site/forense/ContactPage";
+
 // Legacy pages (will be migrated)
 import HomePage from "@/pages/home-page";
 import AboutPage from "@/pages/about-page";
@@ -99,6 +104,12 @@ function Router() {
       <Route path="/site/ness/services/privacy">
         <SiteProvider siteCode="ness">
           <NessPrivacyPage />
+        </SiteProvider>
+      </Route>
+      
+      <Route path="/site/ness/contact">
+        <SiteProvider siteCode="ness">
+          <NessContactPage />
         </SiteProvider>
       </Route>
       
