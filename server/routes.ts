@@ -497,6 +497,105 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Contact Routes
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const { name, email, phone, subject, message, site, language } = req.body;
+      
+      // Validate required fields
+      if (!name || !email || !subject || !message) {
+        return res.status(400).json({ message: "Missing required fields" });
+      }
+
+      // Get contact email from site configuration or environment
+      const contactEmail = process.env.CONTACT_EMAIL || 'admin@example.com';
+      
+      // Here you would typically send an email using a service like SendGrid
+      // For now, we'll log the contact attempt and return success
+      console.log('Contact form submission:', {
+        name,
+        email,
+        phone,
+        subject,
+        message,
+        site,
+        language,
+        timestamp: new Date().toISOString()
+      });
+
+      // Log activity
+      await storage.createActivityLog({
+        userId: 0, // System user for contact forms
+        action: "contact_form",
+        entityType: "contact",
+        entityId: email,
+        details: { name, subject, site }
+      });
+
+      res.json({ success: true, message: "Contact form submitted successfully" });
+    } catch (error) {
+      console.error("Error processing contact form:", error);
+      res.status(500).json({ message: "Error processing contact form" });
+    }
+  });
+
+  // Admin Contact Info Routes
+  app.get("/api/admin/contact-info", async (req, res) => {
+    try {
+      const site = req.query.site?.toString();
+      
+      // Return default contact information
+      // In a real application, this would be stored in the database
+      const contactInfo = {
+        email: site === 'ness' ? 'contato@ness.com.br' :
+               site === 'trustness' ? 'contato@trustness.com.br' :
+               site === 'forense' ? 'contato@forense.io' :
+               'contato@ness.com.br',
+        phone: '+55 11 4002-8922',
+        address: 'São Paulo, Brasil',
+        businessHours: 'Segunda a Sexta, 9h às 18h'
+      };
+
+      res.json(contactInfo);
+    } catch (error) {
+      console.error("Error fetching contact info:", error);
+      res.status(500).json({ message: "Error fetching contact info" });
+    }
+  });
+
+  app.put("/api/admin/contact-info", async (req, res) => {
+    if (!req.isAuthenticated()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    try {
+      const { site, email, phone, address, businessHours } = req.body;
+      
+      // In a real application, you would store this in the database
+      // For now, we'll just return the updated data
+      const updatedContactInfo = {
+        email,
+        phone,
+        address,
+        businessHours
+      };
+
+      // Log activity
+      await storage.createActivityLog({
+        userId: req.user!.id,
+        action: "update",
+        entityType: "contact_info",
+        entityId: site || 'general',
+        details: { email, phone }
+      });
+
+      res.json(updatedContactInfo);
+    } catch (error) {
+      console.error("Error updating contact info:", error);
+      res.status(500).json({ message: "Error updating contact info" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
