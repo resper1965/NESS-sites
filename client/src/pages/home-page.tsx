@@ -1,3 +1,4 @@
+import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
 import SEOHead from '@/components/common/SEOHead';
@@ -55,9 +56,16 @@ export default function HomePage() {
     ]
   };
 
+  const heroTitle = t('home.hero.title').split('\n').map((line, idx, arr) => (
+    <React.Fragment key={idx}>
+      {line}
+      {idx < arr.length - 1 && <br />}
+    </React.Fragment>
+  ));
+
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="ness. - Transformamos Operações Críticas em Vantagem Estratégica"
         description="Desde 1991 fornecendo soluções especializadas em segurança, infraestrutura e operações críticas para empresas que buscam vantagem competitiva através da tecnologia."
         structuredData={structuredData}
@@ -66,8 +74,8 @@ export default function HomePage() {
       <Navbar />
       
       <main>
-        <HeroSection 
-          title={t('home.hero.title')}
+        <HeroSection
+          title={heroTitle}
           subtitle={t('home.hero.subtitle')}
           ctaText1={t('home.hero.cta1')}
           ctaUrl1="/services"

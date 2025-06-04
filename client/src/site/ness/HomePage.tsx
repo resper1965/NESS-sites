@@ -48,20 +48,27 @@ export default function NessHomePage() {
       <HeroSection 
         title={
           language === 'pt' ? (
-            pageContent?.content && JSON.parse(pageContent.content).heroTitle || 
-            <>use <span className="text-[#00ade0]">tecnologia</span> segura, escalável e inteligente para impulsionar sua operação na era digital<span className="text-[#00ade0]">.</span></>
+            pageContent?.content && JSON.parse(pageContent.content).heroTitle ||
+            <>força invisível<br />resultados visíveis</>
           ) :
           language === 'en' ? (
-            pageContent?.content && JSON.parse(pageContent.content).heroTitle_en || 
-            <>use secure, scalable and intelligent <span className="text-[#00ade0]">technology</span> to boost your operation in the digital era<span className="text-[#00ade0]">.</span></>
+            pageContent?.content && JSON.parse(pageContent.content).heroTitle_en ||
+            <>invisible strength<br />visible results</>
           ) :
           language === 'es' ? (
-            pageContent?.content && JSON.parse(pageContent.content).heroTitle_es || 
-            <>use <span className="text-[#00ade0]">tecnología</span> segura, escalable e inteligente para impulsar su operación en la era digital<span className="text-[#00ade0]">.</span></>
+            pageContent?.content && JSON.parse(pageContent.content).heroTitle_es ||
+            <>fuerza invisible<br />resultados visibles</>
           ) :
-          <>use <span className="text-[#00ade0]">tecnologia</span> segura, escalável e inteligente para impulsionar sua operação na era digital<span className="text-[#00ade0]">.</span></>
+          <>força invisível<br />resultados visíveis</>
         }
-        subtitle={pageContent?.content && JSON.parse(pageContent.content).heroSubtitle || "arquitetura modular em infraestrutura, segurança e software para acelerar operações digitais com confiabilidade e velocidade"}
+        subtitle={
+          pageContent?.content && JSON.parse(pageContent.content).heroSubtitle ||
+          (language === 'en'
+            ? 'Experts in technological innovation, process automation, IT infrastructure, cybersecurity, and software architecture.'
+            : language === 'es'
+              ? 'Expertos en innovación tecnológica, automatización de procesos, infraestructura de TI, ciberseguridad y arquitectura de software.'
+              : 'Especialistas em inovação tecnológica, automação de processos, infraestrutura de TI, cibersegurança e arquitetura de software.')
+        }
         ctaText1={
           language === 'pt' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1 || "conheça nossos serviços") :
           language === 'en' ? (pageContent?.content && JSON.parse(pageContent.content).ctaText1_en || "explore our services") :
