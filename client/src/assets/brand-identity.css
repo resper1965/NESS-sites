@@ -1,0 +1,527 @@
+/**
+ * CSS de Identidade Visual Digital
+ * Marcas: ness., trustness. e forense.io
+ * Versão: 1.0 (Junho 2025)
+ */
+
+/* 1. Importação da tipografia Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+/* 2. Variáveis de Cores */
+:root {
+  /* Cor-assinatura */
+  --color-primary: #00ade0;        /* Azul-assinatura */
+
+  /* Neutras */
+  --color-white: #FFFFFF;          /* Branco puro */
+  --color-gray-light: #F5F5F5;     /* Cinza-claro para textos sobre fundo escuro */
+  --color-gray-medium: #BFBFBF;    /* Cinza-médio para legendas e rodapés */
+  --color-gray-dark: #595959;      /* Cinza-escuro para textos sobre fundo claro */
+  --color-gray-darker: #2B2B2B;    /* Cinza-muito escuro para textos primários sobre fundo claro */
+
+  /* Fundos Escuros */
+  --bg-dark-1: #0D111E;            /* Fundo principal escuro/top */
+  --bg-dark-2: #131A2A;            /* Fundo secundário escuro/base */
+  --bg-dark-3: #1F2636;            /* Fundo de contraste sutil (seções) */
+
+  /* Divisórias e Linhas */
+  --color-divider: #1F2636;        /* Linha horizontal fina, bordas sutis */
+
+  /* Espaçamentos base */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 48px;
+
+  /* Tipografia */
+  --font-family-base: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* 3. Reset / Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Estilos Globais */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-gray-dark);
+  background-color: var(--bg-dark-1);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Links padrão */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* 5. Tipografia (Headings & Texto) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-base);
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;       /* 48px */
+}
+h2 {
+  font-weight: 500;
+  font-size: 2rem;       /* 32px */
+}
+h3 {
+  font-weight: 400;
+  font-size: 1.5rem;     /* 24px */
+}
+p, ul, ol {
+  font-weight: 400;
+  font-size: 1rem;       /* 16px */
+  color: var(--color-gray-light);
+  margin-bottom: var(--spacing-md);
+}
+
+small,
+.legend {
+  font-weight: 300;
+  font-size: 0.75rem;    /* 12px */
+  line-height: 1.5;
+  color: var(--color-gray-medium);
+}
+
+/* Listas com marcadores personalizados */
+ul {
+  list-style: none;
+  padding-left: var(--spacing-lg);
+}
+ul li {
+  position: relative;
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-md);
+}
+ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* 6. Classes de Branding para Wordmarks */
+
+/* Classe genérica para wordmark (textos "ness", "trustness", "forense") */
+.brand-wordmark {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 2rem; /* 32px */
+  text-transform: lowercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Classe para o ponto final em ness. e trustness. */
+.brand-dot {
+  color: var(--color-primary);
+  margin-left: var(--spacing-xs);
+}
+
+/* Classe para o ".io" em forense.io */
+.brand-io {
+  display: inline-flex;
+  align-items: center;
+}
+.brand-io .dot-io {
+  color: var(--color-primary);
+  margin-left: var(--spacing-xs);
+}
+.brand-io .letters-io {
+  color: var(--color-white);
+  margin-left: var(--spacing-xs);
+}
+
+/* 7. Container e Layout Geral */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
+/* 8. Hero Section */
+.hero {
+  position: relative;
+  background: linear-gradient(to bottom, var(--bg-dark-1), var(--bg-dark-2));
+  color: var(--color-white);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(circle at center right, var(--bg-dark-3) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero .logo {
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero h1 {
+  font-size: 3rem;       /* 48px */
+  font-weight: 400;      /* Regular */
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero h1 .highlight {
+  font-weight: 700;      /* Bold */
+  color: var(--color-primary);
+}
+
+.hero p {
+  font-size: 1rem;       /* 16px */
+  line-height: 1.5;
+  color: var(--color-gray-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero .btn-primary {
+  display: inline-block;
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+}
+.hero .btn-primary:hover,
+.hero .btn-primary:focus {
+  background-color: #0092B8; /* 20% mais escuro */
+}
+
+/* 9. Seção "Nossos Serviços" */
+.services-section {
+  background-color: var(--bg-dark-2);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  color: var(--color-white);
+}
+
+.services-section .section-title {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: 2rem;     /* 32px */
+  margin-bottom: var(--spacing-lg);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.services-grid .service-card {
+  background-color: var(--bg-dark-2);
+  border: 1px solid var(--color-divider);
+  border-radius: 6px;
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.services-grid .service-card:hover,
+.services-grid .service-card:focus-within {
+  background-color: var(--bg-dark-3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service-card .icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--spacing-md);
+}
+
+.service-card .service-title {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  font-size: 1.25rem; /* 20px */
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card .service-desc {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 0.875rem; /* 14px */
+  color: var(--color-gray-light);
+  line-height: 1.4;
+  margin-bottom: var(--spacing-md);
+}
+
+/* 10. Seção "Unidades de Negócio" */
+.business-units {
+  background-color: var(--bg-dark-3);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  color: var(--color-white);
+}
+
+.business-units .section-title {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: 1.75rem; /* 28px */
+  margin-bottom: var(--spacing-lg);
+}
+
+.business-units .unit-logos {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.business-units .unit-logos .brand-wordmark {
+  font-size: 2.5rem; /* 40px */
+}
+
+/* Descrição opcional abaixo dos logos */
+.business-units .unit-desc {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 1rem;   /* 16px */
+  color: var(--color-gray-light);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* 11. Rodapé (Footer) */
+.footer {
+  background-color: var(--bg-dark-1);
+  color: var(--color-gray-medium);
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer .footer-column h3 {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  font-size: 1rem; /* 16px */
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer .footer-column p,
+.footer .footer-column a {
+  font-family: var(--font-family-base);
+  font-weight: 300;
+  font-size: 0.875rem; /* 14px */
+  color: var(--color-gray-light);
+  line-height: 1.4;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer .footer-column a:hover,
+.footer .footer-column a:focus {
+  color: var(--color-primary);
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: var(--color-white);
+}
+
+.footer .social-icons a:hover,
+.footer .social-icons a:focus {
+  color: var(--color-primary);
+}
+
+/* Linha divisória antes do copyright */
+.footer .divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-divider);
+  margin: var(--spacing-lg) 0;
+}
+
+.footer .copyright {
+  font-family: var(--font-family-base);
+  font-weight: 300;
+  font-size: 0.75rem; /* 12px */
+  color: var(--color-gray-dark);
+  text-align: center;
+}
+
+/* 12. Botões Gerais */
+.btn {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: 1rem;       /* 16px */
+  line-height: 1.2;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0092B8; /* 20% mais escuro */
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* 13. Containers e Utilitários */
+.section {
+  width: 100%;
+  padding: var(--spacing-xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+/* 14. Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem; /* 32px em mobile */
+  }
+  
+  .hero {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .business-units .unit-logos {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 15. Utilitários específicos para as marcas */
+.brand-ness {
+  color: var(--color-white);
+}
+
+.brand-trustness {
+  color: var(--color-white);
+}
+
+.brand-forense {
+  color: var(--color-white);
+}
+
+/* Classes utilitárias para cores */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
