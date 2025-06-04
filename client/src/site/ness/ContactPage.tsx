@@ -359,7 +359,7 @@ export default function NessContactPage() {
                   <div className="flex items-start space-x-4">
                     <Clock className="w-6 h-6 text-[#00ade0] mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-['Montserrat'] font-medium text-gray-800 mb-1">
+                      <h3 className="font-['Montserrat'] font-medium text-gray-800 mb-1 text-[20px]">
                         {content[language].businessHours}
                       </h3>
                       <p className="text-gray-600">
