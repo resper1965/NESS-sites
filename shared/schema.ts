@@ -62,11 +62,16 @@ export const jobs = pgTable("jobs", {
   location: text("location").notNull(),
   locationType: text("location_type").notNull(),
   type: text("type").notNull(),
+  department: varchar("department", { length: 255 }),
+  level: varchar("level", { length: 50 }),
+  salary: varchar("salary", { length: 255 }),
+  benefits: text("benefits"),
   summary: text("summary").notNull(),
   description: text("description"),
   requirements: text("requirements"),
   language: text("language").notNull(),
   active: boolean("active").default(true),
+  isFeatured: boolean("is_featured").default(false),
   tags: jsonb("tags").$type<{ name: string }[]>().default([]),
   // SEO fields
   metaTitle: text("meta_title"),
@@ -83,16 +88,45 @@ export const insertJobSchema = createInsertSchema(jobs).pick({
   location: true,
   locationType: true,
   type: true,
+  department: true,
+  level: true,
+  salary: true,
+  benefits: true,
   summary: true,
   description: true,
   requirements: true,
   language: true,
   active: true,
+  isFeatured: true,
   tags: true,
   metaTitle: true,
   metaDescription: true,
   ogImage: true,
   published: true,
+});
+
+// Job Applications table
+export const jobApplications = pgTable("job_applications", {
+  id: serial("id").primaryKey(),
+  jobId: integer("job_id").notNull().references(() => jobs.id, { onDelete: "cascade" }),
+  name: varchar("name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 255 }).notNull(),
+  phone: varchar("phone", { length: 50 }),
+  resumeUrl: text("resume_url"),
+  coverLetter: text("cover_letter"),
+  status: varchar("status", { length: 50 }).default("pending"),
+  createdAt: timestamp("created_at").defaultNow(),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+export const insertJobApplicationSchema = createInsertSchema(jobApplications).pick({
+  jobId: true,
+  name: true,
+  email: true,
+  phone: true,
+  resumeUrl: true,
+  coverLetter: true,
+  status: true,
 });
 
 // News table
@@ -243,6 +277,9 @@ export type Content = typeof contents.$inferSelect;
 
 export type InsertJob = z.infer<typeof insertJobSchema>;
 export type Job = typeof jobs.$inferSelect;
+
+export type InsertJobApplication = z.infer<typeof insertJobApplicationSchema>;
+export type JobApplication = typeof jobApplications.$inferSelect;
 
 export type InsertNews = z.infer<typeof insertNewsSchema>;
 export type News = typeof news.$inferSelect;
