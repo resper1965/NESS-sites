@@ -207,8 +207,8 @@ function Router() {
       
       {/* Admin Routes */}
       <Route path="/admin/login" component={AdminLoginPage} />
-      <Route path="/admin/dashboard" component={AdminDashboardPage} />
-      <Route path="/admin/branding" component={BrandingPage} />
+      <ProtectedRoute path="/admin/dashboard" component={AdminDashboardPage} />
+      <ProtectedRoute path="/admin/branding" component={BrandingPage} />
       
       {/* Fallback to 404 */}
       <Route component={NotFound} />
