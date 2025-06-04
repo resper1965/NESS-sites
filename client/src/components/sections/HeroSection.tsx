@@ -43,7 +43,7 @@ export default function HeroSection({
           <br />
           <span className="title-accent">visible results</span>
         </h2>
-        <p className="hero-subtitle">
+        <p className="hero-subtitle mt-[20px] mb-[20px]">
           Experts in technological innovation, process automation, IT
           <br />
           infrastructure, cybersecurity, and software architecture.
