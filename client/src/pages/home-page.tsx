@@ -77,10 +77,6 @@ export default function HomePage() {
         <HeroSection
           title={heroTitle}
           subtitle={t('home.hero.subtitle')}
-          ctaText1={t('home.hero.cta1')}
-          ctaUrl1="/services"
-          ctaText2={t('home.hero.cta2')}
-          ctaUrl2="/contact"
           backgroundImage={heroBackground}
         />
         
