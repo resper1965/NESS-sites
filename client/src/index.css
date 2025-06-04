@@ -9,6 +9,20 @@
   .clip-path-polygon {
     clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
   }
+
+  .bg-hero-gradient {
+    background: linear-gradient(to bottom, #0D111E, #131A2A);
+  }
+
+  .hero-vignette-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    pointer-events: none;
+    background: linear-gradient(to left, #1F2636, transparent);
+  }
 }
 
 :root {

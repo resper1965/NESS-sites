@@ -40,23 +40,24 @@ export default function ForenseHomePage() {
       canonicalUrl={`https://${siteConfig.domain}`}
     >
       {/* Hero Section */}
-      <section className="intro bg-[#0d1117] text-white relative overflow-hidden flex items-center" style={{ minHeight: "60vh" }}>
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="mb-3 lowercase">
+      <section className="intro bg-hero-gradient text-white relative overflow-hidden flex items-center" style={{ minHeight: '60vh' }}>
+        <div className="hero-vignette-right" />
+        <div className="container mx-auto px-4 relative flex items-center h-full">
+          <div className="hero-main-content">
+            <h1 className="text-[32px] font-['Montserrat'] font-medium mt-12 mb-3 lowercase">
               forense<span className="text-[#00ade0]">.</span>io
             </h1>
-            <h2 className="lowercase">
+            <h2 className="text-[48px] font-normal text-white lowercase">
               {language === 'pt' && "Especialistas em Forense Digital"}
               {language === 'en' && "Digital Forensic Experts"}
               {language === 'es' && "Expertos en Forense Digital"}
             </h2>
-            <p className="text-xl text-gray-300 mt-8 mb-8">
+            <p className="text-base leading-6 text-[#F5F5F5] mt-6 mb-8">
               {language === 'pt' && "transformamos a evidência digital em resultados concretos, com precisão e segurança"}
               {language === 'en' && "transforming digital evidence into concrete results, with precision and security"}
               {language === 'es' && "transformamos la evidencia digital en resultados concretos, con precisión y seguridad"}
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-start">
               <a
                 href="/site/forense/contact"
                 className="bg-[#00ade0] hover:bg-opacity-90 text-white px-8 py-3 rounded lowercase transition-all duration-300"

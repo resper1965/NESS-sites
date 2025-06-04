@@ -64,13 +64,14 @@ export default function NessDevArchPage() {
       canonicalUrl={`https://${siteConfig.domain}/services/devarch`}
     >
       {/* Hero Section */}
-      <section className="intro bg-[#121212] relative flex items-center justify-center" style={{ minHeight: "60vh" }}>
-        <div className="container mx-auto px-4 z-10">
-          <div className="text-center">
-            <h1 className="text-6xl md:text-7xl font-['Montserrat'] font-normal mb-6 text-white">
+      <section className="intro bg-hero-gradient relative flex items-center overflow-hidden" style={{ minHeight: '60vh' }}>
+        <div className="hero-vignette-right" />
+        <div className="container mx-auto px-4 z-10 flex items-center h-full">
+          <div className="hero-main-content">
+            <h1 className="text-[48px] font-['Montserrat'] font-normal text-white mb-6">
               {formatServiceName(content.title)}
             </h1>
-            <p className="text-xl md:text-2xl font-['Montserrat'] font-light mb-8 max-w-4xl mx-auto text-white lowercase">
+            <p className="text-base leading-6 text-[#F5F5F5] mb-8">
               {content.description}
             </p>
           </div>
