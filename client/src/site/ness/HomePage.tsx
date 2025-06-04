@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useI18n } from '@/lib/i18n';
 import { useSite } from '../SiteContext';
 import SiteLayout from '../layout/SiteLayout';
+import homeTranslations from './translations/home';
 
 // Importando componentes da página existente
 import HeroSection from '@/components/sections/HeroSection';
@@ -12,6 +13,18 @@ import SpinoffsSection from '@/components/sections/SpinoffsSection';
 export default function NessHomePage() {
   const { siteConfig } = useSite();
   const { language } = useI18n();
+
+  const featuredTitleFallback = {
+    pt: homeTranslations.pt.featuredSectionTitle,
+    en: homeTranslations.en.featuredSectionTitle,
+    es: homeTranslations.es.featuredSectionTitle
+  };
+
+  const featuredDescFallback = {
+    pt: homeTranslations.pt.featuredSectionDescription,
+    en: homeTranslations.en.featuredSectionDescription,
+    es: homeTranslations.es.featuredSectionDescription
+  };
   
   // Buscar conteúdo da página inicial específico para o site ness
   const { data: pageContent, isLoading } = useQuery({
@@ -80,11 +93,11 @@ export default function NessHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-gray-800 mb-4 lowercase text-[40px]">
-              {pageContent?.content && JSON.parse(pageContent.content).featuredSectionTitle || 'tecnologia modular para o essencial invisível'}
+              {pageContent?.content && JSON.parse(pageContent.content).featuredSectionTitle || featuredTitleFallback[language]}
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              {pageContent?.content && JSON.parse(pageContent.content).featuredSectionDescription || 
-                'nossas soluções são modulares, escaláveis e atuam nos bastidores — porque o essencial, a estrutura que sustenta tudo, deve funcionar com precisão e ser invisível para quem depende dela.'}
+              {pageContent?.content && JSON.parse(pageContent.content).featuredSectionDescription ||
+                featuredDescFallback[language]}
             </p>
           </div>
           
