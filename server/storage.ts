@@ -196,15 +196,6 @@ export class MemStorage implements IStorage {
     this.newsId = 1;
     this.activityId = 1;
     
-    // Initialize with admin user
-    this.createUser({
-      username: "admin",
-      password: "$2b$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa", // 'password'
-    }).then(user => {
-      // Update user to be admin
-      const adminUser = { ...user, isAdmin: true };
-      this.users.set(user.id, adminUser);
-    });
     
     // Initialize with default content
     this.initializeDefaultContent();
@@ -689,24 +680,24 @@ export class DatabaseStorage implements IStorage {
   
   // Initialize defaults if needed
   private async initializeDefaults() {
-    // Check if users table is empty
-    const result = await db.select({ count: users.id }).from(users);
-    const usersCount = parseInt(result[0]?.count as unknown as string, 10) || 0;
-    
-    if (usersCount === 0) {
-      console.log("Initializing default admin user...");
-      // Create admin user
-      await this.createUser({
-        username: "admin",
-        password: "$2b$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa", // 'password'
-        isAdmin: true,
-      });
-      
-      // Initialize default content
+    // Populate default content if none exists
+    const [contentResult] = await db.select({ count: contents.id }).from(contents);
+    const contentCount = parseInt(contentResult?.count as unknown as string, 10) || 0;
+    if (contentCount === 0) {
       await this.initializeDefaultContent();
-      
-      // Initialize sample jobs and news
+    }
+
+    // Populate sample jobs if table is empty
+    const [jobsResult] = await db.select({ count: jobs.id }).from(jobs);
+    const jobsCount = parseInt(jobsResult?.count as unknown as string, 10) || 0;
+    if (jobsCount === 0) {
       await this.initializeSampleJobs();
+    }
+
+    // Populate sample news if table is empty
+    const [newsResult] = await db.select({ count: news.id }).from(news);
+    const newsCount = parseInt(newsResult?.count as unknown as string, 10) || 0;
+    if (newsCount === 0) {
       await this.initializeSampleNews();
     }
   }

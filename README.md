@@ -24,3 +24,10 @@ cookies. Set it to a random string before starting the application, e.g.:
 export SESSION_SECRET="a long random string"
 npm run dev
 ```
+
+To create the initial administrator account, set `ADMIN_USER` and
+`ADMIN_PASSWORD` before starting the server. The credentials are used by
+`server/auth.ts` to automatically ensure an admin user exists.
+
+When the database is empty the server also populates default page content and
+some sample jobs and news items.
