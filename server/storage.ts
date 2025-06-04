@@ -407,6 +407,12 @@ export class MemStorage implements IStorage {
     return undefined;
   }
 
+  async getJobBySlug(slug: string, language: string, _siteCode?: SiteCode): Promise<Job | undefined> {
+    return Array.from(this.jobsData.values()).find(
+      (job) => job.slug === slug && job.language === language
+    );
+  }
+
   async createJob(job: InsertJob): Promise<Job> {
     const id = this.jobId++;
     const now = new Date();
@@ -466,6 +472,12 @@ export class MemStorage implements IStorage {
       return newsItem;
     }
     return undefined;
+  }
+
+  async getNewsBySlug(slug: string, language: string, _siteCode?: SiteCode): Promise<News | undefined> {
+    return Array.from(this.newsData.values()).find(
+      (item) => item.slug === slug && item.language === language
+    );
   }
 
   async createNewsItem(newsItem: InsertNews): Promise<News> {
@@ -885,6 +897,35 @@ export class DatabaseStorage implements IStorage {
       .where(and(eq(jobs.id, id), eq(jobs.language, language)));
     return job;
   }
+
+  async getJobBySlug(slug: string, language: string, siteCode?: SiteCode): Promise<Job | undefined> {
+    let job;
+
+    if (siteCode) {
+      const [result] = await db.select().from(jobs)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, jobs.id),
+          eq(contentSites.contentType, 'job'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(and(
+          eq(jobs.slug, slug),
+          eq(jobs.language, language)
+        ));
+
+      job = result ? result.jobs : undefined;
+    } else {
+      const [result] = await db.select().from(jobs)
+        .where(and(
+          eq(jobs.slug, slug),
+          eq(jobs.language, language)
+        ));
+
+      job = result;
+    }
+
+    return job;
+  }
   
   async createJob(job: InsertJob): Promise<Job> {
     const [newJob] = await db.insert(jobs).values(job).returning();
@@ -933,6 +974,35 @@ export class DatabaseStorage implements IStorage {
     const [newsItem] = await db.select().from(news)
       .where(and(eq(news.id, id), eq(news.language, language)));
     return newsItem;
+  }
+
+  async getNewsBySlug(slug: string, language: string, siteCode?: SiteCode): Promise<News | undefined> {
+    let item;
+
+    if (siteCode) {
+      const [result] = await db.select().from(news)
+        .innerJoin(contentSites, and(
+          eq(contentSites.contentId, news.id),
+          eq(contentSites.contentType, 'news'),
+          eq(contentSites.siteCode, siteCode)
+        ))
+        .where(and(
+          eq(news.slug, slug),
+          eq(news.language, language)
+        ));
+
+      item = result ? result.news : undefined;
+    } else {
+      const [result] = await db.select().from(news)
+        .where(and(
+          eq(news.slug, slug),
+          eq(news.language, language)
+        ));
+
+      item = result;
+    }
+
+    return item;
   }
   
   async createNewsItem(newsItem: InsertNews): Promise<News> {
