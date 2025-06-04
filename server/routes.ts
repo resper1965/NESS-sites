@@ -938,7 +938,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const jobs = await storage.getJobs(lang, siteCode);
       
       // Filter only active jobs for public API
-      const activeJobs = jobs.filter(job => job.isActive);
+      const activeJobs = jobs.filter(job => job.active);
       
       res.json(activeJobs);
     } catch (error) {
@@ -960,7 +960,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const job = await storage.getJobBySlug(slug, lang, siteCode);
       
-      if (!job || !job.isActive) {
+      if (!job || !job.active) {
         return res.status(404).json({ message: "Job not found" });
       }
       

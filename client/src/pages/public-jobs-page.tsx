@@ -138,7 +138,7 @@ export default function PublicJobsPage() {
   });
 
   const featuredJobs = jobs.filter(job => job.isFeatured);
-  const departments = [...new Set(jobs.map(job => job.department))];
+  const departments = Array.from(new Set(jobs.map(job => job.department)));
 
   if (isLoading) {
     return (
