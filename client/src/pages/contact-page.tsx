@@ -82,6 +82,7 @@ export default function ContactPage() {
     "description": "Entre em contato com nossa equipe para saber mais sobre nossos serviços de tecnologia e segurança."
   };
 
+  // Unused background image kept for potential future use
   const heroBackground = "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=1920&h=1080&q=80";
 
   return (
@@ -95,11 +96,17 @@ export default function ContactPage() {
       <Navbar />
       
       <main>
-        <section className="w-full py-32 bg-gradient-to-b from-blue-600 to-blue-800 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl mb-6 font-['Montserrat'] font-normal">
-                {t('contact.hero.prefix')} <span className="relative">
+        {/* Hero Section - consistent with product pages */}
+        <section
+          className="intro bg-hero-gradient relative flex items-center overflow-hidden"
+          style={{ minHeight: '60vh' }}
+        >
+          <div className="hero-vignette-right" />
+          <div className="container mx-auto px-4 z-10 flex items-center h-full">
+            <div className="hero-main-content">
+              <h1 className="text-4xl md:text-5xl mb-6 font-['Montserrat'] font-normal text-white">
+                {t('contact.hero.prefix')}{' '}
+                <span className="relative">
                   {t('contact.hero.highlight')}
                   <span className="absolute bottom-1 left-0 w-full h-1 bg-accent"></span>
                 </span>
