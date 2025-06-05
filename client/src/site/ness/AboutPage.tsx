@@ -116,7 +116,7 @@ export default function NessAboutPage() {
                   }
                 </p>
                 
-                <p className="mb-4 text-center text-lg">
+                <p className="mb-4 text-center text-lg text-[#2c2c34]">
                   {language === 'pt'
                     ? 'projetamos, conectamos e sustentamos soluções críticas'
                     : language === 'en'
