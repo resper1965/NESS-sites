@@ -35,17 +35,17 @@ export default function HeroSection({
       <div className="hero-overlay"></div>
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full text-center">
         {/* Logo */}
-        <h1 className="font-['Montserrat'] font-light md:text-8xl text-white mb-6 lowercase text-[96px]">
+        <h1 className="font-['Montserrat'] font-light text-7xl md:text-8xl text-white mb-6 lowercase">
           ness<span className="text-[#00ade0]">.</span>
         </h1>
         
         {/* Tagline */}
         <h2 className="mb-8">
           <div className="font-light text-2xl md:text-3xl text-slate-300 mb-2">
-            Tecnologia avançada
+            Invisible strength
           </div>
           <div className="font-normal text-2xl md:text-3xl text-[#00ade0]">
-            para resultados extraordinários
+            visible results
           </div>
         </h2>
         
