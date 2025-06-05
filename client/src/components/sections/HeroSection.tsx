@@ -35,24 +35,27 @@ export default function HeroSection({
       <div className="absolute bottom-1/4 right-1/3 w-24 h-px bg-gradient-to-r from-transparent via-[#00ade0] to-transparent opacity-30"></div>
       
       <div className="hero-overlay"></div>
-      <div className="hero-content ml-[125px] mr-[125px]">
-        <h1 className="logo">
-          <span className="brand-wordmark">
-            <span className="word">ness</span>
-            <span className="brand-dot">.</span>
-          </span>
+      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full text-center">
+        {/* Logo */}
+        <h1 className="font-['Montserrat'] font-light text-7xl md:text-8xl text-white mb-6 lowercase">
+          ness<span className="text-[#00ade0]">.</span>
         </h1>
-        <h2 className="hero-title">
-          <span className="title-light">invisible strength</span>
-          <br />
-          <span className="title-accent">visible results</span>
+        
+        {/* Tagline */}
+        <h2 className="mb-8">
+          <div className="font-light text-2xl md:text-3xl text-slate-300 mb-2">
+            Tecnologia avançada
+          </div>
+          <div className="font-normal text-2xl md:text-3xl text-[#00ade0]">
+            para resultados extraordinários
+          </div>
         </h2>
-        <p className="hero-subtitle mt-[20px] mb-[20px]">
-          Experts in technological innovation, process automation, IT
-          <br />
-          infrastructure, cybersecurity, and software architecture.
+        
+        {/* Parágrafo descritivo */}
+        <p className="font-light text-lg text-slate-400 max-w-2xl leading-relaxed">
+          Especialistas em inovação tecnológica, automação de processos, infraestrutura de TI,
+          cibersegurança e arquitetura de software.
         </p>
-        {/* <a href="#servicos" className="btn btn-primary">Saiba Mais</a> */}
       </div>
     </section>
   );

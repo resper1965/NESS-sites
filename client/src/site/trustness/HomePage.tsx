@@ -53,38 +53,35 @@ export default function TrustnessHomePage() {
         <div className="absolute top-1/2 left-1/3 w-px h-24 bg-gradient-to-b from-transparent via-[#00ade0] to-transparent opacity-30"></div>
         <div className="absolute bottom-1/4 right-1/3 w-24 h-px bg-gradient-to-r from-transparent via-[#00ade0] to-transparent opacity-30"></div>
 
-        <div className="container mx-auto px-4 relative z-10 flex items-center h-full">
-          <div className="hero-main-content">
-            <h1 className="text-[32px] font-['Montserrat'] font-medium mt-12 mb-6 lowercase">
-              trustness<span className="text-[#00ade0]">.</span>
-            </h1>
-            <p className="text-base leading-6 text-[#F5F5F5] mb-8">
-              {language === 'pt' && (pageContent?.content?.heroSubtitle ||
-                'privacidade, segurança da informação e compliance com foco em programas regulatórios e frameworks internacionais')}
-              {language === 'en' && (pageContent?.content?.heroSubtitleEn ||
-                'privacy, information security and compliance focused on regulatory programs and international frameworks')}
-              {language === 'es' && (pageContent?.content?.heroSubtitleEs ||
-                'privacidad, seguridad de la información y compliance con foco en programas regulatorios y frameworks internacionales')}
-            </p>
-            <div className="flex flex-col sm:flex-row justify-start gap-4">
-              <a
-                href="#what-we-do"
-                className="bg-[#00ade0] hover:bg-opacity-90 text-white px-6 py-3 rounded lowercase"
-              >
-                {language === 'pt' && 'nossos serviços'}
-                {language === 'en' && 'our services'}
-                {language === 'es' && 'nuestros servicios'}
-              </a>
-              <a
-                href="/site/trustness/contact"
-                className="border border-[#00ade0] text-white hover:bg-white hover:bg-opacity-10 px-6 py-3 rounded lowercase"
-              >
-                {language === 'pt' && 'fale conosco'}
-                {language === 'en' && 'contact us'}
-                {language === 'es' && 'contáctenos'}
-              </a>
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full text-center">
+          {/* Logo */}
+          <h1 className="font-['Montserrat'] font-light text-7xl md:text-8xl text-white mb-6 lowercase">
+            trustness<span className="text-[#00ade0]">.</span>
+          </h1>
+          
+          {/* Tagline */}
+          <h2 className="mb-8">
+            <div className="font-light text-2xl md:text-3xl text-slate-300 mb-2">
+              {language === 'pt' && 'Confiança digital'}
+              {language === 'en' && 'Digital trust'}
+              {language === 'es' && 'Confianza digital'}
             </div>
-          </div>
+            <div className="font-normal text-2xl md:text-3xl text-[#00ade0]">
+              {language === 'pt' && 'comprovada'}
+              {language === 'en' && 'proven'}
+              {language === 'es' && 'comprobada'}
+            </div>
+          </h2>
+          
+          {/* Parágrafo descritivo */}
+          <p className="font-light text-lg text-slate-400 max-w-2xl leading-relaxed mb-8">
+            {language === 'pt' && (pageContent?.content?.heroSubtitle ||
+              'Privacidade, segurança da informação e compliance com foco em programas regulatórios e frameworks internacionais')}
+            {language === 'en' && (pageContent?.content?.heroSubtitleEn ||
+              'Privacy, information security and compliance focused on regulatory programs and international frameworks')}
+            {language === 'es' && (pageContent?.content?.heroSubtitleEs ||
+              'Privacidad, seguridad de la información y compliance con foco en programas regulatorios y frameworks internacionales')}
+          </p>
         </div>
       </section>
       
