@@ -35,7 +35,7 @@ export default function HeroSection({
       <div className="hero-overlay"></div>
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full text-center">
         {/* Logo */}
-        <h1 className="font-['Montserrat'] font-light text-7xl md:text-8xl text-white mb-6 lowercase">
+        <h1 className="font-['Montserrat'] !font-light !text-7xl md:!text-8xl !text-white mb-6 lowercase">
           ness<span className="text-[#00ade0]">.</span>
         </h1>
         
