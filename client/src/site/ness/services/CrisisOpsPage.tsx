@@ -83,10 +83,10 @@ export default function NessCrisisOpsPage() {
           {/* Tagline */}
           <h2 className="mb-8">
             <div className="font-light text-2xl md:text-3xl text-slate-300 mb-2">
-              Resposta imediata
+              Tecnologia avançada
             </div>
             <div className="font-normal text-2xl md:text-3xl text-[#00ade0]">
-              para incidentes críticos
+              para resultados extraordinários
             </div>
           </h2>
           

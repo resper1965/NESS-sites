@@ -83,10 +83,10 @@ export default function NessDevArchPage() {
           {/* Tagline */}
           <h2 className="mb-8">
             <div className="font-light text-2xl md:text-3xl text-slate-300 mb-2">
-              Fundamentos sólidos
+              Tecnologia avançada
             </div>
             <div className="font-normal text-2xl md:text-3xl text-[#00ade0]">
-              para desenvolvimento seguro
+              para resultados extraordinários
             </div>
           </h2>
           
