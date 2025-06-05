@@ -77,10 +77,10 @@ export default function SecOpsPage() {
             {/* Tagline */}
             <h2 className="mb-8">
               <div className="font-light text-2xl md:text-3xl text-slate-300 mb-2">
-                Segurança cibernética
+                Tecnologia avançada
               </div>
               <div className="font-normal text-2xl md:text-3xl text-[#00ade0]">
-                avançada e contínua
+                para resultados extraordinários
               </div>
             </h2>
             
