@@ -49,32 +49,32 @@ export default function ForenseHomePage() {
         <div className="absolute bottom-1/3 left-1/4 w-32 h-px bg-gradient-to-r from-transparent via-[#00ade0] to-transparent opacity-40"></div>
         <div className="absolute top-1/2 left-1/3 w-px h-24 bg-gradient-to-b from-transparent via-[#00ade0] to-transparent opacity-30"></div>
         <div className="absolute bottom-1/4 right-1/3 w-24 h-px bg-gradient-to-r from-transparent via-[#00ade0] to-transparent opacity-30"></div>
-        <div className="container mx-auto px-4 relative flex items-center h-full">
-          <div className="hero-main-content">
-            <h1 className="text-[32px] font-['Montserrat'] font-medium mt-12 mb-3 lowercase">
-              forense<span className="text-[#00ade0]">.</span>io
-            </h1>
-            <h2 className="text-[48px] font-normal text-white lowercase">
-              {language === 'pt' && "Especialistas em Forense Digital"}
-              {language === 'en' && "Digital Forensic Experts"}
-              {language === 'es' && "Expertos en Forense Digital"}
-            </h2>
-            <p className="text-base leading-6 text-[#F5F5F5] mt-6 mb-8">
-              {language === 'pt' && "transformamos a evidência digital em resultados concretos, com precisão e segurança"}
-              {language === 'en' && "transforming digital evidence into concrete results, with precision and security"}
-              {language === 'es' && "transformamos la evidencia digital en resultados concretos, con precisión y seguridad"}
-            </p>
-            <div className="flex justify-start">
-              <a
-                href="/site/forense/contact"
-                className="bg-[#00ade0] hover:bg-opacity-90 text-white px-8 py-3 rounded lowercase transition-all duration-300"
-              >
-                {language === 'pt' && "fale conosco"}
-                {language === 'en' && "contact us"}
-                {language === 'es' && "contáctenos"}
-              </a>
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full text-center">
+          {/* Logo */}
+          <h1 className="font-['Montserrat'] font-light text-7xl md:text-8xl text-white mb-6 lowercase">
+            forense<span className="text-[#00ade0]">.</span>io
+          </h1>
+          
+          {/* Tagline */}
+          <h2 className="mb-8">
+            <div className="font-light text-2xl md:text-3xl text-slate-300 mb-2">
+              {language === 'pt' && 'Evidências digitais'}
+              {language === 'en' && 'Digital evidence'}
+              {language === 'es' && 'Evidencias digitales'}
             </div>
-          </div>
+            <div className="font-normal text-2xl md:text-3xl text-[#00ade0]">
+              {language === 'pt' && 'precisas e confiáveis'}
+              {language === 'en' && 'accurate and reliable'}
+              {language === 'es' && 'precisas y confiables'}
+            </div>
+          </h2>
+          
+          {/* Parágrafo descritivo */}
+          <p className="font-light text-lg text-slate-400 max-w-2xl leading-relaxed">
+            {language === 'pt' && "Peritos independentes especializados em análise de evidências digitais, perícias computacionais e consultoria forense"}
+            {language === 'en' && "Independent experts specialized in digital evidence analysis, computational forensics and forensic consulting"}
+            {language === 'es' && "Peritos independientes especializados en análisis de evidencias digitales, pericias computacionales y consultoría forense"}
+          </p>
         </div>
       </section>
       
