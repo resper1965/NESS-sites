@@ -166,7 +166,7 @@ export default function NessAboutPage() {
               
               {/* Values */}
               <div className="bg-[#38383f] p-8 rounded-sm border-l-2 border-[#00ade0]">
-                <h3 className="mb-4 lowercase text-white font-medium">
+                <h3 className="mb-4 lowercase text-white font-thin">
                   {defaultContent.values.values.title}
                 </h3>
                 <p className="text-gray-200 lowercase mb-4">
