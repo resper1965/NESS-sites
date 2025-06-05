@@ -103,11 +103,11 @@ export default function NessAboutPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="mb-6 text-center lowercase">
-                <span className="font-normal">{language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
+                <span className="font-normal text-[#00ade0]">{language === 'pt' ? 'somos a' : language === 'es' ? 'somos' : 'we are'}</span> <span className="text-black font-normal">ness<span className="text-[#00ade0]">.</span></span>
               </h2>
               
               <div className="prose prose-base mx-auto text-gray-700 lowercase">
-                <p className="mb-6 text-center font-light tracking-wide text-lg">
+                <p className="mb-6 text-center font-light tracking-wide text-lg text-[#2c2c34]">
                   {language === 'pt' 
                     ? <>tecnologia clara <span className="text-[#00ade0]">•</span> estrutura segura <span className="text-[#00ade0]">•</span> propósito real</>
                     : language === 'en'
