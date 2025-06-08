@@ -6,6 +6,7 @@ import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
 import { storage } from "./storage";
 import { User as SelectUser } from "@shared/schema";
+import logger from "./logger";
 
 declare global {
   namespace Express {
@@ -47,7 +48,7 @@ async function ensureAdminUser() {
   const adminPassword = process.env.ADMIN_PASSWORD;
   
   if (!adminUsername || !adminPassword) {
-    console.error("WARNING: Admin credentials not found in environment variables");
+    logger.warn("Admin credentials not found in environment variables");
     return;
   }
   
@@ -63,21 +64,21 @@ async function ensureAdminUser() {
         password: hashedPassword,
         isAdmin: true,
       });
-      console.log("Admin user created successfully");
+      logger.info("Admin user created successfully");
     } else if (!existingAdmin.isAdmin) {
       // Atualizar para admin se o usuário existe mas não é admin
       await storage.updateUser(existingAdmin.id, { isAdmin: true });
-      console.log("Existing user promoted to admin");
+      logger.info("Existing user promoted to admin");
     }
   } catch (error) {
-    console.error("Error creating admin user:", error);
+    logger.error(`Error creating admin user: ${error}`);
   }
 }
 
 export function setupAuth(app: Express) {
   const sessionSecret = process.env.SESSION_SECRET;
   if (!sessionSecret) {
-    console.error("SESSION_SECRET environment variable is required");
+    logger.error("SESSION_SECRET environment variable is required");
     process.exit(1);
   }
   

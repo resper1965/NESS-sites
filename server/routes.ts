@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { setupAuth, requireAdmin } from "./auth";
 import { storage } from "./storage";
 import { ContentService } from "./content-service";
+import logger from "./logger";
 import { SiteCode, SITE_CODES } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -35,7 +36,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(content);
     } catch (error) {
-      console.error("Error fetching content:", error);
+      logger.error(`Error fetching content: ${error}`);
       res.status(500).json({ message: "Error fetching content" });
     }
   });
@@ -69,7 +70,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(result);
     } catch (error) {
-      console.error("Error updating content:", error);
+      logger.error(`Error updating content: ${error}`);
       res.status(500).json({ message: "Error updating content" });
     }
   });
@@ -88,7 +89,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const jobs = await storage.getJobs(lang, siteCode);
       res.json(jobs);
     } catch (error) {
-      console.error("Error fetching jobs:", error);
+      logger.error(`Error fetching jobs: ${error}`);
       res.status(500).json({ message: "Error fetching jobs" });
     }
   });
@@ -106,7 +107,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const jobs = await storage.getFeaturedJobs(lang, siteCode);
       res.json(jobs);
     } catch (error) {
-      console.error("Error fetching featured jobs:", error);
+      logger.error(`Error fetching featured jobs: ${error}`);
       res.status(500).json({ message: "Error fetching featured jobs" });
     }
   });
@@ -223,7 +224,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const newsItems = await storage.getNewsItems(lang, siteCode);
       res.json(newsItems);
     } catch (error) {
-      console.error("Error fetching news:", error);
+      logger.error(`Error fetching news: ${error}`);
       res.status(500).json({ message: "Error fetching news" });
     }
   });
@@ -241,7 +242,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const newsItems = await storage.getLatestNews(lang, siteCode);
       res.json(newsItems);
     } catch (error) {
-      console.error("Error fetching latest news:", error);
+      logger.error(`Error fetching latest news: ${error}`);
       res.status(500).json({ message: "Error fetching latest news" });
     }
   });
@@ -412,7 +413,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(stats);
     } catch (error) {
-      console.error("Error fetching stats:", error);
+      logger.error(`Error fetching stats: ${error}`);
       res.status(500).json({ message: "Error fetching stats" });
     }
   });
@@ -427,7 +428,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const activities = await storage.getRecentActivities();
       res.json(activities);
     } catch (error) {
-      console.error("Error fetching activities:", error);
+      logger.error(`Error fetching activities: ${error}`);
       res.status(500).json({ message: "Error fetching activities" });
     }
   });
@@ -438,7 +439,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const sites = await storage.getAllSites();
       res.json(sites);
     } catch (error) {
-      console.error("Error fetching sites:", error);
+      logger.error(`Error fetching sites: ${error}`);
       res.status(500).json({ message: "Error fetching sites" });
     }
   });
@@ -460,7 +461,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(site);
     } catch (error) {
-      console.error("Error fetching site:", error);
+      logger.error(`Error fetching site: ${error}`);
       res.status(500).json({ message: "Error fetching site" });
     }
   });
@@ -492,7 +493,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(result);
     } catch (error) {
-      console.error("Error updating site:", error);
+      logger.error(`Error updating site: ${error}`);
       res.status(500).json({ message: "Error updating site" });
     }
   });
@@ -512,7 +513,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Here you would typically send an email using a service like SendGrid
       // For now, we'll log the contact attempt and return success
-      console.log('Contact form submission:', {
+      logger.info('Contact form submission: ' + JSON.stringify({
         name,
         email,
         phone,
@@ -521,7 +522,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         site,
         language,
         timestamp: new Date().toISOString()
-      });
+      }));
 
       // Log activity
       await storage.createActivityLog({
@@ -534,7 +535,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json({ success: true, message: "Contact form submitted successfully" });
     } catch (error) {
-      console.error("Error processing contact form:", error);
+      logger.error(`Error processing contact form: ${error}`);
       res.status(500).json({ message: "Error processing contact form" });
     }
   });
@@ -558,7 +559,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(contactInfo);
     } catch (error) {
-      console.error("Error fetching contact info:", error);
+      logger.error(`Error fetching contact info: ${error}`);
       res.status(500).json({ message: "Error fetching contact info" });
     }
   });
@@ -591,7 +592,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(updatedContactInfo);
     } catch (error) {
-      console.error("Error updating contact info:", error);
+      logger.error(`Error updating contact info: ${error}`);
       res.status(500).json({ message: "Error updating contact info" });
     }
   });
@@ -659,7 +660,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(filteredFiles);
     } catch (error) {
-      console.error("Error fetching branding files:", error);
+      logger.error(`Error fetching branding files: ${error}`);
       res.status(500).json({ message: "Error fetching branding files" });
     }
   });
@@ -703,7 +704,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.status(201).json(newFile);
     } catch (error) {
-      console.error("Error uploading branding file:", error);
+      logger.error(`Error uploading branding file: ${error}`);
       res.status(500).json({ message: "Error uploading branding file" });
     }
   });
@@ -735,7 +736,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(updatedFile);
     } catch (error) {
-      console.error("Error approving branding file:", error);
+      logger.error(`Error approving branding file: ${error}`);
       res.status(500).json({ message: "Error approving branding file" });
     }
   });
@@ -760,7 +761,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json({ success: true, message: "File deleted successfully" });
     } catch (error) {
-      console.error("Error deleting branding file:", error);
+      logger.error(`Error deleting branding file: ${error}`);
       res.status(500).json({ message: "Error deleting branding file" });
     }
   });
@@ -793,7 +794,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(versions);
     } catch (error) {
-      console.error("Error fetching file versions:", error);
+      logger.error(`Error fetching file versions: ${error}`);
       res.status(500).json({ message: "Error fetching file versions" });
     }
   });
@@ -843,7 +844,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(applications);
     } catch (error) {
-      console.error("Error fetching job applications:", error);
+      logger.error(`Error fetching job applications: ${error}`);
       res.status(500).json({ message: "Error fetching job applications" });
     }
   });
@@ -880,7 +881,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.status(201).json(newApplication);
     } catch (error) {
-      console.error("Error creating job application:", error);
+      logger.error(`Error creating job application: ${error}`);
       res.status(500).json({ message: "Error creating job application" });
     }
   });
@@ -919,7 +920,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       res.json(updatedApplication);
     } catch (error) {
-      console.error("Error updating application status:", error);
+      logger.error(`Error updating application status: ${error}`);
       res.status(500).json({ message: "Error updating application status" });
     }
   });
@@ -942,7 +943,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(activeJobs);
     } catch (error) {
-      console.error("Error fetching public jobs:", error);
+      logger.error(`Error fetching public jobs: ${error}`);
       res.status(500).json({ message: "Error fetching jobs" });
     }
   });
@@ -966,7 +967,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(job);
     } catch (error) {
-      console.error("Error fetching job:", error);
+      logger.error(`Error fetching job: ${error}`);
       res.status(500).json({ message: "Error fetching job" });
     }
   });
@@ -977,7 +978,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const settings = await storage.getAllSettings();
       res.json(settings);
     } catch (error) {
-      console.error("Error fetching settings:", error);
+      logger.error(`Error fetching settings: ${error}`);
       res.status(500).json({ message: "Error fetching settings" });
     }
   });
@@ -998,7 +999,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json(setting);
     } catch (error) {
-      console.error("Error updating setting:", error);
+      logger.error(`Error updating setting: ${error}`);
       res.status(500).json({ message: "Error updating setting" });
     }
   });
@@ -1050,7 +1051,7 @@ ${value}`;
         res.status(500).json({ message: "Erro na tradução" });
       }
     } catch (error) {
-      console.error("Error translating setting:", error);
+      logger.error(`Error translating setting: ${error}`);
       res.status(500).json({ message: "Error translating setting" });
     }
   });
@@ -1069,7 +1070,7 @@ ${value}`;
       
       res.json(settingsMap);
     } catch (error) {
-      console.error("Error fetching public settings:", error);
+      logger.error(`Error fetching public settings: ${error}`);
       res.status(500).json({ message: "Error fetching settings" });
     }
   });

@@ -1,6 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import sharp from 'sharp';
+import logger from './logger';
 
 const publicDir = path.join(process.cwd(), 'public');
 const assetsDir = path.join(publicDir, 'assets', 'images');
@@ -21,15 +22,15 @@ async function optimizeImage(inputPath: string, outputPath: string) {
       .webp({ quality: 80 }) // Formato WebP com boa compressão
       .toFile(outputPath);
     
-    console.log(`Imagem otimizada: ${outputPath}`);
+    logger.info(`Imagem otimizada: ${outputPath}`);
     
     // Retorna estatísticas sobre os arquivos
     const originalSize = (fs.statSync(inputPath).size / 1024).toFixed(2);
     const optimizedSize = (fs.statSync(outputPath).size / 1024).toFixed(2);
     
-    console.log(`Original: ${originalSize} KB, Otimizada: ${optimizedSize} KB`);
+    logger.info(`Original: ${originalSize} KB, Otimizada: ${optimizedSize} KB`);
   } catch (error) {
-    console.error(`Erro ao otimizar ${inputPath}:`, error);
+    logger.error(`Erro ao otimizar ${inputPath}: ${error}`);
   }
 }
 
@@ -43,11 +44,11 @@ async function optimizeTrustnessHeroBackground() {
   if (fs.existsSync(inputPath)) {
     await optimizeImage(inputPath, outputPath);
   } else {
-    console.error(`Arquivo não encontrado: ${inputPath}`);
+    logger.error(`Arquivo não encontrado: ${inputPath}`);
   }
 }
 
 // Executar otimização
 optimizeTrustnessHeroBackground()
-  .then(() => console.log('Otimização de imagens concluída'))
-  .catch(error => console.error('Erro durante otimização:', error));
+  .then(() => logger.info('Otimização de imagens concluída'))
+  .catch(error => logger.error(`Erro durante otimização: ${error}`));

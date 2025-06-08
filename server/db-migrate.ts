@@ -1,9 +1,10 @@
 import { db } from './db';
 import { sites, contentSites, landingPages } from '@shared/schema';
 import { SITE_CODES } from '@shared/schema';
+import logger from './logger';
 
 async function migrate() {
-  console.log('Starting database migration...');
+  logger.info('Starting database migration...');
   
   try {
     // Criar tabela sites se não existir
@@ -24,7 +25,7 @@ async function migrate() {
         updated_at TIMESTAMP DEFAULT NOW()
       );
     `);
-    console.log('Sites table checked.');
+    logger.info('Sites table checked.');
     
     // Criar tabela de mapeamento content_sites se não existir
     await db.execute(`
@@ -35,7 +36,7 @@ async function migrate() {
         PRIMARY KEY (content_id, content_type, site_code)
       );
     `);
-    console.log('Content-sites mapping table checked.');
+    logger.info('Content-sites mapping table checked.');
     
     // Criar tabela landing_pages se não existir
     await db.execute(`
@@ -56,7 +57,7 @@ async function migrate() {
         UNIQUE(slug, language)
       );
     `);
-    console.log('Landing pages table checked.');
+    logger.info('Landing pages table checked.');
     
     // Inserir sites padrão se tabela estiver vazia
     const sitesCountQuery = await db.execute('SELECT COUNT(*) as count FROM sites');
@@ -141,13 +142,13 @@ async function migrate() {
           `contato@${domain}`
         ]);
         
-        console.log(`Site ${code} checked.`);
+        logger.info(`Site ${code} checked.`);
       }
     }
     
-    console.log('Database migration completed successfully.');
+    logger.info('Database migration completed successfully.');
   } catch (error) {
-    console.error('Error during migration:', error);
+    logger.error(`Error during migration: ${error}`);
     process.exit(1);
   }
 }
@@ -155,6 +156,6 @@ async function migrate() {
 migrate()
   .then(() => process.exit(0))
   .catch((err) => {
-    console.error('Migration failed:', err);
+    logger.error(`Migration failed: ${err}`);
     process.exit(1);
   });

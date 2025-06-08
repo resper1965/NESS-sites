@@ -15,6 +15,7 @@ import createMemoryStore from "memorystore";
 import connectPg from "connect-pg-simple";
 import { db } from "./db";
 import { eq, desc, and } from "drizzle-orm";
+import logger from "./logger";
 
 // Create memory store for sessions
 const MemoryStore = createMemoryStore(session);
@@ -675,7 +676,7 @@ export class DatabaseStorage implements IStorage {
     
     // Initialize the database with default content
     this.initializeDefaults().catch(err => {
-      console.error("Error initializing database:", err);
+      logger.error(`Error initializing database: ${err}`);
     });
   }
 
@@ -826,7 +827,7 @@ export class DatabaseStorage implements IStorage {
   
   // Initialize default content for all pages and languages
   private async initializeDefaultContent() {
-    console.log("Initializing default content...");
+    logger.info("Initializing default content...");
     const languages = ["pt", "en", "es"];
     const pageIds = ["home", "about", "services", "ethics", "privacy"];
     
@@ -849,7 +850,7 @@ export class DatabaseStorage implements IStorage {
   
   // Initialize sample jobs
   private async initializeSampleJobs() {
-    console.log("Initializing sample jobs...");
+    logger.info("Initializing sample jobs...");
     const sampleJobs = [
       {
         title: "Desenvolvedor Full Stack",
@@ -884,7 +885,7 @@ export class DatabaseStorage implements IStorage {
   
   // Initialize sample news
   private async initializeSampleNews() {
-    console.log("Initializing sample news...");
+    logger.info("Initializing sample news...");
     const sampleNews = [
       {
         title: "Nova parceria estratégica para expansão internacional",
