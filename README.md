@@ -38,6 +38,9 @@ automatically loads variables from this file at startup:
 
 - `DATABASE_URL` - connection string for your database
 - `SESSION_SECRET` - random string used to sign session cookies
+- `PORT` - port for the development server (defaults to 5000)
+
+Change the value of `PORT` if you need the server to run on a different port.
 
 Once the variables are defined you can start the development server:
 
