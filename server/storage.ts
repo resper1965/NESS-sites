@@ -15,6 +15,8 @@ import createMemoryStore from "memorystore";
 import connectPg from "connect-pg-simple";
 import { db } from "./db";
 import { eq, desc, and } from "drizzle-orm";
+import fs from "fs";
+import path from "path";
 
 // Create memory store for sessions
 const MemoryStore = createMemoryStore(session);
@@ -207,14 +209,55 @@ export class MemStorage implements IStorage {
     this.activityId = 1;
     
     
-    // Initialize with default content
-    this.initializeDefaultContent();
-    
-    // Initialize with sample jobs
-    this.initializeSampleJobs();
-    
-    // Initialize with sample news
-    this.initializeSampleNews();
+    // Load seed data if available
+    void this.loadSeeds();
+  }
+
+  private async loadSeeds() {
+    const seedsDir = path.resolve(import.meta.dirname, "..", "seeds");
+
+    const contentFile = path.join(seedsDir, "default-content.json");
+    const jobsFile = path.join(seedsDir, "sample-jobs.json");
+    const newsFile = path.join(seedsDir, "sample-news.json");
+
+    if (fs.existsSync(contentFile)) {
+      const raw = await fs.promises.readFile(contentFile, "utf-8");
+      const data = JSON.parse(raw) as Record<string, Record<string, Partial<Content>>>;
+      for (const [lang, pages] of Object.entries(data)) {
+        for (const [pageId, page] of Object.entries(pages)) {
+          await this.createContent({
+            pageId,
+            language: lang,
+            title: page.title || "",
+            description: page.description || "",
+            content: page.content || "",
+            metadata: page.metadata || {},
+          });
+        }
+      }
+    } else {
+      await this.initializeDefaultContent();
+    }
+
+    if (fs.existsSync(jobsFile)) {
+      const raw = await fs.promises.readFile(jobsFile, "utf-8");
+      const data = JSON.parse(raw) as InsertJob[];
+      for (const job of data) {
+        await this.createJob(job);
+      }
+    } else {
+      await this.initializeSampleJobs();
+    }
+
+    if (fs.existsSync(newsFile)) {
+      const raw = await fs.promises.readFile(newsFile, "utf-8");
+      const data = JSON.parse(raw) as InsertNews[];
+      for (const item of data) {
+        await this.createNewsItem(item);
+      }
+    } else {
+      await this.initializeSampleNews();
+    }
   }
 
   // Initialize default content for all pages and languages

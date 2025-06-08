@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Desenvolvedor Full Stack",
+    "location": "Remoto - Brasil",
+    "locationType": "remote",
+    "type": "Integral",
+    "summary": "Buscamos um desenvolvedor full stack com experiência em Node.js, React e bancos de dados NoSQL para integrar nossa equipe de produtos digitais.",
+    "description": "Descrição detalhada da vaga de desenvolvedor full stack.",
+    "requirements": "Experiência com Node.js, React, MongoDB e AWS.",
+    "language": "pt",
+    "active": true,
+    "tags": [{ "name": "Node.js" }, { "name": "React" }, { "name": "MongoDB" }, { "name": "AWS" }]
+  },
+  {
+    "title": "Especialista em Segurança da Informação",
+    "location": "São Paulo, SP",
+    "locationType": "office",
+    "type": "Integral",
+    "summary": "Procuramos um especialista em segurança da informação para implementar e gerenciar soluções de proteção de dados e sistemas para nossos clientes.",
+    "description": "Descrição detalhada da vaga de especialista em segurança.",
+    "requirements": "Certificações em segurança, experiência com LGPD e ISO 27001.",
+    "language": "pt",
+    "active": true,
+    "tags": [{ "name": "ISO 27001" }, { "name": "Pentest" }, { "name": "LGPD" }, { "name": "Análise de Vulnerabilidades" }]
+  }
+]

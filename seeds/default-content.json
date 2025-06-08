@@ -1,0 +1,83 @@
+{
+  "pt": {
+    "home": {
+      "title": "Página Inicial",
+      "description": "Bem-vindo ao nosso site institucional",
+      "content": "<h1>Bem-vindo à CorpTech</h1><p>Soluções tecnológicas para o seu negócio.</p>"
+    },
+    "about": {
+      "title": "Quem Somos",
+      "description": "Conheça nossa história e valores",
+      "content": "<h1>Sobre a CorpTech</h1><p>Somos uma empresa especializada em soluções tecnológicas.</p>"
+    },
+    "services": {
+      "title": "O Que Fazemos",
+      "description": "Conheça nossos serviços e soluções",
+      "content": "<h1>Nossos Serviços</h1><p>Oferecemos uma ampla gama de serviços tecnológicos.</p>"
+    },
+    "ethics": {
+      "title": "Código de Ética",
+      "description": "Nossos princípios e valores éticos",
+      "content": "<h1>Código de Ética</h1><p>Acreditamos em conduzir nossos negócios com os mais altos padrões éticos.</p>"
+    },
+    "privacy": {
+      "title": "Política de Segurança e Privacidade",
+      "description": "Como protegemos seus dados",
+      "content": "<h1>Política de Privacidade</h1><p>Valorizamos a segurança e privacidade de seus dados.</p>"
+    }
+  },
+  "en": {
+    "home": {
+      "title": "Home Page",
+      "description": "Welcome to our institutional website",
+      "content": "<h1>Welcome to CorpTech</h1><p>Technological solutions for your business.</p>"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn about our history and values",
+      "content": "<h1>About CorpTech</h1><p>We are a company specialized in technological solutions.</p>"
+    },
+    "services": {
+      "title": "What We Do",
+      "description": "Discover our services and solutions",
+      "content": "<h1>Our Services</h1><p>We offer a wide range of technological services.</p>"
+    },
+    "ethics": {
+      "title": "Code of Ethics",
+      "description": "Our ethical principles and values",
+      "content": "<h1>Code of Ethics</h1><p>We believe in conducting our business with the highest ethical standards.</p>"
+    },
+    "privacy": {
+      "title": "Security and Privacy Policy",
+      "description": "How we protect your data",
+      "content": "<h1>Privacy Policy</h1><p>We value the security and privacy of your data.</p>"
+    }
+  },
+  "es": {
+    "home": {
+      "title": "Página de Inicio",
+      "description": "Bienvenido a nuestro sitio web institucional",
+      "content": "<h1>Bienvenido a CorpTech</h1><p>Soluciones tecnológicas para su negocio.</p>"
+    },
+    "about": {
+      "title": "Quiénes Somos",
+      "description": "Conozca nuestra historia y valores",
+      "content": "<h1>Sobre CorpTech</h1><p>Somos una empresa especializada en soluciones tecnológicas.</p>"
+    },
+    "services": {
+      "title": "Qué Hacemos",
+      "description": "Descubra nuestros servicios y soluciones",
+      "content": "<h1>Nuestros Servicios</h1><p>Ofrecemos una amplia gama de servicios tecnológicos.</p>"
+    },
+    "ethics": {
+      "title": "Código de Ética",
+      "description": "Nuestros principios y valores éticos",
+      "content": "<h1>Código de Ética</h1><p>Creemos en conducir nuestros negocios con los más altos estándares éticos.</p>"
+    },
+    "privacy": {
+      "title": "Política de Seguridad y Privacidad",
+      "description": "Cómo protegemos sus datos",
+      "content": "<h1>Política de Privacidad</h1><p>Valoramos la seguridad y privacidad de sus datos.</p>"
+    }
+  }
+}
