@@ -4,7 +4,7 @@ import { Express, Request, Response, NextFunction } from "express";
 import session from "express-session";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
-import { storage } from "./storage";
+import { storage, type IStorage } from "./storage";
 import { User as SelectUser } from "@shared/schema";
 
 declare global {
@@ -42,7 +42,7 @@ export const requireAdmin = (req: Request, res: Response, next: NextFunction) =>
 };
 
 // Verificar e criar o usuário administrador na inicialização
-async function ensureAdminUser() {
+async function ensureAdminUser(store: IStorage) {
   const adminUsername = process.env.ADMIN_USER;
   const adminPassword = process.env.ADMIN_PASSWORD;
   
@@ -53,12 +53,12 @@ async function ensureAdminUser() {
   
   try {
     // Verificar se o usuário admin já existe
-    const existingAdmin = await storage.getUserByUsername(adminUsername);
+    const existingAdmin = await store.getUserByUsername(adminUsername);
     
     if (!existingAdmin) {
       // Criar o usuário admin se não existir
       const hashedPassword = await hashPassword(adminPassword);
-      await storage.createUser({
+      await store.createUser({
         username: adminUsername,
         password: hashedPassword,
         isAdmin: true,
@@ -66,7 +66,7 @@ async function ensureAdminUser() {
       console.log("Admin user created successfully");
     } else if (!existingAdmin.isAdmin) {
       // Atualizar para admin se o usuário existe mas não é admin
-      await storage.updateUser(existingAdmin.id, { isAdmin: true });
+      await store.updateUser(existingAdmin.id, { isAdmin: true });
       console.log("Existing user promoted to admin");
     }
   } catch (error) {
@@ -74,7 +74,7 @@ async function ensureAdminUser() {
   }
 }
 
-export function setupAuth(app: Express) {
+export function setupAuth(app: Express, store: IStorage = storage) {
   const sessionSecret = process.env.SESSION_SECRET;
   if (!sessionSecret) {
     console.error("SESSION_SECRET environment variable is required");
@@ -85,7 +85,7 @@ export function setupAuth(app: Express) {
     secret: sessionSecret,
     resave: false,
     saveUninitialized: false,
-    store: storage.sessionStore,
+    store: store.sessionStore,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24, // 1 day
       httpOnly: true,
@@ -100,12 +100,12 @@ export function setupAuth(app: Express) {
   app.use(passport.session());
 
   // Garantir que o usuário admin exista
-  ensureAdminUser();
+  ensureAdminUser(store);
 
   passport.use(
     new LocalStrategy(async (username, password, done) => {
       try {
-        const user = await storage.getUserByUsername(username);
+        const user = await store.getUserByUsername(username);
         if (!user || !(await comparePasswords(password, user.password))) {
           return done(null, false, { message: "Invalid username or password" });
         } else {
@@ -120,7 +120,7 @@ export function setupAuth(app: Express) {
   passport.serializeUser((user, done) => done(null, user.id));
   passport.deserializeUser(async (id: number, done) => {
     try {
-      const user = await storage.getUser(id);
+      const user = await store.getUser(id);
       done(null, user);
     } catch (error) {
       done(error);

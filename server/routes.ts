@@ -1,16 +1,16 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { setupAuth, requireAdmin } from "./auth";
-import { storage } from "./storage";
+import { storage, type IStorage } from "./storage";
 import { ContentService } from "./content-service";
 import { SiteCode, SITE_CODES } from "@shared/schema";
 
-export async function registerRoutes(app: Express): Promise<Server> {
+export async function registerRoutes(app: Express, store: IStorage = storage): Promise<Server> {
   // Setup authentication routes and middleware
-  setupAuth(app);
+  setupAuth(app, store);
 
   // Initialize content service
-  const contentService = new ContentService(storage);
+  const contentService = new ContentService(store);
 
   // API Routes
   // =====================================

@@ -1305,5 +1305,8 @@ export class DatabaseStorage implements IStorage {
   }
 }
 
-// Use DatabaseStorage instead of MemStorage
-export const storage = new DatabaseStorage();
+// Export a storage instance based on environment
+export const storage: IStorage =
+  process.env.USE_MEM_STORAGE === 'true' || process.env.NODE_ENV === 'test'
+    ? new MemStorage()
+    : new DatabaseStorage();
