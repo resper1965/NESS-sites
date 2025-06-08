@@ -33,7 +33,8 @@ temporary hack has been removed.
 ## Environment variables
 
 Several values are read from the environment when the server starts. Copy
-`.env.example` to `.env` and fill in the following variables:
+`.env.example` to `.env` and fill in the following variables. The server
+automatically loads variables from this file at startup:
 
 - `DATABASE_URL` - connection string for your database
 - `SESSION_SECRET` - random string used to sign session cookies
