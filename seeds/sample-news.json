@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Nova parceria estratégica para expansão internacional",
+    "summary": "Nossa empresa firmou uma parceria estratégica com o grupo internacional TechGlobal para expandir a oferta de soluções em segurança da informação para América Latina.",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>",
+    "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    "date": "2023-06-15",
+    "category": "company",
+    "language": "pt",
+    "featured": true
+  },
+  {
+    "title": "Lançamento da nova plataforma de analytics",
+    "summary": "Apresentamos nossa nova plataforma de analytics com inteligência artificial, que permitirá aos clientes obter insights mais precisos e em tempo real sobre seus negócios.",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>",
+    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    "date": "2023-06-03",
+    "category": "technology",
+    "language": "pt",
+    "featured": false
+  },
+  {
+    "title": "Participação em evento global de tecnologia",
+    "summary": "Nossa equipe marcou presença no TechSummit 2023, um dos maiores eventos globais de tecnologia, apresentando nossas soluções inovadoras em segurança digital.",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+    "date": "2023-05-22",
+    "category": "events",
+    "language": "pt",
+    "featured": false
+  }
+]
